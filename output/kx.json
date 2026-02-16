@@ -1,0 +1,642 @@
+{
+    "document_name": "kx.html",
+    "total_pages": 1,
+    "tables": {
+        "therapeutic_table": [
+            {
+                "component": "Sensor",
+                "brand_name": "Dexcom G6 Sensor",
+                "ndc": "08627005303",
+                "hcpc_code": [
+                    "A9276",
+                    "A4239"
+                ],
+                "standard_dose": "365 appliances per year"
+            },
+            {
+                "component": "Receiver",
+                "brand_name": "Dexcom G6 Receiver",
+                "ndc": "08627009111",
+                "hcpc_code": [
+                    "E2103"
+                ],
+                "standard_dose": "1 appliance per year"
+            },
+            {
+                "component": "Transmitter",
+                "brand_name": "Dexcom G6 Transmitter",
+                "ndc": "08627001601",
+                "hcpc_code": [
+                    "A9277",
+                    "A4239"
+                ],
+                "standard_dose": "4 appliances per year"
+            },
+            {
+                "component": "Sensor",
+                "brand_name": "Dexcom G7 Sensor",
+                "ndc": "08627007701",
+                "hcpc_code": [
+                    "A4239"
+                ],
+                "standard_dose": "365 appliances per year"
+            },
+            {
+                "component": "Receiver",
+                "brand_name": "Dexcom G7 Receiver",
+                "ndc": "08627007801",
+                "hcpc_code": [
+                    "E2103"
+                ],
+                "standard_dose": "1 appliance per year"
+            },
+            {
+                "component": "Sensor",
+                "brand_name": "Freestyle Libre 2 Sensor",
+                "ndc": "57599080000",
+                "hcpc_code": [
+                    "A9276",
+                    "A4239"
+                ],
+                "standard_dose": "365 appliances per year"
+            },
+            {
+                "component": "Sensor",
+                "brand_name": "Freestyle Libre 2 Plus Sensor",
+                "ndc": "57599083500",
+                "hcpc_code": [
+                    "A4239"
+                ],
+                "standard_dose": "365 appliances per year"
+            },
+            {
+                "component": "Reader",
+                "brand_name": "Freestyle Libre 2 Reader",
+                "ndc": "57599080300",
+                "hcpc_code": [
+                    "A9278",
+                    "E2103"
+                ],
+                "standard_dose": "1 appliance per year"
+            },
+            {
+                "component": "Sensor",
+                "brand_name": "Freestyle Libre 3 Sensor",
+                "ndc": "57599081800",
+                "hcpc_code": [
+                    "A9276",
+                    "A4239"
+                ],
+                "standard_dose": "365 appliances per year"
+            },
+            {
+                "component": "Reader",
+                "brand_name": "Freestyle Libre 3 Reader",
+                "ndc": "57599082000",
+                "hcpc_code": [
+                    "E2103"
+                ],
+                "standard_dose": "1 appliance per year"
+            },
+            {
+                "component": "Sensor",
+                "brand_name": "Freestyle Libre 3 Plus Sensor",
+                "ndc": "50090724800",
+                "hcpc_code": [
+                    "A4239"
+                ],
+                "standard_dose": "365 appliances per year"
+            },
+            {
+                "component": "Sensor",
+                "brand_name": "Freestyle Libre 3 Plus Sensor",
+                "ndc": "57599084400",
+                "hcpc_code": [
+                    "A4239"
+                ],
+                "standard_dose": "365 appliances per year"
+            },
+            {
+                "component": "Sensor",
+                "brand_name": "Freestyle Libre 14 Day Sensor",
+                "ndc": "57599000101",
+                "hcpc_code": [
+                    "A9276",
+                    "A4239"
+                ],
+                "standard_dose": "365 appliances per year"
+            },
+            {
+                "component": "Reader",
+                "brand_name": "Freestyle Libre 14 Day Reader",
+                "ndc": "57599000200",
+                "hcpc_code": [
+                    "A9278",
+                    "E2103"
+                ],
+                "standard_dose": "1 appliance per year"
+            },
+            {
+                "component": "Sensor",
+                "brand_name": "Freestyle Libre 10 Day Sensor",
+                "ndc": "57599000019",
+                "hcpc_code": [
+                    "A9276",
+                    "A4238",
+                    "A4239"
+                ],
+                "standard_dose": "365 appliances per year"
+            },
+            {
+                "component": "Reader",
+                "brand_name": "Freestyle Libre 10 Day Reader",
+                "ndc": "57599000021",
+                "hcpc_code": [
+                    "A9278",
+                    "E2103"
+                ],
+                "standard_dose": "1 appliance per year"
+            },
+            {
+                "component": "Sensor",
+                "brand_name": "Simplera Sync Sensor",
+                "ndc": "63000095640",
+                "hcpc_code": [
+                    "A4238",
+                    "A4239"
+                ],
+                "standard_dose": "365 appliances per year"
+            },
+            {
+                "component": "Sensor",
+                "brand_name": "Simplera Sync Sensor",
+                "ndc": "63000095638",
+                "hcpc_code": [
+                    "A4238",
+                    "A4239"
+                ],
+                "standard_dose": "365 appliances per year"
+            }
+        ],
+        "non_therapeutic_table": [
+            {
+                "component": "Receiver",
+                "brand_name": "Dexcom Receiver",
+                "ndc": "08627009011",
+                "hcpc_code": [
+                    "A9278",
+                    "E2102"
+                ],
+                "standard_dose": "1 appliance per year"
+            },
+            {
+                "component": "Receiver",
+                "brand_name": "Dexcom G4 Receiver",
+                "ndc": "08627002011",
+                "hcpc_code": [
+                    "A9278",
+                    "E2102"
+                ],
+                "standard_dose": "1 appliance per year"
+            },
+            {
+                "component": "Receiver",
+                "brand_name": "Dexcom G4 Receiver",
+                "ndc": "08627002021",
+                "hcpc_code": [
+                    "A9278",
+                    "E2102"
+                ],
+                "standard_dose": "1 appliance per year"
+            },
+            {
+                "component": "Receiver",
+                "brand_name": "Dexcom G4 Receiver",
+                "ndc": "08627002031",
+                "hcpc_code": [
+                    "A9278",
+                    "E2102"
+                ],
+                "standard_dose": "1 appliance per year"
+            },
+            {
+                "component": "Receiver",
+                "brand_name": "Dexcom G4 Receiver",
+                "ndc": "08627003011",
+                "hcpc_code": [
+                    "A9278",
+                    "E2102"
+                ],
+                "standard_dose": "1 appliance per year"
+            },
+            {
+                "component": "Receiver",
+                "brand_name": "Dexcom G4 Receiver",
+                "ndc": "08627003021",
+                "hcpc_code": [
+                    "A9278",
+                    "E2102"
+                ],
+                "standard_dose": "1 appliance per year"
+            },
+            {
+                "component": "Receiver",
+                "brand_name": "Dexcom G4 Receiver",
+                "ndc": "08627003031",
+                "hcpc_code": [
+                    "A9278",
+                    "E2102"
+                ],
+                "standard_dose": "1 appliance per year"
+            },
+            {
+                "component": "Receiver",
+                "brand_name": "Dexcom G4 Receiver",
+                "ndc": "08627005011",
+                "hcpc_code": [
+                    "A9278",
+                    "E2102"
+                ],
+                "standard_dose": "1 appliance per year"
+            },
+            {
+                "component": "Receiver",
+                "brand_name": "Dexcom G4 Receiver",
+                "ndc": "08627005021",
+                "hcpc_code": [
+                    "A9278",
+                    "E2102"
+                ],
+                "standard_dose": "1 appliance per year"
+            },
+            {
+                "component": "Receiver",
+                "brand_name": "Dexcom G4 Receiver",
+                "ndc": "08627005031",
+                "hcpc_code": [
+                    "A9278",
+                    "E2102"
+                ],
+                "standard_dose": "1 appliance per year"
+            },
+            {
+                "component": "Receiver",
+                "brand_name": "Dexcom G4 Receiver",
+                "ndc": "08627006011",
+                "hcpc_code": [
+                    "A9278",
+                    "E2102"
+                ],
+                "standard_dose": "1 appliance per year"
+            },
+            {
+                "component": "Receiver",
+                "brand_name": "Dexcom G4 Receiver",
+                "ndc": "08627006021",
+                "hcpc_code": [
+                    "A9278",
+                    "E2102"
+                ],
+                "standard_dose": "1 appliance per year"
+            },
+            {
+                "component": "Receiver",
+                "brand_name": "Dexcom G4 Receiver",
+                "ndc": "08627006031",
+                "hcpc_code": [
+                    "A9278",
+                    "E2102"
+                ],
+                "standard_dose": "1 appliance per year"
+            },
+            {
+                "component": "Transmitter",
+                "brand_name": "Dexcom G4 Transmitter",
+                "ndc": "08627001301",
+                "hcpc_code": [
+                    "A9277",
+                    "A4238"
+                ],
+                "standard_dose": "4 appliances per year"
+            },
+            {
+                "component": "Sensor",
+                "brand_name": "Dexcom G5-G4 Sensor",
+                "ndc": "08627005104",
+                "hcpc_code": [
+                    "A9276",
+                    "A4238"
+                ],
+                "standard_dose": "365 appliances per year"
+            },
+            {
+                "component": "Receiver",
+                "brand_name": "Dexcom G5 Receiver",
+                "ndc": "08627008011",
+                "hcpc_code": [
+                    "A9278",
+                    "E2102"
+                ],
+                "standard_dose": "1 appliance per year"
+            },
+            {
+                "component": "Receiver",
+                "brand_name": "Dexcom G5 Receiver",
+                "ndc": "08627008021",
+                "hcpc_code": [
+                    "A9278",
+                    "E2102"
+                ],
+                "standard_dose": "1 appliance per year"
+            },
+            {
+                "component": "Receiver",
+                "brand_name": "Dexcom G5 Receiver",
+                "ndc": "08627008031",
+                "hcpc_code": [
+                    "A9278",
+                    "E2102"
+                ],
+                "standard_dose": "1 appliance per year"
+            },
+            {
+                "component": "Transmitter",
+                "brand_name": "Dexcom G5 Transmitter",
+                "ndc": "08627001401",
+                "hcpc_code": [
+                    "A9277",
+                    "A4238"
+                ],
+                "standard_dose": "4 appliances per year"
+            },
+            {
+                "component": "Sensor",
+                "brand_name": "Eversense 365 Sensor",
+                "ndc": "17491002429",
+                "hcpc_code": [
+                    "A9276",
+                    "A4238"
+                ],
+                "standard_dose": "365 appliances per year"
+            },
+            {
+                "component": "Sensor",
+                "brand_name": "EversenseSensor-Holder",
+                "ndc": "17491002142",
+                "hcpc_code": [
+                    "A9276",
+                    "A4238"
+                ],
+                "standard_dose": "365 appliances per year"
+            },
+            {
+                "component": "Sensor",
+                "brand_name": "EversenseSensor-Holder",
+                "ndc": "17491002235",
+                "hcpc_code": [
+                    "A9276",
+                    "A4238"
+                ],
+                "standard_dose": "365 appliances per year"
+            },
+            {
+                "component": "Transmitter",
+                "brand_name": "Eversense Smart Transmitter",
+                "ndc": "17491002145",
+                "hcpc_code": [
+                    "A9277",
+                    "A4238"
+                ],
+                "standard_dose": "4 appliances per year"
+            },
+            {
+                "component": "Sensor",
+                "brand_name": "Guardian Sensor 3 (MMT-7020LA EN)",
+                "ndc": "43169070405",
+                "hcpc_code": [
+                    "A9276",
+                    "A4238"
+                ],
+                "standard_dose": "365 appliances per year"
+            },
+            {
+                "component": "Sensor",
+                "brand_name": "Guardian Sensor 3 (MMT-7020LA EN)",
+                "ndc": "63000017962",
+                "hcpc_code": [
+                    "A9276",
+                    "A4238"
+                ],
+                "standard_dose": "365 appliances per year"
+            },
+            {
+                "component": "Sensor",
+                "brand_name": "Guardian Sensor 3 (MMT-7020LA EN)",
+                "ndc": "63000033698",
+                "hcpc_code": [
+                    "A9276",
+                    "A4238"
+                ],
+                "standard_dose": "365 appliances per year"
+            },
+            {
+                "component": "Sensor",
+                "brand_name": "Guardian Sensor 3 (MMT-7020LA EN)",
+                "ndc": "63000035844",
+                "hcpc_code": [
+                    "A9276",
+                    "A4238"
+                ],
+                "standard_dose": "365 appliances per year"
+            },
+            {
+                "component": "Transmitter",
+                "brand_name": "Guardian Link 3 Transmitter",
+                "ndc": "43169095568",
+                "hcpc_code": [
+                    "A9277",
+                    "A4238"
+                ],
+                "standard_dose": "4 appliances per year"
+            },
+            {
+                "component": "Transmitter",
+                "brand_name": "Guardian Link 3 Transmitter",
+                "ndc": "63000028677",
+                "hcpc_code": [
+                    "A9277",
+                    "A4238"
+                ],
+                "standard_dose": "4 appliances per year"
+            },
+            {
+                "component": "Transmitter",
+                "brand_name": "Guardian Link 3 Transmitter",
+                "ndc": "63000028678",
+                "hcpc_code": [
+                    "A9277",
+                    "A4238"
+                ],
+                "standard_dose": "4 appliances per year"
+            },
+            {
+                "component": "Transmitter",
+                "brand_name": "Guardian Link 3 Transmitter",
+                "ndc": "63000031699",
+                "hcpc_code": [
+                    "A9277",
+                    "A4238"
+                ],
+                "standard_dose": "4 appliances per year"
+            },
+            {
+                "component": "Transmitter",
+                "brand_name": "Guardian Link 3 Transmitter",
+                "ndc": "63000035751",
+                "hcpc_code": [
+                    "A9277",
+                    "A4238"
+                ],
+                "standard_dose": "4 appliances per year"
+            },
+            {
+                "component": "Transmitter",
+                "brand_name": "Guardian Link 3 Transmitter",
+                "ndc": "76300023982",
+                "hcpc_code": [
+                    "A9277",
+                    "A4238"
+                ],
+                "standard_dose": "4 appliances per year"
+            },
+            {
+                "component": "Sensor",
+                "brand_name": "Guardian 4 Glucose Sensor",
+                "ndc": "63000041338",
+                "hcpc_code": [
+                    "A9276",
+                    "A4238"
+                ],
+                "standard_dose": "365 appliances per year"
+            },
+            {
+                "component": "Sensor",
+                "brand_name": "Guardian 4 Glucose Sensor",
+                "ndc": "63000051968",
+                "hcpc_code": [
+                    "A9276",
+                    "A4238"
+                ],
+                "standard_dose": "365 appliances per year"
+            },
+            {
+                "component": "Transmitter",
+                "brand_name": "Guardian 4 Transmitter",
+                "ndc": "63000044515",
+                "hcpc_code": [
+                    "A9277",
+                    "A4238"
+                ],
+                "standard_dose": "4 appliances per year"
+            },
+            {
+                "component": "Transmitter",
+                "brand_name": "Guardian 4 Transmitter",
+                "ndc": "63000044516",
+                "hcpc_code": [
+                    "A9277",
+                    "A4238"
+                ],
+                "standard_dose": "4 appliances per year"
+            },
+            {
+                "component": "Transmitter",
+                "brand_name": "Guardian Connect Transmitter",
+                "ndc": "63000028585",
+                "hcpc_code": [
+                    "A9277",
+                    "A4238"
+                ],
+                "standard_dose": "4 appliances per year"
+            },
+            {
+                "component": "Transmitter",
+                "brand_name": "Guardian Connect Transmitter",
+                "ndc": "76300000260",
+                "hcpc_code": [
+                    "A9277",
+                    "A4238"
+                ],
+                "standard_dose": "4 appliances per year"
+            },
+            {
+                "component": "Transmitter",
+                "brand_name": "Minimed 630G Guardian Starter Kit",
+                "ndc": "43169080040",
+                "hcpc_code": [
+                    "A9277",
+                    "A4238"
+                ],
+                "standard_dose": "4 appliances per year"
+            },
+            {
+                "component": "Transmitter",
+                "brand_name": "MiniLink Real-Time Transmitter",
+                "ndc": "76300070701",
+                "hcpc_code": [
+                    "A9277",
+                    "A4238"
+                ],
+                "standard_dose": "4 appliances per year"
+            },
+            {
+                "component": "Sensor",
+                "brand_name": "Enlite Glucose Sensor",
+                "ndc": "76300000805",
+                "hcpc_code": [
+                    "A9276",
+                    "A4238"
+                ],
+                "standard_dose": "365 appliances per year"
+            },
+            {
+                "component": "Sensor",
+                "brand_name": "SOF-Sensor",
+                "ndc": "76300000211",
+                "hcpc_code": [
+                    "A9276",
+                    "A4238"
+                ],
+                "standard_dose": "365 appliances per year"
+            },
+            {
+                "component": "Sensor",
+                "brand_name": "SOF-Sensor",
+                "ndc": "76300000214",
+                "hcpc_code": [
+                    "A9276",
+                    "A4238"
+                ],
+                "standard_dose": "365 appliances per year"
+            },
+            {
+                "component": "Sensor",
+                "brand_name": "Freestyle Navigator Sensor",
+                "ndc": "99073070683",
+                "hcpc_code": [
+                    "A9276",
+                    "A4238"
+                ],
+                "standard_dose": "365 appliances per year"
+            }
+        ]
+    },
+    "metrics": {
+        "duration_seconds": 0.011887788772583008,
+        "total_table_count": 2,
+        "table_row_counts": {
+            "therapeutic_table": 18,
+            "non_therapeutic_table": 45
+        }
+    }
+}
