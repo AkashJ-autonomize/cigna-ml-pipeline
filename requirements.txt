@@ -1,0 +1,11 @@
+beautifulsoup4>=4.12.0
+pydantic>=2.7.0
+beautifulsoup4
+pydantic
+openai
+pandas
+python-dotenv
+python-docx
+pdf2image
+openpyxl
+pillow
