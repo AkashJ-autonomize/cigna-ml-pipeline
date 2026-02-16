@@ -1,0 +1,352 @@
+{
+    "client": {
+        "name": "BJC Healthcare",
+        "aliases": [
+            "BJC Health System"
+        ]
+    },
+    "policy": {
+        "policy_name": "Specialty Drug Pharmacy Benefit Plan Carve-Out",
+        "policy_type": "specialty_drug_jcode_carve_out",
+        "effective_notes": "SLHS aligned to JCode process effective 1/1/2025.",
+        "total_drugs_in_scope": 49,
+        "source_documents": [
+            "files/BJCHealthcare/BJCHealthcare.html",
+            "local_path/BJCHealthcare/BJC Healthcare Specialty Drugs.docx"
+        ]
+    },
+    "drugs": [
+        {
+            "brand_name": "ACTEMRA",
+            "hcpcs_code": "J3262",
+            "j_code": "J3262"
+        },
+        {
+            "brand_name": "ARANESP",
+            "hcpcs_code": "J0881",
+            "j_code": "J0881"
+        },
+        {
+            "brand_name": "BENEFIX",
+            "hcpcs_code": "J7195",
+            "j_code": "J7195"
+        },
+        {
+            "brand_name": "BENLYSTA",
+            "hcpcs_code": "J0490",
+            "j_code": "J0490"
+        },
+        {
+            "brand_name": "CIMZIA",
+            "hcpcs_code": "J0717",
+            "j_code": "J0717"
+        },
+        {
+            "brand_name": "ELIGARD",
+            "hcpcs_code": "J9218",
+            "j_code": "J9218"
+        },
+        {
+            "brand_name": "EMEND",
+            "hcpcs_code": "J8501",
+            "j_code": "J8501"
+        },
+        {
+            "brand_name": "EUFLEXXA",
+            "hcpcs_code": "J7323",
+            "j_code": "J7323"
+        },
+        {
+            "brand_name": "FLEBOGAMMA",
+            "hcpcs_code": "J1572",
+            "j_code": "J1572"
+        },
+        {
+            "brand_name": "GAMIMUNE N",
+            "hcpcs_code": "J1561",
+            "j_code": "J1561"
+        },
+        {
+            "brand_name": "GAMIMUNE N",
+            "hcpcs_code": "J1566",
+            "j_code": "J1566"
+        },
+        {
+            "brand_name": "GAMMAGARD LIQUID",
+            "hcpcs_code": "J1569",
+            "j_code": "J1569"
+        },
+        {
+            "brand_name": "GEL-ONE",
+            "hcpcs_code": "J7326",
+            "j_code": "J7326"
+        },
+        {
+            "brand_name": "HIZENTRA",
+            "hcpcs_code": "J1559",
+            "j_code": "J1559"
+        },
+        {
+            "brand_name": "HUMIRA",
+            "hcpcs_code": "J0135",
+            "j_code": "J0135"
+        },
+        {
+            "brand_name": "HYALGAN",
+            "hcpcs_code": "J7315",
+            "j_code": "J7315"
+        },
+        {
+            "brand_name": "HYLENEX",
+            "hcpcs_code": "J3473",
+            "j_code": "J3473"
+        },
+        {
+            "brand_name": "HYPERRAB S-D",
+            "hcpcs_code": "90375",
+            "j_code": "90375"
+        },
+        {
+            "brand_name": "LEUKINE",
+            "hcpcs_code": "J2820",
+            "j_code": "J2820"
+        },
+        {
+            "brand_name": "LOVENOX",
+            "hcpcs_code": "J1650",
+            "j_code": "J1650"
+        },
+        {
+            "brand_name": "LUCENTIS",
+            "hcpcs_code": "J2778",
+            "j_code": "J2778"
+        },
+        {
+            "brand_name": "LUPRON DEPOT",
+            "hcpcs_code": "J1950",
+            "j_code": "J1950"
+        },
+        {
+            "brand_name": "LUPRON DEPOT-PED",
+            "hcpcs_code": "J9217",
+            "j_code": "J9217"
+        },
+        {
+            "brand_name": "MYFORTIC",
+            "hcpcs_code": "J7518",
+            "j_code": "J7518"
+        },
+        {
+            "brand_name": "NEULASTA",
+            "hcpcs_code": "J2505",
+            "j_code": "J2505"
+        },
+        {
+            "brand_name": "NEUPOGEN",
+            "hcpcs_code": "J1442",
+            "j_code": "J1442"
+        },
+        {
+            "brand_name": "ORENCIA",
+            "hcpcs_code": "J0129",
+            "j_code": "J0129"
+        },
+        {
+            "brand_name": "ORTHOVISC",
+            "hcpcs_code": "J7324",
+            "j_code": "J7324"
+        },
+        {
+            "brand_name": "PRIVIGEN",
+            "hcpcs_code": "J1459",
+            "j_code": "J1459"
+        },
+        {
+            "brand_name": "PROCRIT",
+            "hcpcs_code": "J0885",
+            "j_code": "J0885"
+        },
+        {
+            "brand_name": "PROGESTERONE-50",
+            "hcpcs_code": "J2675",
+            "j_code": "J2675"
+        },
+        {
+            "brand_name": "PROGRAF",
+            "hcpcs_code": "J7507",
+            "j_code": "J7507"
+        },
+        {
+            "brand_name": "PROLASTIN",
+            "hcpcs_code": "J0256",
+            "j_code": "J0256"
+        },
+        {
+            "brand_name": "PROLIA",
+            "hcpcs_code": "J0897",
+            "j_code": "J0897"
+        },
+        {
+            "brand_name": "RECOMBINATE",
+            "hcpcs_code": "J7192",
+            "j_code": "J7192"
+        },
+        {
+            "brand_name": "REMICADE",
+            "hcpcs_code": "J1745",
+            "j_code": "J1745"
+        },
+        {
+            "brand_name": "SANDOSTATIN",
+            "hcpcs_code": "J2354",
+            "j_code": "J2354"
+        },
+        {
+            "brand_name": "SANDOSTATIN LAR",
+            "hcpcs_code": "J2353",
+            "j_code": "J2353"
+        },
+        {
+            "brand_name": "SUPARTZ",
+            "hcpcs_code": "J7321",
+            "j_code": "J7321"
+        },
+        {
+            "brand_name": "SYNAGIS",
+            "hcpcs_code": "90378",
+            "j_code": "90378"
+        },
+        {
+            "brand_name": "SYNVISC",
+            "hcpcs_code": "J7325",
+            "j_code": "J7325"
+        },
+        {
+            "brand_name": "TOBI",
+            "hcpcs_code": "J7682",
+            "j_code": "J7682"
+        },
+        {
+            "brand_name": "TYSABRI",
+            "hcpcs_code": "J2323",
+            "j_code": "J2323"
+        },
+        {
+            "brand_name": "TYVASO",
+            "hcpcs_code": "J7686",
+            "j_code": "J7686"
+        },
+        {
+            "brand_name": "WINRHO SDF",
+            "hcpcs_code": "90386",
+            "j_code": "90386"
+        },
+        {
+            "brand_name": "XEOMIN",
+            "hcpcs_code": "J0588",
+            "j_code": "J0588"
+        },
+        {
+            "brand_name": "XIAFLEX",
+            "hcpcs_code": "J0775",
+            "j_code": "J0775"
+        },
+        {
+            "brand_name": "XOLAIR",
+            "hcpcs_code": "J2357",
+            "j_code": "J2357"
+        },
+        {
+            "brand_name": "ZOLEDRONIC ACID",
+            "hcpcs_code": "J3489",
+            "j_code": "J3489"
+        }
+    ],
+    "administration_rules_by_setting": {
+        "physician_office": {
+            "carve_out_applies": true,
+            "benefit_type": "pharmacy",
+            "redirect_required": true,
+            "prior_authorization_required": false,
+            "precertification_required": false,
+            "medical_plan_billed": false,
+            "routing": "regional_specialty_pharmacy"
+        },
+        "home_health_care": {
+            "carve_out_applies": true,
+            "benefit_type": "pharmacy",
+            "redirect_required": true,
+            "prior_authorization_required": false,
+            "precertification_required": false,
+            "medical_plan_billed": false,
+            "routing": "regional_specialty_pharmacy"
+        },
+        "inpatient_hospital": {
+            "carve_out_applies": false,
+            "benefit_type": "medical",
+            "redirect_required": false,
+            "prior_authorization_required": false,
+            "precertification_required": true,
+            "medical_plan_billed": true
+        },
+        "outpatient_hospital": {
+            "carve_out_applies": false,
+            "benefit_type": "medical",
+            "redirect_required": false,
+            "prior_authorization_required": false,
+            "precertification_required": true,
+            "medical_plan_billed": true
+        },
+        "emergency_room": {
+            "carve_out_applies": false,
+            "benefit_type": "medical",
+            "redirect_required": false,
+            "prior_authorization_required": false,
+            "precertification_required": "not_specified",
+            "medical_plan_billed": true
+        },
+        "urgent_care": {
+            "carve_out_applies": false,
+            "benefit_type": "medical",
+            "redirect_required": false,
+            "prior_authorization_required": false,
+            "precertification_required": "not_specified",
+            "medical_plan_billed": true
+        }
+    },
+    "regional_routing": {
+        "east_region": {
+            "pharmacy_name": "BJC Family Care Central Pharmacy",
+            "phone": "314-657-9000"
+        },
+        "west_region": {
+            "pharmacy_name": "Saint Luke’s Advanced Care Pharmacy",
+            "phone": "816-986-5510",
+            "applies_to": "Saint Luke’s providers"
+        }
+    },
+    "exceptions": {
+        "provider_level": [
+            {
+                "provider_group": "WASHU",
+                "billing_code": "MO917",
+                "billing_tin": "43-0653611",
+                "prior_authorization_required": false,
+                "notes": "Services billed under this TIN do not require prior authorization."
+            }
+        ],
+        "facility_level": [
+            {
+                "facility_name": "Mission Farms Ambulatory Infusion Clinic",
+                "allowed_to_bill_medical_directly": true,
+                "precertification_required": true
+            },
+            {
+                "facility_name": "Blue Springs Ambulatory Infusion Clinic",
+                "allowed_to_bill_medical_directly": true,
+                "precertification_required": true
+            }
+        ]
+    },
+    "summary": "This policy applies to 49 specialty drug HCPCS J-codes. When administered in physician office or home health settings, drugs must be obtained through the BJC Pharmacy Benefit Plan specialty pharmacy and are not billed to the medical plan; prior authorization is not required. When administered in inpatient, outpatient, emergency room, or urgent care settings, the carve-out does not apply; facilities may dispense and bill the medical benefit directly, and pre-certification is required."
+}

@@ -1,0 +1,17 @@
+{
+    "drug_rules": [],
+    "excluded_drug_list_in_hyperlink": false,
+    "excluded_drug_list_in_source_doc": false,
+    "metadata": {
+        "total_carve_out_drugs": null,
+        "source_document": null,
+        "policy_name": null,
+        "carve_out_applies_to": null,
+        "carve_out_excluded_from": null,
+        "client_name": null,
+        "specialty_pharmacy_vendor": null,
+        "additional_info": {
+            "analysis_reasoning": "In the source content, the PHARMACY section states that certain drugs are not covered outside emergencies, but it does not name any specific drugs, J-codes/HCPCS codes, or in-line exclusion rules tied to specific medications—so the in-source drug exclusion list is not clearly present. In the hyperlinks, although there are relevant file types (.xlsx, .pdf, .docx), the surrounding link context provides only general titles (e.g., 'Specialty medications Carve out to ESI', 'excluded dx list') without explicit evidence such as specific drug names, J-codes/HCPCS codes, or explicit 'exclusion list/non-covered' wording tied to drugs in the link sentence itself; the .docx links are for excluded diagnoses (not drugs). Therefore, the hyperlink criterion for an excluded drug list is not met."
+        }
+    }
+}

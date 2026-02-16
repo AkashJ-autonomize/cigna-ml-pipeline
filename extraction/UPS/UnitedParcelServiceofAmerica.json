@@ -1,0 +1,17 @@
+{
+    "drug_rules": [],
+    "excluded_drug_list_in_hyperlink": true,
+    "excluded_drug_list_in_source_doc": false,
+    "metadata": {
+        "total_carve_out_drugs": null,
+        "source_document": null,
+        "policy_name": null,
+        "carve_out_applies_to": null,
+        "carve_out_excluded_from": null,
+        "client_name": null,
+        "specialty_pharmacy_vendor": null,
+        "additional_info": {
+            "analysis_reasoning": "In-source CONTENT references exclusions at a category level (e.g., “a list of J-codes (specialty Rx) excluded” and GLP-1s for weight loss coverage change) but does not name specific drugs or specific J-codes/HCPCS codes inline, so the source flag is FALSE. The STRUCTURAL HYPERLINKS include .pdf/.xlsx files whose surrounding context explicitly states exclusion/carve-out handling for “J-codes” and includes the keyword “carved out” plus references to a “list of J codes,” which meets the hyperlink evidence requirement, so the hyperlink flag is TRUE."
+        }
+    }
+}

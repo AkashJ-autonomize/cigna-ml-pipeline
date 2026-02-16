@@ -1,0 +1,17 @@
+{
+    "drug_rules": [],
+    "excluded_drug_list_in_hyperlink": true,
+    "excluded_drug_list_in_source_doc": false,
+    "metadata": {
+        "total_carve_out_drugs": null,
+        "source_document": null,
+        "policy_name": null,
+        "carve_out_applies_to": null,
+        "carve_out_excluded_from": null,
+        "client_name": null,
+        "specialty_pharmacy_vendor": null,
+        "additional_info": {
+            "analysis_reasoning": "The source content discusses medical case management carve-outs by state and provides contact information, but it does not name any specific drugs, codes, or exclusion rules, so the in-source flag is FALSE. One structural hyperlink is an .xlsx labeled 'DBA Drug List' with explicit exclusion/authorization language ('codes MUST go through CVS for authorization if given SQ'), which is direct evidence of exclusion/authorization criteria tied to a drug list, so the hyperlink flag is TRUE. The travel expense form PDF is not exclusion-related."
+        }
+    }
+}

@@ -1,0 +1,1050 @@
+{
+    "client": {
+        "name": "JPMorganChase",
+        "aliases": [
+            "JPMC"
+        ],
+        "account_numbers": {
+            "primary": "3174696",
+            "florida_oklahoma_georgia_louisiana": "2501770",
+            "dental": "2498929"
+        },
+        "brand_experience": "Cigna",
+        "annual_review": {
+            "last_review_completed": "1.12.26",
+            "next_review_due": "1.12.27"
+        }
+    },
+    "policy": {
+        "policy_name": "CVS Caremark Drug Benefit Alignment (DBA) - Self-Administered Medications",
+        "policy_type": "pharmacy_dba_self_administered_drugs",
+        "effective_date": "Q4 2025",
+        "total_drugs_in_scope": 111,
+        "source_documents": [
+            "JPMorganChase.html (Medical and Pharmacy sections only)",
+            "MS011_30713A_58298_FNL_DBA_Drug_List_Q4_2025_Self_Admin.xlsx",
+            "Cigna_JPMorgan_Chase_Travel_Expense_Form.pdf"
+        ]
+    },
+    "medical_programs": {
+        "bariatric_surgery": {
+            "account_3174696": {
+                "case_management_required": true,
+                "pht_cm_engagement": "Customer must engage with dedicated PHT CM",
+                "calendar_group": "Calendar Group PHT YHF Pittsburgh JPMC (Bariatrics)",
+                "appointments": "1 hour managed in TruCare",
+                "intervention_tracking": "JPMC Bariatric Program engagement will be captured"
+            },
+            "account_2501770": {
+                "case_management_required": false,
+                "unlock_call_required": false,
+                "review_type": "Medical necessity ONLY",
+                "approval_contingency": "Approval of bariatric procedure IS NOT contingent on completing bariatric unlock call",
+                "note": "DO NOT search for bariatric unlock call. Do not handle bariatric case management under this account."
+            }
+        },
+        "fertility_infertility": {
+            "description": "Non-standard Fertility/Infertility Benefit",
+            "winfertility_engagement": {
+                "benefit_amount": "$35,000",
+                "effective_date": "7.1.24",
+                "previous_amount": "$30,000 LTM"
+            },
+            "no_winfertility_engagement": {
+                "benefit_amount": "$10,000 LTM"
+            },
+            "covered_services": [
+                "Elective cryopreservation of oocytes",
+                "Elective cryopreservation of sperm",
+                "Elective cryopreservation of embryos"
+            ],
+            "storage": "One-year storage",
+            "diagnosis_requirement": "Does not require diagnosis of Infertility"
+        },
+        "travel_benefit": {
+            "effective_date": "7.1.22",
+            "description": "Expanded Travel Benefit",
+            "radius_requirement": "50 miles",
+            "lifetime_maximum": {
+                "bariatric": "$10,000",
+                "transplant": "$10,000",
+                "all_other_medical": "$10,000",
+                "behavioral": "Unlimited"
+            },
+            "network_coverage": "In-Network Coverage Only",
+            "reimbursable_services": "Standard",
+            "claim_payment_type": "Claim Reimbursement",
+            "caregiver_allowance": "Yes, one companion",
+            "travel_expense_form": "Cigna JPMorgan Chase Travel Expense Form.pdf",
+            "eligible_expenses": {
+                "lodging": "Up to $50 per night, per person; up to $100 per night when traveling with a companion",
+                "airfare": "Round-trip coach or economy within the United States or from U.S. Virgin Islands, Puerto Rico or Guam to continental U.S., booked on U.S.-based airline carrier",
+                "transportation": [
+                    "Baggage fees for airline travel",
+                    "Bus fare",
+                    "Train fare",
+                    "Taxi fare",
+                    "Vehicle rentals",
+                    "Gasoline",
+                    "Highway tolls (not prepaid)",
+                    "Parking",
+                    "Shuttle services",
+                    "Wheelchair van service to travel from local housing to facility"
+                ]
+            },
+            "non_eligible_expenses": [
+                "Lodging expenses in excess of stated limits",
+                "Fines or traffic tickets",
+                "First-class airline rates",
+                "Food/meals/snacks/beverages",
+                "Loss of money or luggage damage",
+                "Pet care",
+                "Tires or tire service",
+                "Travel from outside United States (except U.S. Virgin Islands, Puerto Rico, Guam)",
+                "Travel or personal trip insurance",
+                "Vehicle maintenance or repairs",
+                "Vehicle deposits or insurance",
+                "Mileage",
+                "Prepayments for future lodging/rental dates"
+            ],
+            "approval_requirements": {
+                "prior_approval_required": true,
+                "contact_phone": "1.800.790.3086",
+                "approval_waiver": "In rare circumstances, approval may be waived"
+            },
+            "claim_submission": {
+                "email": "JPMCTravel@cigna.com",
+                "itemized_receipts_required": true,
+                "bank_statements_not_accepted": true,
+                "credit_card_statements_not_accepted": true,
+                "submission_deadline_after_termination": "30 days",
+                "annual_submission_deadline": "12/31 of the following year in which travel expenses were incurred"
+            }
+        },
+        "included_health_carve_out": {
+            "effective_date": "8.1.24",
+            "states_affected": [
+                "FL",
+                "GA",
+                "OK",
+                "LA"
+            ],
+            "services_carved_out": [
+                "Case Management (except Transplant and Gene Therapy)",
+                "Customer Service"
+            ],
+            "included_health_phone": "833.938.9874",
+            "referral_instruction": "Please refer customers to Included Health or warm transfer",
+            "cigna_retains": [
+                "UM",
+                "YHF Coaching programs"
+            ]
+        },
+        "healthy_pregnancies_healthy_babies": {
+            "note": "See Incentives section for more info"
+        }
+    },
+    "pharmacy": {
+        "vendor": "CVS Caremark",
+        "phone": "866.209.6093",
+        "prior_authorization_fax": "888.217.5371",
+        "appeals_fax": "866.689.3092",
+        "dba_program": {
+            "requirement": "The following codes MUST go through CVS for authorization if given SQ",
+            "drug_list_file": "MS011 30713A_58298 FNL DBA Drug List Q4 2025_Self Admin.xlsx",
+            "last_updated": "Q4 2025",
+            "total_drugs": 111
+        }
+    },
+    "dba_self_administered_drugs": [
+        {
+            "therapy_class": "AUTOIMMUNE DISORDERS",
+            "drug_name": "ABRILADA",
+            "generic_name": "ADALIMUMAB-AFZB",
+            "active_hcpcs": "Q5145",
+            "historical_hcpcs": "Q5132",
+            "route_of_administration": "SC"
+        },
+        {
+            "therapy_class": "SEIZURE DISORDERS",
+            "drug_name": "ACTHAR GEL",
+            "generic_name": "CORTICOTROPIN",
+            "active_hcpcs": "J0801",
+            "historical_hcpcs": null,
+            "route_of_administration": "IM, SC"
+        },
+        {
+            "therapy_class": "INFECTIOUS DISEASE",
+            "drug_name": "ACTIMMUNE",
+            "generic_name": "INTERFERON GAMMA-1B",
+            "active_hcpcs": "J9216",
+            "historical_hcpcs": null,
+            "route_of_administration": "SC"
+        },
+        {
+            "therapy_class": "AUTOIMMUNE DISORDERS",
+            "drug_name": "ADALIMUMAB-AACF",
+            "generic_name": "ADALIMUMAB-AACF",
+            "active_hcpcs": "Q5144",
+            "historical_hcpcs": null,
+            "route_of_administration": "SC"
+        },
+        {
+            "therapy_class": "AUTOIMMUNE DISORDERS",
+            "drug_name": "ADALIMUMAB-AATY",
+            "generic_name": "ADALIMUMAB-AATY",
+            "active_hcpcs": "Q5141",
+            "historical_hcpcs": null,
+            "route_of_administration": "SC"
+        },
+        {
+            "therapy_class": "AUTOIMMUNE DISORDERS",
+            "drug_name": "ADALIMUMAB-ADBM",
+            "generic_name": "ADALIMUMAB-ADBM",
+            "active_hcpcs": "Q5143",
+            "historical_hcpcs": null,
+            "route_of_administration": "SC"
+        },
+        {
+            "therapy_class": "AUTOIMMUNE DISORDERS",
+            "drug_name": "ADALIMUMAB-FKJP",
+            "generic_name": "ADALIMUMAB-FKJP",
+            "active_hcpcs": "Q5140",
+            "historical_hcpcs": null,
+            "route_of_administration": "SC"
+        },
+        {
+            "therapy_class": "AUTOIMMUNE DISORDERS",
+            "drug_name": "ADALIMUMAB-RYVK",
+            "generic_name": "ADALIMUMAB-RYVK",
+            "active_hcpcs": "Q5142",
+            "historical_hcpcs": null,
+            "route_of_administration": "SC"
+        },
+        {
+            "therapy_class": "HEMOPHILIA, VON WILLEBRAND DISEASE & RELATED BLEEDING DISORDERS",
+            "drug_name": "ADVATE",
+            "generic_name": "ANTIHEMOPHILIC FACTOR RAHF-PFM",
+            "active_hcpcs": "J7192",
+            "historical_hcpcs": null,
+            "route_of_administration": "IV"
+        },
+        {
+            "therapy_class": "HEMOPHILIA, VON WILLEBRAND DISEASE & RELATED BLEEDING DISORDERS",
+            "drug_name": "ADYNOVATE",
+            "generic_name": "ANTIHEMOPHILIC FACTOR (RECOMBINANT) PEGYLATED",
+            "active_hcpcs": "J7207",
+            "historical_hcpcs": null,
+            "route_of_administration": "IV"
+        },
+        {
+            "therapy_class": "ONCOLOGY-ORAL",
+            "drug_name": "AFINITOR",
+            "generic_name": "EVEROLIMUS",
+            "active_hcpcs": "J7527",
+            "historical_hcpcs": null,
+            "route_of_administration": "OR"
+        },
+        {
+            "therapy_class": "HEMOPHILIA, VON WILLEBRAND DISEASE & RELATED BLEEDING DISORDERS",
+            "drug_name": "AFSTYLA",
+            "generic_name": "ANTIHEMOPHILIC FACTOR (RECOMBINANT) SINGLE CHAIN",
+            "active_hcpcs": "J7210",
+            "historical_hcpcs": null,
+            "route_of_administration": "IV"
+        },
+        {
+            "therapy_class": "HEMOPHILIA, VON WILLEBRAND DISEASE & RELATED BLEEDING DISORDERS",
+            "drug_name": "ALHEMO",
+            "generic_name": "CONCIZUMAB-MTCI",
+            "active_hcpcs": "J7173",
+            "historical_hcpcs": null,
+            "route_of_administration": "SC"
+        },
+        {
+            "therapy_class": "HEMOPHILIA, VON WILLEBRAND DISEASE & RELATED BLEEDING DISORDERS",
+            "drug_name": "ALPHANATE",
+            "generic_name": "ANTIHEMOPHILIC FACTOR-VWF (HUMAN)",
+            "active_hcpcs": "J7186",
+            "historical_hcpcs": null,
+            "route_of_administration": "IV"
+        },
+        {
+            "therapy_class": "HEMOPHILIA, VON WILLEBRAND DISEASE & RELATED BLEEDING DISORDERS",
+            "drug_name": "ALPHANINE SD",
+            "generic_name": "COAGULATION FACTOR IX",
+            "active_hcpcs": "J7193",
+            "historical_hcpcs": null,
+            "route_of_administration": "IV"
+        },
+        {
+            "therapy_class": "HEMOPHILIA, VON WILLEBRAND DISEASE & RELATED BLEEDING DISORDERS",
+            "drug_name": "ALPROLIX",
+            "generic_name": "COAGULATION FACTOR IX (RFIXFC)",
+            "active_hcpcs": "J7201",
+            "historical_hcpcs": null,
+            "route_of_administration": "IV"
+        },
+        {
+            "therapy_class": "HEMOPHILIA, VON WILLEBRAND DISEASE & RELATED BLEEDING DISORDERS",
+            "drug_name": "ALTUVIIIO",
+            "generic_name": "ANTIHEMOPHILIC FACTOR (RECOMBINANT) FC-VWF-XTEN FUSION PROTEIN-EHTL",
+            "active_hcpcs": "J7214",
+            "historical_hcpcs": null,
+            "route_of_administration": "IV"
+        },
+        {
+            "therapy_class": "MOVEMENT DISORDERS",
+            "drug_name": "APOKYN",
+            "generic_name": "APOMORPHINE HCL",
+            "active_hcpcs": "J0364",
+            "historical_hcpcs": null,
+            "route_of_administration": "SC"
+        },
+        {
+            "therapy_class": "CRYOPYRIN-ASSOCIATED PERIODIC SYNDROMES",
+            "drug_name": "ARCALYST",
+            "generic_name": "RILONACEPT",
+            "active_hcpcs": "J2793",
+            "historical_hcpcs": null,
+            "route_of_administration": "SC"
+        },
+        {
+            "therapy_class": "MULTIPLE SCLEROSIS",
+            "drug_name": "AVONEX",
+            "generic_name": "INTERFERON BETA-1A",
+            "active_hcpcs": "J1826, Q3027",
+            "historical_hcpcs": null,
+            "route_of_administration": "IM"
+        },
+        {
+            "therapy_class": "HEMOPHILIA, VON WILLEBRAND DISEASE & RELATED BLEEDING DISORDERS",
+            "drug_name": "BENEFIX",
+            "generic_name": "COAGULATION FACTOR IX (RECOMBINANT)",
+            "active_hcpcs": "J7195",
+            "historical_hcpcs": null,
+            "route_of_administration": "IV"
+        },
+        {
+            "therapy_class": "MULTIPLE SCLEROSIS",
+            "drug_name": "BETASERON",
+            "generic_name": "INTERFERON BETA-1B",
+            "active_hcpcs": "J1830",
+            "historical_hcpcs": null,
+            "route_of_administration": "SC"
+        },
+        {
+            "therapy_class": "CYSTIC FIBROSIS",
+            "drug_name": "BETHKIS",
+            "generic_name": "TOBRAMYCIN",
+            "active_hcpcs": "J7682",
+            "historical_hcpcs": null,
+            "route_of_administration": "IN"
+        },
+        {
+            "therapy_class": "AUTOIMMUNE DISORDERS",
+            "drug_name": "CIMZIA (PREFILLED SYRINGE)",
+            "generic_name": "CERTOLIZUMAB PEGOL",
+            "active_hcpcs": "J0717",
+            "historical_hcpcs": null,
+            "route_of_administration": "SC"
+        },
+        {
+            "therapy_class": "HEMOPHILIA, VON WILLEBRAND DISEASE & RELATED BLEEDING DISORDERS",
+            "drug_name": "COAGADEX",
+            "generic_name": "COAGULATION FACTOR X (HUMAN)",
+            "active_hcpcs": "J7175",
+            "historical_hcpcs": null,
+            "route_of_administration": "IV"
+        },
+        {
+            "therapy_class": "MULTIPLE SCLEROSIS",
+            "drug_name": "COPAXONE",
+            "generic_name": "GLATIRAMER ACETATE",
+            "active_hcpcs": "J1595",
+            "historical_hcpcs": null,
+            "route_of_administration": "SC"
+        },
+        {
+            "therapy_class": "HEMOPHILIA, VON WILLEBRAND DISEASE & RELATED BLEEDING DISORDERS",
+            "drug_name": "CORIFACT",
+            "generic_name": "FACTOR XIII CONCENTRATE HUMAN",
+            "active_hcpcs": "J7180",
+            "historical_hcpcs": null,
+            "route_of_administration": "IV"
+        },
+        {
+            "therapy_class": "ENDOCRINE DISORDERS - OTHER",
+            "drug_name": "CORTROPHIN",
+            "generic_name": "CORTICOTROPIN",
+            "active_hcpcs": "J0802",
+            "historical_hcpcs": null,
+            "route_of_administration": "IM, SC"
+        },
+        {
+            "therapy_class": "AUTOIMMUNE DISORDERS",
+            "drug_name": "CYLTEZO",
+            "generic_name": "ADALIMUMAB-ADBM",
+            "active_hcpcs": "Q5143",
+            "historical_hcpcs": null,
+            "route_of_administration": "SC"
+        },
+        {
+            "therapy_class": "MOVEMENT DISORDERS",
+            "drug_name": "DUOPA",
+            "generic_name": "CARBIDOPA-LEVODOPA",
+            "active_hcpcs": "J7340",
+            "historical_hcpcs": null,
+            "route_of_administration": "EN"
+        },
+        {
+            "therapy_class": "HEMOPHILIA, VON WILLEBRAND DISEASE & RELATED BLEEDING DISORDERS",
+            "drug_name": "ELOCTATE",
+            "generic_name": "ANTIHEMOPHILIC FACTOR (RECOMB) FC FUSION PROTEIN (RFVIIIFC)",
+            "active_hcpcs": "J7205",
+            "historical_hcpcs": null,
+            "route_of_administration": "IV"
+        },
+        {
+            "therapy_class": "AUTOIMMUNE DISORDERS",
+            "drug_name": "ENBREL",
+            "generic_name": "ETANERCEPT",
+            "active_hcpcs": "J1438",
+            "historical_hcpcs": null,
+            "route_of_administration": "SC"
+        },
+        {
+            "therapy_class": "PULMONARY ARTERIAL HYPERTENSION",
+            "drug_name": "EPOPROSTENOL SODIUM",
+            "generic_name": "EPOPROSTENOL SODIUM",
+            "active_hcpcs": "J1325",
+            "historical_hcpcs": null,
+            "route_of_administration": "IV"
+        },
+        {
+            "therapy_class": "HEMOPHILIA, VON WILLEBRAND DISEASE & RELATED BLEEDING DISORDERS",
+            "drug_name": "ESPEROCT",
+            "generic_name": "ANTIHEMOPHILIC FACTOR (RECOMBINANT) GLYCOPEGYLATED-EXEI",
+            "active_hcpcs": "J7204",
+            "historical_hcpcs": null,
+            "route_of_administration": "IV"
+        },
+        {
+            "therapy_class": "ASTHMA",
+            "drug_name": "FASENRA PEN",
+            "generic_name": "BENRALIZUMAB",
+            "active_hcpcs": "J0517",
+            "historical_hcpcs": null,
+            "route_of_administration": "SC"
+        },
+        {
+            "therapy_class": "HEMOPHILIA, VON WILLEBRAND DISEASE & RELATED BLEEDING DISORDERS",
+            "drug_name": "FEIBA",
+            "generic_name": "ANTIINHIBITOR COAGULANT CMPLX",
+            "active_hcpcs": "J7198",
+            "historical_hcpcs": null,
+            "route_of_administration": "IV"
+        },
+        {
+            "therapy_class": "HEREDITARY ANGIOEDEMA",
+            "drug_name": "FIRAZYR",
+            "generic_name": "ICATIBANT ACETATE",
+            "active_hcpcs": "J1744",
+            "historical_hcpcs": null,
+            "route_of_administration": "SC"
+        },
+        {
+            "therapy_class": "PULMONARY ARTERIAL HYPERTENSION",
+            "drug_name": "FLOLAN",
+            "generic_name": "EPOPROSTENOL SODIUM",
+            "active_hcpcs": "J1325",
+            "historical_hcpcs": null,
+            "route_of_administration": "IV"
+        },
+        {
+            "therapy_class": "INFERTILITY",
+            "drug_name": "FOLLISTIM AQ",
+            "generic_name": "FOLLITROPIN BETA",
+            "active_hcpcs": "S0128",
+            "historical_hcpcs": null,
+            "route_of_administration": "IM, SC"
+        },
+        {
+            "therapy_class": "OSTEOPOROSIS",
+            "drug_name": "FORTEO",
+            "generic_name": "TERIPARATIDE (RECOMBINANT)",
+            "active_hcpcs": "J3110",
+            "historical_hcpcs": null,
+            "route_of_administration": "SC"
+        },
+        {
+            "therapy_class": "HIV MEDICATIONS",
+            "drug_name": "FUZEON",
+            "generic_name": "ENFUVIRTIDE",
+            "active_hcpcs": "J1324",
+            "historical_hcpcs": null,
+            "route_of_administration": "SC"
+        },
+        {
+            "therapy_class": "INFERTILITY",
+            "drug_name": "FYREMADEL",
+            "generic_name": "GANIRELIX ACETATE",
+            "active_hcpcs": "S0132",
+            "historical_hcpcs": null,
+            "route_of_administration": "SC"
+        },
+        {
+            "therapy_class": "INFERTILITY",
+            "drug_name": "GANIRELIX ACETATE",
+            "generic_name": "GANIRELIX ACETATE",
+            "active_hcpcs": "S0132",
+            "historical_hcpcs": null,
+            "route_of_administration": "SC"
+        },
+        {
+            "therapy_class": "ONCOLOGY-ORAL",
+            "drug_name": "GEFITINIB",
+            "generic_name": "GEFITINIB",
+            "active_hcpcs": "J8565",
+            "historical_hcpcs": null,
+            "route_of_administration": "OR"
+        },
+        {
+            "therapy_class": "GROWTH HORMONE & RELATED DISORDERS",
+            "drug_name": "GENOTROPIN",
+            "generic_name": "SOMATROPIN",
+            "active_hcpcs": "J2941",
+            "historical_hcpcs": null,
+            "route_of_administration": "SC"
+        },
+        {
+            "therapy_class": "MULTIPLE SCLEROSIS",
+            "drug_name": "GLATOPA",
+            "generic_name": "GLATIRAMER ACETATE",
+            "active_hcpcs": "J1595",
+            "historical_hcpcs": null,
+            "route_of_administration": "SC"
+        },
+        {
+            "therapy_class": "ONCOLOGY-ORAL",
+            "drug_name": "GLEEVEC",
+            "generic_name": "IMATINIB MESYLATE",
+            "active_hcpcs": "S0088",
+            "historical_hcpcs": null,
+            "route_of_administration": "OR"
+        },
+        {
+            "therapy_class": "INFERTILITY",
+            "drug_name": "GONAL-F",
+            "generic_name": "FOLLITROPIN ALFA",
+            "active_hcpcs": "S0126",
+            "historical_hcpcs": null,
+            "route_of_administration": "SC"
+        },
+        {
+            "therapy_class": "HEREDITARY ANGIOEDEMA",
+            "drug_name": "HAEGARDA",
+            "generic_name": "C1 ESTERASE INHIBITOR (HUMAN)",
+            "active_hcpcs": "J0599",
+            "historical_hcpcs": null,
+            "route_of_administration": "SC"
+        },
+        {
+            "therapy_class": "HEMOPHILIA, VON WILLEBRAND DISEASE & RELATED BLEEDING DISORDERS",
+            "drug_name": "HEMLIBRA",
+            "generic_name": "EMICIZUMAB-KXWH",
+            "active_hcpcs": "J7170",
+            "historical_hcpcs": null,
+            "route_of_administration": "SC"
+        },
+        {
+            "therapy_class": "HEMOPHILIA, VON WILLEBRAND DISEASE & RELATED BLEEDING DISORDERS",
+            "drug_name": "HEMOFIL M",
+            "generic_name": "ANTIHEMOPHILIC FACTOR (HUMAN)",
+            "active_hcpcs": "J7190",
+            "historical_hcpcs": null,
+            "route_of_administration": "IV"
+        },
+        {
+            "therapy_class": "UNCLASSIFIED - HEMOPHILIA",
+            "drug_name": "HEMOPHILIA CLOTTING FACTOR, NOT OTHERWISE CLASSIFIED",
+            "generic_name": "HEMOPHILIA CLOTTING FACTOR, NOT OTHERWISE CLASSIFIED",
+            "active_hcpcs": "J7199",
+            "historical_hcpcs": null,
+            "route_of_administration": "IV"
+        },
+        {
+            "therapy_class": "AUTOIMMUNE DISORDERS",
+            "drug_name": "HULIO",
+            "generic_name": "ADALIMUMAB-FKJP",
+            "active_hcpcs": "Q5140",
+            "historical_hcpcs": null,
+            "route_of_administration": "SC"
+        },
+        {
+            "therapy_class": "HEMOPHILIA, VON WILLEBRAND DISEASE & RELATED BLEEDING DISORDERS",
+            "drug_name": "HUMATE-P",
+            "generic_name": "ANTIHEMOPHILIC FACTOR-VWF (HUMAN)",
+            "active_hcpcs": "J7187",
+            "historical_hcpcs": null,
+            "route_of_administration": "IV"
+        },
+        {
+            "therapy_class": "GROWTH HORMONE & RELATED DISORDERS",
+            "drug_name": "HUMATROPE",
+            "generic_name": "SOMATROPIN",
+            "active_hcpcs": "J2941",
+            "historical_hcpcs": null,
+            "route_of_administration": "SC"
+        },
+        {
+            "therapy_class": "AUTOIMMUNE DISORDERS",
+            "drug_name": "HUMIRA",
+            "generic_name": "ADALIMUMAB",
+            "active_hcpcs": "J0139",
+            "historical_hcpcs": "J0135",
+            "route_of_administration": "SC"
+        },
+        {
+            "therapy_class": "ONCOLOGY-ORAL",
+            "drug_name": "HYCAMTIN",
+            "generic_name": "TOPOTECAN HCL",
+            "active_hcpcs": "J8705",
+            "historical_hcpcs": null,
+            "route_of_administration": "OR"
+        },
+        {
+            "therapy_class": "HEMOPHILIA, VON WILLEBRAND DISEASE & RELATED BLEEDING DISORDERS",
+            "drug_name": "HYMPAVZI",
+            "generic_name": "MARSTACIMAB",
+            "active_hcpcs": "J7172",
+            "historical_hcpcs": null,
+            "route_of_administration": "SC"
+        },
+        {
+            "therapy_class": "HEMOPHILIA, VON WILLEBRAND DISEASE & RELATED BLEEDING DISORDERS",
+            "drug_name": "IDELVION",
+            "generic_name": "COAGULATION FACTOR IX RECOMB ALBUMIN FUSION PROTEIN (RIX-FP)",
+            "active_hcpcs": "J7202",
+            "historical_hcpcs": null,
+            "route_of_administration": "IV"
+        },
+        {
+            "therapy_class": "ONCOLOGY-ORAL",
+            "drug_name": "IRESSA",
+            "generic_name": "GEFITINIB",
+            "active_hcpcs": "J8565",
+            "historical_hcpcs": null,
+            "route_of_administration": "OR"
+        },
+        {
+            "therapy_class": "HEMOPHILIA, VON WILLEBRAND DISEASE & RELATED BLEEDING DISORDERS",
+            "drug_name": "IXINITY",
+            "generic_name": "COAGULATION FACTOR IX (RECOMBINANT)",
+            "active_hcpcs": "J7213",
+            "historical_hcpcs": null,
+            "route_of_administration": "IV"
+        },
+        {
+            "therapy_class": "HEMOPHILIA, VON WILLEBRAND DISEASE & RELATED BLEEDING DISORDERS",
+            "drug_name": "JIVI",
+            "generic_name": "ANTIHEMOPHILIC FACTOR (RECOMBINANT) PEGYLATED-AUCL",
+            "active_hcpcs": "J7208",
+            "historical_hcpcs": null,
+            "route_of_administration": "IV"
+        },
+        {
+            "therapy_class": "CYSTIC FIBROSIS",
+            "drug_name": "KITABIS PAK",
+            "generic_name": "TOBRAMYCIN SULFATE",
+            "active_hcpcs": "J7682",
+            "historical_hcpcs": null,
+            "route_of_administration": "IN"
+        },
+        {
+            "therapy_class": "HEMOPHILIA, VON WILLEBRAND DISEASE & RELATED BLEEDING DISORDERS",
+            "drug_name": "KOATE",
+            "generic_name": "ANTIHEMOPHILIC FACTOR (HUMAN)",
+            "active_hcpcs": "J7190",
+            "historical_hcpcs": null,
+            "route_of_administration": "IV"
+        },
+        {
+            "therapy_class": "HEMOPHILIA, VON WILLEBRAND DISEASE & RELATED BLEEDING DISORDERS",
+            "drug_name": "KOGENATE",
+            "generic_name": "ANTIHEMOPHILIC FACTOR (RECOMBINANT)",
+            "active_hcpcs": "J7192",
+            "historical_hcpcs": null,
+            "route_of_administration": "IV"
+        },
+        {
+            "therapy_class": "HEMOPHILIA, VON WILLEBRAND DISEASE & RELATED BLEEDING DISORDERS",
+            "drug_name": "KOVALTRY",
+            "generic_name": "ANTIHEMOPHILIC FACTOR (RECOMBINANT)",
+            "active_hcpcs": "J7211",
+            "historical_hcpcs": null,
+            "route_of_administration": "IV"
+        },
+        {
+            "therapy_class": "INFERTILITY",
+            "drug_name": "MENOPUR",
+            "generic_name": "MENOTROPINS",
+            "active_hcpcs": "S0122",
+            "historical_hcpcs": null,
+            "route_of_administration": "SC"
+        },
+        {
+            "therapy_class": "GROWTH HORMONE & RELATED DISORDERS",
+            "drug_name": "NORDITROPIN",
+            "generic_name": "SOMATROPIN",
+            "active_hcpcs": "J2941",
+            "historical_hcpcs": null,
+            "route_of_administration": "SC"
+        },
+        {
+            "therapy_class": "INFERTILITY",
+            "drug_name": "NOVAREL",
+            "generic_name": "CHORIONIC GONADOTROPIN",
+            "active_hcpcs": "J0725",
+            "historical_hcpcs": null,
+            "route_of_administration": "IM"
+        },
+        {
+            "therapy_class": "HEMOPHILIA, VON WILLEBRAND DISEASE & RELATED BLEEDING DISORDERS",
+            "drug_name": "NOVOEIGHT",
+            "generic_name": "ANTIHEMOPHILIC FACTOR (RECOMBINANT)",
+            "active_hcpcs": "J7182",
+            "historical_hcpcs": null,
+            "route_of_administration": "IV"
+        },
+        {
+            "therapy_class": "HEMOPHILIA, VON WILLEBRAND DISEASE & RELATED BLEEDING DISORDERS",
+            "drug_name": "NOVOSEVEN RT",
+            "generic_name": "COAGULATION FACTOR VIIA (RECOMBINANT)",
+            "active_hcpcs": "J7189",
+            "historical_hcpcs": null,
+            "route_of_administration": "IV"
+        },
+        {
+            "therapy_class": "ASTHMA",
+            "drug_name": "NUCALA (PREFILLED SYRINGE/AUTO-INJECTOR)",
+            "generic_name": "MEPOLIZUMAB",
+            "active_hcpcs": "J2182",
+            "historical_hcpcs": null,
+            "route_of_administration": "SC"
+        },
+        {
+            "therapy_class": "GROWTH HORMONE & RELATED DISORDERS",
+            "drug_name": "NUTROPIN",
+            "generic_name": "SOMATROPIN",
+            "active_hcpcs": "J2941",
+            "historical_hcpcs": null,
+            "route_of_administration": "SC"
+        },
+        {
+            "therapy_class": "HEMOPHILIA, VON WILLEBRAND DISEASE & RELATED BLEEDING DISORDERS",
+            "drug_name": "NUWIQ",
+            "generic_name": "ANTIHEMOPHILIC FACTOR (RECOMB B-DOMAIN DELETED) (BDD-RFVIII)",
+            "active_hcpcs": "J7209",
+            "historical_hcpcs": null,
+            "route_of_administration": "IV"
+        },
+        {
+            "therapy_class": "GROWTH HORMONE & RELATED DISORDERS",
+            "drug_name": "OMNITROPE",
+            "generic_name": "SOMATROPIN",
+            "active_hcpcs": "J2941",
+            "historical_hcpcs": null,
+            "route_of_administration": "SC"
+        },
+        {
+            "therapy_class": "RHEUMATOID ARTHRITIS",
+            "drug_name": "ORENCIA (PREFILLED SYRINGE/ CLICKJET AUTO-INJECTOR)",
+            "generic_name": "ABATACEPT",
+            "active_hcpcs": "J0129",
+            "historical_hcpcs": null,
+            "route_of_administration": "SC"
+        },
+        {
+            "therapy_class": "HEPATITIS C",
+            "drug_name": "PEGASYS",
+            "generic_name": "PEGINTERFERON ALFA-2A",
+            "active_hcpcs": "S0145",
+            "historical_hcpcs": null,
+            "route_of_administration": "SC"
+        },
+        {
+            "therapy_class": "INFERTILITY",
+            "drug_name": "PREGNYL",
+            "generic_name": "CHORIONIC GONADOTROPIN",
+            "active_hcpcs": "J0725",
+            "historical_hcpcs": null,
+            "route_of_administration": "IM"
+        },
+        {
+            "therapy_class": "HEMOPHILIA, VON WILLEBRAND DISEASE & RELATED BLEEDING DISORDERS",
+            "drug_name": "PROFILNINE SD",
+            "generic_name": "FACTOR IX COMPLEX",
+            "active_hcpcs": "J7194",
+            "historical_hcpcs": null,
+            "route_of_administration": "IV"
+        },
+        {
+            "therapy_class": "CYSTIC FIBROSIS",
+            "drug_name": "PULMOZYME",
+            "generic_name": "DORNASE ALFA",
+            "active_hcpcs": "J7639",
+            "historical_hcpcs": null,
+            "route_of_administration": "IN"
+        },
+        {
+            "therapy_class": "AUTOIMMUNE DISORDERS",
+            "drug_name": "PYZCHIVA",
+            "generic_name": "USTEKINUMAB-TTWE",
+            "active_hcpcs": "Q9996",
+            "historical_hcpcs": null,
+            "route_of_administration": "SC"
+        },
+        {
+            "therapy_class": "MULTIPLE SCLEROSIS",
+            "drug_name": "REBIF",
+            "generic_name": "INTERFERON BETA-1A",
+            "active_hcpcs": "Q3028, J1826",
+            "historical_hcpcs": null,
+            "route_of_administration": "SC"
+        },
+        {
+            "therapy_class": "HEMOPHILIA, VON WILLEBRAND DISEASE & RELATED BLEEDING DISORDERS",
+            "drug_name": "REBINYN",
+            "generic_name": "COAGULATION FACTOR IX (RECOMBINANT) GLYCOPEGYLATED",
+            "active_hcpcs": "J7203",
+            "historical_hcpcs": null,
+            "route_of_administration": "IV"
+        },
+        {
+            "therapy_class": "HEMOPHILIA, VON WILLEBRAND DISEASE & RELATED BLEEDING DISORDERS",
+            "drug_name": "RECOMBINATE",
+            "generic_name": "ANTIHEMOPHILIC FACTOR (RECOMBINANT)",
+            "active_hcpcs": "J7192",
+            "historical_hcpcs": null,
+            "route_of_administration": "IV"
+        },
+        {
+            "therapy_class": "PULMONARY ARTERIAL HYPERTENSION",
+            "drug_name": "REMODULIN",
+            "generic_name": "TREPROSTINIL SODIUM",
+            "active_hcpcs": "J3285",
+            "historical_hcpcs": null,
+            "route_of_administration": "IV, SC"
+        },
+        {
+            "therapy_class": "PULMONARY ARTERIAL HYPERTENSION",
+            "drug_name": "REVATIO",
+            "generic_name": "SILDENAFIL CITRATE",
+            "active_hcpcs": "S0090",
+            "historical_hcpcs": null,
+            "route_of_administration": "IV, OR"
+        },
+        {
+            "therapy_class": "HEMOPHILIA, VON WILLEBRAND DISEASE & RELATED BLEEDING DISORDERS",
+            "drug_name": "RIXUBIS",
+            "generic_name": "COAGULATION FACTOR IX (RECOMBINANT)",
+            "active_hcpcs": "J7200",
+            "historical_hcpcs": null,
+            "route_of_administration": "IV"
+        },
+        {
+            "therapy_class": "HEREDITARY ANGIOEDEMA",
+            "drug_name": "SAJAZIR",
+            "generic_name": "ICATIBANT ACETATE",
+            "active_hcpcs": "J1744",
+            "historical_hcpcs": null,
+            "route_of_administration": "SC"
+        },
+        {
+            "therapy_class": "GROWTH HORMONE & RELATED DISORDERS",
+            "drug_name": "SEROSTIM",
+            "generic_name": "SOMATROPIN",
+            "active_hcpcs": "J2941",
+            "historical_hcpcs": null,
+            "route_of_administration": "SC"
+        },
+        {
+            "therapy_class": "HEMOPHILIA, VON WILLEBRAND DISEASE & RELATED BLEEDING DISORDERS",
+            "drug_name": "SEVENFACT",
+            "generic_name": "COAGULATION FACTOR VIIA (RECOMBINANT)-JNCW",
+            "active_hcpcs": "J7212",
+            "historical_hcpcs": null,
+            "route_of_administration": "IV"
+        },
+        {
+            "therapy_class": "AUTOIMMUNE DISORDERS",
+            "drug_name": "SIMLANDI",
+            "generic_name": "ADALIMUMAB-RYVK",
+            "active_hcpcs": "Q5142",
+            "historical_hcpcs": null,
+            "route_of_administration": "SC"
+        },
+        {
+            "therapy_class": "AUTOIMMUNE DISORDERS",
+            "drug_name": "STELARA",
+            "generic_name": "USTEKINUMAB",
+            "active_hcpcs": "J3357",
+            "historical_hcpcs": null,
+            "route_of_administration": "SC"
+        },
+        {
+            "therapy_class": "HEREDITARY ANGIOEDEMA",
+            "drug_name": "TAKHZYRO",
+            "generic_name": "LADELUMAB-FLYO",
+            "active_hcpcs": "J0593",
+            "historical_hcpcs": null,
+            "route_of_administration": "SC"
+        },
+        {
+            "therapy_class": "ONCOLOGY-ORAL",
+            "drug_name": "TEMODAR",
+            "generic_name": "TEMOZOLOMIDE",
+            "active_hcpcs": "J8700",
+            "historical_hcpcs": null,
+            "route_of_administration": "OR"
+        },
+        {
+            "therapy_class": "ASTHMA",
+            "drug_name": "TEZSPIRE PEN",
+            "generic_name": "TEZEPELUMAB-EKKO",
+            "active_hcpcs": "J2356",
+            "historical_hcpcs": null,
+            "route_of_administration": "SC"
+        },
+        {
+            "therapy_class": "CYSTIC FIBROSIS",
+            "drug_name": "TOBI",
+            "generic_name": "TOBRAMYCIN",
+            "active_hcpcs": "J7682",
+            "historical_hcpcs": null,
+            "route_of_administration": "IN"
+        },
+        {
+            "therapy_class": "HEMOPHILIA, VON WILLEBRAND DISEASE & RELATED BLEEDING DISORDERS",
+            "drug_name": "TRETTEN",
+            "generic_name": "COAGULATION FACTOR XIII A-SUB",
+            "active_hcpcs": "J7181, J7180",
+            "historical_hcpcs": null,
+            "route_of_administration": "IV"
+        },
+        {
+            "therapy_class": "PULMONARY ARTERIAL HYPERTENSION",
+            "drug_name": "TYVASO",
+            "generic_name": "TREPROSTINIL",
+            "active_hcpcs": "J7686",
+            "historical_hcpcs": null,
+            "route_of_administration": "IN"
+        },
+        {
+            "therapy_class": "AUTOIMMUNE DISORDERS",
+            "drug_name": "USTEKINUMAB",
+            "generic_name": "USTEKINUMAB",
+            "active_hcpcs": "J3357",
+            "historical_hcpcs": null,
+            "route_of_administration": "SC"
+        },
+        {
+            "therapy_class": "AUTOIMMUNE DISORDERS",
+            "drug_name": "USTEKINUMAB-TTWE",
+            "generic_name": "USTEKINUMAB-TTWE",
+            "active_hcpcs": "Q9996",
+            "historical_hcpcs": null,
+            "route_of_administration": "SC"
+        },
+        {
+            "therapy_class": "PULMONARY ARTERIAL HYPERTENSION",
+            "drug_name": "VELETRI",
+            "generic_name": "EPOPROSTENOL SODIUM",
+            "active_hcpcs": "J1325",
+            "historical_hcpcs": null,
+            "route_of_administration": "IV"
+        },
+        {
+            "therapy_class": "PULMONARY ARTERIAL HYPERTENSION",
+            "drug_name": "VENTAVIS",
+            "generic_name": "ILOPROST",
+            "active_hcpcs": "Q4074",
+            "historical_hcpcs": null,
+            "route_of_administration": "IN"
+        },
+        {
+            "therapy_class": "HEMOPHILIA, VON WILLEBRAND DISEASE & RELATED BLEEDING DISORDERS",
+            "drug_name": "VONVENDI",
+            "generic_name": "VON WILLEBRAND FACTOR (RECOMBINANT)",
+            "active_hcpcs": "J7179",
+            "historical_hcpcs": null,
+            "route_of_administration": "IV"
+        },
+        {
+            "therapy_class": "AUTOIMMUNE DISORDERS",
+            "drug_name": "WEZLANA",
+            "generic_name": "USTEKINUMAB-AUUB",
+            "active_hcpcs": "Q5137",
+            "historical_hcpcs": null,
+            "route_of_administration": "SC"
+        },
+        {
+            "therapy_class": "HEMOPHILIA, VON WILLEBRAND DISEASE & RELATED BLEEDING DISORDERS",
+            "drug_name": "WILATE",
+            "generic_name": "ANTIHEMOPHILIC FACTOR-VWF (HUMAN)",
+            "active_hcpcs": "J7183",
+            "historical_hcpcs": null,
+            "route_of_administration": "IV"
+        },
+        {
+            "therapy_class": "ONCOLOGY-ORAL",
+            "drug_name": "XELODA",
+            "generic_name": "CAPECITABINE",
+            "active_hcpcs": "J8522",
+            "historical_hcpcs": "J8520, J8521",
+            "route_of_administration": "OR"
+        },
+        {
+            "therapy_class": "ASTHMA",
+            "drug_name": "XOLAIR (PREFILLED SYRINGE/AUTO-INJECTOR)",
+            "generic_name": "OMALIZUMAB",
+            "active_hcpcs": "J2357",
+            "historical_hcpcs": null,
+            "route_of_administration": "SC"
+        },
+        {
+            "therapy_class": "HEMOPHILIA, VON WILLEBRAND DISEASE & RELATED BLEEDING DISORDERS",
+            "drug_name": "XYNTHA",
+            "generic_name": "ANTIHEMOPHILIC FACTOR RECOMBINANT PAF",
+            "active_hcpcs": "J7185",
+            "historical_hcpcs": null,
+            "route_of_administration": "IV"
+        },
+        {
+            "therapy_class": "AUTOIMMUNE DISORDERS",
+            "drug_name": "YUFLYMA",
+            "generic_name": "ADALIMUMAB-AATY",
+            "active_hcpcs": "Q5141",
+            "historical_hcpcs": null,
+            "route_of_administration": "SC"
+        },
+        {
+            "therapy_class": "GROWTH HORMONE & RELATED DISORDERS",
+            "drug_name": "ZOMACTON",
+            "generic_name": "SOMATROPIN",
+            "active_hcpcs": "J2941",
+            "historical_hcpcs": null,
+            "route_of_administration": "SC"
+        },
+        {
+            "therapy_class": "AUTOIMMUNE DISORDERS",
+            "drug_name": "ZYMFENTRA",
+            "generic_name": "INFLIXIMAB-DYYB",
+            "active_hcpcs": "J1748",
+            "historical_hcpcs": null,
+            "route_of_administration": "SC"
+        }
+    ],
+    "summary": "JPMorgan Chase operates under multiple account numbers with specific bariatric surgery requirements differentiated by account (3174696 requires PHT CM engagement, 2501770 does not). The account offers a non-standard fertility/infertility benefit with tiered coverage based on WinFertility engagement ($35,000 with WinFertility vs $10,000 without, effective 7.1.24), covering elective cryopreservation without requiring an infertility diagnosis. An Expanded Travel Benefit effective 7.1.22 provides reimbursement for in-network services beyond 50 miles with lifetime maximums of $10,000 for bariatric, transplant, and other medical services (unlimited for behavioral). Effective 8.1.24, case management (except Transplant and Gene Therapy) and customer service for FL, GA, OK, and LA residents are carved out to Included Health (833.938.9874), while Cigna retains UM and YHF Coaching programs. The pharmacy benefit includes a CVS Caremark DBA program requiring 111 self-administered specialty medications to go through CVS for authorization if given subcutaneously."
+}

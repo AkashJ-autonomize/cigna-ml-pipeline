@@ -1,0 +1,12 @@
+{
+    "medical": {
+        "text": [],
+        "hyperlinks": [],
+        "has_link": false
+    },
+    "pharmacy": {
+        "text": [],
+        "hyperlinks": [],
+        "has_link": false
+    }
+}

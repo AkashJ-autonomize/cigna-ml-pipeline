@@ -1,0 +1,52 @@
+{
+    "medical": {
+        "text": [
+            "See Source System",
+            "Healthy Pregnancies, Healthy Babies - See Incentives section (#Incentives:) for more info",
+            "Bariatric Benefit Coverage - For benefit coverage for bariatric surgery - Customer must engage with dedicated PHT CM if member is under JPMC account #3174696. - If member is under JPMC account #3174696, Refer to Calendar Group PHT YHF Pittsburgh JPMC (Bariatrics) for dedicated Bariatric PHT CMs – appointments are 1 hour and managed in TruCare - Under account number 3174696, When a customer has engaged the intervention (JPMC Bariatric Program) will be captured - If the customer is under account #2501770, DO NOT search for bariatric unlock call. Under account #2501770, we do not handle the bariatric case management and ONLY review for medical necessity. Approval of a bariatric procedure IS NOT contingent on completing a bariatric unlock call.",
+            "Non-standard Fertility/Infertility Benefit",
+            "If member engages with WinFertility, benefit is $30,000 LTM. Effective 7.1.24, this amount is increased to $35,000",
+            "If member does not engage with WinFertility, benefit is $10,000 LTM",
+            "Benefit covers elective cryopreservation of oocytes, sperm, and embryos with one-year storage.",
+            "Does not require diagnosis of Infertility.",
+            "Expanded Travel Benefit",
+            "Effective Travel Benefit: 7.1.22",
+            "Travel Beyond Radius: 50 miles",
+            "Lifetime Maximum:",
+            "Bariatric: $10,000",
+            "Transplant: $10,000",
+            "All other medical: $10,000",
+            "Behavioral: Unlimited",
+            "In-Network Coverage Only",
+            "Reimbursable Travel Services: Standard",
+            "Travel Claim Payment Type: Claim Reimbursement",
+            "Travel for Caregiver: Yes, one companion",
+            "Travel Expense Form (local_path/JPMorgan Chase/Cigna JPMorgan Chase Travel Expense Form.pdf)",
+            "Effective 8.1.24, Case Management (except Transplant and Gene Therapy) and Customer Service will be carved out for residents of FL, GA, OK, and LA to Included Health. Please refer customers to Included Health at 833.938.9874 or warm transfer. Cigna will retain UM and YHF Coaching programs."
+        ],
+        "hyperlinks": [
+            {
+                "text": "Travel Expense Form (local_path/JPMorgan Chase/Cigna JPMorgan Chase Travel Expense Form.pdf)",
+                "url": "local_path/JPMorgan Chase/Cigna JPMorgan Chase Travel Expense Form.pdf",
+                "local_path": null
+            }
+        ],
+        "has_link": true
+    },
+    "pharmacy": {
+        "text": [
+            "Caremark Pharmacy 866.209.6093",
+            "Prior Auth fax: 888.217.5371",
+            "Appeals fax: 866.689.3092",
+            "The following codes MUST go through CVS for authorization if given SQ: Drug List (local_path/JPMorgan Chase/MS011 30713A_58298 FNL DBA Drug List Q4 2025_Self Admin.xlsx) (updated Q4 2025)"
+        ],
+        "hyperlinks": [
+            {
+                "text": "The following codes MUST go through CVS for authorization if given SQ: Drug List (local_path/JPMorgan Chase/MS011 30713A_58298 FNL DBA Drug List Q4 2025_Self Admin.xlsx) (updated Q4 2025)",
+                "url": "local_path/JPMorgan Chase/MS011 30713A_58298 FNL DBA Drug List Q4 2025_Self Admin.xlsx",
+                "local_path": null
+            }
+        ],
+        "has_link": true
+    }
+}

@@ -1,0 +1,73 @@
+{
+    "medical": {
+        "text": [
+            "See Source System",
+            "Health Matters Care Management",
+            "Healthy Pregnancies, Healthy Babies - See Incentives section (#Incentives:) for more info",
+            "Effective 1.1.20, Virtual Second Opinions by The Cleveland Clinic.",
+            "The program can be accessed via the Cleveland Clinic's Second Opinion link in the popular links section of MyCigna.com or by going directly to: https://cigna.virtual2ndopinionbycc.io",
+            "Hinge Health 855.902.2777 or https://www.hingehealth.com/for/maritz/"
+        ],
+        "hyperlinks": [],
+        "has_link": false
+    },
+    "pharmacy": {
+        "text": [
+            "Express Scripts 800.953.3379 or www.express-scripts.com",
+            "MCM Drug List",
+            "2023",
+            "MCM Drug List (Q3 (local_path/MaritzHolding/2023 MCM Drug List Q3.xlsx))",
+            "MCM Drug List (Q2 (local_path/MaritzHolding/2023 MCM Drug List Q2.xlsx))",
+            "MCM Drug List (Q1) (local_path/MaritzHolding/2023 MCM Drug List Q1.XLSX)",
+            "2022",
+            "MCM Drug List (Q4) (local_path/MaritzHolding/2022 MCM Drug List Q4.XLSX)",
+            "MCM Drug List (Q3) (local_path/MaritzHolding/2022 MCM Drug List (Q3).XLSX)",
+            "MCM Drug List (Q2) (local_path/MaritzHolding/2022 MCM Drug List Q2.XLSX)",
+            "MCM Drug List (Q1) (local_path/MaritzHolding/2022 MCM Drug List.XLSX)",
+            "MCM Drug List (local_path/MaritzHolding/MCM Drug List.XLSX)"
+        ],
+        "hyperlinks": [
+            {
+                "text": "MCM Drug List (Q3 (local_path/MaritzHolding/2023 MCM Drug List Q3.xlsx))",
+                "url": "local_path/MaritzHolding/2023 MCM Drug List Q3.xlsx",
+                "local_path": null
+            },
+            {
+                "text": "MCM Drug List (Q2 (local_path/MaritzHolding/2023 MCM Drug List Q2.xlsx))",
+                "url": "local_path/MaritzHolding/2023 MCM Drug List Q2.xlsx",
+                "local_path": null
+            },
+            {
+                "text": "MCM Drug List (Q1) (local_path/MaritzHolding/2023 MCM Drug List Q1.XLSX)",
+                "url": "local_path/MaritzHolding/2023 MCM Drug List Q1.XLSX",
+                "local_path": null
+            },
+            {
+                "text": "MCM Drug List (Q4) (local_path/MaritzHolding/2022 MCM Drug List Q4.XLSX)",
+                "url": "local_path/MaritzHolding/2022 MCM Drug List Q4.XLSX",
+                "local_path": null
+            },
+            {
+                "text": "MCM Drug List (Q3) (local_path/MaritzHolding/2022 MCM Drug List (Q3).XLSX)",
+                "url": "local_path/MaritzHolding/2022 MCM Drug List (Q3).XLSX",
+                "local_path": null
+            },
+            {
+                "text": "MCM Drug List (Q2) (local_path/MaritzHolding/2022 MCM Drug List Q2.XLSX)",
+                "url": "local_path/MaritzHolding/2022 MCM Drug List Q2.XLSX",
+                "local_path": null
+            },
+            {
+                "text": "MCM Drug List (Q1) (local_path/MaritzHolding/2022 MCM Drug List.XLSX)",
+                "url": "local_path/MaritzHolding/2022 MCM Drug List.XLSX",
+                "local_path": null
+            },
+            {
+                "text": "MCM Drug List (local_path/MaritzHolding/MCM Drug List.XLSX)",
+                "url": "local_path/MaritzHolding/MCM Drug List.XLSX",
+                "local_path": null
+            }
+        ],
+        "has_link": true
+    }
+}

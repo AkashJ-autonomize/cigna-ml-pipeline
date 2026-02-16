@@ -1,0 +1,733 @@
+{
+    "client": {
+        "name": "Maritz Holding Inc.",
+        "account_number": "3337219",
+        "hr_benefit_center_contact": [
+            "636.827.6120",
+            "636.827.4088"
+        ],
+        "benefits_website": {
+            "url": "www.Maritzbenefits.com",
+            "password": "Maritzbenefits"
+        },
+        "intranet": "MyMaritz"
+    },
+    "policy": {
+        "policy_name": "Medical Channel Management (MCM) Drug List",
+        "policy_type": "mcm_specialty_drug_updates",
+        "description": "Quarterly updates to MCM Drug List covering Self-Administered, Rare Disease, and Clinician Administered medications",
+        "source_documents": [
+            "MaritzHolding.html (Medical and Pharmacy sections only)",
+            "MCM_Drug_List.XLSX",
+            "2022_MCM_Drug_List.XLSX",
+            "2022_MCM_Drug_List_Q2.XLSX",
+            "2022_MCM_Drug_List__Q3_.XLSX",
+            "2022_MCM_Drug_List_Q4.XLSX",
+            "2023_MCM_Drug_List_Q1.XLSX",
+            "2023_MCM_Drug_List_Q2.xlsx",
+            "2023_MCM_Drug_List_Q3.xlsx",
+            "Virgin_Pulse_Program_Overview.pdf",
+            "2025_MotivateMeClientElectionsTool_Maritz.xls",
+            "2026_MotivateMeClientElectionsTool_Maritz_Holdings.xls"
+        ]
+    },
+    "medical": {
+        "note": "See Source System",
+        "programs": {
+            "health_matters_care_management": {
+                "available": true
+            },
+            "healthy_pregnancies_healthy_babies": {
+                "available": true,
+                "note": "See Incentives section for more info"
+            },
+            "virtual_second_opinions": {
+                "vendor": "Cleveland Clinic",
+                "effective_date": "1.1.20",
+                "access_methods": [
+                    "Cleveland Clinic's Second Opinion link in the popular links section of MyCigna.com",
+                    "Direct URL: https://cigna.virtual2ndopinionbycc.io"
+                ]
+            },
+            "hinge_health": {
+                "vendor": "Hinge Health",
+                "phone": "855.902.2777",
+                "website": "https://www.hingehealth.com/for/maritz/"
+            }
+        }
+    },
+    "pharmacy": {
+        "vendor": "Express Scripts",
+        "phone": "800.953.3379",
+        "website": "www.express-scripts.com",
+        "mcm_drug_list": {
+            "description": "Medical Channel Management Drug List with quarterly updates",
+            "categories": [
+                "Self Administered",
+                "Rare Disease",
+                "Clinician Administered"
+            ],
+            "quarterly_updates": {
+                "2023": {
+                    "q3": "2023 MCM Drug List Q3.xlsx",
+                    "q2": "2023 MCM Drug List Q2.xlsx",
+                    "q1": "2023 MCM Drug List Q1.XLSX"
+                },
+                "2022": {
+                    "q4": "2022 MCM Drug List Q4.XLSX",
+                    "q3": "2022 MCM Drug List (Q3).XLSX",
+                    "q2": "2022 MCM Drug List Q2.XLSX",
+                    "q1": "2022 MCM Drug List.XLSX"
+                },
+                "base": "MCM Drug List.XLSX"
+            }
+        }
+    },
+    "mcm_drug_list_updates": {
+        "q4_2021": [
+            {
+                "drug_name": "BYLVAY",
+                "category": "Self Administered",
+                "disease_state": "Miscellaneous Diseases",
+                "hcpc_to_add": "No code assigned",
+                "notes": "New Drug Addition"
+            },
+            {
+                "drug_name": "DEFERIPRONE (generic Ferriprox)",
+                "category": "Self Administered",
+                "disease_state": "Iron Toxicity",
+                "hcpc_to_add": "No code assigned",
+                "notes": "New Drug Addition"
+            },
+            {
+                "drug_name": "GAVRETO",
+                "category": "Self Administered",
+                "disease_state": "Cancer",
+                "hcpc_to_add": "No code assigned",
+                "notes": "New Drug Addition"
+            },
+            {
+                "drug_name": "LUMAKRAS",
+                "category": "Self Administered",
+                "disease_state": "Cancer",
+                "hcpc_to_add": "No code assigned",
+                "notes": "New Drug Addition"
+            },
+            {
+                "drug_name": "MYTESI",
+                "category": "Self Administered",
+                "disease_state": "Cancer",
+                "hcpc_to_add": "No code assigned",
+                "notes": "New Drug Addition"
+            },
+            {
+                "drug_name": "PONVORY",
+                "category": "Self Administered",
+                "disease_state": "Multiple Sclerosis",
+                "hcpc_to_add": "No code assigned",
+                "notes": "New Drug Addition"
+            },
+            {
+                "drug_name": "TIOPRONIN (generic Thiola)",
+                "category": "Self Administered",
+                "disease_state": "Miscellaneous Diseases",
+                "hcpc_to_add": "No code assigned",
+                "notes": "New Drug Addition"
+            },
+            {
+                "drug_name": "NEXVIAZYME",
+                "category": "Rare Disease",
+                "disease_state": "Enzyme Deficiencies",
+                "hcpc_to_add": "No code assigned",
+                "notes": "New Drug Addition"
+            },
+            {
+                "drug_name": "ADUHELM",
+                "category": "Clinician Administered",
+                "disease_state": "Miscellaneous Diseases",
+                "hcpc_to_add": "No code assigned",
+                "notes": "New Drug Addition"
+            },
+            {
+                "drug_name": "AVSOLA (Remicade Biosimilar)",
+                "category": "Clinician Administered",
+                "disease_state": "Inflammatory Conditions",
+                "hcpc_to_add": "Q5121",
+                "notes": "New Drug Addition"
+            },
+            {
+                "drug_name": "UPLIZNA",
+                "category": "Clinician Administered",
+                "disease_state": "Miscellaneous Diseases",
+                "hcpc_to_add": "J1823",
+                "notes": "New Drug Addition"
+            }
+        ],
+        "q1_2022": [
+            {
+                "drug_name": "ACTEMRA SC (includes ACTPen)",
+                "category": "Self Administered",
+                "disease_state": "Inflammatory Conditions",
+                "hcpc_changes": "Multiple HCPC updates",
+                "notes": "HCPC code changes and additions"
+            },
+            {
+                "drug_name": "ACTHAR H.P. GEL",
+                "category": "Self Administered",
+                "disease_state": "Miscellaneous Diseases",
+                "hcpc_to_add": "J0800",
+                "notes": "HCPC code updates"
+            },
+            {
+                "drug_name": "SCEMBLIX",
+                "category": "Self Administered",
+                "disease_state": "Cancer",
+                "hcpc_to_add": "No code assigned",
+                "notes": "New Drug Addition"
+            },
+            {
+                "drug_name": "SUNITINIB MALATE (generic Sutent)",
+                "category": "Self Administered",
+                "disease_state": "Cancer",
+                "hcpc_to_add": "No code assigned",
+                "notes": "New Drug Addition"
+            },
+            {
+                "drug_name": "PANZYGA",
+                "category": "Clinician Administered",
+                "disease_state": "Immune Deficiencies",
+                "hcpc_to_add": "J1599",
+                "notes": "New Drug Addition"
+            }
+        ],
+        "q2_2022": [
+            {
+                "drug_name": "ADBRY",
+                "category": "Self Administered",
+                "disease_state": "Asthma and Allergy",
+                "hcpc_to_add": "No code assigned",
+                "notes": "New Drug Addition"
+            },
+            {
+                "drug_name": "CORTROPHIN GEL",
+                "category": "Self Administered",
+                "disease_state": "Miscellaneous Diseases",
+                "hcpc_to_add": "No code assigned",
+                "notes": "New Drug Addition"
+            },
+            {
+                "drug_name": "NITISINONE (generic Orfadin)",
+                "category": "Self Administered",
+                "disease_state": "Enzyme Deficiencies",
+                "hcpc_to_add": "No code assigned",
+                "notes": "New Drug Addition"
+            },
+            {
+                "drug_name": "NITYR",
+                "category": "Self Administered",
+                "disease_state": "Enzyme Deficiencies",
+                "hcpc_to_add": "No code assigned",
+                "notes": "New Drug Addition"
+            },
+            {
+                "drug_name": "VOXZOGO",
+                "category": "Self Administered",
+                "disease_state": "Endocrine Disorders",
+                "hcpc_to_add": "No code assigned",
+                "notes": "New Drug Addition"
+            },
+            {
+                "drug_name": "TEZSPIRE",
+                "category": "Clinician Administered",
+                "disease_state": "Asthma and Allergy",
+                "hcpc_to_add": "No code assigned",
+                "notes": "New Drug Addition"
+            },
+            {
+                "drug_name": "VYVGART",
+                "category": "Clinician Administered",
+                "disease_state": "Miscellaneous Diseases",
+                "hcpc_to_add": "No code assigned",
+                "notes": "New Drug Addition"
+            }
+        ],
+        "q3_2022": [
+            {
+                "drug_name": "BETAINE ANHYDROUS (generic Cystadene)",
+                "category": "Self Administered",
+                "therapy_class": "ENZYME DEFICIENCIES",
+                "hcpc_to_add": "No code assigned",
+                "notes": "New Drug Addition"
+            },
+            {
+                "drug_name": "BRONCHITOL",
+                "category": "Self Administered",
+                "therapy_class": "CYSTIC FIBROSIS",
+                "hcpc_to_add": "J7665",
+                "notes": "New Drug Addition"
+            },
+            {
+                "drug_name": "LENALIDOMIDE (generic Revlimid)",
+                "category": "Self Administered",
+                "therapy_class": "CANCER",
+                "hcpc_to_add": "No code assigned",
+                "notes": "New Drug Addition"
+            },
+            {
+                "drug_name": "PIRFENIDONE (generic Esbriet)",
+                "category": "Self Administered",
+                "therapy_class": "IDIOPATHIC PULMONARY FIBROSIS",
+                "hcpc_to_add": "No code assigned",
+                "notes": "New Drug Addition"
+            },
+            {
+                "drug_name": "SKYTROFA",
+                "category": "Self Administered",
+                "therapy_class": "GROWTH DEFICIENCY",
+                "hcpc_to_add": "No code assigned",
+                "notes": "New Drug Addition"
+            },
+            {
+                "drug_name": "GAMMAGARD S/D LESS IgA",
+                "category": "Rare Disease",
+                "therapy_class": "IMMUNE DEFICIENCY",
+                "hcpc_to_add": "J1566",
+                "notes": "New Drug Addition"
+            },
+            {
+                "drug_name": "NEXVIAZYME",
+                "category": "Rare Disease",
+                "therapy_class": "ENZYME DEFICIENCIES",
+                "hcpc_to_add": "C9085",
+                "notes": "HCPC code update"
+            },
+            {
+                "drug_name": "XIPERE",
+                "category": "Clinician Administered",
+                "therapy_class": "OPHTHALMIC CONDITIONS",
+                "hcpc_to_add": "No code assigned",
+                "notes": "New Drug Addition"
+            }
+        ],
+        "q4_2022": [
+            {
+                "drug_name": "CAMZYOS",
+                "category": "Self Administered",
+                "therapy_class": "MISCELLANEOUS DISEASES",
+                "notes": "New Drug Addition"
+            },
+            {
+                "drug_name": "CORTROPHIN GEL",
+                "category": "Self Administered",
+                "therapy_class": "MISCELLANEOUS DISEASES",
+                "hcpc_to_add": "J0800",
+                "notes": "HCPC code update"
+            },
+            {
+                "drug_name": "CIBINQO",
+                "category": "Self Administered",
+                "therapy_class": "ASTHMA and ALLERGY",
+                "notes": "New Drug Addition"
+            },
+            {
+                "drug_name": "RADICAVA",
+                "category": "Self Administered",
+                "therapy_class": "MUSCULAR DYSTROPHIES",
+                "hcpc_to_add": "J1301",
+                "notes": "New Drug Addition"
+            },
+            {
+                "drug_name": "SORAFENIB (generic Nexavar)",
+                "category": "Self Administered",
+                "therapy_class": "CANCER",
+                "notes": "New Drug Addition"
+            },
+            {
+                "drug_name": "ZEJULA",
+                "category": "Self Administered",
+                "therapy_class": "CANCER",
+                "notes": "New Drug Addition"
+            },
+            {
+                "drug_name": "NEXVIAZYME",
+                "category": "Rare Disease",
+                "therapy_class": "ENZYME DEFICIENCIES",
+                "hcpc_to_add": "J0219",
+                "notes": "HCPC code update"
+            },
+            {
+                "drug_name": "APRETUDE",
+                "category": "Clinician Administered",
+                "therapy_class": "HIV",
+                "notes": "New Drug Addition"
+            },
+            {
+                "drug_name": "BYOOVIZ (Lucentis biosimilar)",
+                "category": "Clinician Administered",
+                "therapy_class": "OPHTHALMIC CONDITIONS",
+                "notes": "New Drug Addition"
+            },
+            {
+                "drug_name": "SKYRIZI (IV)",
+                "category": "Clinician Administered",
+                "therapy_class": "INFLAMMATORY CONDITIONS",
+                "notes": "New Drug Addition"
+            },
+            {
+                "drug_name": "XIPERE",
+                "category": "Clinician Administered",
+                "therapy_class": "OPHTHALMIC CONDITIONS",
+                "hcpc_to_add": "C9092",
+                "notes": "HCPC code update"
+            }
+        ],
+        "q1_2023": [
+            {
+                "drug_name": "FINGOLIMOD (generic Gilenya)",
+                "category": "Self Administered",
+                "therapy_class": "MULTIPLE SCLEROSIS",
+                "notes": "New Drug Addition"
+            },
+            {
+                "drug_name": "PHEBURANE",
+                "category": "Self Administered",
+                "therapy_class": "ENZYME DEFICIENCIES",
+                "notes": "New Drug Addition"
+            },
+            {
+                "drug_name": "RELYVRIO",
+                "category": "Self Administered",
+                "therapy_class": "MUSCULAR DYSTROPHIES",
+                "notes": "New Drug Addition"
+            },
+            {
+                "drug_name": "SOTYKTU",
+                "category": "Self Administered",
+                "therapy_class": "INFLAMMATORY CONDITIONS",
+                "notes": "New Drug Addition"
+            },
+            {
+                "drug_name": "CUTAQUIG",
+                "category": "Rare Disease",
+                "therapy_class": "IMMUNE DEFICIENCY",
+                "hcpc_to_add": "J1551",
+                "notes": "New Drug Addition"
+            },
+            {
+                "drug_name": "NEXVIAZYME",
+                "category": "Rare Disease",
+                "therapy_class": "ENZYME DEFICIENCIES",
+                "hcpc_to_add": "J0219",
+                "notes": "HCPC confirmation"
+            },
+            {
+                "drug_name": "TADLIQ",
+                "category": "Rare Disease",
+                "therapy_class": "PULMONARY HYPERTENSION",
+                "notes": "New Drug Addition"
+            },
+            {
+                "drug_name": "XENPOZYME",
+                "category": "Rare Disease",
+                "therapy_class": "ENZYME DEFICIENCIES",
+                "notes": "New Drug Addition"
+            },
+            {
+                "drug_name": "APRETUDE",
+                "category": "Clinician Administered",
+                "therapy_class": "HIV",
+                "hcpc_to_add": "J0739",
+                "notes": "HCPC code update"
+            },
+            {
+                "drug_name": "CIMERLI (Lucentis Biosimilar)",
+                "category": "Clinician Administered",
+                "therapy_class": "OPHTHALMIC CONDITIONS",
+                "notes": "New Drug Addition"
+            },
+            {
+                "drug_name": "SPEVIGO",
+                "category": "Clinician Administered",
+                "therapy_class": "INFLAMMATORY CONDITIONS",
+                "notes": "New Drug Addition"
+            },
+            {
+                "drug_name": "TEZSPIRE",
+                "category": "Clinician Administered",
+                "therapy_class": "ASTHMA and ALLERGY",
+                "hcpc_to_add": "J2356",
+                "notes": "HCPC code update"
+            },
+            {
+                "drug_name": "VYVGART",
+                "category": "Clinician Administered",
+                "therapy_class": "MISCELLANEOUS DISEASES",
+                "hcpc_to_add": "J9332",
+                "notes": "HCPC code update"
+            },
+            {
+                "drug_name": "XIPERE",
+                "category": "Clinician Administered",
+                "therapy_class": "OPHTHALMIC CONDITIONS",
+                "hcpc_to_add": "J3299",
+                "notes": "HCPC code update"
+            }
+        ],
+        "q2_2023": [
+            {
+                "drug_name": "CETRORELIX ACETATE (generic Cetrotide)",
+                "category": "Self Administered",
+                "therapy_class": "INFERTILITY",
+                "notes": "New Drug Addition"
+            },
+            {
+                "drug_name": "RELEUKO (Neupogen biosimilar)",
+                "category": "Self Administered",
+                "therapy_class": "BLOOD CELL DEFICIENCY",
+                "hcpc_to_add": "Q5125",
+                "notes": "New Drug Addition"
+            },
+            {
+                "drug_name": "TASCENSO ODT",
+                "category": "Self Administered",
+                "therapy_class": "MULTIPLE SCLEROSIS",
+                "notes": "New Drug Addition"
+            },
+            {
+                "drug_name": "HEMGENIX",
+                "category": "Rare Disease",
+                "therapy_class": "HEMOPHILIA",
+                "hcpc_to_add": "J1411",
+                "notes": "New Drug Addition"
+            },
+            {
+                "drug_name": "BRIUMVI",
+                "category": "Clinician Administered",
+                "therapy_class": "MULTIPLE SCLEROSIS",
+                "notes": "New Drug Addition"
+            }
+        ],
+        "q3_2023": [
+            {
+                "drug_name": "AMJEVITA (Humira biosimilar)",
+                "category": "Self Administered",
+                "therapy_class": "INFLAMMATORY CONDITIONS",
+                "notes": "New Drug Addition"
+            },
+            {
+                "drug_name": "DICHLORPHENAMIDE (generic Keveyis)",
+                "category": "Self Administered",
+                "therapy_class": "MUSCULAR DYSTROPHIES",
+                "notes": "New Drug Addition"
+            },
+            {
+                "drug_name": "FILSPARI",
+                "category": "Self Administered",
+                "therapy_class": "MISCELLANEOUS DISEASES",
+                "notes": "New Drug Addition"
+            },
+            {
+                "drug_name": "JAVYGTOR (branded generic for Kuvan)",
+                "category": "Self Administered",
+                "therapy_class": "ENZYME DEFICIENCIES",
+                "notes": "New Drug Addition"
+            },
+            {
+                "drug_name": "JAYPIRCA",
+                "category": "Self Administered",
+                "therapy_class": "CANCER",
+                "notes": "New Drug Addition"
+            },
+            {
+                "drug_name": "SKYRIZI SC",
+                "category": "Self Administered",
+                "therapy_class": "INFLAMMATORY CONDITIONS",
+                "notes": "Removed from Self-Administered Tier; Now Shares a HCPC with Skyrizi IV, Moved to Clinician Administered Tier"
+            },
+            {
+                "drug_name": "STIMUFEND (Neulasta biosimilar)",
+                "category": "Self Administered",
+                "therapy_class": "BLOOD CELL DEFICIENCY",
+                "hcpc_to_add": "Q5127",
+                "notes": "New Drug Addition"
+            },
+            {
+                "drug_name": "TERIFLUNOMIDE (generic Aubagio)",
+                "category": "Self Administered",
+                "therapy_class": "MULTIPLE SCLEROSIS",
+                "notes": "New Drug Addition"
+            },
+            {
+                "drug_name": "ALTUVIIIO",
+                "category": "Rare Disease",
+                "therapy_class": "HEMOPHILIA",
+                "notes": "New Drug Addition"
+            },
+            {
+                "drug_name": "XENPOZYME",
+                "category": "Rare Disease",
+                "therapy_class": "ENZYME DEFICIENCIES",
+                "hcpc_to_add": "J0218",
+                "notes": "HCPC code update"
+            },
+            {
+                "drug_name": "BYOOVIZ (Lucentis biosimilar)",
+                "category": "Clinician Administered",
+                "therapy_class": "OPHTHALMIC CONDITIONS",
+                "hcpc_to_add": "Q5124",
+                "notes": "HCPC code update"
+            },
+            {
+                "drug_name": "CABENUVA",
+                "category": "Clinician Administered",
+                "therapy_class": "HIV",
+                "hcpc_to_add": "J0741",
+                "notes": "New Drug Addition"
+            },
+            {
+                "drug_name": "CIMERLI (Lucentis Biosimilar)",
+                "category": "Clinician Administered",
+                "therapy_class": "OPHTHALMIC CONDITIONS",
+                "hcpc_to_add": "Q5128",
+                "notes": "HCPC code update"
+            },
+            {
+                "drug_name": "FENSOLVI",
+                "category": "Clinician Administered",
+                "therapy_class": "ENDOCRINE DISORDERS",
+                "hcpc_to_add": "J1951",
+                "notes": "New Drug Addition"
+            },
+            {
+                "drug_name": "SKYRIZI (All Forms)",
+                "category": "Clinician Administered",
+                "therapy_class": "INFLAMMATORY CONDITIONS",
+                "hcpc_to_add": "J2327",
+                "notes": "HCPC Add / Remove NDC(s)"
+            },
+            {
+                "drug_name": "SPEVIGO",
+                "category": "Clinician Administered",
+                "therapy_class": "INFLAMMATORY CONDITIONS",
+                "hcpc_to_add": "J1747",
+                "notes": "HCPC Add / Remove NDC(s)"
+            },
+            {
+                "drug_name": "SYFOVRE",
+                "category": "Clinician Administered",
+                "therapy_class": "OPHTHALMIC CONDITIONS",
+                "notes": "New Drug Addition"
+            },
+            {
+                "drug_name": "VABYSMO",
+                "category": "Clinician Administered",
+                "therapy_class": "OPHTHALMIC CONDITIONS",
+                "hcpc_to_add": "C9097",
+                "notes": "New Drug Addition"
+            }
+        ]
+    },
+    "wellness_program": {
+        "vendor": "Virgin Pulse",
+        "phone": "888.671.9395",
+        "website": "support.virginpulse.com",
+        "join_url": "join.virginpulse.com/maritz",
+        "eligibility": "Employees and spouses",
+        "maximum_annual_well_credit": "$600 per year",
+        "description": "Virgin Pulse wellbeing program helps achieve health goals with fun and engaging experience",
+        "features": {
+            "health_check": "Survey about current health status and wellbeing habits",
+            "healthy_habits": "Bite-sized ways to build healthy routine",
+            "confetti_points": "Earn up to 300 points per year for full-time employees enrolled in medical plan",
+            "daily_cards": "Helpful tips relevant to interests and goals",
+            "journeys": "Digital coaching program",
+            "my_care_checklist": "Healthcare tracker for managing health checkups",
+            "challenges": "Team up with others for healthy competition",
+            "coaching": "One-on-one support, practical guidance"
+        },
+        "biometric_screening": {
+            "eligibility": "Full-time employees enrolled in medical plan and spouses",
+            "maximum_credit": "$600 Well Credit each",
+            "screening_period": "June 1 to September 30",
+            "screening_options": [
+                "Quest Diagnostics Patient Service Center",
+                "Onsite event",
+                "Physician visit with completed Health Screening Form"
+            ],
+            "exemption": "Employees hired and/or enrolled after May 31, 2023 automatically receive $600 Well Credit",
+            "biometric_goals": {
+                "body_mass_index": {
+                    "goal": "18.5-24.9",
+                    "credit": "$100 Well Credit"
+                },
+                "blood_pressure": {
+                    "goal": "120/80 or less",
+                    "credit": "$100 Well Credit"
+                },
+                "cholesterol": {
+                    "goal": "100 LDL or less, 40 HDL or more",
+                    "credit": "$100 Well Credit"
+                },
+                "triglycerides": {
+                    "goal": "150 or less",
+                    "credit": "$100 Well Credit"
+                },
+                "a1c": {
+                    "goal": "5.69 or less",
+                    "credit": "$100 Well Credit"
+                },
+                "tobacco_nicotine_free": {
+                    "credit": "$100 Well Credit"
+                }
+            },
+            "alternative_credit_methods": [
+                "Meeting goal",
+                "Improving 5% from last year",
+                "Completing 2 coaching sessions"
+            ]
+        },
+        "confetti_points_earning_opportunities": {
+            "one_time": {
+                "sync_device": 10,
+                "first_mobile_app_signin": 10,
+                "increase_401k_contribution": 10
+            },
+            "monthly": {
+                "track_healthy_habits_10_days": 10,
+                "complete_10_daily_cards": 10,
+                "complete_coaching_goal": 20
+            },
+            "quarterly": {
+                "set_interests": 10,
+                "complete_virgin_pulse_journey": 10,
+                "complete_personal_challenge": 10,
+                "join_personal_challenge": 10
+            },
+            "yearly": {
+                "use_cost_savings_tool": 10,
+                "complete_preventive_care_activities": 20
+            }
+        },
+        "support": {
+            "live_chat": "Monday-Friday, 2 am-9 pm ET",
+            "phone": "888-671-9395 (Monday-Friday, 8 am-9 pm ET)",
+            "email": "support@virginpulse.com"
+        }
+    },
+    "incentives": {
+        "hphb_tracking": {
+            "vendor": "Cigna",
+            "platform": "MotivateMe",
+            "note": "Cigna offers incentives for HPHB ONLY tracked via MotivateMe"
+        },
+        "wellness_programs": {
+            "vendor": "Virgin Pulse",
+            "note": "All other wellness related programs and incentives are administered by Virgin Pulse. Please refer all questions about the wellness program to Virgin Pulse."
+        },
+        "motivateme_elections": {
+            "2026": "2026 MotivateMeClientElectionsTool.Maritz Holdings.xls",
+            "2025": "2025 MotivateMeClientElectionsTool.Maritz.xls"
+        }
+    },
+    "summary": "Maritz Holding Inc. (Account 3337219) has Express Scripts pharmacy benefits with quarterly MCM (Medical Channel Management) Drug List updates covering Self-Administered, Rare Disease, and Clinician Administered medications. Medical programs include Health Matters Care Management, Healthy Pregnancies Healthy Babies, Virtual Second Opinions by Cleveland Clinic (effective 1.1.20), and Hinge Health musculoskeletal care. The wellness program is administered by Virgin Pulse (join.virginpulse.com/maritz) with full-time employees and spouses eligible to earn up to $600 Well Credit per year through biometric screenings (June 1 - September 30) and up to 300 Confetti Points for participating in wellness activities. Biometric goals include BMI 18.5-24.9, blood pressure 120/80 or less, cholesterol 100 LDL or less/40 HDL or more, triglycerides 150 or less, A1c 5.69 or less, and tobacco/nicotine free status, with $100 Well Credit available for each goal met. Alternative credit methods include improving 5% from prior year or completing 2 coaching sessions. Cigna tracks HPHB incentives via MotivateMe while Virgin Pulse administers all other wellness programs."
+}

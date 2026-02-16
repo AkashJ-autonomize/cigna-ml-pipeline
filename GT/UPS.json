@@ -1,0 +1,251 @@
+{
+    "client": {
+        "name": "UPS",
+        "account_numbers": [
+            "3342075",
+            "2500754"
+        ],
+        "preferred_customer_name": "UPS employees, UPSer's",
+        "brand_experience": "Cigna",
+        "program_name": "Site of Care and Drug Benefit Alignment",
+        "medical_carrier": "Cigna",
+        "pbm": "CVS Caremark",
+        "exclusive_specialty_provider": "CVS Specialty",
+        "program_effective_date": "2019-01-01"
+    },
+    "medical": {
+        "note": "See Source System",
+        "programs": {
+            "ccmu": {
+                "name": "Custom Care Management Unit (CCMU)",
+                "available": true,
+                "team_phone": "800.589.2987",
+                "dedicated_social_worker": "Jared Ingros",
+                "dedicated_dietitian": "Joan Risbano",
+                "knowledgexchange_article": "kA04P000000UHnySAG",
+                "note": "Check CCV under Programs/Eligibility for CCMU designation. Premium PHT account."
+            },
+            "comprehensive_oncology_program": {
+                "available": true
+            },
+            "healthy_pregnancies_healthy_babies": {
+                "available": true,
+                "note": "No incentive"
+            },
+            "my_personal_champion_program": {
+                "eligibility": "This Account is eligible for the My Personal Champion program",
+                "reminder": "Do not commit to the customer that they can have a Personal Champion",
+                "referral_article": "How to Refer to My Personal Champion Program - Care Solutions",
+                "knowledgexchange_article": "kA04P000000UIJlSAO",
+                "note": "In conjunction with One Guide"
+            }
+        }
+    },
+    "program_overview": {
+        "description": "Select specialty medications previously covered under the medical benefit are covered exclusively under the pharmacy benefit and must be dispensed by CVS Specialty.",
+        "implementation_date": "2019-01-01",
+        "medical_claims_denied_for_included_drugs": true
+    },
+    "program_scope": {
+        "inclusion_criteria": {
+            "drug_list_source": "UPS Site of Care & Drug Benefit Alignment Drug List",
+            "hcpcs_scope": "All active and historical HCPCS codes on the drug list",
+            "place_of_service_applicability": "All places of service except inpatient hospital (CMS POS 21) and emergency room (CMS POS 23)"
+        },
+        "exclusions": [
+            "Inpatient hospital claims (CMS POS 21)",
+            "Emergency room claims (CMS POS 23)",
+            "Medicare primary members",
+            "Drugs billed as part of inpatient hospital stay",
+            "Drugs billed as part of emergency room visit"
+        ]
+    },
+    "site_of_care_component": {
+        "applies_to": "Infused medications on drug list",
+        "requirement": "Must be obtained through CVS Specialty",
+        "alternate_sites_of_care": [
+            "Home infusion",
+            "Ambulatory infusion center",
+            "Provider office (where allowed by law)"
+        ],
+        "exceptions": [
+            "Inpatient hospital",
+            "Emergency room"
+        ]
+    },
+    "drug_benefit_alignment_component": {
+        "self_administered_medications": {
+            "dispensed_by": "CVS Specialty",
+            "delivery": "Delivered to member location (where allowed by law)"
+        },
+        "clinician_administered_medications": {
+            "coordination": "CVS Specialty coordinates with member and provider",
+            "delivery_options": [
+                "Provider office (where allowed by law)",
+                "Member home for administration by home health nurse"
+            ]
+        }
+    },
+    "claims_processing": {
+        "effective_date": "2019-01-01",
+        "medical_claims_denied": true,
+        "applies_to": [
+            "Professional claims associated with HCPCS codes on drug list",
+            "Facility claims associated with HCPCS codes on drug list"
+        ],
+        "denial_basis": [
+            "Not covered under medical benefit",
+            "Authorization requirement not met"
+        ],
+        "eob_message": "This specialty medication is not covered under the medical plan. This expense may be covered under the prescription plan. Please contact CVS Caremark at 1-855-282-8412 for more information."
+    },
+    "prior_authorization_and_eligibility": {
+        "redirected_to": "CVS Caremark dedicated UPS line",
+        "phone": "1-855-282-8412"
+    },
+    "grace_fill_process": {
+        "allowed": true,
+        "limit": "One-time per member per drug",
+        "paid_under": "Medical benefit",
+        "may_include_multiple_dates_of_service": true,
+        "requires_ups_discretion": true,
+        "process_flow": [
+            "Member escalates denied claim to UPS",
+            "UPS forwards member information to SRX-BISPOCAccount@CVSCaremark.com",
+            "CVS Specialty conducts outreach to member and provider",
+            "Education provided regarding pharmacy benefit requirement",
+            "CVS notifies UPS when transition completed",
+            "UPS notifies Cigna contacts to approve payment of past medical claims"
+        ]
+    },
+    "waiver_process": {
+        "applies_only_to": "Site of Care medications",
+        "initiated_by": "CVS Specialty SPOC team",
+        "reviewed_by": "UPS",
+        "approval_results_in": "UPS provides approval directly to Cigna to allow claims payment under medical",
+        "potential_qualifiers": [
+            "Pediatric members",
+            "Drugs infused in conjunction with oncology medications"
+        ]
+    },
+    "drug_list_maintenance": {
+        "update_frequency": "Quarterly",
+        "update_months": [
+            "January",
+            "April",
+            "July",
+            "October"
+        ],
+        "update_notice_timing": "1-2 weeks prior to quarter start",
+        "cigna_update_requirement": "Update claims system within 30 business days",
+        "goal": "Avoid retroactive reprocessing"
+    },
+    "medical_utilization_review": {
+        "start_date": "2019-04-01",
+        "frequency": "Quarterly",
+        "report_includes": [
+            "Paid professional medical claims",
+            "Paid facility medical claims",
+            "Active and historical HCPCS codes on most current drug list"
+        ],
+        "report_exclusions": [
+            "Medicare primary members",
+            "Inpatient hospital claims",
+            "Emergency room claims",
+            "HCPCS not on UPS drug list"
+        ],
+        "report_delivery": {
+            "method": "Encrypted email",
+            "recipient": "SRX-BISPOCAccount@CVSCaremark.com",
+            "ssn_included": false
+        }
+    },
+    "contacts": {
+        "cigna": {
+            "primary": {
+                "name": "Trina Bailey",
+                "title": "Client Service Executive"
+            },
+            "secondary": [
+                {
+                    "name": "Rachel Fowler",
+                    "title": "Account Manager"
+                },
+                {
+                    "name": "Rhonda Guffey",
+                    "title": "Implementation Manager"
+                }
+            ]
+        },
+        "cvs_caremark": {
+            "primary": {
+                "name": "Sydney Matejka",
+                "title": "Director, Strategic Accounts"
+            },
+            "secondary": {
+                "name": "Lee Trevigne",
+                "title": "Sr. Account Manager"
+            }
+        },
+        "ups": {
+            "name": "Amy Nations"
+        }
+    },
+    "cvs_specialty_contact": {
+        "phone": "1-855-282-8412",
+        "hours": "6 a.m. to 10 p.m. CT, Monday through Friday"
+    },
+    "vendor_referral_programs": {
+        "hinge_health": {
+            "program_name": "Hinge Health Digital MSK Clinic",
+            "referral_trigger_words": [
+                "Arthroscopy",
+                "Back pain",
+                "Behavior change",
+                "Chronic pain",
+                "Discectomy",
+                "Ergonomics",
+                "Exercise therapy",
+                "Flexibility",
+                "Healthy habit formation",
+                "Hip pain",
+                "Hip replacement",
+                "Injury",
+                "Injury prevention",
+                "Knee pain",
+                "Lifestyle",
+                "Medicine",
+                "Neck pain",
+                "Pre-op",
+                "Preventative health",
+                "Post-op",
+                "Rehabilitation",
+                "Rotator cuff surgery",
+                "Shoulder pain",
+                "Spinal fusion",
+                "Sprain",
+                "Strain",
+                "Strength",
+                "Total knee replacement",
+                "Wellbeing",
+                "Wellness",
+                "Whiplash"
+            ],
+            "eligibility": {
+                "minimum_age": 18,
+                "plan_requirement": "Union-free UPS medical plan",
+                "eligible_carriers": [
+                    "Aetna",
+                    "Anthem",
+                    "Cigna",
+                    "UnitedHealthcare"
+                ]
+            },
+            "contact": {
+                "website": "www.hingehealth.com/cigna_ups",
+                "email": "hello@hingehealth.com",
+                "phone": "855-902-2777"
+            }
+        }
+    }
+}

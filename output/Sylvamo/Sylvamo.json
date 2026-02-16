@@ -1,0 +1,30 @@
+{
+    "medical": {
+        "text": [
+            "See Source System",
+            "Health Matters Care Management Preferred",
+            "Healthy Pregnancies, Healthy Babies - See Incentives section (#Incentives:) for more info",
+            "Comprehensive Oncology Program",
+            "Cigna’s Gene Therapy Program, including Embarc Benefit Protection"
+        ],
+        "hyperlinks": [],
+        "has_link": false
+    },
+    "pharmacy": {
+        "text": [
+            "OptumRx 800.797.9791",
+            "OptumRx is their Pharmacy vendor - For Specialty Medications: The Sylvamo medical plans administered by Cigna cover the first injection/infusion of a Specialty Drug in the doctor’s office and/or home setting. Thereafter, the Specialty Drug needs to be obtained from OptumSpecialty Pharmacy – 855.427.4682 after the first injection of infusion.",
+            "Injectable/Infused oncology medications dispensed through a cancer clinic should be payable under the client’s medical plan. Oral oncology medications included on the 2019 Specialty Drug Provision List are payable one time per lifetime under the client’s medical plan(s), with all others dispensed through OptumSpecialty Pharmacy.",
+            "All drugs on the attached list are covered by OptumRx, through OptumSpecialty Pharmacy. Should Cigna receive a medical claim for a drug on the list, it should be handled by Cigna according to Sylvamo’s Specialty Drug Medical Provision. The specialty drug provision should ONLY be for places of service as doctor’s office and/or home setting. We should not be applying to outpatient, inpatient or emergency room setting.",
+            "Specialty Drug List (local_path/Sylvamo/2022 Specialty List w JCodes.xlsx) - eff. 1.1.22"
+        ],
+        "hyperlinks": [
+            {
+                "text": "Specialty Drug List (local_path/Sylvamo/2022 Specialty List w JCodes.xlsx) - eff. 1.1.22",
+                "url": "local_path/Sylvamo/2022 Specialty List w JCodes.xlsx",
+                "local_path": null
+            }
+        ],
+        "has_link": true
+    }
+}

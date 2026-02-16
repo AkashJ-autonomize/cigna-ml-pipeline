@@ -1,0 +1,40 @@
+{
+    "medical": {
+        "text": [
+            "See Source System",
+            "Healthy Pregnancies, Healthy Babies - See Incentives section (#Incentives:) for more info",
+            "HSA banking administrator: Fidelity 1.800.835.5087",
+            "1.800.587.5282 for Spanish",
+            "FSA: TaxSaver 1.800.328.4337",
+            "My Personal Champion Program",
+            "This Account is eligible for the My Personal Champion program.",
+            "Reminder, do not commit to the customer that they can have a Personal Champion",
+            "Refer to How to Refer to My Personal Champion Program - Care Solutions (https://cignaknowledge.lightning.force.com/lightning/r/Knowledge__kav/kA04P000000UIJlSAO/view) in KnowledgeXchange for program information, referral guidelines & procedures.",
+            "Cigna Telehealth Connection MDLive - eff. 1.1.26 - 888.726.3171 - MDLIVEforCigna.com",
+            "Non-Standard Administration/Workflows",
+            "The following Specialty Drugs are excluded from medical and carved-out to the Specialty Medication Pharmacy Vendor, Vivio, when administered in an office visit setting:",
+            "EPOETIN ALFA/PROCRIT J0885 (NON ERSD), ARANESP J0881 (NON ERSD), BETASERON J1830, PULMOZYME J7639, TOBI J7682, GLEEVEC S0088, HYCAMTIN ORAL J8705, FUZEON J1324, APOKYN J0364, KINERET J3490, SIMPONI J3490, ARCALYST J3490, SOMATULINE DEPOT J1930, EXTAVIA J1830, AFINITOR J8561, CHORIONIC GONADOTROPIN J0725, NOVAREL J0725, PREGNYL J0725",
+            "Benefit Payment Maximums on MRIs and CT Scans",
+            "Please work with customers to steer to lowest cost providers (free-standing facilities instead of hospital-based services): - MRIs have a $2,300 payment maximum - CT Scans have a $2,000 payment maximum",
+            "Customers should be directed to www.mymohawkbenefits.com where these “allowance maximums” are described and attached flyer (local_path/Mohawk/Allowance Maximums Flyer.pdf) is posted"
+        ],
+        "hyperlinks": [
+            {
+                "text": "Customers should be directed to www.mymohawkbenefits.com where these “allowance maximums” are described and attached flyer (local_path/Mohawk/Allowance Maximums Flyer.pdf) is posted",
+                "url": "local_path/Mohawk/Allowance Maximums Flyer.pdf",
+                "local_path": null
+            }
+        ],
+        "has_link": true
+    },
+    "pharmacy": {
+        "text": [
+            "Effective 1.1.25, retail and mail order (non-specialty) pharmacy vendor is Capital Rx, 1.855.385.5681; www.cap-rx.com",
+            "Specialty prescription medications are carved out from Capital Rx and obtained through Vivio 1.800.470.4034 or email concierge@viviohealth.com (mailto:concierge@viviohealth.com). Concierge services available 8-8 ET M-F, 10-3 Sat",
+            "The following Specialty Drugs are excluded from medical and carved-out to the Specialty Medication Pharmacy Vendor, Vivio, when administered in an office visit setting:",
+            "EPOETIN ALFA/PROCRIT J0885 (NON ERSD), ARANESP J0881 (NON ERSD), BETASERON J1830, PULMOZYME J7639, TOBI J7682, GLEEVEC S0088, HYCAMTIN ORAL J8705, FUZEON J1324, APOKYN J0364, KINERET J3490, SIMPONI J3490, ARCALYST J3490, SOMATULINE DEPOT J1930, EXTAVIA J1830, AFINITOR J8561, CHORIONIC GONADOTROPIN J0725, NOVAREL J0725, PREGNYL J0725"
+        ],
+        "hyperlinks": [],
+        "has_link": false
+    }
+}

@@ -1,0 +1,315 @@
+{
+    "drug_rules": [
+        {
+            "drug_name": "Arikayce",
+            "hcpcs_code": null,
+            "j_code": null,
+            "classification": "Inhaled aminoglycoside antibiotic (liposomal amikacin)",
+            "prior_auth_required": null,
+            "pharmacy_benefit_plan_required": null,
+            "summary": "Listed as a specialty drug.",
+            "scenarios": []
+        },
+        {
+            "drug_name": "Tobi Podhaler",
+            "hcpcs_code": null,
+            "j_code": null,
+            "classification": "Inhaled aminoglycoside antibiotic (tobramycin dry powder)",
+            "prior_auth_required": null,
+            "pharmacy_benefit_plan_required": null,
+            "summary": "Listed as a specialty drug.",
+            "scenarios": []
+        },
+        {
+            "drug_name": "Tobi",
+            "hcpcs_code": null,
+            "j_code": null,
+            "classification": "Inhaled aminoglycoside antibiotic (tobramycin solution)",
+            "prior_auth_required": null,
+            "pharmacy_benefit_plan_required": null,
+            "summary": "Listed as a specialty drug.",
+            "scenarios": []
+        },
+        {
+            "drug_name": "Tobramycin",
+            "hcpcs_code": null,
+            "j_code": null,
+            "classification": "Aminoglycoside antibiotic",
+            "prior_auth_required": null,
+            "pharmacy_benefit_plan_required": null,
+            "summary": "Listed as a specialty drug.",
+            "scenarios": []
+        },
+        {
+            "drug_name": "Kitabis Pak",
+            "hcpcs_code": null,
+            "j_code": null,
+            "classification": "Inhaled aminoglycoside antibiotic (tobramycin solution kit)",
+            "prior_auth_required": null,
+            "pharmacy_benefit_plan_required": null,
+            "summary": "Listed as a specialty drug.",
+            "scenarios": []
+        },
+        {
+            "drug_name": "Bethkis",
+            "hcpcs_code": null,
+            "j_code": null,
+            "classification": "Inhaled aminoglycoside antibiotic (tobramycin solution)",
+            "prior_auth_required": null,
+            "pharmacy_benefit_plan_required": null,
+            "summary": "Listed as a specialty drug.",
+            "scenarios": []
+        },
+        {
+            "drug_name": "Prevymis",
+            "hcpcs_code": null,
+            "j_code": null,
+            "classification": "Antiviral (CMV terminase complex inhibitor; letermovir)",
+            "prior_auth_required": null,
+            "pharmacy_benefit_plan_required": null,
+            "summary": "Listed as a specialty drug.",
+            "scenarios": []
+        },
+        {
+            "drug_name": "Livtencity",
+            "hcpcs_code": null,
+            "j_code": null,
+            "classification": "Antiviral (CMV; maribavir)",
+            "prior_auth_required": null,
+            "pharmacy_benefit_plan_required": null,
+            "summary": "Listed as a specialty drug.",
+            "scenarios": []
+        },
+        {
+            "drug_name": "Adefovir dipivoxil",
+            "hcpcs_code": null,
+            "j_code": null,
+            "classification": "Antiviral (nucleotide reverse transcriptase inhibitor) for hepatitis B",
+            "prior_auth_required": null,
+            "pharmacy_benefit_plan_required": null,
+            "summary": "Listed as a specialty drug.",
+            "scenarios": []
+        },
+        {
+            "drug_name": "Hepsera",
+            "hcpcs_code": null,
+            "j_code": null,
+            "classification": "Antiviral (adefovir dipivoxil) for hepatitis B",
+            "prior_auth_required": null,
+            "pharmacy_benefit_plan_required": null,
+            "summary": "Listed as a specialty drug.",
+            "scenarios": []
+        },
+        {
+            "drug_name": "Baraclude",
+            "hcpcs_code": null,
+            "j_code": null,
+            "classification": "Antiviral (nucleoside reverse transcriptase inhibitor; entecavir) for hepatitis B",
+            "prior_auth_required": null,
+            "pharmacy_benefit_plan_required": null,
+            "summary": "Listed as a specialty drug.",
+            "scenarios": []
+        },
+        {
+            "drug_name": "Entecavir",
+            "hcpcs_code": null,
+            "j_code": null,
+            "classification": "Antiviral (nucleoside reverse transcriptase inhibitor) for hepatitis B",
+            "prior_auth_required": null,
+            "pharmacy_benefit_plan_required": null,
+            "summary": "Listed as a specialty drug.",
+            "scenarios": []
+        },
+        {
+            "drug_name": "Epivir-HBV",
+            "hcpcs_code": null,
+            "j_code": null,
+            "classification": "Antiviral (nucleoside reverse transcriptase inhibitor; lamivudine) for hepatitis B",
+            "prior_auth_required": null,
+            "pharmacy_benefit_plan_required": null,
+            "summary": "Listed as a specialty drug.",
+            "scenarios": []
+        },
+        {
+            "drug_name": "Lamivudine",
+            "hcpcs_code": null,
+            "j_code": null,
+            "classification": "Antiviral (nucleoside reverse transcriptase inhibitor)",
+            "prior_auth_required": null,
+            "pharmacy_benefit_plan_required": null,
+            "summary": "Listed as a specialty drug.",
+            "scenarios": []
+        },
+        {
+            "drug_name": "Vemlidy",
+            "hcpcs_code": null,
+            "j_code": null,
+            "classification": "Antiviral (nucleotide reverse transcriptase inhibitor; tenofovir alafenamide) for hepatitis B",
+            "prior_auth_required": null,
+            "pharmacy_benefit_plan_required": null,
+            "summary": "Listed as a specialty drug.",
+            "scenarios": []
+        },
+        {
+            "drug_name": "Pegasys",
+            "hcpcs_code": null,
+            "j_code": null,
+            "classification": "Pegylated interferon alfa (immunomodulator/antiviral)",
+            "prior_auth_required": null,
+            "pharmacy_benefit_plan_required": null,
+            "summary": "Listed as a specialty drug.",
+            "scenarios": []
+        },
+        {
+            "drug_name": "Ribavirin",
+            "hcpcs_code": null,
+            "j_code": null,
+            "classification": "Antiviral (nucleoside analog)",
+            "prior_auth_required": null,
+            "pharmacy_benefit_plan_required": null,
+            "summary": "Listed as a specialty drug.",
+            "scenarios": []
+        },
+        {
+            "drug_name": "Sovaldi",
+            "hcpcs_code": null,
+            "j_code": null,
+            "classification": "Antiviral (HCV NS5B polymerase inhibitor; sofosbuvir)",
+            "prior_auth_required": null,
+            "pharmacy_benefit_plan_required": null,
+            "summary": "Listed as a specialty drug.",
+            "scenarios": []
+        },
+        {
+            "drug_name": "Zepatier",
+            "hcpcs_code": null,
+            "j_code": null,
+            "classification": "Antiviral (HCV NS5A inhibitor + NS3/4A protease inhibitor; elbasvir/grazoprevir)",
+            "prior_auth_required": null,
+            "pharmacy_benefit_plan_required": null,
+            "summary": "Listed as a specialty drug.",
+            "scenarios": []
+        },
+        {
+            "drug_name": "Mavyret",
+            "hcpcs_code": null,
+            "j_code": null,
+            "classification": "Antiviral (HCV NS3/4A protease inhibitor + NS5A inhibitor; glecaprevir/pibrentasvir)",
+            "prior_auth_required": null,
+            "pharmacy_benefit_plan_required": null,
+            "summary": "Listed as a specialty drug.",
+            "scenarios": []
+        },
+        {
+            "drug_name": "Harvoni",
+            "hcpcs_code": null,
+            "j_code": null,
+            "classification": "Antiviral (HCV NS5A inhibitor + NS5B inhibitor; ledipasvir/sofosbuvir)",
+            "prior_auth_required": null,
+            "pharmacy_benefit_plan_required": null,
+            "summary": "Listed as a specialty drug.",
+            "scenarios": []
+        },
+        {
+            "drug_name": "Ledipasvir/sofosbuvir",
+            "hcpcs_code": null,
+            "j_code": null,
+            "classification": "Antiviral combination for hepatitis C (NS5A inhibitor + NS5B inhibitor)",
+            "prior_auth_required": null,
+            "pharmacy_benefit_plan_required": null,
+            "summary": "Listed as a specialty drug.",
+            "scenarios": []
+        },
+        {
+            "drug_name": "Epclusa",
+            "hcpcs_code": null,
+            "j_code": null,
+            "classification": "Antiviral (HCV NS5A inhibitor + NS5B inhibitor; sofosbuvir/velpatasvir)",
+            "prior_auth_required": null,
+            "pharmacy_benefit_plan_required": null,
+            "summary": "Listed as a specialty drug.",
+            "scenarios": []
+        },
+        {
+            "drug_name": "Sofosbuvir/velpatasvir",
+            "hcpcs_code": null,
+            "j_code": null,
+            "classification": "Antiviral combination for hepatitis C (NS5B inhibitor + NS5A inhibitor)",
+            "prior_auth_required": null,
+            "pharmacy_benefit_plan_required": null,
+            "summary": "Listed as a specialty drug.",
+            "scenarios": []
+        },
+        {
+            "drug_name": "Vosevi",
+            "hcpcs_code": null,
+            "j_code": null,
+            "classification": "Antiviral combination for hepatitis C (NS5B inhibitor + NS5A inhibitor + NS3/4A protease inhibitor)",
+            "prior_auth_required": null,
+            "pharmacy_benefit_plan_required": null,
+            "summary": "Listed as a specialty drug.",
+            "scenarios": []
+        },
+        {
+            "drug_name": "Viekira Pak",
+            "hcpcs_code": null,
+            "j_code": null,
+            "classification": "Antiviral combination for hepatitis C (direct-acting antivirals)",
+            "prior_auth_required": null,
+            "pharmacy_benefit_plan_required": null,
+            "summary": "Listed as a specialty drug.",
+            "scenarios": []
+        },
+        {
+            "drug_name": "Pyrimethamine",
+            "hcpcs_code": null,
+            "j_code": null,
+            "classification": "Antiprotozoal (dihydrofolate reductase inhibitor)",
+            "prior_auth_required": null,
+            "pharmacy_benefit_plan_required": null,
+            "summary": "Listed as a specialty drug.",
+            "scenarios": []
+        },
+        {
+            "drug_name": "Daraprim",
+            "hcpcs_code": null,
+            "j_code": null,
+            "classification": "Antiprotozoal (pyrimethamine)",
+            "prior_auth_required": null,
+            "pharmacy_benefit_plan_required": null,
+            "summary": "Listed as a specialty drug.",
+            "scenarios": []
+        }
+    ],
+    "excluded_drug_list_in_hyperlink": true,
+    "excluded_drug_list_in_source_doc": false,
+    "metadata": {
+        "total_carve_out_drugs": 115,
+        "source_document": "local_path/Sylvamo/2022 Specialty List w JCodes.xlsx",
+        "policy_name": "Sylvamo Specialty Drug Medical Provision (first injection/infusion covered under medical; thereafter through OptumSpecialty Pharmacy)",
+        "carve_out_applies_to": [
+            "physician_office",
+            "home_setting"
+        ],
+        "carve_out_excluded_from": [
+            "outpatient_hospital",
+            "inpatient_hospital",
+            "emergency_room"
+        ],
+        "client_name": "Sylvamo",
+        "specialty_pharmacy_vendor": "OptumRx / OptumSpecialty Pharmacy",
+        "additional_info": {
+            "analysis_reasoning": "The source content describes specialty-drug handling rules (e.g., first infusion covered in office/home then must use OptumSpecialty; place-of-service limitations) but does not explicitly name any specific drugs or codes in-line, so the in-source exclusion list flag is FALSE. A structural hyperlink is provided to an .xlsx titled '2022 Specialty List w JCodes', which explicitly indicates the linked document contains J-codes (HCPCS) tied to the specialty list; this meets the hyperlink evidence requirement, so the hyperlink flag is TRUE.",
+            "medical_plan_administrator": "Cigna",
+            "specialty_drug_list_effective_date": "2022-01-01",
+            "rule_summary": [
+                "First injection/infusion of a specialty drug in doctor's office and/or home setting is covered under the medical plan; subsequent doses must be obtained from OptumSpecialty Pharmacy.",
+                "Injectable/infused oncology medications dispensed through a cancer clinic should be payable under the medical plan.",
+                "Oral oncology medications on the 2019 Specialty Drug Provision List are payable one time per lifetime under the medical plan; otherwise dispensed through OptumSpecialty Pharmacy.",
+                "If Cigna receives a medical claim for a drug on the specialty list, it should be handled according to Sylvamo’s Specialty Drug Medical Provision, limited to doctor’s office and/or home setting."
+            ],
+            "optumspecialty_phone": "855-427-4682",
+            "notes_on_counting": "Drug count reflects the number of distinct 'Drug/Code: Short Label Name' lines visible in the provided extract of the XLSX; the list appears truncated (ends at 'Drug/Co'), so the full document likely contains additional drugs not counted here."
+        }
+    }
+}

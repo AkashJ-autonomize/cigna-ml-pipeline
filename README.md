@@ -1,90 +1,95 @@
-# Cigna Guideline Extraction Pipeline
+# Cigna OLAM Policy Extraction Pipeline
 
-A production-grade ML pipeline for extracting structured clinical data from Cigna guideline documents. This repository contains two specialized extraction flows.
+A production-grade ML pipeline designed to extract structured clinical drug rules from Cigna OLAM HTML documents and their associated attachments (PDF, DOCX, CSV, XLSX).
 
-## Repository Structure
+## 🚀 Workflow Overview
 
-This repository has two independent extraction pipelines in separate feature branches:
+The pipeline utilizes a sophisticated **4-Stage Conditional Orchestration** logic to ensure accuracy, context-awareness, and resource efficiency.
 
-| Pipeline | Branch | Purpose | Input Format |
-|----------|--------|---------|--------------|
-| **CGM Pipeline** | `cgm-pipeline` | Extracts CGM device component data from HTML tables | HTML |
-| **OLAM Pipeline** | `olam-pipeline` | Extracts clinical drug rules from policy documents | HTML + PDF/DOCX/CSV/XLSX |
+### Stage 1: Classification & Namespace Detection
+- **Namespace Analysis**: Automatically identifies boundaries between **Medical** and **Pharmacy** namespaces.
+- **Evidence Detection**: The LLM analyzes the parsed text and structural hyperlink metadata to determine where drug rules reside.
+- **Binary Flag Steering**: Returns two boolean flags:
+    - `excluded_drug_list_in_source_doc`: TRUE if rules are named directly in the HTML.
+    - `excluded_drug_list_in_hyperlink`: TRUE if rules are contained in external attachments (e.g., CSV carve-out lists).
 
-## CGM Pipeline
+### Stage 2: Source Extraction (Conditional)
+- **Trigger**: Runs only if `excluded_drug_list_in_source_doc` is TRUE.
+- **Task**: Extracts granular `drug_rules` directly from the HTML text snippets.
+- **Strict Logic**: Separates drug names from codes and captures setting-specific usage rules.
 
-**Branch**: `cgm-pipeline`
+### Stage 3: Hyperlink Extraction (Conditional)
+- **Trigger**: Runs only if `excluded_drug_list_in_hyperlink` is TRUE.
+- **Document Handlers**:
+    - **CSV/Excel**: Extracts high-signal clinical lists using `pandas`.
+    - **DOCX**: Parses complex formatting/tables using `python-docx`.
+    - **PDF Vision**: Converts pages to images and uses **Azure OpenAI GPT-5.2 with Vision** for precise table/list extraction.
+- **Exhaustive Mapping**: Maps every individual item in an external list to a separate drug rule object.
 
-Processes Continuous Glucose Monitoring (CGM) device data from HTML documents.
+### Stage 4: Metadata Extraction
+- **Trigger**: Runs if any drug rules are found.
+- **Task**: Extracts policy-level metadata such as:
+    - `total_carve_out_drugs`
+    - `policy_name` & `client_name`
+    - `carve_out_applies_to` / `carve_out_excluded_from`
+- **Result**: Enriches the final JSON output with high-level policy context.
 
-### Features
-- Extracts therapeutic and non-therapeutic component tables
-- Parses device information (brand names, NDC codes, HCPC codes, dosages)
-- Batch processing with data validation
-
-### Usage
-```bash
-git checkout cgm-pipeline
-pip install -r requirements.txt
-python run.py
-```
-
-### Output
-```json
-{
-  "tables": {
-    "therapeutic_table": [...],
-    "non_therapeutic_table": [...]
-  }
-}
-```
-
-## OLAM Pipeline
-
-**Branch**: `olam-pipeline`
-
-Extracts structured clinical drug rules using a 4-stage conditional orchestration.
-
-### Features
-- **Stage 1**: Classification & namespace detection
-- **Stage 2**: Source text extraction
-- **Stage 3**: Attachment extraction (PDF/DOCX/CSV/XLSX)
-- **Stage 4**: Metadata enrichment
-- Azure OpenAI GPT-5.2 with Vision support
-
-### Prerequisites
-- Python 3.10+
-- Poppler for PDF processing
-- Azure OpenAI API credentials
-
-### Usage
-```bash
-git checkout olam-pipeline
-pip install -r requirements.txt
-# Configure .env with Azure OpenAI credentials
-python run.py
-```
-
-### Output
-```json
-{
-  "drug_rules": [...],
-  "metadata": {
-    "total_carve_out_drugs": 45,
-    "policy_name": "..."
-  }
-}
-```
-
-## Getting Started
-
-1. Clone the repository
-2. Checkout the required branch (`cgm-pipeline` or `olam-pipeline`)
-3. Install dependencies: `pip install -r requirements.txt`
-4. Place input files in `files/` directory
-5. Run: `python run.py`
+### Final Step: Result Merging
+- Consolidated all rules from Stage 2 and Stage 3 into a single, unified `drug_rules` array.
+- Ensures a consistent JSON schema regardless of whether the data was in the source text or an attachment.
 
 ---
 
-**Maintained by**: Autonomize Team  
-**Last Updated**: February 2026
+## 📂 Directory Structure
+
+```text
+├── run.py                 # Main orchestration engine (supports --local-test)
+├── src/
+│   ├── html_parser.py     # Structural BeautifulSoup parsing
+│   ├── processor.py       # 4-Stage Logic & Document Handlers
+│   ├── handlers.py        # File handlers (PDF/DOCX/CSV/Vision)
+│   ├── prompts.py         # Versioned AI Extraction Prompts
+│   └── schemas.py         # Pydantic models for extraction consistency
+├── files/                 # Input provider HTML folders
+├── output/                # Raw Parser logs
+├── extraction/            # Final AI-refined Drug Rules
+└── cache/                 # PDF Vision PNG snapshots (for verification)
+```
+
+## 🛠 Setup & Execution
+
+### Prerequisites
+1.  **Python 3.10+**
+2.  **Poppler**: Required for PDF processing.
+    - Mac: `brew install poppler`
+    - Linux: `sudo apt-get install poppler-utils`
+    - Windows: Download binary and add to PATH.
+
+### Installation
+```bash
+pip install -r requirements.txt
+```
+
+### Configuration
+1.  **Environment Config**:
+    Populate `.env` with Azure OpenAI credentials (requires GPT-5.2 / Vision support).
+    ```ini
+    AZURE_OPENAI_API_KEY=your_key
+    AZURE_OPENAI_ENDPOINT=your_endpoint
+    AZURE_OPENAI_DEPLOYMENT_NAME=your_deployment
+    ```
+
+2.  **Run Full Pipeline**:
+    ```bash
+    python run.py
+    ```
+
+3.  **Local Testing (Mocking)**:
+    Modify `run.py` to limit processing to specific provider folders:
+    ```python
+    LOCAL_TEST_PROVIDERS = ["ProviderName"]
+    USE_LOCAL_TESTING = True
+    ```
+
+---
+*Developed for Autonomize | Cigna Guideline Extraction Project*

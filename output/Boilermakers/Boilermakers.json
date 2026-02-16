@@ -1,0 +1,50 @@
+{
+    "medical": {
+        "text": [
+            "See Source System",
+            "Under no circumstances should we create an INN authorization for an OON HCP/Facility unless the admission is directly through an ER. Only in this scenario can the authorization be written as INN, negotiated rates are not allowed. Any other Out of network scenario it should be written as OON. We do not send to peer review to approve an Ad Hoc, we write as OON. Single Case agreements/Negotiated Rates are never allowed under any circumstance.",
+            "Network Adequacy does not apply",
+            "For Out-of-Network Outpatient services: Please read benefits page clearly as payment maximums may apply and member needs to be made aware of this.",
+            "OON Home Health requires precertification",
+            "Gene and Advanced Cell Therapies are not covered.",
+            "Eating Disorder Treatment is not a covered benefit even if it is not listed as the primary diagnosis/if there is any diagnosis (primary or secondary). Under no circumstance should we approve these requests. Any request made for this treatment, will be administratively denied. Please reference the administrative denial SOP for specific account processes / verbiage requirements. There are no exceptions. - Click here (https://olam.healthcare.cigna.com/OLAM/B_Accts/Boilermakers/Boilermakers%20excluded%20dx%20list.docx) to see list of excluded diagnosis as of 1.1.20 - When administratively denying a request due to Eating Disorder in any pointer (Primary/Secondary/ or any other position), you must reference the specific language from the SPD: According to your benefits through Boilermakers National Health and Welfare Fund, there is an exclusion related to the medical management of weight loss or gain or treatment of obesity including prescription drugs or procedures such as reconstructive surgeries following weight loss or the treatment of eating disorders such as anorexia except for benefits provided under Preventative Services. - Click here (https://centralhub.cigna.com/team/pcben/Final%20Communications/Forms/AllItems.aspx?RootFolder=%2fteam%2fpcben%2fFinal%20Communications%2fPreventive%20Care%20Codes%2dCall%20and%20Claim%20SOP%20link&) to see list of PPACA required codes, column N only (Standard Services Official CIGNA Preventive Care Policy List). If the code meets the PPACA requirements the service can be allowed.",
+            "Unless PPACA Preventive, the follow diagnosis codes are excluded click here (/OLAM/B_Accts/Boilermakers/Boilermakers excluded dx list.docx) to see list of excluded diagnosis as of 1.1.20",
+            "Telehealth preferred services covered through Brightline, Brightside and MD Live at 100%. All other telehealth vendors will pay at the aligned benefit level.",
+            "No Care Management applies for Medicare participants"
+        ],
+        "hyperlinks": [
+            {
+                "text": "Eating Disorder Treatment is not a covered benefit even if it is not listed as the primary diagnosis/if there is any diagnosis (primary or secondary). Under no circumstance should we approve these requests. Any request made for this treatment, will be administratively denied. Please reference the administrative denial SOP for specific account processes / verbiage requirements. There are no exceptions. - Click here (https://olam.healthcare.cigna.com/OLAM/B_Accts/Boilermakers/Boilermakers%20excluded%20dx%20list.docx) to see list of excluded diagnosis as of 1.1.20 - When administratively denying a request due to Eating Disorder in any pointer (Primary/Secondary/ or any other position), you must reference the specific language from the SPD: According to your benefits through Boilermakers National Health and Welfare Fund, there is an exclusion related to the medical management of weight loss or gain or treatment of obesity including prescription drugs or procedures such as reconstructive surgeries following weight loss or the treatment of eating disorders such as anorexia except for benefits provided under Preventative Services. - Click here (https://centralhub.cigna.com/team/pcben/Final%20Communications/Forms/AllItems.aspx?RootFolder=%2fteam%2fpcben%2fFinal%20Communications%2fPreventive%20Care%20Codes%2dCall%20and%20Claim%20SOP%20link&) to see list of PPACA required codes, column N only (Standard Services Official CIGNA Preventive Care Policy List). If the code meets the PPACA requirements the service can be allowed.",
+                "url": "https://olam.healthcare.cigna.com/OLAM/B_Accts/Boilermakers/Boilermakers%20excluded%20dx%20list.docx",
+                "local_path": null
+            },
+            {
+                "text": "Unless PPACA Preventive, the follow diagnosis codes are excluded click here (/OLAM/B_Accts/Boilermakers/Boilermakers excluded dx list.docx) to see list of excluded diagnosis as of 1.1.20",
+                "url": "/OLAM/B_Accts/Boilermakers/Boilermakers excluded dx list.docx",
+                "local_path": null
+            }
+        ],
+        "has_link": true
+    },
+    "pharmacy": {
+        "text": [
+            "Express Scripts Patient Customer Service: 800.655.0459 (not a Cigna Co.)",
+            "Effective 1.1.18, the following drugs will not be covered outside of emergency situations:",
+            "Boilermakers Specialty medications Carve out to ESI (local_path/Boilermakers/Boilermakers Specialty medications Carve out to ESI (1).xlsx)",
+            "ESI direct contact (local_path/Boilermakers/ESI direct contact.pdf)"
+        ],
+        "hyperlinks": [
+            {
+                "text": "Boilermakers Specialty medications Carve out to ESI (local_path/Boilermakers/Boilermakers Specialty medications Carve out to ESI (1).xlsx)",
+                "url": "local_path/Boilermakers/Boilermakers Specialty medications Carve out to ESI (1).xlsx",
+                "local_path": null
+            },
+            {
+                "text": "ESI direct contact (local_path/Boilermakers/ESI direct contact.pdf)",
+                "url": "local_path/Boilermakers/ESI direct contact.pdf",
+                "local_path": null
+            }
+        ],
+        "has_link": true
+    }
+}

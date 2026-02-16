@@ -1,0 +1,26 @@
+{
+    "medical": {
+        "text": [
+            "See Source System"
+        ],
+        "hyperlinks": [],
+        "has_link": false
+    },
+    "pharmacy": {
+        "text": [
+            "Express Scripts 866.273.5779www.express-scripts.com",
+            "Price a medication: www.express-scripts.com/BJC",
+            "Locate a network pharmacy: www.express-scripts.com/BJC",
+            "BJC Family Care Central Pharmacy (mail order: 314.657.9000 / 855.525.0411 or www.BJCRx.org",
+            "The attached document (local_path/BJCHealthcare/BJC Healthcare Specialty Drugs.docx) lists 49 Specialty Drug HCPC codes that must be acquired through the BJC Pharmacy Benefit Plan for Physician and Home Health Care services. This carve-out to the BJC Pharmacy Benefit Plan for these 49 medications does not apply to services provided in an inpatient, outpatient, or ER hospital setting, or in an urgent care setting. Please read the document for further info."
+        ],
+        "hyperlinks": [
+            {
+                "text": "The attached document (local_path/BJCHealthcare/BJC Healthcare Specialty Drugs.docx) lists 49 Specialty Drug HCPC codes that must be acquired through the BJC Pharmacy Benefit Plan for Physician and Home Health Care services. This carve-out to the BJC Pharmacy Benefit Plan for these 49 medications does not apply to services provided in an inpatient, outpatient, or ER hospital setting, or in an urgent care setting. Please read the document for further info.",
+                "url": "local_path/BJCHealthcare/BJC Healthcare Specialty Drugs.docx",
+                "local_path": null
+            }
+        ],
+        "has_link": true
+    }
+}

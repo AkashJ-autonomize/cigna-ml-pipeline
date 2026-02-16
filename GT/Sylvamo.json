@@ -1,0 +1,476 @@
+{
+    "client": {
+        "name": "Sylvamo North America LLC",
+        "account_number": "3344396",
+        "company_website": "www.sylvamo.com",
+        "employee_service_center": {
+            "phones": [
+                "888.372.2968",
+                "866.683.4547"
+            ],
+            "note": "Contact Sylvamo ESC for any payroll or benefits questions/issues that occur after September 1"
+        }
+    },
+    "policy": {
+        "policy_name": "Specialty Drug Medical Provision",
+        "policy_type": "specialty_drug_first_dose_medical_provision",
+        "effective_date": "1.1.22",
+        "total_drugs_in_scope": 773,
+        "source_documents": [
+            "Sylvamo.html (Medical and Pharmacy sections only)",
+            "2022_Specialty_List_w_JCodes.xlsx"
+        ]
+    },
+    "medical": {
+        "note": "See Source System",
+        "programs": {
+            "health_matters_care_management_preferred": {
+                "available": true
+            },
+            "healthy_pregnancies_healthy_babies": {
+                "available": true,
+                "note": "See Incentives section for more info"
+            },
+            "comprehensive_oncology_program": {
+                "available": true
+            },
+            "cigna_gene_therapy_program": {
+                "available": true,
+                "includes": "Embarc Benefit Protection"
+            }
+        }
+    },
+    "pharmacy": {
+        "vendor": "OptumRx",
+        "phone": "800.797.9791",
+        "specialty_pharmacy": {
+            "vendor": "OptumSpecialty Pharmacy",
+            "phone": "855.427.4682"
+        },
+        "specialty_drug_medical_provision": {
+            "description": "The Sylvamo medical plans administered by Cigna cover the first injection/infusion of a Specialty Drug in the doctor's office and/or home setting. Thereafter, the Specialty Drug needs to be obtained from OptumSpecialty Pharmacy after the first injection or infusion.",
+            "first_dose_coverage": {
+                "covered_by": "Medical plan (Cigna)",
+                "settings": [
+                    "Doctor's office",
+                    "Home setting"
+                ]
+            },
+            "subsequent_doses": {
+                "covered_by": "OptumSpecialty Pharmacy",
+                "pharmacy_phone": "855.427.4682",
+                "requirement": "After the first injection or infusion"
+            },
+            "oncology_medications": {
+                "injectable_infused": {
+                    "setting": "Cancer clinic",
+                    "coverage": "Payable under the client's medical plan"
+                },
+                "oral": {
+                    "specialty_list_drugs": "Payable one time per lifetime under the client's medical plan(s)",
+                    "all_others": "Dispensed through OptumSpecialty Pharmacy"
+                }
+            },
+            "place_of_service_restrictions": {
+                "provision_applies_to": [
+                    "Doctor's office",
+                    "Home setting"
+                ],
+                "provision_does_not_apply_to": [
+                    "Outpatient setting",
+                    "Inpatient setting",
+                    "Emergency room setting"
+                ]
+            },
+            "claims_handling": {
+                "note": "Should Cigna receive a medical claim for a drug on the list, it should be handled by Cigna according to Sylvamo's Specialty Drug Medical Provision. The specialty drug provision should ONLY be for places of service as doctor's office and/or home setting."
+            }
+        }
+    },
+    "specialty_drug_list": {
+        "description": "All drugs on the attached list are covered by OptumRx, through OptumSpecialty Pharmacy",
+        "effective_date": "1.1.22",
+        "total_unique_drugs": 773,
+        "total_drug_classes": 55,
+        "drug_classes": [
+            "ADULT INCONTINENCE",
+            "ALZHEIMER'S DISEASE",
+            "AMMONIA DETOXICANTS",
+            "ANEMIA",
+            "ANTI-GOUT AGENT",
+            "ANTI-INFECTIVE",
+            "ANTIBACTERIALS",
+            "ANTICOAGULATION",
+            "ANTICONVULSANTS",
+            "ANTIHYPERLIPIDEMIC",
+            "ASTHMA",
+            "CARDIOVASCULAR",
+            "CENTRAL NERVOUS SYSTEM AGENTS",
+            "CHEMOTHERAPY PROTECTANT",
+            "CYSTIC FIBROSIS",
+            "DERMATOLOGIC",
+            "DUCHENNE MUSCULAR DYSTROPHY",
+            "ENDOCRINE",
+            "ENZYME THERAPY",
+            "GASTROINTESTINAL AGENTS",
+            "GENE THERAPY",
+            "GENETIC DISORDER",
+            "GROWTH HORMONE DEFICIENCY",
+            "HEMATOLOGICAL AGENTS",
+            "HEMOPHILIA",
+            "HEPATITIS B",
+            "HEPATITIS C",
+            "HEPATOLOGY",
+            "HEREDITARY ANGIOEDEMA",
+            "IMMUNE GLOBULIN",
+            "IMMUNOLOGICAL AGENTS",
+            "INFERTILITY",
+            "INFLAMMATORY CONDITIONS",
+            "METABOLIC AGENTS",
+            "METABOLIC BONE DISEASE",
+            "MOOD DISORDER DRUGS",
+            "MULTIPLE SCLEROSIS",
+            "MUSCULOSKELETAL AGENTS",
+            "NARCOLEPSY",
+            "NEUROLOGICAL AGENTS",
+            "NEUTROPENIA",
+            "ONCOLOGY - INJECTABLE",
+            "ONCOLOGY - ORAL",
+            "ONCOLOGY - TOPICAL",
+            "OPHTHALMIC AGENTS",
+            "OPIOID ANTAGONISTS",
+            "OSTEOARTHRITIS",
+            "OSTEOPOROSIS",
+            "PAIN MANAGEMENT",
+            "PARKINSON'S DISEASE",
+            "PULMONARY FIBROSIS",
+            "PULMONARY HYPERTENSION",
+            "RSV",
+            "SUBSTANCE ABUSE TREATMENT",
+            "TRANSPLANT"
+        ],
+        "sample_drugs": [
+            {
+                "drug_name": "SOLESTA",
+                "drug_class": "ADULT INCONTINENCE",
+                "jcode": "J7520"
+            },
+            {
+                "drug_name": "ADUHELM",
+                "drug_class": "ALZHEIMER'S DISEASE",
+                "jcode": "J0172"
+            },
+            {
+                "drug_name": "RAVICTI",
+                "drug_class": "AMMONIA DETOXICANTS",
+                "jcode": "J1301"
+            },
+            {
+                "drug_name": "REBLOZYL",
+                "drug_class": "ANEMIA",
+                "jcode": "J0896"
+            },
+            {
+                "drug_name": "KRYSTEXXA",
+                "drug_class": "ANTI-GOUT AGENT",
+                "jcode": "J2507"
+            },
+            {
+                "drug_name": "PREVYMIS",
+                "drug_class": "ANTI-INFECTIVE",
+                "jcode": "J9204"
+            },
+            {
+                "drug_name": "ARIKAYCE",
+                "drug_class": "ANTIBACTERIALS",
+                "jcode": "J2793"
+            },
+            {
+                "drug_name": "FRAGMIN",
+                "drug_class": "ANTICOAGULATION",
+                "jcode": "J3110"
+            },
+            {
+                "drug_name": "EPIDIOLEX",
+                "drug_class": "ANTICONVULSANTS",
+                "jcode": "J7503"
+            },
+            {
+                "drug_name": "EVKEEZA",
+                "drug_class": "ANTIHYPERLIPIDEMIC",
+                "jcode": "J1305"
+            },
+            {
+                "drug_name": "XOLAIR",
+                "drug_class": "ASTHMA",
+                "jcode": "J2357"
+            },
+            {
+                "drug_name": "DROXIDOPA",
+                "drug_class": "CARDIOVASCULAR",
+                "jcode": "J9000"
+            },
+            {
+                "drug_name": "BRINEURA",
+                "drug_class": "CENTRAL NERVOUS SYSTEM AGENTS",
+                "jcode": "J0567"
+            },
+            {
+                "drug_name": "LEVOLEUCOVOR",
+                "drug_class": "CHEMOTHERAPY PROTECTANT",
+                "jcode": "J9218"
+            },
+            {
+                "drug_name": "TOBI PODHALR",
+                "drug_class": "CYSTIC FIBROSIS",
+                "jcode": "J3240"
+            },
+            {
+                "drug_name": "SCENESSE",
+                "drug_class": "DERMATOLOGIC",
+                "jcode": "J7352"
+            },
+            {
+                "drug_name": "EMFLAZA",
+                "drug_class": "DUCHENNE MUSCULAR DYSTROPHY",
+                "jcode": "J9269"
+            },
+            {
+                "drug_name": "HYDROXY CAPR",
+                "drug_class": "ENDOCRINE",
+                "jcode": "J8705"
+            },
+            {
+                "drug_name": "FIRMAGON",
+                "drug_class": "ENDOCRINE",
+                "jcode": "J9155"
+            },
+            {
+                "drug_name": "REVCOVI",
+                "drug_class": "ENZYME THERAPY",
+                "jcode": "S0104"
+            },
+            {
+                "drug_name": "FABRAZYME",
+                "drug_class": "ENZYME THERAPY",
+                "jcode": "J0180"
+            },
+            {
+                "drug_name": "GATTEX",
+                "drug_class": "GASTROINTESTINAL AGENTS",
+                "jcode": "S0132"
+            },
+            {
+                "drug_name": "ZOLGENSMA",
+                "drug_class": "GENE THERAPY",
+                "jcode": "J3399"
+            },
+            {
+                "drug_name": "OXLUMO",
+                "drug_class": "GENETIC DISORDER",
+                "jcode": "J0224"
+            },
+            {
+                "drug_name": "SKYTROFA",
+                "drug_class": "GROWTH HORMONE DEFICIENCY",
+                "jcode": "J7520"
+            },
+            {
+                "drug_name": "DOPTELET",
+                "drug_class": "HEMATOLOGICAL AGENTS",
+                "jcode": "J9171"
+            },
+            {
+                "drug_name": "HEMOFIL M",
+                "drug_class": "HEMOPHILIA",
+                "jcode": "Q9995"
+            },
+            {
+                "drug_name": "KOATE",
+                "drug_class": "HEMOPHILIA",
+                "jcode": "J9271"
+            },
+            {
+                "drug_name": "ADEFOV DIPIV",
+                "drug_class": "HEPATITIS B",
+                "jcode": "J9042"
+            },
+            {
+                "drug_name": "PEGASYS",
+                "drug_class": "HEPATITIS C",
+                "jcode": "S0145"
+            },
+            {
+                "drug_name": "LIVMARLI",
+                "drug_class": "HEPATOLOGY",
+                "jcode": "Q2049"
+            },
+            {
+                "drug_name": "CINRYZE",
+                "drug_class": "HEREDITARY ANGIOEDEMA",
+                "jcode": "J0598"
+            },
+            {
+                "drug_name": "CYTOGAM",
+                "drug_class": "IMMUNE GLOBULIN",
+                "jcode": "J0850"
+            },
+            {
+                "drug_name": "GAMASTAN",
+                "drug_class": "IMMUNE GLOBULIN",
+                "jcode": "J1324"
+            },
+            {
+                "drug_name": "PALFORZIA",
+                "drug_class": "IMMUNOLOGICAL AGENTS",
+                "jcode": "J9267"
+            },
+            {
+                "drug_name": "NOVAREL",
+                "drug_class": "INFERTILITY",
+                "jcode": "J9999"
+            },
+            {
+                "drug_name": "CORTROPHIN",
+                "drug_class": "INFLAMMATORY CONDITIONS",
+                "jcode": "J7180"
+            },
+            {
+                "drug_name": "ACTHAR",
+                "drug_class": "INFLAMMATORY CONDITIONS",
+                "jcode": "J3262"
+            },
+            {
+                "drug_name": "NULIBRY",
+                "drug_class": "METABOLIC AGENTS",
+                "jcode": "J2182"
+            },
+            {
+                "drug_name": "ZOLEDRONIC",
+                "drug_class": "METABOLIC BONE DISEASE",
+                "jcode": "J9202"
+            },
+            {
+                "drug_name": "ZULRESSO",
+                "drug_class": "MOOD DISORDER DRUGS",
+                "jcode": "J1632"
+            },
+            {
+                "drug_name": "GLATIRAMER",
+                "drug_class": "MULTIPLE SCLEROSIS",
+                "jcode": "J0257"
+            },
+            {
+                "drug_name": "GLATOPA",
+                "drug_class": "MULTIPLE SCLEROSIS",
+                "jcode": "J0257"
+            },
+            {
+                "drug_name": "VOXZOGO",
+                "drug_class": "MUSCULOSKELETAL AGENTS",
+                "jcode": "J7179"
+            },
+            {
+                "drug_name": "WAKIX",
+                "drug_class": "NARCOLEPSY",
+                "jcode": "J9153"
+            },
+            {
+                "drug_name": "DYSPORT",
+                "drug_class": "NEUROLOGICAL AGENTS",
+                "jcode": "J0586"
+            },
+            {
+                "drug_name": "NEUPOGEN",
+                "drug_class": "NEUTROPENIA",
+                "jcode": "J1442"
+            },
+            {
+                "drug_name": "BELRAPZO",
+                "drug_class": "ONCOLOGY - INJECTABLE",
+                "jcode": "J9036"
+            },
+            {
+                "drug_name": "BENDEKA",
+                "drug_class": "ONCOLOGY - INJECTABLE",
+                "jcode": "J9034"
+            },
+            {
+                "drug_name": "MELPHALAN",
+                "drug_class": "ONCOLOGY - ORAL",
+                "jcode": "J9245"
+            },
+            {
+                "drug_name": "ALKERAN",
+                "drug_class": "ONCOLOGY - ORAL",
+                "jcode": "J8600"
+            },
+            {
+                "drug_name": "VALCHLOR",
+                "drug_class": "ONCOLOGY - TOPICAL",
+                "jcode": "J1823"
+            },
+            {
+                "drug_name": "KEVEYIS",
+                "drug_class": "OPHTHALMIC AGENTS",
+                "jcode": "J2425"
+            },
+            {
+                "drug_name": "SUBLOCADE",
+                "drug_class": "OPIOID ANTAGONISTS",
+                "jcode": "Q9992"
+            },
+            {
+                "drug_name": "GEL-ONE",
+                "drug_class": "OSTEOARTHRITIS",
+                "jcode": "J7326"
+            },
+            {
+                "drug_name": "TYMLOS",
+                "drug_class": "OSTEOPOROSIS",
+                "jcode": "Q5115"
+            },
+            {
+                "drug_name": "PRIALT",
+                "drug_class": "PAIN MANAGEMENT",
+                "jcode": "J2278"
+            },
+            {
+                "drug_name": "INBRIJA",
+                "drug_class": "PARKINSON'S DISEASE",
+                "jcode": "J1599"
+            },
+            {
+                "drug_name": "ESBRIET",
+                "drug_class": "PULMONARY FIBROSIS",
+                "jcode": "J9019"
+            },
+            {
+                "drug_name": "UPTRAVI",
+                "drug_class": "PULMONARY HYPERTENSION",
+                "jcode": "J1823"
+            },
+            {
+                "drug_name": "ADEMPAS",
+                "drug_class": "PULMONARY HYPERTENSION",
+                "jcode": "J9042"
+            },
+            {
+                "drug_name": "SYNAGIS",
+                "drug_class": "RSV",
+                "jcode": "90378"
+            },
+            {
+                "drug_name": "VIVITROL",
+                "drug_class": "SUBSTANCE ABUSE TREATMENT",
+                "jcode": "J2315"
+            },
+            {
+                "drug_name": "LIVTENCITY",
+                "drug_class": "TRANSPLANT",
+                "jcode": "Q2049"
+            }
+        ]
+    },
+    "summary": "Sylvamo North America LLC (Account 3344396) has OptumRx as their pharmacy vendor (800.797.9791) with a unique Specialty Drug Medical Provision effective 1.1.22. Under this provision, Cigna's medical plans cover the first injection/infusion of any specialty drug in the doctor's office and/or home setting, with all subsequent doses obtained through OptumSpecialty Pharmacy (855.427.4682). The provision applies ONLY to doctor's office and home settings, NOT to outpatient, inpatient, or emergency room settings. For oncology medications, injectable/infused drugs dispensed through cancer clinics are payable under the medical plan, while oral oncology medications included on the 2019 Specialty Drug Provision List are payable one time per lifetime under the medical plan, with all others dispensed through OptumSpecialty Pharmacy. The specialty drug list contains 773 unique drugs across 55 therapeutic classes including major categories such as Oncology (Injectable, Oral, and Topical), Hemophilia, Inflammatory Conditions, Immunological Agents, Immune Globulin, Endocrine, Enzyme Therapy, Multiple Sclerosis, Pulmonary Hypertension, Gene Therapy, Transplant, Hematological Agents, and others. Medical programs include Health Matters Care Management Preferred, Healthy Pregnancies Healthy Babies, Comprehensive Oncology Program, and Cigna's Gene Therapy Program with Embarc Benefit Protection."
+}

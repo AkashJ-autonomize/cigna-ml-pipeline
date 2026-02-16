@@ -1,0 +1,191 @@
+{
+    "client": {
+        "name": "BayCare Health System Inc.",
+        "preferred_customer_name": "BayCare Health System Inc.",
+        "administrative_structure": {
+            "brand_experience": "Cigna",
+            "medical_platform": "Facets",
+            "behavioral_platform": "Evernorth"
+        },
+        "customer_service": {
+            "name": "BayCare Customer Service Dedicated Team",
+            "phone": "877.229.4942"
+        },
+        "websites": [
+            "www.baycare.org",
+            "www.BayCareBenefitServices.com"
+        ],
+        "account_flags": {
+            "sensitive_account": true
+        },
+        "review_information": {
+            "last_review_completed": "1.27.26",
+            "next_review_due": "1.27.27"
+        }
+    },
+    "account_updates": [
+        {
+            "description": "Behavioral supported by Cigna/Facets Platform",
+            "effective_date": "7.1.22"
+        },
+        {
+            "description": "Virgin Pulse Core",
+            "effective_date": "1.1.24"
+        },
+        {
+            "description": "Skin Cancer Screening Preventive Coverage",
+            "effective_date": "1.1.26"
+        }
+    ],
+    "policy": {
+        "policy_name": null,
+        "policy_type": "account_operational_reference",
+        "source_documents": [
+            "files/BayCareHealth/BayCareHealthSystem.html",
+            "local_path/BayCareHealth/CignaSupplementalHealthSolutionsAICIHC.html"
+        ]
+    },
+    "clinical_programs": [
+        {
+            "program_name": "Rheumatoid Arthritis Clinic Requirement",
+            "description": "Members are required to utilize St. Joseph’s Hospital specialty clinic for administration of specified Rheumatoid Arthritis medications.",
+            "facility_required": "St. Joseph’s Hospital Specialty Clinic",
+            "facility_phone": "813.356.7161",
+            "applicable_drugs": [
+                {
+                    "brand_name": "Actemra",
+                    "hcpcs_code": null,
+                    "j_code": null
+                },
+                {
+                    "brand_name": "Cimzia",
+                    "hcpcs_code": null,
+                    "j_code": null
+                },
+                {
+                    "brand_name": "Cosentyx",
+                    "hcpcs_code": null,
+                    "j_code": null
+                },
+                {
+                    "brand_name": "Enbrel",
+                    "hcpcs_code": null,
+                    "j_code": null
+                },
+                {
+                    "brand_name": "Humira",
+                    "hcpcs_code": null,
+                    "j_code": null
+                },
+                {
+                    "brand_name": "Kevzara",
+                    "hcpcs_code": null,
+                    "j_code": null
+                },
+                {
+                    "brand_name": "Kineret",
+                    "hcpcs_code": null,
+                    "j_code": null
+                },
+                {
+                    "brand_name": "Olumiant",
+                    "hcpcs_code": null,
+                    "j_code": null
+                },
+                {
+                    "brand_name": "Orencia",
+                    "hcpcs_code": null,
+                    "j_code": null
+                },
+                {
+                    "brand_name": "Otezla",
+                    "hcpcs_code": null,
+                    "j_code": null
+                },
+                {
+                    "brand_name": "Remicade",
+                    "hcpcs_code": null,
+                    "j_code": null
+                },
+                {
+                    "brand_name": "Rinvoq",
+                    "hcpcs_code": null,
+                    "j_code": null
+                },
+                {
+                    "brand_name": "Rituxan",
+                    "hcpcs_code": null,
+                    "j_code": null
+                },
+                {
+                    "brand_name": "Simponi/Simponi Aria",
+                    "hcpcs_code": null,
+                    "j_code": null
+                },
+                {
+                    "brand_name": "Stelara",
+                    "hcpcs_code": null,
+                    "j_code": null
+                },
+                {
+                    "brand_name": "Taltz",
+                    "hcpcs_code": null,
+                    "j_code": null
+                },
+                {
+                    "brand_name": "Xeljanz",
+                    "hcpcs_code": null,
+                    "j_code": null
+                }
+            ]
+        }
+    ],
+    "administration_rules_by_setting": {},
+    "network_rules": {
+        "exclusive_network": "BayCare Exclusive Network (CSN)",
+        "counties_in_scope": [
+            "Hillsborough",
+            "Pinellas",
+            "Pasco",
+            "Polk"
+        ],
+        "out_of_area_network": "OAP network"
+    },
+    "carve_outs": {
+        "home_health_and_dme": {
+            "carved_out_to": "BayCare Home Care",
+            "phone": "800.940.5151"
+        }
+    },
+    "utilization_management": {
+        "hospice": {
+            "precertification_required": true
+        },
+        "behavioral": {
+            "ip_um_managed_by": "Evernorth Behavioral Health",
+            "outpatient_behavioral_um_allowed": false
+        }
+    },
+    "supplemental_health_solutions": {
+        "vendor": "Cigna Supplemental Health Solutions",
+        "coverage_offered": [
+            {
+                "code": "AI",
+                "name": "Accidental Injury"
+            },
+            {
+                "code": "CI",
+                "name": "Critical Illness"
+            },
+            {
+                "code": "HC",
+                "name": "Hospital Coverage"
+            }
+        ],
+        "pre_enrollment_support_line": "800.351.9214",
+        "claims_phone": "800.754.3207",
+        "claims_email": "SuppHealthClaims@CignaHealthcare.com",
+        "claims_mail_address": "Cigna Supplemental Health Solutions, P.O. Box 188028, Chattanooga, TN 37422-9702"
+    },
+    "summary": "BayCare Health System Inc. operates under a Cigna brand experience with an exclusive BayCare CSN network within Hillsborough, Pinellas, Pasco, and Polk counties. Home Health Care and Durable Medical Equipment are carved out to BayCare Home Care. Hospice services require precertification. Behavioral IP utilization management is handled by Evernorth Behavioral Health, and outpatient behavioral UM is not allowed per MH Parity. A Rheumatoid Arthritis clinic requirement mandates utilization of St. Joseph’s Hospital specialty clinic for listed medications. Supplemental Health coverage includes Accidental Injury, Critical Illness, and Hospital Coverage administered through Cigna Supplemental Health Solutions."
+}

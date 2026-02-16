@@ -1,0 +1,50 @@
+{
+    "medical": {
+        "text": [
+            "See Source System - In the four county area (Hillsborough, Pinellas, Pasco and Polk), members must access the BayCare Exclusive Network (CSN). Outside of those four counties, members will be loaded to their benefit option with the OAP network (BayCare refers to these locations outside the four counties as Out of Area Plans). - Exclusive CSN Network: Customers must receive services from Providers within the CSN network. Approval is required to receive services outside of the CSN network.",
+            "Home Health Care and Durable Medical Equipment are carved out to BayCare Home Care - Phone # 800.940.5151 - This includes Breast Feeding Equipment",
+            "Hospice - BayCare does not directly provide hospice care. Hospice providers are loaded in the CSN directory. Precertification is required.",
+            "Outpatient Surgeries at BayCare Facilities - An inpatient admission for a surgical procedure at a BayCare facility may be more cost efficient than an ambulatory/inpatient procedure. - Specific requests can be approved for one (1) inpatient day when the surgical procedure can be allowed as ambulatory with 23 hours observation. - Follow the Prior Authorization for BayCare Health Systems, Inc. Client Ambulatory vs Inpatient SOP in Knowledge / Article 39684",
+            "Medical Specialty - For Oncology Navigation Program please refer to the ECCO team at 727.519.1336 - Oncology Medical Specialty Drugs: Evicore Opt out. Auto approve if utilization at INN sites; both OP and IP - Non-Oncology Medical Specialty Drugs: - Administered IP or OP at a BayCare Facility – Reviewed by Cigna. *If done at a BayCare infusion center covered at 100%. - Administered IP or OP at a NON-BayCare Facility- Reviewed by CIGNA. Business as usual. - Administered in a doctor’s office or home setting: Refer to BayCare Home Care. - exception: Florida Cancer Center which utilizes “Buy and bill” vs utilization of BayCare Home Care",
+            "RA Clinic As a member of the BayCare Medical Plan who takes one of the following rheumatoid arthritis or psoriatic arthritis medications (Actemra, Cimzia, Cosentyx, Enbrel, Humira, Kevzara, Kineret, Olumiant, Orencia, Otezla, Remicade, Rinvoq, Rituxan, Simponi/Simponi Aria, Stelara, Taltz, Xeljanz), you currently are required to utilize the specialty clinic at St. Joseph’s Hospital to help you manage your condition and to save costs. To schedule your telehealth visit, please contact the specialty clinic at 813.356.7161. As a reminder, team members and dependents 18 or older who are enrolled in the Choice Share or Premium Plans will receive these medications at no out-of-pocket cost. For those enrolled in the HSA Plan, these medications will be covered at 100% after meeting the deductible.",
+            "Bariatric Surgery - Bariatric Surgery is only covered when performed at BayCare Facilities. Subject to Benefit and Medical Necessity Review.",
+            "Transplants - BayCare facilities do not perform transplants. - Transplants are to be performed at a LifeSource Facility",
+            "Inpatient Hospitalizations - BayCare Facilities - Cigna IPCM performs initial IP reviews - Continued Stay review is not performed when Inpatient within a BayCare Facility. BayCare submits bed days via the BayCare Daily Census Report. - Cannot deny for Inpatient Level of Care within a BayCare Facility",
+            "Inpatient Hospitalizations - OON Facility - Inpatient admissions to OON facilities: IPCM reviews stays with aligned Cigna MD to determine appropriateness of facility transfer. - If appropriate for transfer, BayCare will coordinate the transfer thru Transfer Center at 844.673.6233",
+            "Sleep Studies - Exclusive CSN: no medical necessity review or precert required for procedure performed within OP Setting - OOA Plan: business as usual Sleep disorders or Sleep abnormalities require an appropriate diagnosis for effective management. Sleep studies are often the first step in the process. BayCare sleep centers offer advanced diagnostic testing performed by sleep technologist. Options for testing include: in-center testing, home sleep testing and home test delivery. The first step is a referral from your physician. - 813.328.9928 for information or physician referral - 813.852.3080 to schedule an appointment In Person testing sites: Pediatric: St Joseph Woman’s Center Adult: Bardmoor and Mease Countryside Safety Harbor",
+            "Utilization Review Opt Outs - Speech Therapy - EviCore for High Tech Imaging, Nuclear Cardiac, musculoskeletal and OP oncology BayCare does not utilize ASH network for physical therapy review Network adequacy still applies - Accredo",
+            "Telehealth Vendor - BayCare Anywhere, Recommend to utilize the App - 800-BayCare Opt 1 Nurse triage 8am-5pm EST - BayCare.org/BayCareanywhere",
+            "Urgent Care: BayCare Anywhere 877.716.5652",
+            "Cigna Supplemental Health Solutions",
+            "Supplemental Health benefits: Pay a defined benefit to customers directly for health events, which can be used for medical expenses, health equipment, child care, or any other expenses the customer chooses. Clients offer various coverage options, but as customers must enroll in the benefits, individual coverage MUST be verified in OneView. Click here (local_path/BayCareHealth/CignaSupplementalHealthSolutionsAICIHC.html) to see various coverage options and how customers can file a claim.",
+            "FSA/HSA: Fidelity 800.343.0860 or netbenefits.com/atwork (https://nb.fidelity.com/public/nbpreloginnav/spa/fidelitywork/core/home?s_tnt=169707:1:0&adobe_mc_sdid=sdid%3D078541a99b0cb8dd-153fb9721f182cc4%7Cmcorgid%3Dedcf01ac512d2b770a490d4c@adobeorg%7Cts%3D1702582740)",
+            "FedLogic: provides counseling and support services to help team members apply for a range of government programs such as Medicare, Medicaid and more.",
+            "877.837.4196 or services@fedlogicgroup.com (mailto:services@fedlogicgroup.com)",
+            "Employee Access Code – BAYC24",
+            "Skin Cancer Screening - eff. 1.1.26",
+            "Skin Cancer Screenings provided by an in-network provider will be covered as Preventive Care with zero cost share for covered members",
+            "Claims must be billed with the below codes in order to process at 100% and covered as any other preventive service.",
+            "New Patients: CPT-4 codes 99202–99205",
+            "Established Patients: CPT-4 codes 99211–99215",
+            "Diagnosis Code: ICD-10 Z12.83 only"
+        ],
+        "hyperlinks": [
+            {
+                "text": "Supplemental Health benefits: Pay a defined benefit to customers directly for health events, which can be used for medical expenses, health equipment, child care, or any other expenses the customer chooses. Clients offer various coverage options, but as customers must enroll in the benefits, individual coverage MUST be verified in OneView. Click here (local_path/BayCareHealth/CignaSupplementalHealthSolutionsAICIHC.html) to see various coverage options and how customers can file a claim.",
+                "url": "local_path/BayCareHealth/CignaSupplementalHealthSolutionsAICIHC.html",
+                "local_path": null
+            }
+        ],
+        "has_link": true
+    },
+    "pharmacy": {
+        "text": [
+            "CVS Caremark 855.465.0026 or www.caremark.com",
+            "BayCare Medication Assistance Program: 813.901.6350 or medassist@baycare.org (mailto:medassist@baycare.org)",
+            "BayCare’s Medication Assistance Program helps patients and the general public navigate these resources, apply for eligible programs and obtain medications for less cost. Resources may include: Drug manufacturer patient assistance programs (PAPs),Drug copay or discount cards, and Referral to retail pharmacy discount drug list Anyone can reach out to the Medication Assistance Program, however everyone may not qualify for all available resources. Some programs have restrictions based on: Legal residence, Insurance status, Income guidelines according to the Federal Poverty Level",
+            "To contact a medication assistance coordinator: Phone: 813.901.6350 Fax: 813.901.6313 Monday-Friday, 8am-5pm BayCare team members and family members, patients at all BayCare facilities, as well as the general public are eligible."
+        ],
+        "hyperlinks": [],
+        "has_link": false
+    }
+}

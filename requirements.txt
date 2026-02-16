@@ -1,0 +1,9 @@
+beautifulsoup4
+pydantic
+openai
+pandas
+python-dotenv
+python-docx
+pdf2image
+openpyxl
+pillow
