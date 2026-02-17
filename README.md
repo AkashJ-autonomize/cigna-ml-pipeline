@@ -1,95 +1,85 @@
 # Cigna OLAM Policy Extraction Pipeline
 
-A production-grade ML pipeline designed to extract structured clinical drug rules from Cigna OLAM HTML documents and their associated attachments (PDF, DOCX, CSV, XLSX).
+A production-grade ML pipeline designed to extract structured clinical drug rules from Cigna OLAM HTML documents and their associated attachments.
 
-## 🚀 Workflow Overview
+## 🚀 4-Stage Orchestration Flow
 
-The pipeline utilizes a sophisticated **4-Stage Conditional Orchestration** logic to ensure accuracy, context-awareness, and resource efficiency.
+The pipeline uses a conditional logic to ensure high accuracy and resource efficiency.
 
-### Stage 1: Classification & Namespace Detection
-- **Namespace Analysis**: Automatically identifies boundaries between **Medical** and **Pharmacy** namespaces.
-- **Evidence Detection**: The LLM analyzes the parsed text and structural hyperlink metadata to determine where drug rules reside.
-- **Binary Flag Steering**: Returns two boolean flags:
-    - `excluded_drug_list_in_source_doc`: TRUE if rules are named directly in the HTML.
-    - `excluded_drug_list_in_hyperlink`: TRUE if rules are contained in external attachments (e.g., CSV carve-out lists).
+### 1. Classification & Routing
+- **Namespace Analysis**: Detects boundaries between **Medical** and **Pharmacy** sections.
+- **Evidence Detection**: Determines if drug rules reside in the source HTML text or external links.
+- **Flags**: Returns `source_doc` and `hyperlink` flags to steer subsequent stages.
 
-### Stage 2: Source Extraction (Conditional)
-- **Trigger**: Runs only if `excluded_drug_list_in_source_doc` is TRUE.
-- **Task**: Extracts granular `drug_rules` directly from the HTML text snippets.
-- **Strict Logic**: Separates drug names from codes and captures setting-specific usage rules.
+### 2. Source Text Extraction
+- **Trigger**: Runs if `source_doc` flag is TRUE.
+- **Task**: Extracts granular `drug_rules` and `scenarios` directly from HTML snippets.
+- **Cleanup**: Automatically normalizes drug names and removes noise (HCPCS, J-Codes, Junk).
 
-### Stage 3: Hyperlink Extraction (Conditional)
-- **Trigger**: Runs only if `excluded_drug_list_in_hyperlink` is TRUE.
-- **Document Handlers**:
-    - **CSV/Excel**: Extracts high-signal clinical lists using `pandas`.
-    - **DOCX**: Parses complex formatting/tables using `python-docx`.
-    - **PDF Vision**: Converts pages to images and uses **Azure OpenAI GPT-5.2 with Vision** for precise table/list extraction.
-- **Exhaustive Mapping**: Maps every individual item in an external list to a separate drug rule object.
+### 3. Hyperlink & Attachment Extraction
+- **Trigger**: Runs if `hyperlink` flag is TRUE.
+- **Handlers**: 
+    - **CSV/Excel**: Deterministic mapping of clinical lists using LLM-assisted column detection.
+    - **DOCX**: Structural parsing of tables and paragraphs.
+    - **PDF Vision**: GPT-4o Vision analysis on first 5 pages for precise table extraction.
 
-### Stage 4: Metadata Extraction
-- **Trigger**: Runs if any drug rules are found.
-- **Task**: Extracts policy-level metadata such as:
-    - `total_carve_out_drugs`
-    - `policy_name` & `client_name`
-    - `carve_out_applies_to` / `carve_out_excluded_from`
-- **Result**: Enriches the final JSON output with high-level policy context.
-
-### Final Step: Result Merging
-- Consolidated all rules from Stage 2 and Stage 3 into a single, unified `drug_rules` array.
-- Ensures a consistent JSON schema regardless of whether the data was in the source text or an attachment.
+### 4. Metadata & Consolidation
+- **Metadata**: Captures policy-level context (Policy Name, Client, Total Drugs).
+- **Consolidation**: Merges identical drug lists across sections and prevents duplicates.
 
 ---
 
 ## 📂 Directory Structure
 
 ```text
-├── run.py                 # Main orchestration engine (supports --local-test)
+├── run.py                 # Main orchestration engine
 ├── src/
 │   ├── html_parser.py     # Structural BeautifulSoup parsing
-│   ├── processor.py       # 4-Stage Logic & Document Handlers
-│   ├── handlers.py        # File handlers (PDF/DOCX/CSV/Vision)
-│   ├── prompts.py         # Versioned AI Extraction Prompts
-│   └── schemas.py         # Pydantic models for extraction consistency
-├── files/                 # Input provider HTML folders
-├── output/                # Raw Parser logs
-├── extraction/            # Final AI-refined Drug Rules
-└── cache/                 # PDF Vision PNG snapshots (for verification)
+│   ├── processor.py       # 4-Stage Logic & AI Orchestration
+│   ├── handlers.py        # Document Handlers (PDF/DOCX/CSV/Vision)
+│   ├── prompts.py         # AI Extraction Prompts
+│   ├── schemas.py         # Pydantic models (Data validation)
+│   └── utils.py           # Helper utilities
+├── files/                 # Input: Provider HTML folders
+├── local_path/            # Input: Referenced attachments
+├── extraction/            # Output: Final AI-refined Drug Rules (JSON)
+└── output/                # Output: Intermediate structural results
 ```
 
-## 🛠 Setup & Execution
+## 📝 Example Output
 
-### Prerequisites
-1.  **Python 3.10+**
-2.  **Poppler**: Required for PDF processing.
-    - Mac: `brew install poppler`
-    - Linux: `sudo apt-get install poppler-utils`
-    - Windows: Download binary and add to PATH.
+The pipeline produces a unified JSON structure like this:
 
-### Installation
-```bash
-pip install -r requirements.txt
+```json
+{
+  "client": "Boilermakers",
+  "extraction": [
+    {
+      "section_type": "pharmacy",
+      "scenario": {
+        "rule": "Specialty medications are not covered outside of emergency situations.",
+        "routing": "Pharmacy",
+        "applied_in": ["Home", "Office"],
+        "does_not_applies_in": ["Hospital"]
+      },
+      "drugs": [
+        {
+          "drug_name": "TREPROSTINIL SODIUM (GENERIC REMODULIN)",
+          "hcpcs_code": "J3285"
+        }
+      ]
+    }
+  ],
+  "metadata": { "total_drugs_found": 129, "flags": { "source_doc": true, "hyperlink": true } }
+}
 ```
 
-### Configuration
-1.  **Environment Config**:
-    Populate `.env` with Azure OpenAI credentials (requires GPT-5.2 / Vision support).
-    ```ini
-    AZURE_OPENAI_API_KEY=your_key
-    AZURE_OPENAI_ENDPOINT=your_endpoint
-    AZURE_OPENAI_DEPLOYMENT_NAME=your_deployment
-    ```
+## 🛠 Setup
 
-2.  **Run Full Pipeline**:
-    ```bash
-    python run.py
-    ```
-
-3.  **Local Testing (Mocking)**:
-    Modify `run.py` to limit processing to specific provider folders:
-    ```python
-    LOCAL_TEST_PROVIDERS = ["ProviderName"]
-    USE_LOCAL_TESTING = True
-    ```
+1. **Install Dependencies**: `pip install -r requirements.txt`
+2. **Environment**: Populate `.env` with Azure OpenAI credentials.
+3. **Run**: `python run.py`
+4. **Local Test**: Toggle `USE_LOCAL_TESTING = True` in `run.py` to test specific providers.
 
 ---
-*Developed for Autonomize | Cigna Guideline Extraction Project*
+*Autonomize AI | Cigna Guideline Extraction Project*
