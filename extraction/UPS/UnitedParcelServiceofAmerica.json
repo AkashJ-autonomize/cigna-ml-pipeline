@@ -1,17 +1,17 @@
 {
-    "drug_rules": [],
-    "excluded_drug_list_in_hyperlink": true,
-    "excluded_drug_list_in_source_doc": false,
+    "client": "UPS",
+    "source_type": "source_text",
+    "extraction": [],
     "metadata": {
-        "total_carve_out_drugs": null,
-        "source_document": null,
+        "total_drugs_found": 0,
+        "total_scenarios_found": 0,
+        "same_drugs_across_scenarios": false,
         "policy_name": null,
-        "carve_out_applies_to": null,
-        "carve_out_excluded_from": null,
-        "client_name": null,
-        "specialty_pharmacy_vendor": null,
-        "additional_info": {
-            "analysis_reasoning": "In-source CONTENT references exclusions at a category level (e.g., “a list of J-codes (specialty Rx) excluded” and GLP-1s for weight loss coverage change) but does not name specific drugs or specific J-codes/HCPCS codes inline, so the source flag is FALSE. The STRUCTURAL HYPERLINKS include .pdf/.xlsx files whose surrounding context explicitly states exclusion/carve-out handling for “J-codes” and includes the keyword “carved out” plus references to a “list of J codes,” which meets the hyperlink evidence requirement, so the hyperlink flag is TRUE."
+        "source_document": null,
+        "analysis_reasoning": "medical: The source content describes care programs/referral resources (social worker, dietitian, oncology expert opinion, benefit navigation) but contains no explicit drug names and no setting-based pharmacy/coverage rules. Although multiple hyperlinks are present, the source text does not instruct the reader to use any link for a drug list or medication coverage details; the linked files appear to be general program flyers/templates rather than drug lists. | pharmacy: The source contains coverage/handling rules (e.g., J-codes excluded from medical and must be filled through CVS PBM; GLP-1 weight-loss coverage change; OneTouch products preferred). It also explicitly points to linked documents (e.g., the CVS Caremark Legacy Drug List and J-code handling/workflow PDFs) for the detailed drug/J-code lists and processing details, so extraction should include both source rules and hyperlink documents.",
+        "flags": {
+            "source_doc": true,
+            "hyperlink": true
         }
     }
 }

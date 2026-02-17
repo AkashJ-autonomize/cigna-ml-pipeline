@@ -1,223 +1,163 @@
 """
 This module contains the prompts used by the DrugProcessor to analyze clinical text.
-Keeping prompts in a separate file improves maintainability and allows for versioning
-of the LLM instructions independent of the processing logic.
+Keeping prompts in a separate file improves maintainability and allows for versioning of the LLM instructions independent of the processing logic.
 """
 
-# PROMPT 1: CLASSIFICATION
+# PROMPT 1: CLASSIFICATION ROUTER
 SOURCE_ANALYSIS_PROMPT = """
-Analyze the provided CONTENT and STRUCTURAL HYPERLINKS to set dual boolean flags.
+### ROLE
+You are a smart clinical document analyzer. Your goal is to determine WHERE the drug extraction data resides based on the provided CONTENT and HYPERLINKS.
 
-STRICT CRITERIA:
+### INPUT
+- **SOURCE CONTENT**: Extracted text from the HTML document.
+- **DETECTED HYPERLINKS**: List of file links found in the text.
 
-1. EXCLUSION DETECTION (Source):
-   - Set 'excluded_drug_list_in_source_doc' to TRUE if the text context itself clearly names SPECIFIC drugs (e.g., "Actemra", "Procrit") and their associated exclusion rules, or requirements like "must use specialty clinic".
-   - If the text only gives general hints but no names/rules in-line, set to FALSE.
+### YOUR TASK
+Set two boolean flags to guide the extraction pipeline:
 
-2. EXCLUSION DETECTION (Hyperlink):
-   - Set 'excluded_drug_list_in_hyperlink' to TRUE *ONLY* if:
-     a) There is a STRUCTURAL HYPERLINK provided in the metadata with a relevant file extension (.pdf, .csv, .xls, .xlsx, .docx).
-     b) The sentence/meaning conveying the link includes EXPLICIT EVIDENCE of exclusion criteria. Evidence includes:
-        - Specific **Drug Names** (e.g., Actemra, Procrit).
-        - **J-codes** or **HCPCS codes** (e.g., J0885, J3490).
-        - Explicit keywords like **"Exclusion list"**, **"Carve-out rule"**, **"Authorization required"**, or **"Non-covered"**.
-   - If the sentence only says "MCM Drug List" or "2023 Formulary" (general titles with no rule/code context), set to FALSE.
-   - If a link exists but the meaning is general (Benefits, Enrollment, Expense), set to FALSE.
+1. **`extract_from_source`**:
+   - **TRUE if**: The source text contains ANY setting-based rules OR explicit drug names.
+   - **NOTE**: If the text defines a RULE (e.g., "Must go through Pharmacy Plan") but the drugs are in a link, this must be TRUE to capture the rule.
 
-3. DUAL PRESENCE:
-   - If both in-source names/rules AND a relevant external link exist, set BOTH to TRUE.
+2. **`extract_from_hyperlink`**:
+   - **TRUE if**: A hyperlink is present AND there is an explicit instruction or RULE in the source text pointing to that link for a list of drugs or further coverage details.
+   - **FALSE if**: No rule in the source text references the link, or the link is obviously irrelevant (e.g., travel forms, generic homepages).
 
-OUTPUT FORMAT (JSON):
+### OUTPUT FORMAT (JSON)
 {
-  "excluded_drug_list_in_source_doc": true | false,
-  "excluded_drug_list_in_hyperlink": true | false,
-  "analysis_reasoning": "Crisp reasoning for the boolean flags based on semantic relevance."
+  "extract_from_source": boolean,
+  "extract_from_hyperlink": boolean,
+  "analysis_reasoning": "Concise explanation of rule-link correlation."
 }
 """
 
-###########################################################################################################################
-
-# PROMPT 2: SOURCE EXTRACTION
+# PROMPT 2: SOURCE DOCUMENT EXTRACTION
 DETAILED_EXTRACTION_PROMPT = """
-Analyze the clinical content provided and extract structured DRUG RULES from the SOURCE TEXT with extreme precision.
+### GOAL
+Extract clinical "Routing Logic" (rules) from the provided section. 
 
-STRICT RULES:
-1. EXPLICIT SOURCE EXTRACTION: ONLY extract rules that are clearly stated in the provided text. Do not hallucinate or use external knowledge.
-2. CLEAN DRUG NAMES: Extract ONLY the brand or generic name (e.g., "Humira", "Actemra"). No HCPCS or J-codes in the 'drug_name' field.
-3. DETAIL CAPTURE: For each drug, extract:
-   - hcpcs_code / j_code: Capture if explicitly present.
-   - classification: Describe the drug classification (e.g., "Specialty Drug - Carve-Out", "Medical", "Pharmacy").
-   - summary: Ultra-crisp consolidated summary. State ONLY the rule and core reason. EXPLICITLY FORBID: specific facility names, specific pharmacy names, regional names (East/West), and identification numbers (TIN, NPI, etc.).
-   
-4. SETTING-SPECIFIC EXTRACTION (OPTIONAL):
-   - If the text describes different rules for different care settings (e.g., physician office, hospital, emergency room), extract setting-specific data.
-   - Standard care settings: physician_office, home_health_care, inpatient_hospital, outpatient_hospital, emergency_room, urgent_care
-   - For prior_auth_required: If rules vary by setting, provide an object with setting-specific booleans. If uniform, use a single boolean. If not mentioned, omit this field.
-   - For pharmacy_benefit_plan_required: Provide setting-specific booleans indicating if pharmacy benefit plan routing is required. If not mentioned, omit this field.
-   
-5. SCENARIOS EXTRACTION (OPTIONAL - ONLY IF DETAILS ARE AVAILABLE):
-   - **IMPORTANT**: Only create scenarios if the source text provides SPECIFIC details about care settings, routing, or benefit types.
-   - If the text only mentions drugs with a general requirement (e.g., "must use specialty clinic") WITHOUT specifying settings or routing details, DO NOT create scenarios. Just provide the summary.
-   - Each scenario should only be created when you have ACTUAL information from the source for:
-     * setting: The care setting (use snake_case: physician_office, inpatient_hospital, etc.) - ONLY if explicitly mentioned
-     * routing: Where to obtain the drug - ONLY if explicitly stated
-     * benefit_type: Either "pharmacy" or "medical" - ONLY if clearly indicated
-     * prior_auth: Boolean indicating if prior authorization is required - ONLY if explicitly stated
-     * notes: Any exceptions, special conditions, or additional context
-   - If you cannot determine these details from the source, leave scenarios as an empty array [].
-   
-6. CONSOLIDATION RULE:
-   - Provide only ONE object per unique drug/code. 
-   - Combine all location-based rules into that single object's 'summary', 'scenarios', and setting-specific fields.
+### 1. CORE EXTRACTION PRINCIPLE: RULE-DRUG PAIRING
+- **STRICT REQUIREMENT**: ONLY extract a data block (Scenario + Drugs) if an **actionable, setting-based rule** is explicitly paired with a **drug list** OR a **hyperlink reference**.
+- **RULE DEFINITION**: A rule must specify HOW or WHERE a drug list is managed based on clinical setting (Home, Office, Hospital).
+- **PAIRING DEFINITION**: The rule must be **immediately adjacent** (above/below) to:
+    a) A list of specific drug names.
+    b) A hyperlink reference (e.g., "see attached link", "refer to linked document").
 
-OUTPUT FORMAT (JSON):
+### 2. SURGICAL FILTERING (DO NOT EXTRACT IF...)
+- **NO DRUGS OR LINKS**: If the text contains a policy but NO drug names and NO hyperlinks are nearby, **SKIP IT**.
+- **LINK-ONLY CASE**: If a rule points to a link but lists no drugs in text, extract the rule and leave the `drugs` list empty.
+- **GENERIC TEXT**: Ignore document headers, contact info, or boilerplate that doesn't change coverage logic.
+- **NO SETTING**: If the rule doesn't vary by setting (Home/Office/Hospital), it is likely not a "Routing Rule" for this pipeline. **SKIP IT**.
+
+### 3. DRUG CLEANLINESS (STRICT DRUG NAMES)
+- **EXTRACT ONLY**: The clinical/brand name (e.g., "Actemra").
+- **EXCLUDE ALL**: J-codes, HCPCS, dosages, packaging, or random identifiers.
+- **NO PLACEHOLDERS**: Do NOT extract "Drug List", "Attached document", or "49 Medications" as drug names.
+
+### 4. RULE CLEANLINESS (HUMAN-READABLE)
+- **CLEAN**: Remove all J-codes, HCPCS, and diagnosis codes from the rule text.
+- **CRISP**: Merge redundant sentences into one comprehensive coverage scenario.
+
+### 5. SETTING DEFINITIONS
+Extract exactly 4 settings: **HOME**, **OFFICE**, **PHARMACY**, **HOSPITAL**.
+- **Clinics**: Always classify "Specialty Clinics" or "Infusion Clinics" or "Clinics at [Hospital]" as **OFFICE** (even if on hospital grounds).
+- **Hospital**: Reserved for Inpatient, ER, or general Outpatient Departments.
+- **HOME**: Patient residence / Home health.
+- **Pharmacy**: Medication is dispensed by a pharmacy and not administered by a provider at time of service. 
+- **Emergency Situations**: DO NOT map to any of the above. If a drug is ONLY covered in emergency situations, its `applied_in` list must be EMPTY.
+
+The settings should be clearly understood based on the exclusion logic and should be added in `applied_in` list.
+For Example:
+`Medications does not apply to services provided in an inpatient, outpatient, or ER hospital setting, or in an urgent care setting.`
+Result:
+applied_in: ["HOME", "OFFICE", "PHARMACY"]
+does_not_applies_in: ["HOSPITAL"]
+
+### 6. INTELLIGENT INFERENCE
+- **`applied_in`**: MANDATORY. If the rule says "Excluding Hospital", `applied_in` must be ["HOME", "OFFICE", "PHARMACY"]. If a rule says "only covered in emergency", `applied_in` must be EMPTY [].
+- **`does_not_applies_in`**: STRICTLY LITERAL. Only populate if explicit exclusions are stated.
+
+### 7. FEW-SHOT EXAMPLES (GUIDANCE)
+**EXAMPLE 1 (VALID)**: 
+*Text*: "As a member of the Plan who takes one of the following medications (Actemra, Cimzia, Enbrel), you are required to utilize the specialty clinic at St. Joseph’s Hospital..."
+*Reasoning*: VALID rule because it contains a specific setting (Clinic/Hospital) paired with explicit drug names.
+
+**EXAMPLE 2 (INVALID)**:
+*Text*: "Oncology Medical Specialty Drugs: Evicore Opt out. Auto approve if utilization at INN sites; both OP and IP."
+*Reasoning*: INVALID because it does not provide a specific drug list or a clear hyperlink reference for one.
+
+**EXAMPLE 3 (INVALID)**:
+*Text*: "Non-Oncology Medical Specialty Drugs: Administered IP or OP at a Facility – Reviewed by Cigna."
+*Reasoning*: INVALID because it is generic text without a paired drug list or hyperlink.
+
+**EXAMPLE 4 (VALID)**:
+*Text*: "The attached document lists 49 Specialty Drug HCPC codes that must be acquired through the Pharmacy Benefit Plan... This does not apply to outpatient or ER hospital settings."
+*Reasoning*: VALID rule because it explicitly points to a supplemental document (hyperlink) for a specific list and defines setting exclusions (applied_in: ["HOME", "OFFICE"], does_not_applies_in: ["HOSPITAL"]).
+
+### 8. OUTPUT SCHEMA (JSON)
 {
-  "drug_rules": [
+  "client": "{client_name}",
+  "source_type": "source_text",
+  "extraction": [
     {
-      "drug_name": "...",
-      "hcpcs_code": "...",
-      "j_code": "...",
-      "classification": "...",
-      "prior_auth_required": {
-        "physician_office": false,
-        "home_health_care": false,
-        "inpatient_hospital": true,
-        "outpatient_hospital": true,
-        "emergency_room": false,
-        "urgent_care": false
+      "section_type": "{section_name}",
+      "scenario": { 
+          "rule": "Primary coverage rule (concise, NO codes)", 
+          "routing": "Medical or Pharmacy", 
+          "applied_in": ["HOME", "OFFICE", "PHARMACY", "HOSPITAL"], 
+          "does_not_applies_in": [] 
       },
-      "pharmacy_benefit_plan_required": {
-        "physician_office": true,
-        "home_health_care": true,
-        "inpatient_hospital": false,
-        "outpatient_hospital": false,
-        "emergency_room": false,
-        "urgent_care": false
-      },
-      "summary": "Consolidated summary of rules across all settings.",
-      "scenarios": [
-        {
-          "setting": "physician_office",
-          "routing": "Pharmacy Benefit Plan",
-          "benefit_type": "pharmacy",
-          "prior_auth": false,
-          "notes": "Must acquire through specialty pharmacy"
-        },
-        {
-          "setting": "inpatient_hospital",
-          "routing": "Direct facility dispensing",
-          "benefit_type": "medical",
-          "prior_auth": true,
-          "notes": "Carve-out does not apply; standard medical benefit rules"
-        }
+      "drugs": [
+        { "drug_name": "Actemra", "hcpcs_code": "...", "j_code": "..." }
       ]
     }
   ]
 }
-
-
-EXAMPLE WITH LIMITED INFORMATION (NO DETAILED SCENARIOS):
-{
-  "drug_rules": [
-    {
-      "drug_name": "Humira",
-      "classification": "RA/Psoriatic Arthritis Drug",
-      "summary": "Members taking this drug are required to utilize the specialty clinic.",
-      "scenarios": []
-    }
-  ]
-}
-
-NOTE: Prioritize accuracy over completeness. If information is not explicitly stated, omit the field or use an empty array rather than guessing or creating null values. If prior auth or pharmacy benefit requirements are uniform across all settings, you may use a simple boolean instead of the object format.
 """
 
-
-###########################################################################################################################
-
-# PROMPT 3: HYPERLINK EXTRACTION
+# PROMPT 3: HYPERLINK DOCUMENT EXTRACTION
 HYPERLINK_EXTRACTION_PROMPT = """
-Analyze the clinical content provided (hyperlink document results) and extract structured DRUG RULES.
+### ROLE
+You are a clinical data assistant. Your goal is to extract a pristine list of medications and their codes from a supplemental document.
 
-STRICT RULES:
-1. EXHAUSTIVE EXTRACTION: Extract EVERY individual drug/code item mentioned as a separate rule. Do not summarize list contents.
-2. CLEAN DRUG NAMES: 
-   - Extract ONLY the name (e.g., "Actemra"). No codes in this field.
-   - If only a code like "J3262" is provided, use the common name for that code if known, or as a last resort use the code itself but mark it clearly.
-3. DETAIL CAPTURE:
-   - hcpcs_code / j_code: Capture if explicitly provided.
-   - classification: Describe the drug classification.
-   - summary: Ultra-crisp consolidated summary. Strip ALL specific entity names, facility/pharmacy identifiers, geographical regions, and numeric codes (TIN, etc.). Focus strictly on the clinical logic.
-   
-4. SETTING-SPECIFIC EXTRACTION:
-   - If the document describes different rules for different care settings, extract setting-specific data.
-   - Standard care settings: physician_office, home_health_care, inpatient_hospital, outpatient_hospital, emergency_room, urgent_care
-   - For prior_auth_required: If rules vary by setting, provide an object with setting-specific booleans. If uniform, use a single boolean.
-   - For pharmacy_benefit_plan_required: Provide setting-specific booleans indicating if pharmacy benefit plan routing is required.
-   
-5. SCENARIOS EXTRACTION:
-   - Extract detailed scenarios for each care setting mentioned.
-   - Each scenario must include:
-     * setting: The care setting (use snake_case)
-     * routing: Where to obtain the drug
-     * benefit_type: Either "pharmacy" or "medical"
-     * prior_auth: Boolean indicating if prior authorization is required
-     * notes: Any exceptions or special conditions (strip all specific identifiers)
-   
-6. CONSOLIDATION RULE:
-   - Provide only ONE object per unique drug/code. Do not create separate objects for different scenarios of the same drug.
-   - Combine all location-based rules into the 'summary', 'scenarios', and setting-specific fields of that single object.
+### EXTRACTION PRINCIPLES
+1. **STRICT DRUG NAMES ONLY**: 
+   - Extract clinical or brand names.
+   - **DO NOT** include J-codes, HCPCS, dosages, pack sizes, or strengths in the `drug_name` field.
+2. **CODE CAPTURE**:
+   - Capture J-codes and HCPCS codes in their respective fields if provided.
+3. **QUALITY FILTERING**:
+   - Skip page numbers, dates, random text, or technical metadata.
 
-OUTPUT FORMAT (JSON):
+### OUTPUT FORMAT (JSON)
 {
-  "drug_rules": [
-    {
-      "drug_name": "...",
-      "hcpcs_code": "...",
-      "j_code": "...",
-      "classification": "...",
-      "prior_auth_required": {...} or true/false,
-      "pharmacy_benefit_plan_required": {...},
-      "summary": "Consolidated summary of rules from the document.",
-      "scenarios": [
-        {
-          "setting": "...",
-          "routing": "...",
-          "benefit_type": "pharmacy" or "medical",
-          "prior_auth": true/false,
-          "notes": "..."
-        }
-      ]
-    }
+  "drugs": [
+    { "drug_name": "Actemra", "hcpcs_code": "J3262", "j_code": "J3262" }
   ]
 }
 """
 
-# PROMPT 4: METADATA EXTRACTION
-METADATA_EXTRACTION_PROMPT = """
-Analyze the provided content and extract POLICY-LEVEL METADATA about the drug rules.
+# PROMPT 4: CSV/EXCEL COLUMN DETECTION
+CSV_COLUMN_DETECTION_PROMPT = """
+### ROLE
+You are a technical data mapper. Your goal is to identify the index of the columns representing 'Drug Name' and 'HCPCS/J-Code' in a spreadsheet based on the first few rows.
 
-EXTRACTION GUIDELINES:
-1. total_carve_out_drugs: Count or extract the total number of drugs mentioned in carve-out lists
-2. source_document: Extract the path or reference to the source document (e.g., "local_path/BJCHealthcare/BJC Healthcare Specialty Drugs.docx")
-3. policy_name: Extract the policy name or description (e.g., "BJC Specialty Drug Pharmacy Benefit Plan Carve-Out")
-4. carve_out_applies_to: List of care settings where the carve-out applies (e.g., ["physician_office", "home_health_care"])
-5. carve_out_excluded_from: List of care settings excluded from the carve-out (e.g., ["inpatient_hospital", "outpatient_hospital", "emergency_room", "urgent_care"])
-6. client_name: Extract the client/organization name
-7. specialty_pharmacy_vendor: Extract the specialty pharmacy vendor name if mentioned (e.g., "Vivio", "Express Scripts")
-8. additional_info: Any other relevant policy-level information
+### INPUT (First 2 Rows)
+{csv_sample}
 
-OUTPUT FORMAT (JSON):
+### TARGET COLUMNS
+1. **Drug Name**: Usually labeled as "Drug Name", "Brand Name", "Medication", "Name", or similar.
+2. **HCPCS/J-Code**: Usually labeled as "HCPCS", "J-Code", "Current HCPC", "HCPCS Code", or similar.
+
+### YOUR TASK
+1. Analyze the sample data.
+2. Provide the integer index (starting from 0) for each column.
+3. If a column is missing, return -1.
+
+### OUTPUT FORMAT (JSON)
 {
-  "total_carve_out_drugs": 49,
-  "source_document": "local_path/BJCHealthcare/BJC Healthcare Specialty Drugs.docx",
-  "policy_name": "BJC Specialty Drug Pharmacy Benefit Plan Carve-Out",
-  "carve_out_applies_to": ["physician_office", "home_health_care"],
-  "carve_out_excluded_from": ["inpatient_hospital", "outpatient_hospital", "emergency_room", "urgent_care"],
-  "client_name": "BJC Healthcare",
-  "specialty_pharmacy_vendor": "BJC Pharmacy Benefit Plan",
-  "additional_info": {}
+  "drug_name_index": integer,
+  "hcpcs_code_index": integer,
+  "analysis": "Short reasoning for index choice."
 }
-
-NOTE: All fields are optional. Only extract what is clearly stated in the content.
 """
-

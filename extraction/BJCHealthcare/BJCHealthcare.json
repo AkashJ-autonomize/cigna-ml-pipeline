@@ -1,2638 +1,329 @@
 {
-    "drug_rules": [
+    "client": "BJCHealthcare",
+    "source_type": "source_text",
+    "extraction": [
         {
-            "drug_name": "Actemra",
-            "hcpcs_code": "J3262",
-            "j_code": "J3262",
-            "classification": "Interleukin-6 (IL-6) receptor antagonist biologic",
-            "prior_auth_required": {
-                "physician_office": false,
-                "home_health_care": false,
-                "inpatient_hospital": true,
-                "outpatient_hospital": true,
-                "emergency_room": null,
-                "urgent_care": null
+            "section_type": "pharmacy",
+            "scenario": {
+                "rule": "Specialty drugs listed in the attached document must be acquired through the BJC Pharmacy Benefit Plan when used for physician (office) and home health services; this requirement does not apply when services are provided in inpatient, outpatient, or ER hospital settings, or in urgent care settings.",
+                "routing": "Pharmacy",
+                "applied_in": [
+                    "HOME",
+                    "OFFICE",
+                    "PHARMACY"
+                ],
+                "does_not_applies_in": [
+                    "HOSPITAL"
+                ]
             },
-            "pharmacy_benefit_plan_required": {
-                "physician_office": true,
-                "home_health_care": true,
-                "inpatient_hospital": false,
-                "outpatient_hospital": false,
-                "emergency_room": null,
-                "urgent_care": null
-            },
-            "summary": "For office or home administration, route medication through the designated health-system specialty pharmacy and do not bill the medical plan; prior authorization is not required. For outpatient infusion/clinic or inpatient administration, do not redirect; medical benefit billing applies and pre-certification is required. Certain ambulatory infusion clinics may obtain and bill medical directly with pre-certification. Exception: prior authorization not required for certain provider billing arrangements when billed to the medical plan.",
-            "scenarios": [
-                {
-                    "setting": "physician_office",
-                    "routing": "Obtain through designated health-system specialty pharmacy",
-                    "benefit_type": "pharmacy",
-                    "prior_auth": false,
-                    "notes": "Medication is redirected for office administration; medical plan is not billed."
-                },
-                {
-                    "setting": "home_health_care",
-                    "routing": "Obtain through designated health-system specialty pharmacy",
-                    "benefit_type": "pharmacy",
-                    "prior_auth": false,
-                    "notes": "Medication is redirected for home administration; medical plan is not billed."
-                },
-                {
-                    "setting": "outpatient_hospital",
-                    "routing": "Administer without redirection; facility obtains and bills under medical benefit",
-                    "benefit_type": "medical",
-                    "prior_auth": true,
-                    "notes": "Pre-certification required. Certain ambulatory infusion clinics may obtain and bill medical directly."
-                },
-                {
-                    "setting": "inpatient_hospital",
-                    "routing": "Administer without redirection; hospital bills under medical benefit",
-                    "benefit_type": "medical",
-                    "prior_auth": true,
-                    "notes": "Pre-certification required. Exception may apply for certain provider billing arrangements where prior auth is not required."
-                }
-            ]
-        },
-        {
-            "drug_name": "Aranesp",
-            "hcpcs_code": "J0881",
-            "j_code": "J0881",
-            "classification": "Erythropoiesis-stimulating agent (darbepoetin alfa)",
-            "prior_auth_required": {
-                "physician_office": false,
-                "home_health_care": false,
-                "inpatient_hospital": true,
-                "outpatient_hospital": true,
-                "emergency_room": null,
-                "urgent_care": null
-            },
-            "pharmacy_benefit_plan_required": {
-                "physician_office": true,
-                "home_health_care": true,
-                "inpatient_hospital": false,
-                "outpatient_hospital": false,
-                "emergency_room": null,
-                "urgent_care": null
-            },
-            "summary": "For office or home administration, route medication through the designated health-system specialty pharmacy and do not bill the medical plan; prior authorization is not required. For outpatient infusion/clinic or inpatient administration, do not redirect; medical benefit billing applies and pre-certification is required. Certain ambulatory infusion clinics may obtain and bill medical directly with pre-certification. Exception: prior authorization not required for certain provider billing arrangements when billed to the medical plan.",
-            "scenarios": [
-                {
-                    "setting": "physician_office",
-                    "routing": "Obtain through designated health-system specialty pharmacy",
-                    "benefit_type": "pharmacy",
-                    "prior_auth": false,
-                    "notes": "Medication is redirected for office administration; medical plan is not billed."
-                },
-                {
-                    "setting": "home_health_care",
-                    "routing": "Obtain through designated health-system specialty pharmacy",
-                    "benefit_type": "pharmacy",
-                    "prior_auth": false,
-                    "notes": "Medication is redirected for home administration; medical plan is not billed."
-                },
-                {
-                    "setting": "outpatient_hospital",
-                    "routing": "Administer without redirection; facility obtains and bills under medical benefit",
-                    "benefit_type": "medical",
-                    "prior_auth": true,
-                    "notes": "Pre-certification required. Certain ambulatory infusion clinics may obtain and bill medical directly."
-                },
-                {
-                    "setting": "inpatient_hospital",
-                    "routing": "Administer without redirection; hospital bills under medical benefit",
-                    "benefit_type": "medical",
-                    "prior_auth": true,
-                    "notes": "Pre-certification required. Exception may apply for certain provider billing arrangements where prior auth is not required."
-                }
-            ]
-        },
-        {
-            "drug_name": "Benefix",
-            "hcpcs_code": "J7195",
-            "j_code": "J7195",
-            "classification": "Coagulation factor IX (recombinant) for hemophilia B",
-            "prior_auth_required": {
-                "physician_office": false,
-                "home_health_care": false,
-                "inpatient_hospital": true,
-                "outpatient_hospital": true,
-                "emergency_room": null,
-                "urgent_care": null
-            },
-            "pharmacy_benefit_plan_required": {
-                "physician_office": true,
-                "home_health_care": true,
-                "inpatient_hospital": false,
-                "outpatient_hospital": false,
-                "emergency_room": null,
-                "urgent_care": null
-            },
-            "summary": "For office or home administration, route medication through the designated health-system specialty pharmacy and do not bill the medical plan; prior authorization is not required. For outpatient infusion/clinic or inpatient administration, do not redirect; medical benefit billing applies and pre-certification is required. Certain ambulatory infusion clinics may obtain and bill medical directly with pre-certification. Exception: prior authorization not required for certain provider billing arrangements when billed to the medical plan.",
-            "scenarios": [
-                {
-                    "setting": "physician_office",
-                    "routing": "Obtain through designated health-system specialty pharmacy",
-                    "benefit_type": "pharmacy",
-                    "prior_auth": false,
-                    "notes": "Medication is redirected for office administration; medical plan is not billed."
-                },
-                {
-                    "setting": "home_health_care",
-                    "routing": "Obtain through designated health-system specialty pharmacy",
-                    "benefit_type": "pharmacy",
-                    "prior_auth": false,
-                    "notes": "Medication is redirected for home administration; medical plan is not billed."
-                },
-                {
-                    "setting": "outpatient_hospital",
-                    "routing": "Administer without redirection; facility obtains and bills under medical benefit",
-                    "benefit_type": "medical",
-                    "prior_auth": true,
-                    "notes": "Pre-certification required. Certain ambulatory infusion clinics may obtain and bill medical directly."
-                },
-                {
-                    "setting": "inpatient_hospital",
-                    "routing": "Administer without redirection; hospital bills under medical benefit",
-                    "benefit_type": "medical",
-                    "prior_auth": true,
-                    "notes": "Pre-certification required. Exception may apply for certain provider billing arrangements where prior auth is not required."
-                }
-            ]
-        },
-        {
-            "drug_name": "Benlysta",
-            "hcpcs_code": "J0490",
-            "j_code": "J0490",
-            "classification": "B-lymphocyte stimulator (BLyS) inhibitor monoclonal antibody (belimumab)",
-            "prior_auth_required": {
-                "physician_office": false,
-                "home_health_care": false,
-                "inpatient_hospital": true,
-                "outpatient_hospital": true,
-                "emergency_room": null,
-                "urgent_care": null
-            },
-            "pharmacy_benefit_plan_required": {
-                "physician_office": true,
-                "home_health_care": true,
-                "inpatient_hospital": false,
-                "outpatient_hospital": false,
-                "emergency_room": null,
-                "urgent_care": null
-            },
-            "summary": "For office or home administration, route medication through the designated health-system specialty pharmacy and do not bill the medical plan; prior authorization is not required. For outpatient infusion/clinic or inpatient administration, do not redirect; medical benefit billing applies and pre-certification is required. Certain ambulatory infusion clinics may obtain and bill medical directly with pre-certification. Exception: prior authorization not required for certain provider billing arrangements when billed to the medical plan.",
-            "scenarios": [
-                {
-                    "setting": "physician_office",
-                    "routing": "Obtain through designated health-system specialty pharmacy",
-                    "benefit_type": "pharmacy",
-                    "prior_auth": false,
-                    "notes": "Medication is redirected for office administration; medical plan is not billed."
-                },
-                {
-                    "setting": "home_health_care",
-                    "routing": "Obtain through designated health-system specialty pharmacy",
-                    "benefit_type": "pharmacy",
-                    "prior_auth": false,
-                    "notes": "Medication is redirected for home administration; medical plan is not billed."
-                },
-                {
-                    "setting": "outpatient_hospital",
-                    "routing": "Administer without redirection; facility obtains and bills under medical benefit",
-                    "benefit_type": "medical",
-                    "prior_auth": true,
-                    "notes": "Pre-certification required. Certain ambulatory infusion clinics may obtain and bill medical directly."
-                },
-                {
-                    "setting": "inpatient_hospital",
-                    "routing": "Administer without redirection; hospital bills under medical benefit",
-                    "benefit_type": "medical",
-                    "prior_auth": true,
-                    "notes": "Pre-certification required. Exception may apply for certain provider billing arrangements where prior auth is not required."
-                }
-            ]
-        },
-        {
-            "drug_name": "Cimzia",
-            "hcpcs_code": "J0717",
-            "j_code": "J0717",
-            "classification": "Tumor necrosis factor (TNF) inhibitor biologic (certolizumab pegol)",
-            "prior_auth_required": {
-                "physician_office": false,
-                "home_health_care": false,
-                "inpatient_hospital": true,
-                "outpatient_hospital": true,
-                "emergency_room": null,
-                "urgent_care": null
-            },
-            "pharmacy_benefit_plan_required": {
-                "physician_office": true,
-                "home_health_care": true,
-                "inpatient_hospital": false,
-                "outpatient_hospital": false,
-                "emergency_room": null,
-                "urgent_care": null
-            },
-            "summary": "For office or home administration, route medication through the designated health-system specialty pharmacy and do not bill the medical plan; prior authorization is not required. For outpatient infusion/clinic or inpatient administration, do not redirect; medical benefit billing applies and pre-certification is required. Certain ambulatory infusion clinics may obtain and bill medical directly with pre-certification. Exception: prior authorization not required for certain provider billing arrangements when billed to the medical plan.",
-            "scenarios": [
-                {
-                    "setting": "physician_office",
-                    "routing": "Obtain through designated health-system specialty pharmacy",
-                    "benefit_type": "pharmacy",
-                    "prior_auth": false,
-                    "notes": "Medication is redirected for office administration; medical plan is not billed."
-                },
-                {
-                    "setting": "home_health_care",
-                    "routing": "Obtain through designated health-system specialty pharmacy",
-                    "benefit_type": "pharmacy",
-                    "prior_auth": false,
-                    "notes": "Medication is redirected for home administration; medical plan is not billed."
-                },
-                {
-                    "setting": "outpatient_hospital",
-                    "routing": "Administer without redirection; facility obtains and bills under medical benefit",
-                    "benefit_type": "medical",
-                    "prior_auth": true,
-                    "notes": "Pre-certification required. Certain ambulatory infusion clinics may obtain and bill medical directly."
-                },
-                {
-                    "setting": "inpatient_hospital",
-                    "routing": "Administer without redirection; hospital bills under medical benefit",
-                    "benefit_type": "medical",
-                    "prior_auth": true,
-                    "notes": "Pre-certification required. Exception may apply for certain provider billing arrangements where prior auth is not required."
-                }
-            ]
-        },
-        {
-            "drug_name": "Eligard",
-            "hcpcs_code": "J9218",
-            "j_code": "J9218",
-            "classification": "Gonadotropin-releasing hormone (GnRH) agonist (leuprolide acetate depot)",
-            "prior_auth_required": {
-                "physician_office": false,
-                "home_health_care": false,
-                "inpatient_hospital": true,
-                "outpatient_hospital": true,
-                "emergency_room": null,
-                "urgent_care": null
-            },
-            "pharmacy_benefit_plan_required": {
-                "physician_office": true,
-                "home_health_care": true,
-                "inpatient_hospital": false,
-                "outpatient_hospital": false,
-                "emergency_room": null,
-                "urgent_care": null
-            },
-            "summary": "For office or home administration, route medication through the designated health-system specialty pharmacy and do not bill the medical plan; prior authorization is not required. For outpatient infusion/clinic or inpatient administration, do not redirect; medical benefit billing applies and pre-certification is required. Certain ambulatory infusion clinics may obtain and bill medical directly with pre-certification. Exception: prior authorization not required for certain provider billing arrangements when billed to the medical plan.",
-            "scenarios": [
-                {
-                    "setting": "physician_office",
-                    "routing": "Obtain through designated health-system specialty pharmacy",
-                    "benefit_type": "pharmacy",
-                    "prior_auth": false,
-                    "notes": "Medication is redirected for office administration; medical plan is not billed."
-                },
-                {
-                    "setting": "home_health_care",
-                    "routing": "Obtain through designated health-system specialty pharmacy",
-                    "benefit_type": "pharmacy",
-                    "prior_auth": false,
-                    "notes": "Medication is redirected for home administration; medical plan is not billed."
-                },
-                {
-                    "setting": "outpatient_hospital",
-                    "routing": "Administer without redirection; facility obtains and bills under medical benefit",
-                    "benefit_type": "medical",
-                    "prior_auth": true,
-                    "notes": "Pre-certification required. Certain ambulatory infusion clinics may obtain and bill medical directly."
-                },
-                {
-                    "setting": "inpatient_hospital",
-                    "routing": "Administer without redirection; hospital bills under medical benefit",
-                    "benefit_type": "medical",
-                    "prior_auth": true,
-                    "notes": "Pre-certification required. Exception may apply for certain provider billing arrangements where prior auth is not required."
-                }
-            ]
-        },
-        {
-            "drug_name": "Emend",
-            "hcpcs_code": "J8501",
-            "j_code": "J8501",
-            "classification": "Neurokinin-1 (NK1) receptor antagonist antiemetic (aprepitant)",
-            "prior_auth_required": {
-                "physician_office": false,
-                "home_health_care": false,
-                "inpatient_hospital": true,
-                "outpatient_hospital": true,
-                "emergency_room": null,
-                "urgent_care": null
-            },
-            "pharmacy_benefit_plan_required": {
-                "physician_office": true,
-                "home_health_care": true,
-                "inpatient_hospital": false,
-                "outpatient_hospital": false,
-                "emergency_room": null,
-                "urgent_care": null
-            },
-            "summary": "For office or home administration, route medication through the designated health-system specialty pharmacy and do not bill the medical plan; prior authorization is not required. For outpatient infusion/clinic or inpatient administration, do not redirect; medical benefit billing applies and pre-certification is required. Certain ambulatory infusion clinics may obtain and bill medical directly with pre-certification. Exception: prior authorization not required for certain provider billing arrangements when billed to the medical plan.",
-            "scenarios": [
-                {
-                    "setting": "physician_office",
-                    "routing": "Obtain through designated health-system specialty pharmacy",
-                    "benefit_type": "pharmacy",
-                    "prior_auth": false,
-                    "notes": "Medication is redirected for office administration; medical plan is not billed."
-                },
-                {
-                    "setting": "home_health_care",
-                    "routing": "Obtain through designated health-system specialty pharmacy",
-                    "benefit_type": "pharmacy",
-                    "prior_auth": false,
-                    "notes": "Medication is redirected for home administration; medical plan is not billed."
-                },
-                {
-                    "setting": "outpatient_hospital",
-                    "routing": "Administer without redirection; facility obtains and bills under medical benefit",
-                    "benefit_type": "medical",
-                    "prior_auth": true,
-                    "notes": "Pre-certification required. Certain ambulatory infusion clinics may obtain and bill medical directly."
-                },
-                {
-                    "setting": "inpatient_hospital",
-                    "routing": "Administer without redirection; hospital bills under medical benefit",
-                    "benefit_type": "medical",
-                    "prior_auth": true,
-                    "notes": "Pre-certification required. Exception may apply for certain provider billing arrangements where prior auth is not required."
-                }
-            ]
-        },
-        {
-            "drug_name": "Euflexxa",
-            "hcpcs_code": "J7323",
-            "j_code": "J7323",
-            "classification": "Intra-articular hyaluronan (viscosupplement)",
-            "prior_auth_required": {
-                "physician_office": false,
-                "home_health_care": false,
-                "inpatient_hospital": true,
-                "outpatient_hospital": true,
-                "emergency_room": null,
-                "urgent_care": null
-            },
-            "pharmacy_benefit_plan_required": {
-                "physician_office": true,
-                "home_health_care": true,
-                "inpatient_hospital": false,
-                "outpatient_hospital": false,
-                "emergency_room": null,
-                "urgent_care": null
-            },
-            "summary": "For office or home administration, route medication through the designated health-system specialty pharmacy and do not bill the medical plan; prior authorization is not required. For outpatient infusion/clinic or inpatient administration, do not redirect; medical benefit billing applies and pre-certification is required. Certain ambulatory infusion clinics may obtain and bill medical directly with pre-certification. Exception: prior authorization not required for certain provider billing arrangements when billed to the medical plan.",
-            "scenarios": [
-                {
-                    "setting": "physician_office",
-                    "routing": "Obtain through designated health-system specialty pharmacy",
-                    "benefit_type": "pharmacy",
-                    "prior_auth": false,
-                    "notes": "Medication is redirected for office administration; medical plan is not billed."
-                },
-                {
-                    "setting": "home_health_care",
-                    "routing": "Obtain through designated health-system specialty pharmacy",
-                    "benefit_type": "pharmacy",
-                    "prior_auth": false,
-                    "notes": "Medication is redirected for home administration; medical plan is not billed."
-                },
-                {
-                    "setting": "outpatient_hospital",
-                    "routing": "Administer without redirection; facility obtains and bills under medical benefit",
-                    "benefit_type": "medical",
-                    "prior_auth": true,
-                    "notes": "Pre-certification required. Certain ambulatory infusion clinics may obtain and bill medical directly."
-                },
-                {
-                    "setting": "inpatient_hospital",
-                    "routing": "Administer without redirection; hospital bills under medical benefit",
-                    "benefit_type": "medical",
-                    "prior_auth": true,
-                    "notes": "Pre-certification required. Exception may apply for certain provider billing arrangements where prior auth is not required."
-                }
-            ]
-        },
-        {
-            "drug_name": "Flebogamma",
-            "hcpcs_code": "J1572",
-            "j_code": "J1572",
-            "classification": "Intravenous immune globulin (IVIG)",
-            "prior_auth_required": {
-                "physician_office": false,
-                "home_health_care": false,
-                "inpatient_hospital": true,
-                "outpatient_hospital": true,
-                "emergency_room": null,
-                "urgent_care": null
-            },
-            "pharmacy_benefit_plan_required": {
-                "physician_office": true,
-                "home_health_care": true,
-                "inpatient_hospital": false,
-                "outpatient_hospital": false,
-                "emergency_room": null,
-                "urgent_care": null
-            },
-            "summary": "For office or home administration, route medication through the designated health-system specialty pharmacy and do not bill the medical plan; prior authorization is not required. For outpatient infusion/clinic or inpatient administration, do not redirect; medical benefit billing applies and pre-certification is required. Certain ambulatory infusion clinics may obtain and bill medical directly with pre-certification. Exception: prior authorization not required for certain provider billing arrangements when billed to the medical plan.",
-            "scenarios": [
-                {
-                    "setting": "physician_office",
-                    "routing": "Obtain through designated health-system specialty pharmacy",
-                    "benefit_type": "pharmacy",
-                    "prior_auth": false,
-                    "notes": "Medication is redirected for office administration; medical plan is not billed."
-                },
-                {
-                    "setting": "home_health_care",
-                    "routing": "Obtain through designated health-system specialty pharmacy",
-                    "benefit_type": "pharmacy",
-                    "prior_auth": false,
-                    "notes": "Medication is redirected for home administration; medical plan is not billed."
-                },
-                {
-                    "setting": "outpatient_hospital",
-                    "routing": "Administer without redirection; facility obtains and bills under medical benefit",
-                    "benefit_type": "medical",
-                    "prior_auth": true,
-                    "notes": "Pre-certification required. Certain ambulatory infusion clinics may obtain and bill medical directly."
-                },
-                {
-                    "setting": "inpatient_hospital",
-                    "routing": "Administer without redirection; hospital bills under medical benefit",
-                    "benefit_type": "medical",
-                    "prior_auth": true,
-                    "notes": "Pre-certification required. Exception may apply for certain provider billing arrangements where prior auth is not required."
-                }
-            ]
-        },
-        {
-            "drug_name": "Gamimune N",
-            "hcpcs_code": "J1561",
-            "j_code": "J1561",
-            "classification": "Intravenous immune globulin (IVIG)",
-            "prior_auth_required": {
-                "physician_office": false,
-                "home_health_care": false,
-                "inpatient_hospital": true,
-                "outpatient_hospital": true,
-                "emergency_room": null,
-                "urgent_care": null
-            },
-            "pharmacy_benefit_plan_required": {
-                "physician_office": true,
-                "home_health_care": true,
-                "inpatient_hospital": false,
-                "outpatient_hospital": false,
-                "emergency_room": null,
-                "urgent_care": null
-            },
-            "summary": "For office or home administration, route medication through the designated health-system specialty pharmacy and do not bill the medical plan; prior authorization is not required. For outpatient infusion/clinic or inpatient administration, do not redirect; medical benefit billing applies and pre-certification is required. Certain ambulatory infusion clinics may obtain and bill medical directly with pre-certification. Exception: prior authorization not required for certain provider billing arrangements when billed to the medical plan.",
-            "scenarios": [
-                {
-                    "setting": "physician_office",
-                    "routing": "Obtain through designated health-system specialty pharmacy",
-                    "benefit_type": "pharmacy",
-                    "prior_auth": false,
-                    "notes": "Medication is redirected for office administration; medical plan is not billed."
-                },
-                {
-                    "setting": "home_health_care",
-                    "routing": "Obtain through designated health-system specialty pharmacy",
-                    "benefit_type": "pharmacy",
-                    "prior_auth": false,
-                    "notes": "Medication is redirected for home administration; medical plan is not billed."
-                },
-                {
-                    "setting": "outpatient_hospital",
-                    "routing": "Administer without redirection; facility obtains and bills under medical benefit",
-                    "benefit_type": "medical",
-                    "prior_auth": true,
-                    "notes": "Pre-certification required. Certain ambulatory infusion clinics may obtain and bill medical directly."
-                },
-                {
-                    "setting": "inpatient_hospital",
-                    "routing": "Administer without redirection; hospital bills under medical benefit",
-                    "benefit_type": "medical",
-                    "prior_auth": true,
-                    "notes": "Pre-certification required. Exception may apply for certain provider billing arrangements where prior auth is not required."
-                }
-            ]
-        },
-        {
-            "drug_name": "Gamimune N",
-            "hcpcs_code": "J1566",
-            "j_code": "J1566",
-            "classification": "Intravenous immune globulin (IVIG)",
-            "prior_auth_required": {
-                "physician_office": false,
-                "home_health_care": false,
-                "inpatient_hospital": true,
-                "outpatient_hospital": true,
-                "emergency_room": null,
-                "urgent_care": null
-            },
-            "pharmacy_benefit_plan_required": {
-                "physician_office": true,
-                "home_health_care": true,
-                "inpatient_hospital": false,
-                "outpatient_hospital": false,
-                "emergency_room": null,
-                "urgent_care": null
-            },
-            "summary": "For office or home administration, route medication through the designated health-system specialty pharmacy and do not bill the medical plan; prior authorization is not required. For outpatient infusion/clinic or inpatient administration, do not redirect; medical benefit billing applies and pre-certification is required. Certain ambulatory infusion clinics may obtain and bill medical directly with pre-certification. Exception: prior authorization not required for certain provider billing arrangements when billed to the medical plan.",
-            "scenarios": [
-                {
-                    "setting": "physician_office",
-                    "routing": "Obtain through designated health-system specialty pharmacy",
-                    "benefit_type": "pharmacy",
-                    "prior_auth": false,
-                    "notes": "Medication is redirected for office administration; medical plan is not billed."
-                },
-                {
-                    "setting": "home_health_care",
-                    "routing": "Obtain through designated health-system specialty pharmacy",
-                    "benefit_type": "pharmacy",
-                    "prior_auth": false,
-                    "notes": "Medication is redirected for home administration; medical plan is not billed."
-                },
-                {
-                    "setting": "outpatient_hospital",
-                    "routing": "Administer without redirection; facility obtains and bills under medical benefit",
-                    "benefit_type": "medical",
-                    "prior_auth": true,
-                    "notes": "Pre-certification required. Certain ambulatory infusion clinics may obtain and bill medical directly."
-                },
-                {
-                    "setting": "inpatient_hospital",
-                    "routing": "Administer without redirection; hospital bills under medical benefit",
-                    "benefit_type": "medical",
-                    "prior_auth": true,
-                    "notes": "Pre-certification required. Exception may apply for certain provider billing arrangements where prior auth is not required."
-                }
-            ]
-        },
-        {
-            "drug_name": "Gammagard Liquid",
-            "hcpcs_code": "J1569",
-            "j_code": "J1569",
-            "classification": "Intravenous immune globulin (IVIG)",
-            "prior_auth_required": {
-                "physician_office": false,
-                "home_health_care": false,
-                "inpatient_hospital": true,
-                "outpatient_hospital": true,
-                "emergency_room": null,
-                "urgent_care": null
-            },
-            "pharmacy_benefit_plan_required": {
-                "physician_office": true,
-                "home_health_care": true,
-                "inpatient_hospital": false,
-                "outpatient_hospital": false,
-                "emergency_room": null,
-                "urgent_care": null
-            },
-            "summary": "For office or home administration, route medication through the designated health-system specialty pharmacy and do not bill the medical plan; prior authorization is not required. For outpatient infusion/clinic or inpatient administration, do not redirect; medical benefit billing applies and pre-certification is required. Certain ambulatory infusion clinics may obtain and bill medical directly with pre-certification. Exception: prior authorization not required for certain provider billing arrangements when billed to the medical plan.",
-            "scenarios": [
-                {
-                    "setting": "physician_office",
-                    "routing": "Obtain through designated health-system specialty pharmacy",
-                    "benefit_type": "pharmacy",
-                    "prior_auth": false,
-                    "notes": "Medication is redirected for office administration; medical plan is not billed."
-                },
-                {
-                    "setting": "home_health_care",
-                    "routing": "Obtain through designated health-system specialty pharmacy",
-                    "benefit_type": "pharmacy",
-                    "prior_auth": false,
-                    "notes": "Medication is redirected for home administration; medical plan is not billed."
-                },
-                {
-                    "setting": "outpatient_hospital",
-                    "routing": "Administer without redirection; facility obtains and bills under medical benefit",
-                    "benefit_type": "medical",
-                    "prior_auth": true,
-                    "notes": "Pre-certification required. Certain ambulatory infusion clinics may obtain and bill medical directly."
-                },
-                {
-                    "setting": "inpatient_hospital",
-                    "routing": "Administer without redirection; hospital bills under medical benefit",
-                    "benefit_type": "medical",
-                    "prior_auth": true,
-                    "notes": "Pre-certification required. Exception may apply for certain provider billing arrangements where prior auth is not required."
-                }
-            ]
-        },
-        {
-            "drug_name": "Gel-One",
-            "hcpcs_code": "J7326",
-            "j_code": "J7326",
-            "classification": "Intra-articular hyaluronan (viscosupplement)",
-            "prior_auth_required": {
-                "physician_office": false,
-                "home_health_care": false,
-                "inpatient_hospital": true,
-                "outpatient_hospital": true,
-                "emergency_room": null,
-                "urgent_care": null
-            },
-            "pharmacy_benefit_plan_required": {
-                "physician_office": true,
-                "home_health_care": true,
-                "inpatient_hospital": false,
-                "outpatient_hospital": false,
-                "emergency_room": null,
-                "urgent_care": null
-            },
-            "summary": "For office or home administration, route medication through the designated health-system specialty pharmacy and do not bill the medical plan; prior authorization is not required. For outpatient infusion/clinic or inpatient administration, do not redirect; medical benefit billing applies and pre-certification is required. Certain ambulatory infusion clinics may obtain and bill medical directly with pre-certification. Exception: prior authorization not required for certain provider billing arrangements when billed to the medical plan.",
-            "scenarios": [
-                {
-                    "setting": "physician_office",
-                    "routing": "Obtain through designated health-system specialty pharmacy",
-                    "benefit_type": "pharmacy",
-                    "prior_auth": false,
-                    "notes": "Medication is redirected for office administration; medical plan is not billed."
-                },
-                {
-                    "setting": "home_health_care",
-                    "routing": "Obtain through designated health-system specialty pharmacy",
-                    "benefit_type": "pharmacy",
-                    "prior_auth": false,
-                    "notes": "Medication is redirected for home administration; medical plan is not billed."
-                },
-                {
-                    "setting": "outpatient_hospital",
-                    "routing": "Administer without redirection; facility obtains and bills under medical benefit",
-                    "benefit_type": "medical",
-                    "prior_auth": true,
-                    "notes": "Pre-certification required. Certain ambulatory infusion clinics may obtain and bill medical directly."
-                },
-                {
-                    "setting": "inpatient_hospital",
-                    "routing": "Administer without redirection; hospital bills under medical benefit",
-                    "benefit_type": "medical",
-                    "prior_auth": true,
-                    "notes": "Pre-certification required. Exception may apply for certain provider billing arrangements where prior auth is not required."
-                }
-            ]
-        },
-        {
-            "drug_name": "Hizentra",
-            "hcpcs_code": "J1559",
-            "j_code": "J1559",
-            "classification": "Subcutaneous immune globulin (SCIG)",
-            "prior_auth_required": {
-                "physician_office": false,
-                "home_health_care": false,
-                "inpatient_hospital": true,
-                "outpatient_hospital": true,
-                "emergency_room": null,
-                "urgent_care": null
-            },
-            "pharmacy_benefit_plan_required": {
-                "physician_office": true,
-                "home_health_care": true,
-                "inpatient_hospital": false,
-                "outpatient_hospital": false,
-                "emergency_room": null,
-                "urgent_care": null
-            },
-            "summary": "For office or home administration, route medication through the designated health-system specialty pharmacy and do not bill the medical plan; prior authorization is not required. For outpatient infusion/clinic or inpatient administration, do not redirect; medical benefit billing applies and pre-certification is required. Certain ambulatory infusion clinics may obtain and bill medical directly with pre-certification. Exception: prior authorization not required for certain provider billing arrangements when billed to the medical plan.",
-            "scenarios": [
-                {
-                    "setting": "physician_office",
-                    "routing": "Obtain through designated health-system specialty pharmacy",
-                    "benefit_type": "pharmacy",
-                    "prior_auth": false,
-                    "notes": "Medication is redirected for office administration; medical plan is not billed."
-                },
-                {
-                    "setting": "home_health_care",
-                    "routing": "Obtain through designated health-system specialty pharmacy",
-                    "benefit_type": "pharmacy",
-                    "prior_auth": false,
-                    "notes": "Medication is redirected for home administration; medical plan is not billed."
-                },
-                {
-                    "setting": "outpatient_hospital",
-                    "routing": "Administer without redirection; facility obtains and bills under medical benefit",
-                    "benefit_type": "medical",
-                    "prior_auth": true,
-                    "notes": "Pre-certification required. Certain ambulatory infusion clinics may obtain and bill medical directly."
-                },
-                {
-                    "setting": "inpatient_hospital",
-                    "routing": "Administer without redirection; hospital bills under medical benefit",
-                    "benefit_type": "medical",
-                    "prior_auth": true,
-                    "notes": "Pre-certification required. Exception may apply for certain provider billing arrangements where prior auth is not required."
-                }
-            ]
-        },
-        {
-            "drug_name": "Humira",
-            "hcpcs_code": "J0135",
-            "j_code": "J0135",
-            "classification": "Tumor necrosis factor (TNF) inhibitor biologic (adalimumab)",
-            "prior_auth_required": {
-                "physician_office": false,
-                "home_health_care": false,
-                "inpatient_hospital": true,
-                "outpatient_hospital": true,
-                "emergency_room": null,
-                "urgent_care": null
-            },
-            "pharmacy_benefit_plan_required": {
-                "physician_office": true,
-                "home_health_care": true,
-                "inpatient_hospital": false,
-                "outpatient_hospital": false,
-                "emergency_room": null,
-                "urgent_care": null
-            },
-            "summary": "For office or home administration, route medication through the designated health-system specialty pharmacy and do not bill the medical plan; prior authorization is not required. For outpatient infusion/clinic or inpatient administration, do not redirect; medical benefit billing applies and pre-certification is required. Certain ambulatory infusion clinics may obtain and bill medical directly with pre-certification. Exception: prior authorization not required for certain provider billing arrangements when billed to the medical plan.",
-            "scenarios": [
-                {
-                    "setting": "physician_office",
-                    "routing": "Obtain through designated health-system specialty pharmacy",
-                    "benefit_type": "pharmacy",
-                    "prior_auth": false,
-                    "notes": "Medication is redirected for office administration; medical plan is not billed."
-                },
-                {
-                    "setting": "home_health_care",
-                    "routing": "Obtain through designated health-system specialty pharmacy",
-                    "benefit_type": "pharmacy",
-                    "prior_auth": false,
-                    "notes": "Medication is redirected for home administration; medical plan is not billed."
-                },
-                {
-                    "setting": "outpatient_hospital",
-                    "routing": "Administer without redirection; facility obtains and bills under medical benefit",
-                    "benefit_type": "medical",
-                    "prior_auth": true,
-                    "notes": "Pre-certification required. Certain ambulatory infusion clinics may obtain and bill medical directly."
-                },
-                {
-                    "setting": "inpatient_hospital",
-                    "routing": "Administer without redirection; hospital bills under medical benefit",
-                    "benefit_type": "medical",
-                    "prior_auth": true,
-                    "notes": "Pre-certification required. Exception may apply for certain provider billing arrangements where prior auth is not required."
-                }
-            ]
-        },
-        {
-            "drug_name": "Hyalgan",
-            "hcpcs_code": "J7315",
-            "j_code": "J7315",
-            "classification": "Intra-articular hyaluronan (viscosupplement)",
-            "prior_auth_required": {
-                "physician_office": false,
-                "home_health_care": false,
-                "inpatient_hospital": true,
-                "outpatient_hospital": true,
-                "emergency_room": null,
-                "urgent_care": null
-            },
-            "pharmacy_benefit_plan_required": {
-                "physician_office": true,
-                "home_health_care": true,
-                "inpatient_hospital": false,
-                "outpatient_hospital": false,
-                "emergency_room": null,
-                "urgent_care": null
-            },
-            "summary": "For office or home administration, route medication through the designated health-system specialty pharmacy and do not bill the medical plan; prior authorization is not required. For outpatient infusion/clinic or inpatient administration, do not redirect; medical benefit billing applies and pre-certification is required. Certain ambulatory infusion clinics may obtain and bill medical directly with pre-certification. Exception: prior authorization not required for certain provider billing arrangements when billed to the medical plan.",
-            "scenarios": [
-                {
-                    "setting": "physician_office",
-                    "routing": "Obtain through designated health-system specialty pharmacy",
-                    "benefit_type": "pharmacy",
-                    "prior_auth": false,
-                    "notes": "Medication is redirected for office administration; medical plan is not billed."
-                },
-                {
-                    "setting": "home_health_care",
-                    "routing": "Obtain through designated health-system specialty pharmacy",
-                    "benefit_type": "pharmacy",
-                    "prior_auth": false,
-                    "notes": "Medication is redirected for home administration; medical plan is not billed."
-                },
-                {
-                    "setting": "outpatient_hospital",
-                    "routing": "Administer without redirection; facility obtains and bills under medical benefit",
-                    "benefit_type": "medical",
-                    "prior_auth": true,
-                    "notes": "Pre-certification required. Certain ambulatory infusion clinics may obtain and bill medical directly."
-                },
-                {
-                    "setting": "inpatient_hospital",
-                    "routing": "Administer without redirection; hospital bills under medical benefit",
-                    "benefit_type": "medical",
-                    "prior_auth": true,
-                    "notes": "Pre-certification required. Exception may apply for certain provider billing arrangements where prior auth is not required."
-                }
-            ]
-        },
-        {
-            "drug_name": "Hylenex",
-            "hcpcs_code": "J3473",
-            "j_code": "J3473",
-            "classification": "Hyaluronidase enzyme (permeation enhancer)",
-            "prior_auth_required": {
-                "physician_office": false,
-                "home_health_care": false,
-                "inpatient_hospital": true,
-                "outpatient_hospital": true,
-                "emergency_room": null,
-                "urgent_care": null
-            },
-            "pharmacy_benefit_plan_required": {
-                "physician_office": true,
-                "home_health_care": true,
-                "inpatient_hospital": false,
-                "outpatient_hospital": false,
-                "emergency_room": null,
-                "urgent_care": null
-            },
-            "summary": "For office or home administration, route medication through the designated health-system specialty pharmacy and do not bill the medical plan; prior authorization is not required. For outpatient infusion/clinic or inpatient administration, do not redirect; medical benefit billing applies and pre-certification is required. Certain ambulatory infusion clinics may obtain and bill medical directly with pre-certification. Exception: prior authorization not required for certain provider billing arrangements when billed to the medical plan.",
-            "scenarios": [
-                {
-                    "setting": "physician_office",
-                    "routing": "Obtain through designated health-system specialty pharmacy",
-                    "benefit_type": "pharmacy",
-                    "prior_auth": false,
-                    "notes": "Medication is redirected for office administration; medical plan is not billed."
-                },
-                {
-                    "setting": "home_health_care",
-                    "routing": "Obtain through designated health-system specialty pharmacy",
-                    "benefit_type": "pharmacy",
-                    "prior_auth": false,
-                    "notes": "Medication is redirected for home administration; medical plan is not billed."
-                },
-                {
-                    "setting": "outpatient_hospital",
-                    "routing": "Administer without redirection; facility obtains and bills under medical benefit",
-                    "benefit_type": "medical",
-                    "prior_auth": true,
-                    "notes": "Pre-certification required. Certain ambulatory infusion clinics may obtain and bill medical directly."
-                },
-                {
-                    "setting": "inpatient_hospital",
-                    "routing": "Administer without redirection; hospital bills under medical benefit",
-                    "benefit_type": "medical",
-                    "prior_auth": true,
-                    "notes": "Pre-certification required. Exception may apply for certain provider billing arrangements where prior auth is not required."
-                }
-            ]
-        },
-        {
-            "drug_name": "HyperRAB S/D",
-            "hcpcs_code": "90375",
-            "j_code": null,
-            "classification": "Rabies immune globulin (human)",
-            "prior_auth_required": {
-                "physician_office": false,
-                "home_health_care": false,
-                "inpatient_hospital": true,
-                "outpatient_hospital": true,
-                "emergency_room": null,
-                "urgent_care": null
-            },
-            "pharmacy_benefit_plan_required": {
-                "physician_office": true,
-                "home_health_care": true,
-                "inpatient_hospital": false,
-                "outpatient_hospital": false,
-                "emergency_room": null,
-                "urgent_care": null
-            },
-            "summary": "For office or home administration, route medication through the designated health-system specialty pharmacy and do not bill the medical plan; prior authorization is not required. For outpatient or inpatient administration, do not redirect; medical benefit billing applies and pre-certification is required. Certain ambulatory infusion clinics may obtain and bill medical directly with pre-certification. Exception: prior authorization not required for certain provider billing arrangements when billed to the medical plan.",
-            "scenarios": [
-                {
-                    "setting": "physician_office",
-                    "routing": "Obtain through designated health-system specialty pharmacy",
-                    "benefit_type": "pharmacy",
-                    "prior_auth": false,
-                    "notes": "Redirected for office administration; medical plan is not billed."
-                },
-                {
-                    "setting": "home_health_care",
-                    "routing": "Obtain through designated health-system specialty pharmacy",
-                    "benefit_type": "pharmacy",
-                    "prior_auth": false,
-                    "notes": "Redirected for home administration; medical plan is not billed."
-                },
-                {
-                    "setting": "outpatient_hospital",
-                    "routing": "Administer without redirection; facility bills under medical benefit",
-                    "benefit_type": "medical",
-                    "prior_auth": true,
-                    "notes": "Pre-certification required; certain ambulatory infusion clinics may bill medical directly."
-                },
-                {
-                    "setting": "inpatient_hospital",
-                    "routing": "Administer without redirection; hospital bills under medical benefit",
-                    "benefit_type": "medical",
-                    "prior_auth": true,
-                    "notes": "Pre-certification required; exception may apply for certain provider billing arrangements."
-                }
-            ]
-        },
-        {
-            "drug_name": "Leukine",
-            "hcpcs_code": "J2820",
-            "j_code": "J2820",
-            "classification": "Colony-stimulating factor (sargramostim; GM-CSF)",
-            "prior_auth_required": {
-                "physician_office": false,
-                "home_health_care": false,
-                "inpatient_hospital": true,
-                "outpatient_hospital": true,
-                "emergency_room": null,
-                "urgent_care": null
-            },
-            "pharmacy_benefit_plan_required": {
-                "physician_office": true,
-                "home_health_care": true,
-                "inpatient_hospital": false,
-                "outpatient_hospital": false,
-                "emergency_room": null,
-                "urgent_care": null
-            },
-            "summary": "For office or home administration, route medication through the designated health-system specialty pharmacy and do not bill the medical plan; prior authorization is not required. For outpatient infusion/clinic or inpatient administration, do not redirect; medical benefit billing applies and pre-certification is required. Certain ambulatory infusion clinics may obtain and bill medical directly with pre-certification. Exception: prior authorization not required for certain provider billing arrangements when billed to the medical plan.",
-            "scenarios": [
-                {
-                    "setting": "physician_office",
-                    "routing": "Obtain through designated health-system specialty pharmacy",
-                    "benefit_type": "pharmacy",
-                    "prior_auth": false,
-                    "notes": "Medication is redirected for office administration; medical plan is not billed."
-                },
-                {
-                    "setting": "home_health_care",
-                    "routing": "Obtain through designated health-system specialty pharmacy",
-                    "benefit_type": "pharmacy",
-                    "prior_auth": false,
-                    "notes": "Medication is redirected for home administration; medical plan is not billed."
-                },
-                {
-                    "setting": "outpatient_hospital",
-                    "routing": "Administer without redirection; facility obtains and bills under medical benefit",
-                    "benefit_type": "medical",
-                    "prior_auth": true,
-                    "notes": "Pre-certification required. Certain ambulatory infusion clinics may obtain and bill medical directly."
-                },
-                {
-                    "setting": "inpatient_hospital",
-                    "routing": "Administer without redirection; hospital bills under medical benefit",
-                    "benefit_type": "medical",
-                    "prior_auth": true,
-                    "notes": "Pre-certification required. Exception may apply for certain provider billing arrangements where prior auth is not required."
-                }
-            ]
-        },
-        {
-            "drug_name": "Lovenox",
-            "hcpcs_code": "J1650",
-            "j_code": "J1650",
-            "classification": "Low-molecular-weight heparin anticoagulant (enoxaparin)",
-            "prior_auth_required": {
-                "physician_office": false,
-                "home_health_care": false,
-                "inpatient_hospital": true,
-                "outpatient_hospital": true,
-                "emergency_room": null,
-                "urgent_care": null
-            },
-            "pharmacy_benefit_plan_required": {
-                "physician_office": true,
-                "home_health_care": true,
-                "inpatient_hospital": false,
-                "outpatient_hospital": false,
-                "emergency_room": null,
-                "urgent_care": null
-            },
-            "summary": "For office or home administration, route medication through the designated health-system specialty pharmacy and do not bill the medical plan; prior authorization is not required. For outpatient infusion/clinic or inpatient administration, do not redirect; medical benefit billing applies and pre-certification is required. Certain ambulatory infusion clinics may obtain and bill medical directly with pre-certification. Exception: prior authorization not required for certain provider billing arrangements when billed to the medical plan.",
-            "scenarios": [
-                {
-                    "setting": "physician_office",
-                    "routing": "Obtain through designated health-system specialty pharmacy",
-                    "benefit_type": "pharmacy",
-                    "prior_auth": false,
-                    "notes": "Medication is redirected for office administration; medical plan is not billed."
-                },
-                {
-                    "setting": "home_health_care",
-                    "routing": "Obtain through designated health-system specialty pharmacy",
-                    "benefit_type": "pharmacy",
-                    "prior_auth": false,
-                    "notes": "Medication is redirected for home administration; medical plan is not billed."
-                },
-                {
-                    "setting": "outpatient_hospital",
-                    "routing": "Administer without redirection; facility obtains and bills under medical benefit",
-                    "benefit_type": "medical",
-                    "prior_auth": true,
-                    "notes": "Pre-certification required. Certain ambulatory infusion clinics may obtain and bill medical directly."
-                },
-                {
-                    "setting": "inpatient_hospital",
-                    "routing": "Administer without redirection; hospital bills under medical benefit",
-                    "benefit_type": "medical",
-                    "prior_auth": true,
-                    "notes": "Pre-certification required. Exception may apply for certain provider billing arrangements where prior auth is not required."
-                }
-            ]
-        },
-        {
-            "drug_name": "Lucentis",
-            "hcpcs_code": "J2778",
-            "j_code": "J2778",
-            "classification": "Anti-VEGF monoclonal antibody fragment (ranibizumab)",
-            "prior_auth_required": {
-                "physician_office": false,
-                "home_health_care": false,
-                "inpatient_hospital": true,
-                "outpatient_hospital": true,
-                "emergency_room": null,
-                "urgent_care": null
-            },
-            "pharmacy_benefit_plan_required": {
-                "physician_office": true,
-                "home_health_care": true,
-                "inpatient_hospital": false,
-                "outpatient_hospital": false,
-                "emergency_room": null,
-                "urgent_care": null
-            },
-            "summary": "For office or home administration, route medication through the designated health-system specialty pharmacy and do not bill the medical plan; prior authorization is not required. For outpatient infusion/clinic or inpatient administration, do not redirect; medical benefit billing applies and pre-certification is required. Certain ambulatory infusion clinics may obtain and bill medical directly with pre-certification. Exception: prior authorization not required for certain provider billing arrangements when billed to the medical plan.",
-            "scenarios": [
-                {
-                    "setting": "physician_office",
-                    "routing": "Obtain through designated health-system specialty pharmacy",
-                    "benefit_type": "pharmacy",
-                    "prior_auth": false,
-                    "notes": "Medication is redirected for office administration; medical plan is not billed."
-                },
-                {
-                    "setting": "home_health_care",
-                    "routing": "Obtain through designated health-system specialty pharmacy",
-                    "benefit_type": "pharmacy",
-                    "prior_auth": false,
-                    "notes": "Medication is redirected for home administration; medical plan is not billed."
-                },
-                {
-                    "setting": "outpatient_hospital",
-                    "routing": "Administer without redirection; facility obtains and bills under medical benefit",
-                    "benefit_type": "medical",
-                    "prior_auth": true,
-                    "notes": "Pre-certification required. Certain ambulatory infusion clinics may obtain and bill medical directly."
-                },
-                {
-                    "setting": "inpatient_hospital",
-                    "routing": "Administer without redirection; hospital bills under medical benefit",
-                    "benefit_type": "medical",
-                    "prior_auth": true,
-                    "notes": "Pre-certification required. Exception may apply for certain provider billing arrangements where prior auth is not required."
-                }
-            ]
-        },
-        {
-            "drug_name": "Lupron Depot",
-            "hcpcs_code": "J1950",
-            "j_code": "J1950",
-            "classification": "Gonadotropin-releasing hormone (GnRH) agonist (leuprolide acetate depot)",
-            "prior_auth_required": {
-                "physician_office": false,
-                "home_health_care": false,
-                "inpatient_hospital": true,
-                "outpatient_hospital": true,
-                "emergency_room": null,
-                "urgent_care": null
-            },
-            "pharmacy_benefit_plan_required": {
-                "physician_office": true,
-                "home_health_care": true,
-                "inpatient_hospital": false,
-                "outpatient_hospital": false,
-                "emergency_room": null,
-                "urgent_care": null
-            },
-            "summary": "For office or home administration, route medication through the designated health-system specialty pharmacy and do not bill the medical plan; prior authorization is not required. For outpatient infusion/clinic or inpatient administration, do not redirect; medical benefit billing applies and pre-certification is required. Certain ambulatory infusion clinics may obtain and bill medical directly with pre-certification. Exception: prior authorization not required for certain provider billing arrangements when billed to the medical plan.",
-            "scenarios": [
-                {
-                    "setting": "physician_office",
-                    "routing": "Obtain through designated health-system specialty pharmacy",
-                    "benefit_type": "pharmacy",
-                    "prior_auth": false,
-                    "notes": "Medication is redirected for office administration; medical plan is not billed."
-                },
-                {
-                    "setting": "home_health_care",
-                    "routing": "Obtain through designated health-system specialty pharmacy",
-                    "benefit_type": "pharmacy",
-                    "prior_auth": false,
-                    "notes": "Medication is redirected for home administration; medical plan is not billed."
-                },
-                {
-                    "setting": "outpatient_hospital",
-                    "routing": "Administer without redirection; facility obtains and bills under medical benefit",
-                    "benefit_type": "medical",
-                    "prior_auth": true,
-                    "notes": "Pre-certification required. Certain ambulatory infusion clinics may obtain and bill medical directly."
-                },
-                {
-                    "setting": "inpatient_hospital",
-                    "routing": "Administer without redirection; hospital bills under medical benefit",
-                    "benefit_type": "medical",
-                    "prior_auth": true,
-                    "notes": "Pre-certification required. Exception may apply for certain provider billing arrangements where prior auth is not required."
-                }
-            ]
-        },
-        {
-            "drug_name": "Lupron Depot-Ped",
-            "hcpcs_code": "J9217",
-            "j_code": "J9217",
-            "classification": "Gonadotropin-releasing hormone (GnRH) agonist (leuprolide acetate depot)",
-            "prior_auth_required": {
-                "physician_office": false,
-                "home_health_care": false,
-                "inpatient_hospital": true,
-                "outpatient_hospital": true,
-                "emergency_room": null,
-                "urgent_care": null
-            },
-            "pharmacy_benefit_plan_required": {
-                "physician_office": true,
-                "home_health_care": true,
-                "inpatient_hospital": false,
-                "outpatient_hospital": false,
-                "emergency_room": null,
-                "urgent_care": null
-            },
-            "summary": "For office or home administration, route medication through the designated health-system specialty pharmacy and do not bill the medical plan; prior authorization is not required. For outpatient infusion/clinic or inpatient administration, do not redirect; medical benefit billing applies and pre-certification is required. Certain ambulatory infusion clinics may obtain and bill medical directly with pre-certification. Exception: prior authorization not required for certain provider billing arrangements when billed to the medical plan.",
-            "scenarios": [
-                {
-                    "setting": "physician_office",
-                    "routing": "Obtain through designated health-system specialty pharmacy",
-                    "benefit_type": "pharmacy",
-                    "prior_auth": false,
-                    "notes": "Medication is redirected for office administration; medical plan is not billed."
-                },
-                {
-                    "setting": "home_health_care",
-                    "routing": "Obtain through designated health-system specialty pharmacy",
-                    "benefit_type": "pharmacy",
-                    "prior_auth": false,
-                    "notes": "Medication is redirected for home administration; medical plan is not billed."
-                },
-                {
-                    "setting": "outpatient_hospital",
-                    "routing": "Administer without redirection; facility obtains and bills under medical benefit",
-                    "benefit_type": "medical",
-                    "prior_auth": true,
-                    "notes": "Pre-certification required. Certain ambulatory infusion clinics may obtain and bill medical directly."
-                },
-                {
-                    "setting": "inpatient_hospital",
-                    "routing": "Administer without redirection; hospital bills under medical benefit",
-                    "benefit_type": "medical",
-                    "prior_auth": true,
-                    "notes": "Pre-certification required. Exception may apply for certain provider billing arrangements where prior auth is not required."
-                }
-            ]
-        },
-        {
-            "drug_name": "Myfortic",
-            "hcpcs_code": "J7518",
-            "j_code": "J7518",
-            "classification": "Antimetabolite immunosuppressant (mycophenolic acid)",
-            "prior_auth_required": {
-                "physician_office": false,
-                "home_health_care": false,
-                "inpatient_hospital": true,
-                "outpatient_hospital": true,
-                "emergency_room": null,
-                "urgent_care": null
-            },
-            "pharmacy_benefit_plan_required": {
-                "physician_office": true,
-                "home_health_care": true,
-                "inpatient_hospital": false,
-                "outpatient_hospital": false,
-                "emergency_room": null,
-                "urgent_care": null
-            },
-            "summary": "For office or home administration, route medication through the designated health-system specialty pharmacy and do not bill the medical plan; prior authorization is not required. For outpatient infusion/clinic or inpatient administration, do not redirect; medical benefit billing applies and pre-certification is required. Certain ambulatory infusion clinics may obtain and bill medical directly with pre-certification. Exception: prior authorization not required for certain provider billing arrangements when billed to the medical plan.",
-            "scenarios": [
-                {
-                    "setting": "physician_office",
-                    "routing": "Obtain through designated health-system specialty pharmacy",
-                    "benefit_type": "pharmacy",
-                    "prior_auth": false,
-                    "notes": "Medication is redirected for office administration; medical plan is not billed."
-                },
-                {
-                    "setting": "home_health_care",
-                    "routing": "Obtain through designated health-system specialty pharmacy",
-                    "benefit_type": "pharmacy",
-                    "prior_auth": false,
-                    "notes": "Medication is redirected for home administration; medical plan is not billed."
-                },
-                {
-                    "setting": "outpatient_hospital",
-                    "routing": "Administer without redirection; facility obtains and bills under medical benefit",
-                    "benefit_type": "medical",
-                    "prior_auth": true,
-                    "notes": "Pre-certification required. Certain ambulatory infusion clinics may obtain and bill medical directly."
-                },
-                {
-                    "setting": "inpatient_hospital",
-                    "routing": "Administer without redirection; hospital bills under medical benefit",
-                    "benefit_type": "medical",
-                    "prior_auth": true,
-                    "notes": "Pre-certification required. Exception may apply for certain provider billing arrangements where prior auth is not required."
-                }
-            ]
-        },
-        {
-            "drug_name": "Neulasta",
-            "hcpcs_code": "J2505",
-            "j_code": "J2505",
-            "classification": "Granulocyte colony-stimulating factor (G-CSF) (pegfilgrastim)",
-            "prior_auth_required": {
-                "physician_office": false,
-                "home_health_care": false,
-                "inpatient_hospital": true,
-                "outpatient_hospital": true,
-                "emergency_room": null,
-                "urgent_care": null
-            },
-            "pharmacy_benefit_plan_required": {
-                "physician_office": true,
-                "home_health_care": true,
-                "inpatient_hospital": false,
-                "outpatient_hospital": false,
-                "emergency_room": null,
-                "urgent_care": null
-            },
-            "summary": "For office or home administration, route medication through the designated health-system specialty pharmacy and do not bill the medical plan; prior authorization is not required. For outpatient infusion/clinic or inpatient administration, do not redirect; medical benefit billing applies and pre-certification is required. Certain ambulatory infusion clinics may obtain and bill medical directly with pre-certification. Exception: prior authorization not required for certain provider billing arrangements when billed to the medical plan.",
-            "scenarios": [
-                {
-                    "setting": "physician_office",
-                    "routing": "Obtain through designated health-system specialty pharmacy",
-                    "benefit_type": "pharmacy",
-                    "prior_auth": false,
-                    "notes": "Medication is redirected for office administration; medical plan is not billed."
-                },
-                {
-                    "setting": "home_health_care",
-                    "routing": "Obtain through designated health-system specialty pharmacy",
-                    "benefit_type": "pharmacy",
-                    "prior_auth": false,
-                    "notes": "Medication is redirected for home administration; medical plan is not billed."
-                },
-                {
-                    "setting": "outpatient_hospital",
-                    "routing": "Administer without redirection; facility obtains and bills under medical benefit",
-                    "benefit_type": "medical",
-                    "prior_auth": true,
-                    "notes": "Pre-certification required. Certain ambulatory infusion clinics may obtain and bill medical directly."
-                },
-                {
-                    "setting": "inpatient_hospital",
-                    "routing": "Administer without redirection; hospital bills under medical benefit",
-                    "benefit_type": "medical",
-                    "prior_auth": true,
-                    "notes": "Pre-certification required. Exception may apply for certain provider billing arrangements where prior auth is not required."
-                }
-            ]
-        },
-        {
-            "drug_name": "Neupogen",
-            "hcpcs_code": "J1442",
-            "j_code": "J1442",
-            "classification": "Granulocyte colony-stimulating factor (G-CSF) (filgrastim)",
-            "prior_auth_required": {
-                "physician_office": false,
-                "home_health_care": false,
-                "inpatient_hospital": true,
-                "outpatient_hospital": true,
-                "emergency_room": null,
-                "urgent_care": null
-            },
-            "pharmacy_benefit_plan_required": {
-                "physician_office": true,
-                "home_health_care": true,
-                "inpatient_hospital": false,
-                "outpatient_hospital": false,
-                "emergency_room": null,
-                "urgent_care": null
-            },
-            "summary": "For office or home administration, route medication through the designated health-system specialty pharmacy and do not bill the medical plan; prior authorization is not required. For outpatient infusion/clinic or inpatient administration, do not redirect; medical benefit billing applies and pre-certification is required. Certain ambulatory infusion clinics may obtain and bill medical directly with pre-certification. Exception: prior authorization not required for certain provider billing arrangements when billed to the medical plan.",
-            "scenarios": [
-                {
-                    "setting": "physician_office",
-                    "routing": "Obtain through designated health-system specialty pharmacy",
-                    "benefit_type": "pharmacy",
-                    "prior_auth": false,
-                    "notes": "Medication is redirected for office administration; medical plan is not billed."
-                },
-                {
-                    "setting": "home_health_care",
-                    "routing": "Obtain through designated health-system specialty pharmacy",
-                    "benefit_type": "pharmacy",
-                    "prior_auth": false,
-                    "notes": "Medication is redirected for home administration; medical plan is not billed."
-                },
-                {
-                    "setting": "outpatient_hospital",
-                    "routing": "Administer without redirection; facility obtains and bills under medical benefit",
-                    "benefit_type": "medical",
-                    "prior_auth": true,
-                    "notes": "Pre-certification required. Certain ambulatory infusion clinics may obtain and bill medical directly."
-                },
-                {
-                    "setting": "inpatient_hospital",
-                    "routing": "Administer without redirection; hospital bills under medical benefit",
-                    "benefit_type": "medical",
-                    "prior_auth": true,
-                    "notes": "Pre-certification required. Exception may apply for certain provider billing arrangements where prior auth is not required."
-                }
-            ]
-        },
-        {
-            "drug_name": "Orencia",
-            "hcpcs_code": "J0129",
-            "j_code": "J0129",
-            "classification": "T-cell costimulation blocker (CTLA-4 Ig; abatacept)",
-            "prior_auth_required": {
-                "physician_office": false,
-                "home_health_care": false,
-                "inpatient_hospital": true,
-                "outpatient_hospital": true,
-                "emergency_room": null,
-                "urgent_care": null
-            },
-            "pharmacy_benefit_plan_required": {
-                "physician_office": true,
-                "home_health_care": true,
-                "inpatient_hospital": false,
-                "outpatient_hospital": false,
-                "emergency_room": null,
-                "urgent_care": null
-            },
-            "summary": "For office or home administration, route medication through the designated health-system specialty pharmacy and do not bill the medical plan; prior authorization is not required. For outpatient infusion/clinic or inpatient administration, do not redirect; medical benefit billing applies and pre-certification is required. Certain ambulatory infusion clinics may obtain and bill medical directly with pre-certification. Exception: prior authorization not required for certain provider billing arrangements when billed to the medical plan.",
-            "scenarios": [
-                {
-                    "setting": "physician_office",
-                    "routing": "Obtain through designated health-system specialty pharmacy",
-                    "benefit_type": "pharmacy",
-                    "prior_auth": false,
-                    "notes": "Medication is redirected for office administration; medical plan is not billed."
-                },
-                {
-                    "setting": "home_health_care",
-                    "routing": "Obtain through designated health-system specialty pharmacy",
-                    "benefit_type": "pharmacy",
-                    "prior_auth": false,
-                    "notes": "Medication is redirected for home administration; medical plan is not billed."
-                },
-                {
-                    "setting": "outpatient_hospital",
-                    "routing": "Administer without redirection; facility obtains and bills under medical benefit",
-                    "benefit_type": "medical",
-                    "prior_auth": true,
-                    "notes": "Pre-certification required. Certain ambulatory infusion clinics may obtain and bill medical directly."
-                },
-                {
-                    "setting": "inpatient_hospital",
-                    "routing": "Administer without redirection; hospital bills under medical benefit",
-                    "benefit_type": "medical",
-                    "prior_auth": true,
-                    "notes": "Pre-certification required. Exception may apply for certain provider billing arrangements where prior auth is not required."
-                }
-            ]
-        },
-        {
-            "drug_name": "Orthovisc",
-            "hcpcs_code": "J7324",
-            "j_code": "J7324",
-            "classification": "Intra-articular hyaluronan (viscosupplement)",
-            "prior_auth_required": {
-                "physician_office": false,
-                "home_health_care": false,
-                "inpatient_hospital": true,
-                "outpatient_hospital": true,
-                "emergency_room": null,
-                "urgent_care": null
-            },
-            "pharmacy_benefit_plan_required": {
-                "physician_office": true,
-                "home_health_care": true,
-                "inpatient_hospital": false,
-                "outpatient_hospital": false,
-                "emergency_room": null,
-                "urgent_care": null
-            },
-            "summary": "For office or home administration, route medication through the designated health-system specialty pharmacy and do not bill the medical plan; prior authorization is not required. For outpatient infusion/clinic or inpatient administration, do not redirect; medical benefit billing applies and pre-certification is required. Certain ambulatory infusion clinics may obtain and bill medical directly with pre-certification. Exception: prior authorization not required for certain provider billing arrangements when billed to the medical plan.",
-            "scenarios": [
-                {
-                    "setting": "physician_office",
-                    "routing": "Obtain through designated health-system specialty pharmacy",
-                    "benefit_type": "pharmacy",
-                    "prior_auth": false,
-                    "notes": "Medication is redirected for office administration; medical plan is not billed."
-                },
-                {
-                    "setting": "home_health_care",
-                    "routing": "Obtain through designated health-system specialty pharmacy",
-                    "benefit_type": "pharmacy",
-                    "prior_auth": false,
-                    "notes": "Medication is redirected for home administration; medical plan is not billed."
-                },
-                {
-                    "setting": "outpatient_hospital",
-                    "routing": "Administer without redirection; facility obtains and bills under medical benefit",
-                    "benefit_type": "medical",
-                    "prior_auth": true,
-                    "notes": "Pre-certification required. Certain ambulatory infusion clinics may obtain and bill medical directly."
-                },
-                {
-                    "setting": "inpatient_hospital",
-                    "routing": "Administer without redirection; hospital bills under medical benefit",
-                    "benefit_type": "medical",
-                    "prior_auth": true,
-                    "notes": "Pre-certification required. Exception may apply for certain provider billing arrangements where prior auth is not required."
-                }
-            ]
-        },
-        {
-            "drug_name": "Privigen",
-            "hcpcs_code": "J1459",
-            "j_code": "J1459",
-            "classification": "Intravenous immune globulin (IVIG)",
-            "prior_auth_required": {
-                "physician_office": false,
-                "home_health_care": false,
-                "inpatient_hospital": true,
-                "outpatient_hospital": true,
-                "emergency_room": null,
-                "urgent_care": null
-            },
-            "pharmacy_benefit_plan_required": {
-                "physician_office": true,
-                "home_health_care": true,
-                "inpatient_hospital": false,
-                "outpatient_hospital": false,
-                "emergency_room": null,
-                "urgent_care": null
-            },
-            "summary": "For office or home administration, route medication through the designated health-system specialty pharmacy and do not bill the medical plan; prior authorization is not required. For outpatient infusion/clinic or inpatient administration, do not redirect; medical benefit billing applies and pre-certification is required. Certain ambulatory infusion clinics may obtain and bill medical directly with pre-certification. Exception: prior authorization not required for certain provider billing arrangements when billed to the medical plan.",
-            "scenarios": [
-                {
-                    "setting": "physician_office",
-                    "routing": "Obtain through designated health-system specialty pharmacy",
-                    "benefit_type": "pharmacy",
-                    "prior_auth": false,
-                    "notes": "Medication is redirected for office administration; medical plan is not billed."
-                },
-                {
-                    "setting": "home_health_care",
-                    "routing": "Obtain through designated health-system specialty pharmacy",
-                    "benefit_type": "pharmacy",
-                    "prior_auth": false,
-                    "notes": "Medication is redirected for home administration; medical plan is not billed."
-                },
+            "drugs": [
                 {
-                    "setting": "outpatient_hospital",
-                    "routing": "Administer without redirection; facility obtains and bills under medical benefit",
-                    "benefit_type": "medical",
-                    "prior_auth": true,
-                    "notes": "Pre-certification required. Certain ambulatory infusion clinics may obtain and bill medical directly."
+                    "drug_name": "Actemra",
+                    "hcpcs_code": "J3262",
+                    "j_code": "J3262",
+                    "original_text": null
                 },
                 {
-                    "setting": "inpatient_hospital",
-                    "routing": "Administer without redirection; hospital bills under medical benefit",
-                    "benefit_type": "medical",
-                    "prior_auth": true,
-                    "notes": "Pre-certification required. Exception may apply for certain provider billing arrangements where prior auth is not required."
-                }
-            ]
-        },
-        {
-            "drug_name": "Procrit",
-            "hcpcs_code": "J0885",
-            "j_code": "J0885",
-            "classification": "Erythropoiesis-stimulating agent (epoetin alfa)",
-            "prior_auth_required": {
-                "physician_office": false,
-                "home_health_care": false,
-                "inpatient_hospital": true,
-                "outpatient_hospital": true,
-                "emergency_room": null,
-                "urgent_care": null
-            },
-            "pharmacy_benefit_plan_required": {
-                "physician_office": true,
-                "home_health_care": true,
-                "inpatient_hospital": false,
-                "outpatient_hospital": false,
-                "emergency_room": null,
-                "urgent_care": null
-            },
-            "summary": "For office or home administration, route medication through the designated health-system specialty pharmacy and do not bill the medical plan; prior authorization is not required. For outpatient infusion/clinic or inpatient administration, do not redirect; medical benefit billing applies and pre-certification is required. Certain ambulatory infusion clinics may obtain and bill medical directly with pre-certification. Exception: prior authorization not required for certain provider billing arrangements when billed to the medical plan.",
-            "scenarios": [
-                {
-                    "setting": "physician_office",
-                    "routing": "Obtain through designated health-system specialty pharmacy",
-                    "benefit_type": "pharmacy",
-                    "prior_auth": false,
-                    "notes": "Medication is redirected for office administration; medical plan is not billed."
-                },
-                {
-                    "setting": "home_health_care",
-                    "routing": "Obtain through designated health-system specialty pharmacy",
-                    "benefit_type": "pharmacy",
-                    "prior_auth": false,
-                    "notes": "Medication is redirected for home administration; medical plan is not billed."
-                },
-                {
-                    "setting": "outpatient_hospital",
-                    "routing": "Administer without redirection; facility obtains and bills under medical benefit",
-                    "benefit_type": "medical",
-                    "prior_auth": true,
-                    "notes": "Pre-certification required. Certain ambulatory infusion clinics may obtain and bill medical directly."
-                },
-                {
-                    "setting": "inpatient_hospital",
-                    "routing": "Administer without redirection; hospital bills under medical benefit",
-                    "benefit_type": "medical",
-                    "prior_auth": true,
-                    "notes": "Pre-certification required. Exception may apply for certain provider billing arrangements where prior auth is not required."
-                }
-            ]
-        },
-        {
-            "drug_name": "Progesterone",
-            "hcpcs_code": "J2675",
-            "j_code": "J2675",
-            "classification": "Progestin hormone (progesterone injection)",
-            "prior_auth_required": {
-                "physician_office": false,
-                "home_health_care": false,
-                "inpatient_hospital": true,
-                "outpatient_hospital": true,
-                "emergency_room": null,
-                "urgent_care": null
-            },
-            "pharmacy_benefit_plan_required": {
-                "physician_office": true,
-                "home_health_care": true,
-                "inpatient_hospital": false,
-                "outpatient_hospital": false,
-                "emergency_room": null,
-                "urgent_care": null
-            },
-            "summary": "For office or home administration, route medication through the designated health-system specialty pharmacy and do not bill the medical plan; prior authorization is not required. For outpatient infusion/clinic or inpatient administration, do not redirect; medical benefit billing applies and pre-certification is required. Certain ambulatory infusion clinics may obtain and bill medical directly with pre-certification. Exception: prior authorization not required for certain provider billing arrangements when billed to the medical plan.",
-            "scenarios": [
-                {
-                    "setting": "physician_office",
-                    "routing": "Obtain through designated health-system specialty pharmacy",
-                    "benefit_type": "pharmacy",
-                    "prior_auth": false,
-                    "notes": "Medication is redirected for office administration; medical plan is not billed."
-                },
-                {
-                    "setting": "home_health_care",
-                    "routing": "Obtain through designated health-system specialty pharmacy",
-                    "benefit_type": "pharmacy",
-                    "prior_auth": false,
-                    "notes": "Medication is redirected for home administration; medical plan is not billed."
-                },
-                {
-                    "setting": "outpatient_hospital",
-                    "routing": "Administer without redirection; facility obtains and bills under medical benefit",
-                    "benefit_type": "medical",
-                    "prior_auth": true,
-                    "notes": "Pre-certification required. Certain ambulatory infusion clinics may obtain and bill medical directly."
-                },
-                {
-                    "setting": "inpatient_hospital",
-                    "routing": "Administer without redirection; hospital bills under medical benefit",
-                    "benefit_type": "medical",
-                    "prior_auth": true,
-                    "notes": "Pre-certification required. Exception may apply for certain provider billing arrangements where prior auth is not required."
-                }
-            ]
-        },
-        {
-            "drug_name": "Prograf",
-            "hcpcs_code": "J7507",
-            "j_code": "J7507",
-            "classification": "Calcineurin inhibitor immunosuppressant (tacrolimus)",
-            "prior_auth_required": {
-                "physician_office": false,
-                "home_health_care": false,
-                "inpatient_hospital": true,
-                "outpatient_hospital": true,
-                "emergency_room": null,
-                "urgent_care": null
-            },
-            "pharmacy_benefit_plan_required": {
-                "physician_office": true,
-                "home_health_care": true,
-                "inpatient_hospital": false,
-                "outpatient_hospital": false,
-                "emergency_room": null,
-                "urgent_care": null
-            },
-            "summary": "For office or home administration, route medication through the designated health-system specialty pharmacy and do not bill the medical plan; prior authorization is not required. For outpatient infusion/clinic or inpatient administration, do not redirect; medical benefit billing applies and pre-certification is required. Certain ambulatory infusion clinics may obtain and bill medical directly with pre-certification. Exception: prior authorization not required for certain provider billing arrangements when billed to the medical plan.",
-            "scenarios": [
-                {
-                    "setting": "physician_office",
-                    "routing": "Obtain through designated health-system specialty pharmacy",
-                    "benefit_type": "pharmacy",
-                    "prior_auth": false,
-                    "notes": "Medication is redirected for office administration; medical plan is not billed."
+                    "drug_name": "Aranesp",
+                    "hcpcs_code": "J0881",
+                    "j_code": "J0881",
+                    "original_text": null
                 },
                 {
-                    "setting": "home_health_care",
-                    "routing": "Obtain through designated health-system specialty pharmacy",
-                    "benefit_type": "pharmacy",
-                    "prior_auth": false,
-                    "notes": "Medication is redirected for home administration; medical plan is not billed."
+                    "drug_name": "Benefix",
+                    "hcpcs_code": "J7195",
+                    "j_code": "J7195",
+                    "original_text": null
                 },
-                {
-                    "setting": "outpatient_hospital",
-                    "routing": "Administer without redirection; facility obtains and bills under medical benefit",
-                    "benefit_type": "medical",
-                    "prior_auth": true,
-                    "notes": "Pre-certification required. Certain ambulatory infusion clinics may obtain and bill medical directly."
-                },
-                {
-                    "setting": "inpatient_hospital",
-                    "routing": "Administer without redirection; hospital bills under medical benefit",
-                    "benefit_type": "medical",
-                    "prior_auth": true,
-                    "notes": "Pre-certification required. Exception may apply for certain provider billing arrangements where prior auth is not required."
-                }
-            ]
-        },
-        {
-            "drug_name": "Prolastin",
-            "hcpcs_code": "J0256",
-            "j_code": "J0256",
-            "classification": "Alpha-1 proteinase inhibitor (human) augmentation therapy",
-            "prior_auth_required": {
-                "physician_office": false,
-                "home_health_care": false,
-                "inpatient_hospital": true,
-                "outpatient_hospital": true,
-                "emergency_room": null,
-                "urgent_care": null
-            },
-            "pharmacy_benefit_plan_required": {
-                "physician_office": true,
-                "home_health_care": true,
-                "inpatient_hospital": false,
-                "outpatient_hospital": false,
-                "emergency_room": null,
-                "urgent_care": null
-            },
-            "summary": "For office or home administration, route medication through the designated health-system specialty pharmacy and do not bill the medical plan; prior authorization is not required. For outpatient infusion/clinic or inpatient administration, do not redirect; medical benefit billing applies and pre-certification is required. Certain ambulatory infusion clinics may obtain and bill medical directly with pre-certification. Exception: prior authorization not required for certain provider billing arrangements when billed to the medical plan.",
-            "scenarios": [
-                {
-                    "setting": "physician_office",
-                    "routing": "Obtain through designated health-system specialty pharmacy",
-                    "benefit_type": "pharmacy",
-                    "prior_auth": false,
-                    "notes": "Medication is redirected for office administration; medical plan is not billed."
-                },
-                {
-                    "setting": "home_health_care",
-                    "routing": "Obtain through designated health-system specialty pharmacy",
-                    "benefit_type": "pharmacy",
-                    "prior_auth": false,
-                    "notes": "Medication is redirected for home administration; medical plan is not billed."
-                },
-                {
-                    "setting": "outpatient_hospital",
-                    "routing": "Administer without redirection; facility obtains and bills under medical benefit",
-                    "benefit_type": "medical",
-                    "prior_auth": true,
-                    "notes": "Pre-certification required. Certain ambulatory infusion clinics may obtain and bill medical directly."
-                },
-                {
-                    "setting": "inpatient_hospital",
-                    "routing": "Administer without redirection; hospital bills under medical benefit",
-                    "benefit_type": "medical",
-                    "prior_auth": true,
-                    "notes": "Pre-certification required. Exception may apply for certain provider billing arrangements where prior auth is not required."
-                }
-            ]
-        },
-        {
-            "drug_name": "Prolia",
-            "hcpcs_code": "J0897",
-            "j_code": "J0897",
-            "classification": "RANKL inhibitor monoclonal antibody (denosumab)",
-            "prior_auth_required": {
-                "physician_office": false,
-                "home_health_care": false,
-                "inpatient_hospital": true,
-                "outpatient_hospital": true,
-                "emergency_room": null,
-                "urgent_care": null
-            },
-            "pharmacy_benefit_plan_required": {
-                "physician_office": true,
-                "home_health_care": true,
-                "inpatient_hospital": false,
-                "outpatient_hospital": false,
-                "emergency_room": null,
-                "urgent_care": null
-            },
-            "summary": "For office or home administration, route medication through the designated health-system specialty pharmacy and do not bill the medical plan; prior authorization is not required. For outpatient infusion/clinic or inpatient administration, do not redirect; medical benefit billing applies and pre-certification is required. Certain ambulatory infusion clinics may obtain and bill medical directly with pre-certification. Exception: prior authorization not required for certain provider billing arrangements when billed to the medical plan.",
-            "scenarios": [
-                {
-                    "setting": "physician_office",
-                    "routing": "Obtain through designated health-system specialty pharmacy",
-                    "benefit_type": "pharmacy",
-                    "prior_auth": false,
-                    "notes": "Medication is redirected for office administration; medical plan is not billed."
-                },
-                {
-                    "setting": "home_health_care",
-                    "routing": "Obtain through designated health-system specialty pharmacy",
-                    "benefit_type": "pharmacy",
-                    "prior_auth": false,
-                    "notes": "Medication is redirected for home administration; medical plan is not billed."
-                },
-                {
-                    "setting": "outpatient_hospital",
-                    "routing": "Administer without redirection; facility obtains and bills under medical benefit",
-                    "benefit_type": "medical",
-                    "prior_auth": true,
-                    "notes": "Pre-certification required. Certain ambulatory infusion clinics may obtain and bill medical directly."
-                },
-                {
-                    "setting": "inpatient_hospital",
-                    "routing": "Administer without redirection; hospital bills under medical benefit",
-                    "benefit_type": "medical",
-                    "prior_auth": true,
-                    "notes": "Pre-certification required. Exception may apply for certain provider billing arrangements where prior auth is not required."
-                }
-            ]
-        },
-        {
-            "drug_name": "Recombinate",
-            "hcpcs_code": "J7192",
-            "j_code": "J7192",
-            "classification": "Coagulation factor VIII (recombinant) for hemophilia A",
-            "prior_auth_required": {
-                "physician_office": false,
-                "home_health_care": false,
-                "inpatient_hospital": true,
-                "outpatient_hospital": true,
-                "emergency_room": null,
-                "urgent_care": null
-            },
-            "pharmacy_benefit_plan_required": {
-                "physician_office": true,
-                "home_health_care": true,
-                "inpatient_hospital": false,
-                "outpatient_hospital": false,
-                "emergency_room": null,
-                "urgent_care": null
-            },
-            "summary": "For office or home administration, route medication through the designated health-system specialty pharmacy and do not bill the medical plan; prior authorization is not required. For outpatient infusion/clinic or inpatient administration, do not redirect; medical benefit billing applies and pre-certification is required. Certain ambulatory infusion clinics may obtain and bill medical directly with pre-certification. Exception: prior authorization not required for certain provider billing arrangements when billed to the medical plan.",
-            "scenarios": [
                 {
-                    "setting": "physician_office",
-                    "routing": "Obtain through designated health-system specialty pharmacy",
-                    "benefit_type": "pharmacy",
-                    "prior_auth": false,
-                    "notes": "Medication is redirected for office administration; medical plan is not billed."
+                    "drug_name": "Benlysta",
+                    "hcpcs_code": "J0490",
+                    "j_code": "J0490",
+                    "original_text": null
                 },
                 {
-                    "setting": "home_health_care",
-                    "routing": "Obtain through designated health-system specialty pharmacy",
-                    "benefit_type": "pharmacy",
-                    "prior_auth": false,
-                    "notes": "Medication is redirected for home administration; medical plan is not billed."
+                    "drug_name": "Cimzia",
+                    "hcpcs_code": "J0717",
+                    "j_code": "J0717",
+                    "original_text": null
                 },
                 {
-                    "setting": "outpatient_hospital",
-                    "routing": "Administer without redirection; facility obtains and bills under medical benefit",
-                    "benefit_type": "medical",
-                    "prior_auth": true,
-                    "notes": "Pre-certification required. Certain ambulatory infusion clinics may obtain and bill medical directly."
+                    "drug_name": "Eligard",
+                    "hcpcs_code": "J9218",
+                    "j_code": "J9218",
+                    "original_text": null
                 },
-                {
-                    "setting": "inpatient_hospital",
-                    "routing": "Administer without redirection; hospital bills under medical benefit",
-                    "benefit_type": "medical",
-                    "prior_auth": true,
-                    "notes": "Pre-certification required. Exception may apply for certain provider billing arrangements where prior auth is not required."
-                }
-            ]
-        },
-        {
-            "drug_name": "Remicade",
-            "hcpcs_code": "J1745",
-            "j_code": "J1745",
-            "classification": "Tumor necrosis factor (TNF) inhibitor biologic (infliximab)",
-            "prior_auth_required": {
-                "physician_office": false,
-                "home_health_care": false,
-                "inpatient_hospital": true,
-                "outpatient_hospital": true,
-                "emergency_room": null,
-                "urgent_care": null
-            },
-            "pharmacy_benefit_plan_required": {
-                "physician_office": true,
-                "home_health_care": true,
-                "inpatient_hospital": false,
-                "outpatient_hospital": false,
-                "emergency_room": null,
-                "urgent_care": null
-            },
-            "summary": "For office or home administration, route medication through the designated health-system specialty pharmacy and do not bill the medical plan; prior authorization is not required. For outpatient infusion/clinic or inpatient administration, do not redirect; medical benefit billing applies and pre-certification is required. Certain ambulatory infusion clinics may obtain and bill medical directly with pre-certification. Exception: prior authorization not required for certain provider billing arrangements when billed to the medical plan.",
-            "scenarios": [
                 {
-                    "setting": "physician_office",
-                    "routing": "Obtain through designated health-system specialty pharmacy",
-                    "benefit_type": "pharmacy",
-                    "prior_auth": false,
-                    "notes": "Medication is redirected for office administration; medical plan is not billed."
+                    "drug_name": "Emend",
+                    "hcpcs_code": "J8501",
+                    "j_code": "J8501",
+                    "original_text": null
                 },
                 {
-                    "setting": "home_health_care",
-                    "routing": "Obtain through designated health-system specialty pharmacy",
-                    "benefit_type": "pharmacy",
-                    "prior_auth": false,
-                    "notes": "Medication is redirected for home administration; medical plan is not billed."
+                    "drug_name": "Euflexxa",
+                    "hcpcs_code": "J7323",
+                    "j_code": "J7323",
+                    "original_text": null
                 },
                 {
-                    "setting": "outpatient_hospital",
-                    "routing": "Administer without redirection; facility obtains and bills under medical benefit",
-                    "benefit_type": "medical",
-                    "prior_auth": true,
-                    "notes": "Pre-certification required. Certain ambulatory infusion clinics may obtain and bill medical directly."
+                    "drug_name": "Flebogamma",
+                    "hcpcs_code": "J1572",
+                    "j_code": "J1572",
+                    "original_text": null
                 },
-                {
-                    "setting": "inpatient_hospital",
-                    "routing": "Administer without redirection; hospital bills under medical benefit",
-                    "benefit_type": "medical",
-                    "prior_auth": true,
-                    "notes": "Pre-certification required. Exception may apply for certain provider billing arrangements where prior auth is not required."
-                }
-            ]
-        },
-        {
-            "drug_name": "Sandostatin",
-            "hcpcs_code": "J2354",
-            "j_code": "J2354",
-            "classification": "Somatostatin analog (octreotide)",
-            "prior_auth_required": {
-                "physician_office": false,
-                "home_health_care": false,
-                "inpatient_hospital": true,
-                "outpatient_hospital": true,
-                "emergency_room": null,
-                "urgent_care": null
-            },
-            "pharmacy_benefit_plan_required": {
-                "physician_office": true,
-                "home_health_care": true,
-                "inpatient_hospital": false,
-                "outpatient_hospital": false,
-                "emergency_room": null,
-                "urgent_care": null
-            },
-            "summary": "For office or home administration, route medication through the designated health-system specialty pharmacy and do not bill the medical plan; prior authorization is not required. For outpatient infusion/clinic or inpatient administration, do not redirect; medical benefit billing applies and pre-certification is required. Certain ambulatory infusion clinics may obtain and bill medical directly with pre-certification. Exception: prior authorization not required for certain provider billing arrangements when billed to the medical plan.",
-            "scenarios": [
                 {
-                    "setting": "physician_office",
-                    "routing": "Obtain through designated health-system specialty pharmacy",
-                    "benefit_type": "pharmacy",
-                    "prior_auth": false,
-                    "notes": "Medication is redirected for office administration; medical plan is not billed."
+                    "drug_name": "Gamimune N",
+                    "hcpcs_code": "J1561",
+                    "j_code": "J1561",
+                    "original_text": null
                 },
                 {
-                    "setting": "home_health_care",
-                    "routing": "Obtain through designated health-system specialty pharmacy",
-                    "benefit_type": "pharmacy",
-                    "prior_auth": false,
-                    "notes": "Medication is redirected for home administration; medical plan is not billed."
+                    "drug_name": "Gamimune N",
+                    "hcpcs_code": "J1566",
+                    "j_code": "J1566",
+                    "original_text": null
                 },
                 {
-                    "setting": "outpatient_hospital",
-                    "routing": "Administer without redirection; facility obtains and bills under medical benefit",
-                    "benefit_type": "medical",
-                    "prior_auth": true,
-                    "notes": "Pre-certification required. Certain ambulatory infusion clinics may obtain and bill medical directly."
+                    "drug_name": "Gammagard Liquid",
+                    "hcpcs_code": "J1569",
+                    "j_code": "J1569",
+                    "original_text": null
                 },
-                {
-                    "setting": "inpatient_hospital",
-                    "routing": "Administer without redirection; hospital bills under medical benefit",
-                    "benefit_type": "medical",
-                    "prior_auth": true,
-                    "notes": "Pre-certification required. Exception may apply for certain provider billing arrangements where prior auth is not required."
-                }
-            ]
-        },
-        {
-            "drug_name": "Sandostatin LAR",
-            "hcpcs_code": "J2353",
-            "j_code": "J2353",
-            "classification": "Somatostatin analog (octreotide long-acting)",
-            "prior_auth_required": {
-                "physician_office": false,
-                "home_health_care": false,
-                "inpatient_hospital": true,
-                "outpatient_hospital": true,
-                "emergency_room": null,
-                "urgent_care": null
-            },
-            "pharmacy_benefit_plan_required": {
-                "physician_office": true,
-                "home_health_care": true,
-                "inpatient_hospital": false,
-                "outpatient_hospital": false,
-                "emergency_room": null,
-                "urgent_care": null
-            },
-            "summary": "For office or home administration, route medication through the designated health-system specialty pharmacy and do not bill the medical plan; prior authorization is not required. For outpatient infusion/clinic or inpatient administration, do not redirect; medical benefit billing applies and pre-certification is required. Certain ambulatory infusion clinics may obtain and bill medical directly with pre-certification. Exception: prior authorization not required for certain provider billing arrangements when billed to the medical plan.",
-            "scenarios": [
                 {
-                    "setting": "physician_office",
-                    "routing": "Obtain through designated health-system specialty pharmacy",
-                    "benefit_type": "pharmacy",
-                    "prior_auth": false,
-                    "notes": "Medication is redirected for office administration; medical plan is not billed."
+                    "drug_name": "Gel-One",
+                    "hcpcs_code": "J7326",
+                    "j_code": "J7326",
+                    "original_text": null
                 },
                 {
-                    "setting": "home_health_care",
-                    "routing": "Obtain through designated health-system specialty pharmacy",
-                    "benefit_type": "pharmacy",
-                    "prior_auth": false,
-                    "notes": "Medication is redirected for home administration; medical plan is not billed."
+                    "drug_name": "Hizentra",
+                    "hcpcs_code": "J1559",
+                    "j_code": "J1559",
+                    "original_text": null
                 },
                 {
-                    "setting": "outpatient_hospital",
-                    "routing": "Administer without redirection; facility obtains and bills under medical benefit",
-                    "benefit_type": "medical",
-                    "prior_auth": true,
-                    "notes": "Pre-certification required. Certain ambulatory infusion clinics may obtain and bill medical directly."
+                    "drug_name": "Humira",
+                    "hcpcs_code": "J0135",
+                    "j_code": "J0135",
+                    "original_text": null
                 },
                 {
-                    "setting": "inpatient_hospital",
-                    "routing": "Administer without redirection; hospital bills under medical benefit",
-                    "benefit_type": "medical",
-                    "prior_auth": true,
-                    "notes": "Pre-certification required. Exception may apply for certain provider billing arrangements where prior auth is not required."
-                }
-            ]
-        },
-        {
-            "drug_name": "Supartz",
-            "hcpcs_code": "J7321",
-            "j_code": "J7321",
-            "classification": "Intra-articular hyaluronan (viscosupplement)",
-            "prior_auth_required": {
-                "physician_office": false,
-                "home_health_care": false,
-                "inpatient_hospital": true,
-                "outpatient_hospital": true,
-                "emergency_room": null,
-                "urgent_care": null
-            },
-            "pharmacy_benefit_plan_required": {
-                "physician_office": true,
-                "home_health_care": true,
-                "inpatient_hospital": false,
-                "outpatient_hospital": false,
-                "emergency_room": null,
-                "urgent_care": null
-            },
-            "summary": "For office or home administration, route medication through the designated health-system specialty pharmacy and do not bill the medical plan; prior authorization is not required. For outpatient infusion/clinic or inpatient administration, do not redirect; medical benefit billing applies and pre-certification is required. Certain ambulatory infusion clinics may obtain and bill medical directly with pre-certification. Exception: prior authorization not required for certain provider billing arrangements when billed to the medical plan.",
-            "scenarios": [
-                {
-                    "setting": "physician_office",
-                    "routing": "Obtain through designated health-system specialty pharmacy",
-                    "benefit_type": "pharmacy",
-                    "prior_auth": false,
-                    "notes": "Medication is redirected for office administration; medical plan is not billed."
+                    "drug_name": "Hyalgan",
+                    "hcpcs_code": "J7315",
+                    "j_code": "J7315",
+                    "original_text": null
                 },
                 {
-                    "setting": "home_health_care",
-                    "routing": "Obtain through designated health-system specialty pharmacy",
-                    "benefit_type": "pharmacy",
-                    "prior_auth": false,
-                    "notes": "Medication is redirected for home administration; medical plan is not billed."
+                    "drug_name": "Hylenex",
+                    "hcpcs_code": "J3473",
+                    "j_code": "J3473",
+                    "original_text": null
                 },
                 {
-                    "setting": "outpatient_hospital",
-                    "routing": "Administer without redirection; facility obtains and bills under medical benefit",
-                    "benefit_type": "medical",
-                    "prior_auth": true,
-                    "notes": "Pre-certification required. Certain ambulatory infusion clinics may obtain and bill medical directly."
+                    "drug_name": "HyperRab S-D",
+                    "hcpcs_code": "90375",
+                    "j_code": null,
+                    "original_text": null
                 },
-                {
-                    "setting": "inpatient_hospital",
-                    "routing": "Administer without redirection; hospital bills under medical benefit",
-                    "benefit_type": "medical",
-                    "prior_auth": true,
-                    "notes": "Pre-certification required. Exception may apply for certain provider billing arrangements where prior auth is not required."
-                }
-            ]
-        },
-        {
-            "drug_name": "Synagis",
-            "hcpcs_code": "90378",
-            "j_code": null,
-            "classification": "RSV monoclonal antibody (palivizumab)",
-            "prior_auth_required": {
-                "physician_office": false,
-                "home_health_care": false,
-                "inpatient_hospital": true,
-                "outpatient_hospital": true,
-                "emergency_room": null,
-                "urgent_care": null
-            },
-            "pharmacy_benefit_plan_required": {
-                "physician_office": true,
-                "home_health_care": true,
-                "inpatient_hospital": false,
-                "outpatient_hospital": false,
-                "emergency_room": null,
-                "urgent_care": null
-            },
-            "summary": "For office or home administration, route medication through the designated health-system specialty pharmacy and do not bill the medical plan; prior authorization is not required. For outpatient or inpatient administration, do not redirect; medical benefit billing applies and pre-certification is required. Certain ambulatory infusion clinics may obtain and bill medical directly with pre-certification. Exception: prior authorization not required for certain provider billing arrangements when billed to the medical plan.",
-            "scenarios": [
                 {
-                    "setting": "physician_office",
-                    "routing": "Obtain through designated health-system specialty pharmacy",
-                    "benefit_type": "pharmacy",
-                    "prior_auth": false,
-                    "notes": "Redirected for office administration; medical plan is not billed."
+                    "drug_name": "Leukine",
+                    "hcpcs_code": "J2820",
+                    "j_code": "J2820",
+                    "original_text": null
                 },
                 {
-                    "setting": "home_health_care",
-                    "routing": "Obtain through designated health-system specialty pharmacy",
-                    "benefit_type": "pharmacy",
-                    "prior_auth": false,
-                    "notes": "Redirected for home administration; medical plan is not billed."
+                    "drug_name": "Lovenox",
+                    "hcpcs_code": "J1650",
+                    "j_code": "J1650",
+                    "original_text": null
                 },
                 {
-                    "setting": "outpatient_hospital",
-                    "routing": "Administer without redirection; facility bills under medical benefit",
-                    "benefit_type": "medical",
-                    "prior_auth": true,
-                    "notes": "Pre-certification required; certain ambulatory infusion clinics may bill medical directly."
+                    "drug_name": "Lucentis",
+                    "hcpcs_code": "J2778",
+                    "j_code": "J2778",
+                    "original_text": null
                 },
-                {
-                    "setting": "inpatient_hospital",
-                    "routing": "Administer without redirection; hospital bills under medical benefit",
-                    "benefit_type": "medical",
-                    "prior_auth": true,
-                    "notes": "Pre-certification required; exception may apply for certain provider billing arrangements."
-                }
-            ]
-        },
-        {
-            "drug_name": "Synvisc",
-            "hcpcs_code": "J7325",
-            "j_code": "J7325",
-            "classification": "Intra-articular hyaluronan (hylan G-F 20; viscosupplement)",
-            "prior_auth_required": {
-                "physician_office": false,
-                "home_health_care": false,
-                "inpatient_hospital": true,
-                "outpatient_hospital": true,
-                "emergency_room": null,
-                "urgent_care": null
-            },
-            "pharmacy_benefit_plan_required": {
-                "physician_office": true,
-                "home_health_care": true,
-                "inpatient_hospital": false,
-                "outpatient_hospital": false,
-                "emergency_room": null,
-                "urgent_care": null
-            },
-            "summary": "For office or home administration, route medication through the designated health-system specialty pharmacy and do not bill the medical plan; prior authorization is not required. For outpatient infusion/clinic or inpatient administration, do not redirect; medical benefit billing applies and pre-certification is required. Certain ambulatory infusion clinics may obtain and bill medical directly with pre-certification. Exception: prior authorization not required for certain provider billing arrangements when billed to the medical plan.",
-            "scenarios": [
                 {
-                    "setting": "physician_office",
-                    "routing": "Obtain through designated health-system specialty pharmacy",
-                    "benefit_type": "pharmacy",
-                    "prior_auth": false,
-                    "notes": "Medication is redirected for office administration; medical plan is not billed."
+                    "drug_name": "Lupron Depot",
+                    "hcpcs_code": "J1950",
+                    "j_code": "J1950",
+                    "original_text": null
                 },
                 {
-                    "setting": "home_health_care",
-                    "routing": "Obtain through designated health-system specialty pharmacy",
-                    "benefit_type": "pharmacy",
-                    "prior_auth": false,
-                    "notes": "Medication is redirected for home administration; medical plan is not billed."
+                    "drug_name": "Lupron Depot-Ped",
+                    "hcpcs_code": "J9217",
+                    "j_code": "J9217",
+                    "original_text": null
                 },
                 {
-                    "setting": "outpatient_hospital",
-                    "routing": "Administer without redirection; facility obtains and bills under medical benefit",
-                    "benefit_type": "medical",
-                    "prior_auth": true,
-                    "notes": "Pre-certification required. Certain ambulatory infusion clinics may obtain and bill medical directly."
+                    "drug_name": "Myfortic",
+                    "hcpcs_code": "J7518",
+                    "j_code": "J7518",
+                    "original_text": null
                 },
-                {
-                    "setting": "inpatient_hospital",
-                    "routing": "Administer without redirection; hospital bills under medical benefit",
-                    "benefit_type": "medical",
-                    "prior_auth": true,
-                    "notes": "Pre-certification required. Exception may apply for certain provider billing arrangements where prior auth is not required."
-                }
-            ]
-        },
-        {
-            "drug_name": "Tobi",
-            "hcpcs_code": "J7682",
-            "j_code": "J7682",
-            "classification": "Aminoglycoside antibiotic (tobramycin) inhalation solution",
-            "prior_auth_required": {
-                "physician_office": false,
-                "home_health_care": false,
-                "inpatient_hospital": true,
-                "outpatient_hospital": true,
-                "emergency_room": null,
-                "urgent_care": null
-            },
-            "pharmacy_benefit_plan_required": {
-                "physician_office": true,
-                "home_health_care": true,
-                "inpatient_hospital": false,
-                "outpatient_hospital": false,
-                "emergency_room": null,
-                "urgent_care": null
-            },
-            "summary": "For office or home administration, route medication through the designated health-system specialty pharmacy and do not bill the medical plan; prior authorization is not required. For outpatient infusion/clinic or inpatient administration, do not redirect; medical benefit billing applies and pre-certification is required. Certain ambulatory infusion clinics may obtain and bill medical directly with pre-certification. Exception: prior authorization not required for certain provider billing arrangements when billed to the medical plan.",
-            "scenarios": [
                 {
-                    "setting": "physician_office",
-                    "routing": "Obtain through designated health-system specialty pharmacy",
-                    "benefit_type": "pharmacy",
-                    "prior_auth": false,
-                    "notes": "Medication is redirected for office administration; medical plan is not billed."
+                    "drug_name": "Neulasta",
+                    "hcpcs_code": "J2505",
+                    "j_code": "J2505",
+                    "original_text": null
                 },
                 {
-                    "setting": "home_health_care",
-                    "routing": "Obtain through designated health-system specialty pharmacy",
-                    "benefit_type": "pharmacy",
-                    "prior_auth": false,
-                    "notes": "Medication is redirected for home administration; medical plan is not billed."
+                    "drug_name": "Neupogen",
+                    "hcpcs_code": "J1442",
+                    "j_code": "J1442",
+                    "original_text": null
                 },
                 {
-                    "setting": "outpatient_hospital",
-                    "routing": "Administer without redirection; facility obtains and bills under medical benefit",
-                    "benefit_type": "medical",
-                    "prior_auth": true,
-                    "notes": "Pre-certification required. Certain ambulatory infusion clinics may obtain and bill medical directly."
+                    "drug_name": "Orencia",
+                    "hcpcs_code": "J0129",
+                    "j_code": "J0129",
+                    "original_text": null
                 },
-                {
-                    "setting": "inpatient_hospital",
-                    "routing": "Administer without redirection; hospital bills under medical benefit",
-                    "benefit_type": "medical",
-                    "prior_auth": true,
-                    "notes": "Pre-certification required. Exception may apply for certain provider billing arrangements where prior auth is not required."
-                }
-            ]
-        },
-        {
-            "drug_name": "Tysabri",
-            "hcpcs_code": "J2323",
-            "j_code": "J2323",
-            "classification": "Integrin inhibitor monoclonal antibody (natalizumab)",
-            "prior_auth_required": {
-                "physician_office": false,
-                "home_health_care": false,
-                "inpatient_hospital": true,
-                "outpatient_hospital": true,
-                "emergency_room": null,
-                "urgent_care": null
-            },
-            "pharmacy_benefit_plan_required": {
-                "physician_office": true,
-                "home_health_care": true,
-                "inpatient_hospital": false,
-                "outpatient_hospital": false,
-                "emergency_room": null,
-                "urgent_care": null
-            },
-            "summary": "For office or home administration, route medication through the designated health-system specialty pharmacy and do not bill the medical plan; prior authorization is not required. For outpatient infusion/clinic or inpatient administration, do not redirect; medical benefit billing applies and pre-certification is required. Certain ambulatory infusion clinics may obtain and bill medical directly with pre-certification. Exception: prior authorization not required for certain provider billing arrangements when billed to the medical plan.",
-            "scenarios": [
                 {
-                    "setting": "physician_office",
-                    "routing": "Obtain through designated health-system specialty pharmacy",
-                    "benefit_type": "pharmacy",
-                    "prior_auth": false,
-                    "notes": "Medication is redirected for office administration; medical plan is not billed."
+                    "drug_name": "Orthovisc",
+                    "hcpcs_code": "J7324",
+                    "j_code": "J7324",
+                    "original_text": null
                 },
                 {
-                    "setting": "home_health_care",
-                    "routing": "Obtain through designated health-system specialty pharmacy",
-                    "benefit_type": "pharmacy",
-                    "prior_auth": false,
-                    "notes": "Medication is redirected for home administration; medical plan is not billed."
+                    "drug_name": "Privigen",
+                    "hcpcs_code": "J1459",
+                    "j_code": "J1459",
+                    "original_text": null
                 },
                 {
-                    "setting": "outpatient_hospital",
-                    "routing": "Administer without redirection; facility obtains and bills under medical benefit",
-                    "benefit_type": "medical",
-                    "prior_auth": true,
-                    "notes": "Pre-certification required. Certain ambulatory infusion clinics may obtain and bill medical directly."
+                    "drug_name": "Procrit",
+                    "hcpcs_code": "J0885",
+                    "j_code": "J0885",
+                    "original_text": null
                 },
-                {
-                    "setting": "inpatient_hospital",
-                    "routing": "Administer without redirection; hospital bills under medical benefit",
-                    "benefit_type": "medical",
-                    "prior_auth": true,
-                    "notes": "Pre-certification required. Exception may apply for certain provider billing arrangements where prior auth is not required."
-                }
-            ]
-        },
-        {
-            "drug_name": "Tyvaso",
-            "hcpcs_code": "J7686",
-            "j_code": "J7686",
-            "classification": "Prostacyclin analog (treprostinil) inhalation solution for pulmonary arterial hypertension",
-            "prior_auth_required": {
-                "physician_office": false,
-                "home_health_care": false,
-                "inpatient_hospital": true,
-                "outpatient_hospital": true,
-                "emergency_room": null,
-                "urgent_care": null
-            },
-            "pharmacy_benefit_plan_required": {
-                "physician_office": true,
-                "home_health_care": true,
-                "inpatient_hospital": false,
-                "outpatient_hospital": false,
-                "emergency_room": null,
-                "urgent_care": null
-            },
-            "summary": "For office or home administration, route medication through the designated health-system specialty pharmacy and do not bill the medical plan; prior authorization is not required. For outpatient infusion/clinic or inpatient administration, do not redirect; medical benefit billing applies and pre-certification is required. Certain ambulatory infusion clinics may obtain and bill medical directly with pre-certification. Exception: prior authorization not required for certain provider billing arrangements when billed to the medical plan.",
-            "scenarios": [
                 {
-                    "setting": "physician_office",
-                    "routing": "Obtain through designated health-system specialty pharmacy",
-                    "benefit_type": "pharmacy",
-                    "prior_auth": false,
-                    "notes": "Medication is redirected for office administration; medical plan is not billed."
+                    "drug_name": "Progesterone",
+                    "hcpcs_code": "J2675",
+                    "j_code": "J2675",
+                    "original_text": null
                 },
                 {
-                    "setting": "home_health_care",
-                    "routing": "Obtain through designated health-system specialty pharmacy",
-                    "benefit_type": "pharmacy",
-                    "prior_auth": false,
-                    "notes": "Medication is redirected for home administration; medical plan is not billed."
+                    "drug_name": "Prograf",
+                    "hcpcs_code": "J7507",
+                    "j_code": "J7507",
+                    "original_text": null
                 },
                 {
-                    "setting": "outpatient_hospital",
-                    "routing": "Administer without redirection; facility obtains and bills under medical benefit",
-                    "benefit_type": "medical",
-                    "prior_auth": true,
-                    "notes": "Pre-certification required. Certain ambulatory infusion clinics may obtain and bill medical directly."
+                    "drug_name": "Prolastin",
+                    "hcpcs_code": "J0256",
+                    "j_code": "J0256",
+                    "original_text": null
                 },
-                {
-                    "setting": "inpatient_hospital",
-                    "routing": "Administer without redirection; hospital bills under medical benefit",
-                    "benefit_type": "medical",
-                    "prior_auth": true,
-                    "notes": "Pre-certification required. Exception may apply for certain provider billing arrangements where prior auth is not required."
-                }
-            ]
-        },
-        {
-            "drug_name": "WinRho SDF",
-            "hcpcs_code": "90386",
-            "j_code": null,
-            "classification": "Rho(D) immune globulin (human)",
-            "prior_auth_required": {
-                "physician_office": false,
-                "home_health_care": false,
-                "inpatient_hospital": true,
-                "outpatient_hospital": true,
-                "emergency_room": null,
-                "urgent_care": null
-            },
-            "pharmacy_benefit_plan_required": {
-                "physician_office": true,
-                "home_health_care": true,
-                "inpatient_hospital": false,
-                "outpatient_hospital": false,
-                "emergency_room": null,
-                "urgent_care": null
-            },
-            "summary": "For office or home administration, route medication through the designated health-system specialty pharmacy and do not bill the medical plan; prior authorization is not required. For outpatient or inpatient administration, do not redirect; medical benefit billing applies and pre-certification is required. Certain ambulatory infusion clinics may obtain and bill medical directly with pre-certification. Exception: prior authorization not required for certain provider billing arrangements when billed to the medical plan.",
-            "scenarios": [
                 {
-                    "setting": "physician_office",
-                    "routing": "Obtain through designated health-system specialty pharmacy",
-                    "benefit_type": "pharmacy",
-                    "prior_auth": false,
-                    "notes": "Redirected for office administration; medical plan is not billed."
+                    "drug_name": "Prolia",
+                    "hcpcs_code": "J0897",
+                    "j_code": "J0897",
+                    "original_text": null
                 },
                 {
-                    "setting": "home_health_care",
-                    "routing": "Obtain through designated health-system specialty pharmacy",
-                    "benefit_type": "pharmacy",
-                    "prior_auth": false,
-                    "notes": "Redirected for home administration; medical plan is not billed."
+                    "drug_name": "Recombinate",
+                    "hcpcs_code": "J7192",
+                    "j_code": "J7192",
+                    "original_text": null
                 },
                 {
-                    "setting": "outpatient_hospital",
-                    "routing": "Administer without redirection; facility bills under medical benefit",
-                    "benefit_type": "medical",
-                    "prior_auth": true,
-                    "notes": "Pre-certification required; certain ambulatory infusion clinics may bill medical directly."
+                    "drug_name": "Remicade",
+                    "hcpcs_code": "J1745",
+                    "j_code": "J1745",
+                    "original_text": null
                 },
-                {
-                    "setting": "inpatient_hospital",
-                    "routing": "Administer without redirection; hospital bills under medical benefit",
-                    "benefit_type": "medical",
-                    "prior_auth": true,
-                    "notes": "Pre-certification required; exception may apply for certain provider billing arrangements."
-                }
-            ]
-        },
-        {
-            "drug_name": "Xeomin",
-            "hcpcs_code": "J0588",
-            "j_code": "J0588",
-            "classification": "Botulinum toxin type A (incobotulinumtoxinA)",
-            "prior_auth_required": {
-                "physician_office": false,
-                "home_health_care": false,
-                "inpatient_hospital": true,
-                "outpatient_hospital": true,
-                "emergency_room": null,
-                "urgent_care": null
-            },
-            "pharmacy_benefit_plan_required": {
-                "physician_office": true,
-                "home_health_care": true,
-                "inpatient_hospital": false,
-                "outpatient_hospital": false,
-                "emergency_room": null,
-                "urgent_care": null
-            },
-            "summary": "For office or home administration, route medication through the designated health-system specialty pharmacy and do not bill the medical plan; prior authorization is not required. For outpatient infusion/clinic or inpatient administration, do not redirect; medical benefit billing applies and pre-certification is required. Certain ambulatory infusion clinics may obtain and bill medical directly with pre-certification. Exception: prior authorization not required for certain provider billing arrangements when billed to the medical plan.",
-            "scenarios": [
                 {
-                    "setting": "physician_office",
-                    "routing": "Obtain through designated health-system specialty pharmacy",
-                    "benefit_type": "pharmacy",
-                    "prior_auth": false,
-                    "notes": "Medication is redirected for office administration; medical plan is not billed."
+                    "drug_name": "Sandostatin",
+                    "hcpcs_code": "J2354",
+                    "j_code": "J2354",
+                    "original_text": null
                 },
                 {
-                    "setting": "home_health_care",
-                    "routing": "Obtain through designated health-system specialty pharmacy",
-                    "benefit_type": "pharmacy",
-                    "prior_auth": false,
-                    "notes": "Medication is redirected for home administration; medical plan is not billed."
+                    "drug_name": "Sandostatin LAR",
+                    "hcpcs_code": "J2353",
+                    "j_code": "J2353",
+                    "original_text": null
                 },
                 {
-                    "setting": "outpatient_hospital",
-                    "routing": "Administer without redirection; facility obtains and bills under medical benefit",
-                    "benefit_type": "medical",
-                    "prior_auth": true,
-                    "notes": "Pre-certification required. Certain ambulatory infusion clinics may obtain and bill medical directly."
+                    "drug_name": "Supartz",
+                    "hcpcs_code": "J7321",
+                    "j_code": "J7321",
+                    "original_text": null
                 },
-                {
-                    "setting": "inpatient_hospital",
-                    "routing": "Administer without redirection; hospital bills under medical benefit",
-                    "benefit_type": "medical",
-                    "prior_auth": true,
-                    "notes": "Pre-certification required. Exception may apply for certain provider billing arrangements where prior auth is not required."
-                }
-            ]
-        },
-        {
-            "drug_name": "Xiaflex",
-            "hcpcs_code": "J0775",
-            "j_code": "J0775",
-            "classification": "Enzyme (collagenase clostridium histolyticum)",
-            "prior_auth_required": {
-                "physician_office": false,
-                "home_health_care": false,
-                "inpatient_hospital": true,
-                "outpatient_hospital": true,
-                "emergency_room": null,
-                "urgent_care": null
-            },
-            "pharmacy_benefit_plan_required": {
-                "physician_office": true,
-                "home_health_care": true,
-                "inpatient_hospital": false,
-                "outpatient_hospital": false,
-                "emergency_room": null,
-                "urgent_care": null
-            },
-            "summary": "For office or home administration, route medication through the designated health-system specialty pharmacy and do not bill the medical plan; prior authorization is not required. For outpatient infusion/clinic or inpatient administration, do not redirect; medical benefit billing applies and pre-certification is required. Certain ambulatory infusion clinics may obtain and bill medical directly with pre-certification. Exception: prior authorization not required for certain provider billing arrangements when billed to the medical plan.",
-            "scenarios": [
                 {
-                    "setting": "physician_office",
-                    "routing": "Obtain through designated health-system specialty pharmacy",
-                    "benefit_type": "pharmacy",
-                    "prior_auth": false,
-                    "notes": "Medication is redirected for office administration; medical plan is not billed."
+                    "drug_name": "Synagis",
+                    "hcpcs_code": "90378",
+                    "j_code": null,
+                    "original_text": null
                 },
                 {
-                    "setting": "home_health_care",
-                    "routing": "Obtain through designated health-system specialty pharmacy",
-                    "benefit_type": "pharmacy",
-                    "prior_auth": false,
-                    "notes": "Medication is redirected for home administration; medical plan is not billed."
+                    "drug_name": "Synvisc",
+                    "hcpcs_code": "J7325",
+                    "j_code": "J7325",
+                    "original_text": null
                 },
                 {
-                    "setting": "outpatient_hospital",
-                    "routing": "Administer without redirection; facility obtains and bills under medical benefit",
-                    "benefit_type": "medical",
-                    "prior_auth": true,
-                    "notes": "Pre-certification required. Certain ambulatory infusion clinics may obtain and bill medical directly."
+                    "drug_name": "Tobi",
+                    "hcpcs_code": "J7682",
+                    "j_code": "J7682",
+                    "original_text": null
                 },
                 {
-                    "setting": "inpatient_hospital",
-                    "routing": "Administer without redirection; hospital bills under medical benefit",
-                    "benefit_type": "medical",
-                    "prior_auth": true,
-                    "notes": "Pre-certification required. Exception may apply for certain provider billing arrangements where prior auth is not required."
-                }
-            ]
-        },
-        {
-            "drug_name": "Xolair",
-            "hcpcs_code": "J2357",
-            "j_code": "J2357",
-            "classification": "Anti-IgE monoclonal antibody (omalizumab)",
-            "prior_auth_required": {
-                "physician_office": false,
-                "home_health_care": false,
-                "inpatient_hospital": true,
-                "outpatient_hospital": true,
-                "emergency_room": null,
-                "urgent_care": null
-            },
-            "pharmacy_benefit_plan_required": {
-                "physician_office": true,
-                "home_health_care": true,
-                "inpatient_hospital": false,
-                "outpatient_hospital": false,
-                "emergency_room": null,
-                "urgent_care": null
-            },
-            "summary": "For office or home administration, route medication through the designated health-system specialty pharmacy and do not bill the medical plan; prior authorization is not required. For outpatient infusion/clinic or inpatient administration, do not redirect; medical benefit billing applies and pre-certification is required. Certain ambulatory infusion clinics may obtain and bill medical directly with pre-certification. Exception: prior authorization not required for certain provider billing arrangements when billed to the medical plan.",
-            "scenarios": [
-                {
-                    "setting": "physician_office",
-                    "routing": "Obtain through designated health-system specialty pharmacy",
-                    "benefit_type": "pharmacy",
-                    "prior_auth": false,
-                    "notes": "Medication is redirected for office administration; medical plan is not billed."
+                    "drug_name": "Tysabri",
+                    "hcpcs_code": "J2323",
+                    "j_code": "J2323",
+                    "original_text": null
                 },
                 {
-                    "setting": "home_health_care",
-                    "routing": "Obtain through designated health-system specialty pharmacy",
-                    "benefit_type": "pharmacy",
-                    "prior_auth": false,
-                    "notes": "Medication is redirected for home administration; medical plan is not billed."
+                    "drug_name": "Tyvaso",
+                    "hcpcs_code": "J7686",
+                    "j_code": "J7686",
+                    "original_text": null
                 },
                 {
-                    "setting": "outpatient_hospital",
-                    "routing": "Administer without redirection; facility obtains and bills under medical benefit",
-                    "benefit_type": "medical",
-                    "prior_auth": true,
-                    "notes": "Pre-certification required. Certain ambulatory infusion clinics may obtain and bill medical directly."
+                    "drug_name": "WinRho SDF",
+                    "hcpcs_code": "90386",
+                    "j_code": null,
+                    "original_text": null
                 },
-                {
-                    "setting": "inpatient_hospital",
-                    "routing": "Administer without redirection; hospital bills under medical benefit",
-                    "benefit_type": "medical",
-                    "prior_auth": true,
-                    "notes": "Pre-certification required. Exception may apply for certain provider billing arrangements where prior auth is not required."
-                }
-            ]
-        },
-        {
-            "drug_name": "Zoledronic Acid",
-            "hcpcs_code": "J3489",
-            "j_code": "J3489",
-            "classification": "Bisphosphonate (osteoclast inhibitor)",
-            "prior_auth_required": {
-                "physician_office": false,
-                "home_health_care": false,
-                "inpatient_hospital": true,
-                "outpatient_hospital": true,
-                "emergency_room": null,
-                "urgent_care": null
-            },
-            "pharmacy_benefit_plan_required": {
-                "physician_office": true,
-                "home_health_care": true,
-                "inpatient_hospital": false,
-                "outpatient_hospital": false,
-                "emergency_room": null,
-                "urgent_care": null
-            },
-            "summary": "For office or home administration, route medication through the designated health-system specialty pharmacy and do not bill the medical plan; prior authorization is not required. For outpatient infusion/clinic or inpatient administration, do not redirect; medical benefit billing applies and pre-certification is required. Certain ambulatory infusion clinics may obtain and bill medical directly with pre-certification. Exception: prior authorization not required for certain provider billing arrangements when billed to the medical plan.",
-            "scenarios": [
                 {
-                    "setting": "physician_office",
-                    "routing": "Obtain through designated health-system specialty pharmacy",
-                    "benefit_type": "pharmacy",
-                    "prior_auth": false,
-                    "notes": "Medication is redirected for office administration; medical plan is not billed."
+                    "drug_name": "Xeomin",
+                    "hcpcs_code": "J0588",
+                    "j_code": "J0588",
+                    "original_text": null
                 },
                 {
-                    "setting": "home_health_care",
-                    "routing": "Obtain through designated health-system specialty pharmacy",
-                    "benefit_type": "pharmacy",
-                    "prior_auth": false,
-                    "notes": "Medication is redirected for home administration; medical plan is not billed."
+                    "drug_name": "Xiaflex",
+                    "hcpcs_code": "J0775",
+                    "j_code": "J0775",
+                    "original_text": null
                 },
                 {
-                    "setting": "outpatient_hospital",
-                    "routing": "Administer without redirection; facility obtains and bills under medical benefit",
-                    "benefit_type": "medical",
-                    "prior_auth": true,
-                    "notes": "Pre-certification required. Certain ambulatory infusion clinics may obtain and bill medical directly."
+                    "drug_name": "Xolair",
+                    "hcpcs_code": "J2357",
+                    "j_code": "J2357",
+                    "original_text": null
                 },
                 {
-                    "setting": "inpatient_hospital",
-                    "routing": "Administer without redirection; hospital bills under medical benefit",
-                    "benefit_type": "medical",
-                    "prior_auth": true,
-                    "notes": "Pre-certification required. Exception may apply for certain provider billing arrangements where prior auth is not required."
+                    "drug_name": "Zoledronic Acid",
+                    "hcpcs_code": "J3489",
+                    "j_code": "J3489",
+                    "original_text": null
                 }
             ]
         }
     ],
-    "excluded_drug_list_in_hyperlink": true,
-    "excluded_drug_list_in_source_doc": false,
     "metadata": {
-        "total_carve_out_drugs": 49,
-        "source_document": "local_path/BJCHealthcare/BJC Healthcare Specialty Drugs.docx",
-        "policy_name": "BJC Pharmacy Benefit Plan specialty drug (49 J-code/HCPCS) carve-out for office/home administration",
-        "carve_out_applies_to": [
-            "physician_office",
-            "home_health_care"
-        ],
-        "carve_out_excluded_from": [
-            "inpatient_hospital",
-            "outpatient_hospital",
-            "emergency_room",
-            "urgent_care"
-        ],
-        "client_name": "BJC Healthcare",
-        "specialty_pharmacy_vendor": "BJC Pharmacy Benefit Plan",
-        "additional_info": {
-            "analysis_reasoning": "The in-line CONTENT does not name any specific drugs or list specific exclusion rules; it only generally references an attached document. The STRUCTURAL HYPERLINK is to a .docx and the surrounding sentence explicitly indicates carve-out/exclusion criteria via '49 Specialty Drug HCPC codes that must be acquired through the BJC Pharmacy Benefit Plan,' which is direct evidence of an exclusion/carve-out rule tied to HCPC codes.",
-            "network_pharmacy_links": [
-                "www.express-scripts.com/BJC",
-                "www.BJCRx.org"
-            ],
-            "redirected_to_pharmacies_for_office_or_home_setting": {
-                "BJC_East_Region": "BJC Family Care Central Pharmacy (1-314-657-9000)",
-                "BJC_West_Region": "Saint Luke’s Advanced Care Pharmacy (816-986-5510) (Saint Luke’s providers)"
-            },
-            "implementation_note": "SLHS (Saint Luke’s Health System) added to the JCode process effective 1/1/2025; process intended to mirror legacy BJC employees.",
-            "billing_and_authorization_rules": {
-                "office_or_home_setting_for_49_jcodes": "Redirect to BJC/SLHS pharmacy benefit; Cigna Medical not billed by BJC Pharmacy; prior auth not needed.",
-                "outpatient_or_inpatient_setting_for_49_jcodes": "Not redirected; pre-certification still required."
-            },
-            "site_of_care_caveat": "Mission Farms Ambulatory Infusion Clinic and Blue Springs Ambulatory Infusion Clinic may obtain covered drugs and bill Cigna Medical directly; pre-certification still required.",
-            "washu_exception": "Prior auth not required for WASHU providers billing under MO917/TIN 43-0653611; billed to the medical plan without prior auth requirements."
+        "total_drugs_found": 49,
+        "total_scenarios_found": 1,
+        "same_drugs_across_scenarios": true,
+        "policy_name": "Extracted Rules (49 drugs)",
+        "source_document": null,
+        "analysis_reasoning": "pharmacy: The source text contains setting-based coverage rules (49 specialty drug HCPC codes must be acquired through the BJC Pharmacy Benefit Plan for physician/home health; carve-out does not apply in inpatient/outpatient/ER/urgent care). It explicitly points to the attached .docx as the document listing the drugs/HCPC codes and states to read it for further info, so extraction should also pull from the hyperlink.",
+        "flags": {
+            "source_doc": true,
+            "hyperlink": true
         }
     }
 }

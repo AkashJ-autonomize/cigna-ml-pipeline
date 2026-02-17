@@ -1,17 +1,17 @@
 {
-    "drug_rules": [],
-    "excluded_drug_list_in_hyperlink": false,
-    "excluded_drug_list_in_source_doc": false,
+    "client": "MaritzHolding",
+    "source_type": "source_text",
+    "extraction": [],
     "metadata": {
-        "total_carve_out_drugs": null,
-        "source_document": null,
+        "total_drugs_found": 0,
+        "total_scenarios_found": 0,
+        "same_drugs_across_scenarios": false,
         "policy_name": null,
-        "carve_out_applies_to": null,
-        "carve_out_excluded_from": null,
-        "client_name": null,
-        "specialty_pharmacy_vendor": null,
-        "additional_info": {
-            "analysis_reasoning": "The source content only mentions a Virtual Second Opinions program and provides no in-line drug names, HCPCS/J-codes, exclusion rules, or authorization/non-covered language. Although multiple .XLSX links titled 'MCM Drug List' are present, the hyperlink context is only a general title and does not explicitly indicate exclusion criteria (no drug names, codes, or keywords like 'Exclusion list', 'carve-out', 'non-covered', or 'authorization required')."
+        "source_document": null,
+        "analysis_reasoning": "medical: The source contains a setting-based program access rule (Virtual Second Opinions via Cleveland Clinic through MyCigna or direct URL) but includes no drug list and no relevant hyperlinks pointing to drug/coverage details. | pharmacy: The source content is only a set of references titled 'MCM Drug List' with no explicit drug names or coverage/setting rules. It clearly points to multiple Excel files that likely contain the actual drug list, so extraction should be driven from the hyperlinks.",
+        "flags": {
+            "source_doc": true,
+            "hyperlink": true
         }
     }
 }

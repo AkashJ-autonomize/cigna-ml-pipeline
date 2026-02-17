@@ -14,22 +14,58 @@ class DocumentHandler:
         self.client = openai_client
         self.deployment_name = deployment_name
 
-    def process_csv(self, file_path: str) -> List[str]:
-        """Extracts values from the first column of a CSV or Excel file."""
-        print(f"      [CSV] Extracting column[0] from: {os.path.basename(file_path)}")
+    def get_csv_sample(self, file_path: str) -> str:
+        """Returns the first 2 rows of a CSV or Excel file as a string for LLM analysis."""
+        try:
+            ext = os.path.splitext(file_path)[1].lower()
+            # Read first 5 rows to ensure we catch the header if it's not on row 0
+            if ext in [".xls", ".xlsx"]:
+                df = pd.read_excel(file_path, nrows=5, header=None)
+            else:
+                df = pd.read_csv(file_path, nrows=5, header=None)
+            
+            # Convert to string representation
+            return df.to_string()
+        except Exception as e:
+            return f"Error reading sample: {e}"
+
+    def process_csv(self, file_path: str, drug_col_idx: int = 0, hcpcs_col_idx: Optional[int] = None) -> List[str]:
+        """Extracts values from relevant columns of a CSV or Excel file."""
+        print(f"      [CSV/EXCEL] Analyzing: {os.path.basename(file_path)}")
         try:
             ext = os.path.splitext(file_path)[1].lower()
             if ext in [".xls", ".xlsx"]:
-                df = pd.read_excel(file_path)
+                df = pd.read_excel(file_path, header=None)
             else:
-                df = pd.read_csv(file_path)
+                df = pd.read_csv(file_path, header=None)
             
             if df.empty:
                 return []
             
-            # Extract first column and drop NaNs
-            col0_values = df.iloc[:, 0].dropna().astype(str).unique().tolist()
-            return [f"Drug/Code: {v}" for v in col0_values if v.strip()]
+            max_cols = len(df.columns)
+            drug_idx = drug_col_idx if drug_col_idx < max_cols else 0
+            
+            extracted_rows = []
+            print(f"      [CSV/EXCEL] Extracting drug names from column {drug_idx}")
+            
+            for index, row in df.iterrows():
+                drug_val = str(row.iloc[drug_idx]).strip()
+                
+                # Check for useless content or headers
+                if not drug_val or drug_val.lower() in ["nan", "null", "none", "drug name", "brand name", "name", "label"]:
+                    continue
+                
+                entry = f"Drug: {drug_val}"
+                
+                # Optionally add HCPCS code if index is valid
+                if hcpcs_col_idx is not None and 0 <= hcpcs_col_idx < max_cols:
+                    hcpcs_val = str(row.iloc[hcpcs_col_idx]).strip()
+                    if hcpcs_val and hcpcs_val.lower() not in ["nan", "null", "none", "hcpcs", "j-code", "jcode"]:
+                        entry += f" | Code: {hcpcs_val}"
+                
+                extracted_rows.append(entry)
+            
+            return list(set(extracted_rows)) # Unique entries
         except Exception as e:
             print(f"      [CSV ERROR] {e}")
             return [f"Error parsing CSV: {os.path.basename(file_path)}"]
@@ -64,9 +100,9 @@ class DocumentHandler:
             
             all_page_results = []
             for i, image in enumerate(images):
-                # Save to cache for debugging
-                if not os.path.exists("cache"):
-                    os.makedirs("cache")
+                # Ensure cache directory exists
+                os.makedirs("cache", exist_ok=True)
+                
                 cache_path = f"cache/{os.path.basename(file_path)}_page_{i+1}.png"
                 image.save(cache_path, "PNG")
                 
@@ -82,7 +118,7 @@ class DocumentHandler:
             
             return "\n\n".join(all_page_results)
         except Exception as e:
-            print(f"      [PDF ERROR] {e}")
+            print(f"      [PDF ERROR] Failed to process {os.path.basename(file_path)} via vision: {e}")
             return f"Error parsing PDF via Vision: {os.path.basename(file_path)}"
 
     def _call_vision_model(self, base64_image: str) -> str:
@@ -110,7 +146,7 @@ class DocumentHandler:
                 ],
                 max_completion_tokens=1000
             )
-            return response.choices[0].message.content
+            return response.choices[0].message.content or ""
         except Exception as e:
             print(f"    [VISION ERROR] {e}")
             return ""

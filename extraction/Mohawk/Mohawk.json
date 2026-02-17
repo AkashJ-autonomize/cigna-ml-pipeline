@@ -1,238 +1,260 @@
 {
-    "drug_rules": [
+    "client": "Mohawk",
+    "source_type": "source_text",
+    "extraction": [
         {
-            "drug_name": "Epoetin alfa",
-            "hcpcs_code": "J0885",
-            "j_code": null,
-            "classification": "Specialty Drug - excluded from medical and carved-out to Specialty Medication Pharmacy Vendor",
-            "prior_auth_required": null,
-            "pharmacy_benefit_plan_required": null,
-            "summary": "When administered in an office visit setting, this specialty drug is excluded from medical coverage and carved out to the specialty medication pharmacy vendor.",
-            "scenarios": []
+            "section_type": "medical",
+            "scenario": {
+                "rule": "When administered in an office visit setting, the following specialty drugs are excluded from the medical benefit and routed (carved out) to the Specialty Medication Pharmacy Vendor (Vivio).",
+                "routing": "Pharmacy",
+                "applied_in": [
+                    "OFFICE"
+                ],
+                "does_not_applies_in": []
+            },
+            "drugs": [
+                {
+                    "drug_name": "Epoetin alfa/Procrit",
+                    "hcpcs_code": "",
+                    "j_code": "",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "Aranesp",
+                    "hcpcs_code": "",
+                    "j_code": "",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "Betaseron",
+                    "hcpcs_code": "",
+                    "j_code": "",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "Pulmozyme",
+                    "hcpcs_code": "",
+                    "j_code": "",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "Tobi",
+                    "hcpcs_code": "",
+                    "j_code": "",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "Gleevec",
+                    "hcpcs_code": "",
+                    "j_code": "",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "Hycamptin",
+                    "hcpcs_code": "",
+                    "j_code": "",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "Fuzeon",
+                    "hcpcs_code": "",
+                    "j_code": "",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "Apokyn",
+                    "hcpcs_code": "",
+                    "j_code": "",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "Kineret",
+                    "hcpcs_code": "",
+                    "j_code": "",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "Simponi",
+                    "hcpcs_code": "",
+                    "j_code": "",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "Arcalyst",
+                    "hcpcs_code": "",
+                    "j_code": "",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "Somatuline Depot",
+                    "hcpcs_code": "",
+                    "j_code": "",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "Extavia",
+                    "hcpcs_code": "",
+                    "j_code": "",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "Afinitor",
+                    "hcpcs_code": "",
+                    "j_code": "",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "Chorionic gonadotropin",
+                    "hcpcs_code": "",
+                    "j_code": "",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "Novarel",
+                    "hcpcs_code": "",
+                    "j_code": "",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "Pregnyl",
+                    "hcpcs_code": "",
+                    "j_code": "",
+                    "original_text": null
+                }
+            ]
         },
         {
-            "drug_name": "Procrit",
-            "hcpcs_code": "J0885",
-            "j_code": null,
-            "classification": "Specialty Drug - excluded from medical and carved-out to Specialty Medication Pharmacy Vendor",
-            "prior_auth_required": null,
-            "pharmacy_benefit_plan_required": null,
-            "summary": "When administered in an office visit setting, this specialty drug is excluded from medical coverage and carved out to the specialty medication pharmacy vendor.",
-            "scenarios": []
-        },
-        {
-            "drug_name": "Aranesp",
-            "hcpcs_code": "J0881",
-            "j_code": null,
-            "classification": "Specialty Drug - excluded from medical and carved-out to Specialty Medication Pharmacy Vendor",
-            "prior_auth_required": null,
-            "pharmacy_benefit_plan_required": null,
-            "summary": "When administered in an office visit setting, this specialty drug is excluded from medical coverage and carved out to the specialty medication pharmacy vendor.",
-            "scenarios": []
-        },
-        {
-            "drug_name": "Betaseron",
-            "hcpcs_code": "J1830",
-            "j_code": null,
-            "classification": "Specialty Drug - excluded from medical and carved-out to Specialty Medication Pharmacy Vendor",
-            "prior_auth_required": null,
-            "pharmacy_benefit_plan_required": null,
-            "summary": "When administered in an office visit setting, this specialty drug is excluded from medical coverage and carved out to the specialty medication pharmacy vendor.",
-            "scenarios": []
-        },
-        {
-            "drug_name": "Pulmozyme",
-            "hcpcs_code": "J7639",
-            "j_code": null,
-            "classification": "Specialty Drug - excluded from medical and carved-out to Specialty Medication Pharmacy Vendor",
-            "prior_auth_required": null,
-            "pharmacy_benefit_plan_required": null,
-            "summary": "When administered in an office visit setting, this specialty drug is excluded from medical coverage and carved out to the specialty medication pharmacy vendor.",
-            "scenarios": []
-        },
-        {
-            "drug_name": "Tobi",
-            "hcpcs_code": "J7682",
-            "j_code": null,
-            "classification": "Specialty Drug - excluded from medical and carved-out to Specialty Medication Pharmacy Vendor",
-            "prior_auth_required": null,
-            "pharmacy_benefit_plan_required": null,
-            "summary": "When administered in an office visit setting, this specialty drug is excluded from medical coverage and carved out to the specialty medication pharmacy vendor.",
-            "scenarios": []
-        },
-        {
-            "drug_name": "Gleevec",
-            "hcpcs_code": "S0088",
-            "j_code": null,
-            "classification": "Specialty Drug - excluded from medical and carved-out to Specialty Medication Pharmacy Vendor",
-            "prior_auth_required": null,
-            "pharmacy_benefit_plan_required": null,
-            "summary": "When administered in an office visit setting, this specialty drug is excluded from medical coverage and carved out to the specialty medication pharmacy vendor.",
-            "scenarios": []
-        },
-        {
-            "drug_name": "Hycamtin",
-            "hcpcs_code": "J8705",
-            "j_code": null,
-            "classification": "Specialty Drug - excluded from medical and carved-out to Specialty Medication Pharmacy Vendor",
-            "prior_auth_required": null,
-            "pharmacy_benefit_plan_required": null,
-            "summary": "When administered in an office visit setting, this specialty drug is excluded from medical coverage and carved out to the specialty medication pharmacy vendor.",
-            "scenarios": []
-        },
-        {
-            "drug_name": "Fuzeon",
-            "hcpcs_code": "J1324",
-            "j_code": null,
-            "classification": "Specialty Drug - excluded from medical and carved-out to Specialty Medication Pharmacy Vendor",
-            "prior_auth_required": null,
-            "pharmacy_benefit_plan_required": null,
-            "summary": "When administered in an office visit setting, this specialty drug is excluded from medical coverage and carved out to the specialty medication pharmacy vendor.",
-            "scenarios": []
-        },
-        {
-            "drug_name": "Apokyn",
-            "hcpcs_code": "J0364",
-            "j_code": null,
-            "classification": "Specialty Drug - excluded from medical and carved-out to Specialty Medication Pharmacy Vendor",
-            "prior_auth_required": null,
-            "pharmacy_benefit_plan_required": null,
-            "summary": "When administered in an office visit setting, this specialty drug is excluded from medical coverage and carved out to the specialty medication pharmacy vendor.",
-            "scenarios": []
-        },
-        {
-            "drug_name": "Kineret",
-            "hcpcs_code": "J3490",
-            "j_code": null,
-            "classification": "Specialty Drug - excluded from medical and carved-out to Specialty Medication Pharmacy Vendor",
-            "prior_auth_required": null,
-            "pharmacy_benefit_plan_required": null,
-            "summary": "When administered in an office visit setting, this specialty drug is excluded from medical coverage and carved out to the specialty medication pharmacy vendor.",
-            "scenarios": []
-        },
-        {
-            "drug_name": "Simponi",
-            "hcpcs_code": "J3490",
-            "j_code": null,
-            "classification": "Specialty Drug - excluded from medical and carved-out to Specialty Medication Pharmacy Vendor",
-            "prior_auth_required": null,
-            "pharmacy_benefit_plan_required": null,
-            "summary": "When administered in an office visit setting, this specialty drug is excluded from medical coverage and carved out to the specialty medication pharmacy vendor.",
-            "scenarios": []
-        },
-        {
-            "drug_name": "Arcalyst",
-            "hcpcs_code": "J3490",
-            "j_code": null,
-            "classification": "Specialty Drug - excluded from medical and carved-out to Specialty Medication Pharmacy Vendor",
-            "prior_auth_required": null,
-            "pharmacy_benefit_plan_required": null,
-            "summary": "When administered in an office visit setting, this specialty drug is excluded from medical coverage and carved out to the specialty medication pharmacy vendor.",
-            "scenarios": []
-        },
-        {
-            "drug_name": "Somatuline Depot",
-            "hcpcs_code": "J1930",
-            "j_code": null,
-            "classification": "Specialty Drug - excluded from medical and carved-out to Specialty Medication Pharmacy Vendor",
-            "prior_auth_required": null,
-            "pharmacy_benefit_plan_required": null,
-            "summary": "When administered in an office visit setting, this specialty drug is excluded from medical coverage and carved out to the specialty medication pharmacy vendor.",
-            "scenarios": []
-        },
-        {
-            "drug_name": "Extavia",
-            "hcpcs_code": "J1830",
-            "j_code": null,
-            "classification": "Specialty Drug - excluded from medical and carved-out to Specialty Medication Pharmacy Vendor",
-            "prior_auth_required": null,
-            "pharmacy_benefit_plan_required": null,
-            "summary": "When administered in an office visit setting, this specialty drug is excluded from medical coverage and carved out to the specialty medication pharmacy vendor.",
-            "scenarios": []
-        },
-        {
-            "drug_name": "Afinitor",
-            "hcpcs_code": "J8561",
-            "j_code": null,
-            "classification": "Specialty Drug - excluded from medical and carved-out to Specialty Medication Pharmacy Vendor",
-            "prior_auth_required": null,
-            "pharmacy_benefit_plan_required": null,
-            "summary": "When administered in an office visit setting, this specialty drug is excluded from medical coverage and carved out to the specialty medication pharmacy vendor.",
-            "scenarios": []
-        },
-        {
-            "drug_name": "Chorionic gonadotropin",
-            "hcpcs_code": "J0725",
-            "j_code": null,
-            "classification": "Specialty Drug - excluded from medical and carved-out to Specialty Medication Pharmacy Vendor",
-            "prior_auth_required": null,
-            "pharmacy_benefit_plan_required": null,
-            "summary": "When administered in an office visit setting, this specialty drug is excluded from medical coverage and carved out to the specialty medication pharmacy vendor.",
-            "scenarios": []
-        },
-        {
-            "drug_name": "Novarel",
-            "hcpcs_code": "J0725",
-            "j_code": null,
-            "classification": "Specialty Drug - excluded from medical and carved-out to Specialty Medication Pharmacy Vendor",
-            "prior_auth_required": null,
-            "pharmacy_benefit_plan_required": null,
-            "summary": "When administered in an office visit setting, this specialty drug is excluded from medical coverage and carved out to the specialty medication pharmacy vendor.",
-            "scenarios": []
-        },
-        {
-            "drug_name": "Pregnyl",
-            "hcpcs_code": "J0725",
-            "j_code": null,
-            "classification": "Specialty Drug - excluded from medical and carved-out to Specialty Medication Pharmacy Vendor",
-            "prior_auth_required": null,
-            "pharmacy_benefit_plan_required": null,
-            "summary": "When administered in an office visit setting, this specialty drug is excluded from medical coverage and carved out to the specialty medication pharmacy vendor.",
-            "scenarios": []
+            "section_type": "pharmacy",
+            "scenario": {
+                "rule": "When administered in an office visit setting, the following specialty drugs are excluded from the medical benefit and are carved out to the specialty medication pharmacy vendor (Vivio).",
+                "routing": "Pharmacy",
+                "applied_in": [
+                    "OFFICE"
+                ],
+                "does_not_applies_in": []
+            },
+            "drugs": [
+                {
+                    "drug_name": "Epoetin alfa/Procrit",
+                    "hcpcs_code": "",
+                    "j_code": "",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "Aranesp",
+                    "hcpcs_code": "",
+                    "j_code": "",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "Betaseron",
+                    "hcpcs_code": "",
+                    "j_code": "",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "Pulmozyme",
+                    "hcpcs_code": "",
+                    "j_code": "",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "Tobi",
+                    "hcpcs_code": "",
+                    "j_code": "",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "Gleevec",
+                    "hcpcs_code": "",
+                    "j_code": "",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "Hycamtin",
+                    "hcpcs_code": "",
+                    "j_code": "",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "Fuzeon",
+                    "hcpcs_code": "",
+                    "j_code": "",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "Apokyn",
+                    "hcpcs_code": "",
+                    "j_code": "",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "Kineret",
+                    "hcpcs_code": "",
+                    "j_code": "",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "Simponi",
+                    "hcpcs_code": "",
+                    "j_code": "",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "Arcalyst",
+                    "hcpcs_code": "",
+                    "j_code": "",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "Somatuline Depot",
+                    "hcpcs_code": "",
+                    "j_code": "",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "Extavia",
+                    "hcpcs_code": "",
+                    "j_code": "",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "Afinitor",
+                    "hcpcs_code": "",
+                    "j_code": "",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "Chorionic gonadotropin",
+                    "hcpcs_code": "",
+                    "j_code": "",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "Novarel",
+                    "hcpcs_code": "",
+                    "j_code": "",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "Pregnyl",
+                    "hcpcs_code": "",
+                    "j_code": "",
+                    "original_text": null
+                }
+            ]
         }
     ],
-    "excluded_drug_list_in_hyperlink": false,
-    "excluded_drug_list_in_source_doc": true,
     "metadata": {
-        "total_carve_out_drugs": 18,
-        "source_document": "local_path/Mohawk/Allowance Maximums Flyer.pdf",
-        "policy_name": "Specialty prescription medications carve-out to Vivio; retail/mail (non-specialty) pharmacy vendor Capital Rx (effective 1.1.25)",
-        "carve_out_applies_to": [
-            "physician_office"
-        ],
-        "carve_out_excluded_from": null,
-        "client_name": null,
-        "specialty_pharmacy_vendor": "Vivio",
-        "additional_info": {
-            "analysis_reasoning": "The source content explicitly lists multiple specialty drugs by name and HCPCS/J-codes (e.g., Epoetin alfa/Procrit J0885, Aranesp J0881) and states they are excluded from medical and carved-out to Vivio—clear in-line exclusion rules. The only provided structural hyperlink is to an 'Allowance Maximums Flyer.pdf' with context about allowance maximums, and it contains no explicit exclusion indicators (no drug names, J-codes, or terms like exclusion list/non-covered/prior authorization) in the link sentence/context.",
-            "carve_out_description": "Specialty drugs are excluded from medical and carved out to Vivio when administered in an office visit setting.",
-            "effective_date": "1.1.25",
-            "retail_and_mail_vendor": "Capital Rx",
-            "capital_rx_phone": "1.855.385.5681",
-            "capital_rx_website": "www.cap-rx.com",
-            "vivio_phone": "1.800.470.4034",
-            "vivio_email": "concierge@viviohealth.com",
-            "vivio_concierge_hours": "8-8 ET M-F, 10-3 Sat",
-            "carve_out_drug_list": [
-                "EPOETIN ALFA/PROCRIT (J0885) (NON ERSD)",
-                "ARANESP (J0881) (NON ERSD)",
-                "BETASERON (J1830)",
-                "PULMOZYME (J7639)",
-                "TOBI (J7682)",
-                "GLEEVEC (S0088)",
-                "HYCAMTIN ORAL (J8705)",
-                "FUZEON (J1324)",
-                "APOKYN (J0364)",
-                "KINERET (J3490)",
-                "SIMPONI (J3490)",
-                "ARCALYST (J3490)",
-                "SOMATULINE DEPOT (J1930)",
-                "EXTAVIA (J1830)",
-                "AFINITOR (J8561)",
-                "CHORIONIC GONADOTROPIN (J0725)",
-                "NOVAREL (J0725)",
-                "PREGNYL (J0725)"
-            ]
+        "total_drugs_found": 36,
+        "total_scenarios_found": 2,
+        "same_drugs_across_scenarios": false,
+        "policy_name": "Extracted Rules (36 drugs)",
+        "source_document": null,
+        "analysis_reasoning": "medical: The source content explicitly lists multiple specialty drug names/codes and states a setting-based coverage rule (excluded from medical and carved out to Vivio when administered in an office visit setting). The detected hyperlink pertains to 'allowance maximums' and is not referenced in the source text as the location for the drug list or coverage details for these specialty drugs. | pharmacy: The source text contains explicit setting-based coverage rules (specialty drugs carved out to Vivio when administered in an office visit setting) and includes a specific list of drug names/J-codes. No relevant hyperlinks are provided that are referenced for additional drug lists or coverage details.",
+        "flags": {
+            "source_doc": true,
+            "hyperlink": false
         }
     }
 }

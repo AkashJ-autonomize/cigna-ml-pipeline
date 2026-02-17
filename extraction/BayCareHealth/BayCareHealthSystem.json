@@ -1,246 +1,139 @@
 {
-    "drug_rules": [
+    "client": "BayCareHealth",
+    "source_type": "source_text",
+    "extraction": [
         {
-            "drug_name": "Actemra",
-            "hcpcs_code": null,
-            "j_code": null,
-            "classification": "Rheumatoid arthritis or psoriatic arthritis medication",
-            "prior_auth_required": null,
-            "pharmacy_benefit_plan_required": null,
-            "summary": "Members taking Actemra are required to utilize the specialty clinic at a hospital to help manage their condition and save costs.",
-            "scenarios": []
-        },
-        {
-            "drug_name": "Cimzia",
-            "hcpcs_code": null,
-            "j_code": null,
-            "classification": "Rheumatoid arthritis or psoriatic arthritis medication",
-            "prior_auth_required": null,
-            "pharmacy_benefit_plan_required": null,
-            "summary": "Members taking Cimzia are required to utilize the specialty clinic at a hospital to help manage their condition and save costs.",
-            "scenarios": []
-        },
-        {
-            "drug_name": "Cosentyx",
-            "hcpcs_code": null,
-            "j_code": null,
-            "classification": "Rheumatoid arthritis or psoriatic arthritis medication",
-            "prior_auth_required": null,
-            "pharmacy_benefit_plan_required": null,
-            "summary": "Members taking Cosentyx are required to utilize the specialty clinic at a hospital to help manage their condition and save costs.",
-            "scenarios": []
-        },
-        {
-            "drug_name": "Enbrel",
-            "hcpcs_code": null,
-            "j_code": null,
-            "classification": "Rheumatoid arthritis or psoriatic arthritis medication",
-            "prior_auth_required": null,
-            "pharmacy_benefit_plan_required": null,
-            "summary": "Members taking Enbrel are required to utilize the specialty clinic at a hospital to help manage their condition and save costs.",
-            "scenarios": []
-        },
-        {
-            "drug_name": "Humira",
-            "hcpcs_code": null,
-            "j_code": null,
-            "classification": "Rheumatoid arthritis or psoriatic arthritis medication",
-            "prior_auth_required": null,
-            "pharmacy_benefit_plan_required": null,
-            "summary": "Members taking Humira are required to utilize the specialty clinic at a hospital to help manage their condition and save costs.",
-            "scenarios": []
-        },
-        {
-            "drug_name": "Kevzara",
-            "hcpcs_code": null,
-            "j_code": null,
-            "classification": "Rheumatoid arthritis or psoriatic arthritis medication",
-            "prior_auth_required": null,
-            "pharmacy_benefit_plan_required": null,
-            "summary": "Members taking Kevzara are required to utilize the specialty clinic at a hospital to help manage their condition and save costs.",
-            "scenarios": []
-        },
-        {
-            "drug_name": "Kineret",
-            "hcpcs_code": null,
-            "j_code": null,
-            "classification": "Rheumatoid arthritis or psoriatic arthritis medication",
-            "prior_auth_required": null,
-            "pharmacy_benefit_plan_required": null,
-            "summary": "Members taking Kineret are required to utilize the specialty clinic at a hospital to help manage their condition and save costs.",
-            "scenarios": []
-        },
-        {
-            "drug_name": "Olumiant",
-            "hcpcs_code": null,
-            "j_code": null,
-            "classification": "Rheumatoid arthritis or psoriatic arthritis medication",
-            "prior_auth_required": null,
-            "pharmacy_benefit_plan_required": null,
-            "summary": "Members taking Olumiant are required to utilize the specialty clinic at a hospital to help manage their condition and save costs.",
-            "scenarios": []
-        },
-        {
-            "drug_name": "Orencia",
-            "hcpcs_code": null,
-            "j_code": null,
-            "classification": "Rheumatoid arthritis or psoriatic arthritis medication",
-            "prior_auth_required": null,
-            "pharmacy_benefit_plan_required": null,
-            "summary": "Members taking Orencia are required to utilize the specialty clinic at a hospital to help manage their condition and save costs.",
-            "scenarios": []
-        },
-        {
-            "drug_name": "Otezla",
-            "hcpcs_code": null,
-            "j_code": null,
-            "classification": "Rheumatoid arthritis or psoriatic arthritis medication",
-            "prior_auth_required": null,
-            "pharmacy_benefit_plan_required": null,
-            "summary": "Members taking Otezla are required to utilize the specialty clinic at a hospital to help manage their condition and save costs.",
-            "scenarios": []
-        },
-        {
-            "drug_name": "Remicade",
-            "hcpcs_code": null,
-            "j_code": null,
-            "classification": "Rheumatoid arthritis or psoriatic arthritis medication",
-            "prior_auth_required": null,
-            "pharmacy_benefit_plan_required": null,
-            "summary": "Members taking Remicade are required to utilize the specialty clinic at a hospital to help manage their condition and save costs.",
-            "scenarios": []
-        },
-        {
-            "drug_name": "Rinvoq",
-            "hcpcs_code": null,
-            "j_code": null,
-            "classification": "Rheumatoid arthritis or psoriatic arthritis medication",
-            "prior_auth_required": null,
-            "pharmacy_benefit_plan_required": null,
-            "summary": "Members taking Rinvoq are required to utilize the specialty clinic at a hospital to help manage their condition and save costs.",
-            "scenarios": []
-        },
-        {
-            "drug_name": "Rituxan",
-            "hcpcs_code": null,
-            "j_code": null,
-            "classification": "Rheumatoid arthritis or psoriatic arthritis medication",
-            "prior_auth_required": null,
-            "pharmacy_benefit_plan_required": null,
-            "summary": "Members taking Rituxan are required to utilize the specialty clinic at a hospital to help manage their condition and save costs.",
-            "scenarios": []
-        },
-        {
-            "drug_name": "Simponi",
-            "hcpcs_code": null,
-            "j_code": null,
-            "classification": "Rheumatoid arthritis or psoriatic arthritis medication",
-            "prior_auth_required": null,
-            "pharmacy_benefit_plan_required": null,
-            "summary": "Members taking Simponi/Simponi Aria are required to utilize the specialty clinic at a hospital to help manage their condition and save costs.",
-            "scenarios": []
-        },
-        {
-            "drug_name": "Simponi Aria",
-            "hcpcs_code": null,
-            "j_code": null,
-            "classification": "Rheumatoid arthritis or psoriatic arthritis medication",
-            "prior_auth_required": null,
-            "pharmacy_benefit_plan_required": null,
-            "summary": "Members taking Simponi/Simponi Aria are required to utilize the specialty clinic at a hospital to help manage their condition and save costs.",
-            "scenarios": []
-        },
-        {
-            "drug_name": "Stelara",
-            "hcpcs_code": null,
-            "j_code": null,
-            "classification": "Rheumatoid arthritis or psoriatic arthritis medication",
-            "prior_auth_required": null,
-            "pharmacy_benefit_plan_required": null,
-            "summary": "Members taking Stelara are required to utilize the specialty clinic at a hospital to help manage their condition and save costs.",
-            "scenarios": []
-        },
-        {
-            "drug_name": "Taltz",
-            "hcpcs_code": null,
-            "j_code": null,
-            "classification": "Rheumatoid arthritis or psoriatic arthritis medication",
-            "prior_auth_required": null,
-            "pharmacy_benefit_plan_required": null,
-            "summary": "Members taking Taltz are required to utilize the specialty clinic at a hospital to help manage their condition and save costs.",
-            "scenarios": []
-        },
-        {
-            "drug_name": "Xeljanz",
-            "hcpcs_code": null,
-            "j_code": null,
-            "classification": "Rheumatoid arthritis or psoriatic arthritis medication",
-            "prior_auth_required": null,
-            "pharmacy_benefit_plan_required": null,
-            "summary": "Members taking Xeljanz are required to utilize the specialty clinic at a hospital to help manage their condition and save costs.",
-            "scenarios": []
+            "section_type": "medical",
+            "scenario": {
+                "rule": "Members taking the listed rheumatoid arthritis or psoriatic arthritis medications are required to utilize the specialty clinic at St. Joseph’s Hospital to manage their condition.",
+                "routing": "Medical",
+                "applied_in": [
+                    "OFFICE"
+                ],
+                "does_not_applies_in": []
+            },
+            "drugs": [
+                {
+                    "drug_name": "Actemra",
+                    "hcpcs_code": "",
+                    "j_code": "",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "Cimzia",
+                    "hcpcs_code": "",
+                    "j_code": "",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "Cosentyx",
+                    "hcpcs_code": "",
+                    "j_code": "",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "Enbrel",
+                    "hcpcs_code": "",
+                    "j_code": "",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "Humira",
+                    "hcpcs_code": "",
+                    "j_code": "",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "Kevzara",
+                    "hcpcs_code": "",
+                    "j_code": "",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "Kineret",
+                    "hcpcs_code": "",
+                    "j_code": "",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "Olumiant",
+                    "hcpcs_code": "",
+                    "j_code": "",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "Orencia",
+                    "hcpcs_code": "",
+                    "j_code": "",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "Otezla",
+                    "hcpcs_code": "",
+                    "j_code": "",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "Remicade",
+                    "hcpcs_code": "",
+                    "j_code": "",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "Rinvoq",
+                    "hcpcs_code": "",
+                    "j_code": "",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "Rituxan",
+                    "hcpcs_code": "",
+                    "j_code": "",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "Simponi",
+                    "hcpcs_code": "",
+                    "j_code": "",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "Simponi Aria",
+                    "hcpcs_code": "",
+                    "j_code": "",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "Stelara",
+                    "hcpcs_code": "",
+                    "j_code": "",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "Taltz",
+                    "hcpcs_code": "",
+                    "j_code": "",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "Xeljanz",
+                    "hcpcs_code": "",
+                    "j_code": "",
+                    "original_text": null
+                }
+            ]
         }
     ],
-    "excluded_drug_list_in_hyperlink": false,
-    "excluded_drug_list_in_source_doc": true,
     "metadata": {
-        "total_carve_out_drugs": 20,
+        "total_drugs_found": 18,
+        "total_scenarios_found": 1,
+        "same_drugs_across_scenarios": true,
+        "policy_name": "Extracted Rules (18 drugs)",
         "source_document": null,
-        "policy_name": "RA Clinic specialty clinic requirement for BayCare Medical Plan members on specified rheumatoid arthritis/psoriatic arthritis medications",
-        "carve_out_applies_to": [
-            "specialty_clinic"
-        ],
-        "carve_out_excluded_from": [
-            "non_specialty_clinic"
-        ],
-        "client_name": "BayCare",
-        "specialty_pharmacy_vendor": "Accredo",
-        "additional_info": {
-            "analysis_reasoning": "The source content explicitly lists specific RA/psoriatic arthritis drugs (e.g., Actemra, Humira, Enbrel, Remicade, etc.) and states a concrete utilization requirement: members taking these drugs are required to use the specialty clinic at St. Joseph’s Hospital. No relevant structural hyperlinks (PDF/CSV/XLS/XLSX/DOCX) are provided, so there is no hyperlink-based evidence of an exclusion list or carve-out criteria.",
-            "RA_psoriatic_arthritis_drug_list": [
-                "Actemra",
-                "Cimzia",
-                "Cosentyx",
-                "Enbrel",
-                "Humira",
-                "Kevzara",
-                "Kineret",
-                "Olumiant",
-                "Orencia",
-                "Otezla",
-                "Remicade",
-                "Rinvoq",
-                "Rituxan",
-                "Simponi/Simponi Aria",
-                "Stelara",
-                "Taltz",
-                "Xeljanz"
-            ],
-            "required_site_of_care_for_listed_RA_drugs": "Specialty clinic at St. Joseph’s Hospital (telehealth available)",
-            "contact_for_RA_clinic": "813.356.7161",
-            "benefit_notes": {
-                "Choice_Share_or_Premium_plans_age_18_plus": "Listed medications at no out-of-pocket cost",
-                "HSA_plan": "Listed medications covered at 100% after meeting deductible"
-            },
-            "medical_specialty_drug_notes": {
-                "oncology_medical_specialty_drugs": "EviCore opt out; auto-approve if utilization at INN sites; both outpatient and inpatient",
-                "non_oncology_medical_specialty_drugs_at_BayCare_facility": "Reviewed by Cigna; BayCare infusion center covered at 100%",
-                "non_oncology_medical_specialty_drugs_at_non_BayCare_facility": "Reviewed by Cigna (business as usual)",
-                "doctor_office_or_home_setting": "Refer to BayCare Home Care",
-                "exception": "Florida Cancer Center uses buy-and-bill rather than BayCare Home Care"
-            },
-            "medication_assistance_program": {
-                "name": "BayCare Medication Assistance Program",
-                "phone": "813.901.6350",
-                "fax": "813.901.6313",
-                "email": "medassist@baycare.org",
-                "hours": "Monday-Friday, 8am-5pm",
-                "eligible_populations": [
-                    "BayCare team members and family members",
-                    "patients at all BayCare facilities",
-                    "general public"
-                ]
-            }
+        "analysis_reasoning": "medical: The source content includes explicit drug names (RA/psoriatic arthritis meds list) and setting-based coverage/routing rules (e.g., specialty clinic requirement, IP/OP administration rules). No relevant hyperlinks are present or referenced for drug lists or coverage details. | pharmacy: The source text contains setting-based/pharmacy resource rules and contact pathways (CVS Caremark, BayCare Medication Assistance Program) describing how to obtain medication assistance, but it does not list specific drug names and provides no drug-list hyperlink (and no relevant hyperlinks are present).",
+        "flags": {
+            "source_doc": true,
+            "hyperlink": false
         }
     }
 }

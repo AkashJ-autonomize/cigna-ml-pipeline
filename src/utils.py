@@ -1,30 +1,37 @@
 import os
 import shutil
+import re
 from typing import List, Dict
 from src.schemas import OLAMExtraction
 
 def lazy_download_documents(extraction: OLAMExtraction, output_dir: str):
-    """Copies referenced local documents to output dir only when needed."""
+    """
+    Copies referenced local documents to output dir only when needed.
+    Sanitizes filenames and truncates long paths to avoid OS limits.
+    """
     fetched_dir = os.path.join(output_dir, "fetched_files")
-    if not os.path.exists(fetched_dir):
-        os.makedirs(fetched_dir)
+    os.makedirs(fetched_dir, exist_ok=True)
         
     all_docs = extraction.medical.hyperlinks + extraction.pharmacy.hyperlinks
     base_proj_dir = os.getcwd() 
     
-    print(f"      [FETCH HYPERLINKS] Checking {len(all_docs)} hyperlinks...")
+    print(f"      [FETCH] Checking {len(all_docs)} hyperlinks...")
+    
     for doc in all_docs:
+        # Skip if already downloaded/fetched
         if doc.local_path and os.path.exists(doc.local_path):
             continue 
             
         local_src = None
-        local_paths = [
+        # Possible locations for the file relative to base project
+        search_paths = [
             os.path.join(base_proj_dir, doc.url),
             os.path.join(os.path.dirname(base_proj_dir), doc.url),
             os.path.join(base_proj_dir, doc.url.lstrip("/")),
             os.path.join(os.path.dirname(base_proj_dir), doc.url.lstrip("/"))
         ]
-        for p in local_paths:
+        
+        for p in search_paths:
             if os.path.exists(p) and os.path.isfile(p):
                 local_src = p
                 break
@@ -34,7 +41,7 @@ def lazy_download_documents(extraction: OLAMExtraction, output_dir: str):
             # Filename sanitization
             safe_filename = "".join([c if c.isalnum() or c in "._-" else "_" for c in url_filename])
             
-            # Truncate if too long
+            # Truncate if too long (path limit safety)
             max_name_len = 120
             name_part, ext_part = os.path.splitext(safe_filename)
             if len(safe_filename) > max_name_len:

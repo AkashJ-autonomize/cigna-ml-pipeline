@@ -1,0 +1,14 @@
+{
+    "client": "TUFTs",
+    "source_type": "source_text",
+    "extraction": [],
+    "metadata": {
+        "total_drugs_found": 0,
+        "total_scenarios_found": 0,
+        "same_drugs_across_scenarios": false,
+        "policy_name": null,
+        "source_document": null,
+        "analysis_reasoning": "No relevant Medical or Pharmacy sections detected in the source document.",
+        "flags": {}
+    }
+}

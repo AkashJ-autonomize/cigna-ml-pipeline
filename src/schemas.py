@@ -23,70 +23,43 @@ class OLAMExtraction(BaseModel):
 # Stage 2: Generalized Drug Rule Extraction Models
 # ============================================================================
 
-class PriorAuthBySetting(BaseModel):
-    """Setting-specific prior authorization requirements"""
-    physician_office: Optional[bool] = None
-    home_health_care: Optional[bool] = None
-    inpatient_hospital: Optional[bool] = None
-    outpatient_hospital: Optional[bool] = None
-    emergency_room: Optional[bool] = None
-    urgent_care: Optional[bool] = None
-
-class PharmacyBenefitBySetting(BaseModel):
-    """Setting-specific pharmacy benefit plan requirements"""
-    physician_office: Optional[bool] = None
-    home_health_care: Optional[bool] = None
-    inpatient_hospital: Optional[bool] = None
-    outpatient_hospital: Optional[bool] = None
-    emergency_room: Optional[bool] = None
-    urgent_care: Optional[bool] = None
-
-class Scenario(BaseModel):
-    """Detailed scenario describing drug administration rules for a specific setting"""
-    setting: Optional[str] = Field(None, description="Care setting (e.g., physician_office, inpatient_hospital)")
-    routing: Optional[str] = Field(None, description="Where to obtain the drug (e.g., 'BJC Pharmacy Benefit Plan', 'Direct facility dispensing')")
-    benefit_type: Optional[str] = Field(None, description="Type of benefit: 'pharmacy' or 'medical'")
-    prior_auth: Optional[bool] = Field(None, description="Whether prior authorization is required in this setting")
-    notes: Optional[str] = Field(None, description="Additional context or exceptions for this scenario")
-
-class DrugRule(BaseModel):
-    """Comprehensive drug rule with setting-specific requirements and scenarios"""
-    drug_name: str = Field(..., description="Brand or generic name of the drug")
+class DrugItem(BaseModel):
+    """Represents the specific drug and its codes"""
+    drug_name: str = Field(..., description="Brand or generic name of the drug ONLY (no headers, no codes)")
     hcpcs_code: Optional[str] = Field(None, description="HCPCS code if available")
     j_code: Optional[str] = Field(None, description="J-code if available")
-    classification: str = Field(..., description="Drug classification (e.g., 'Specialty Drug - Carve-Out', 'Medical', 'Pharmacy')")
-    
-    # Setting-specific fields (optional for flexibility)
-    prior_auth_required: Optional[Union[bool, PriorAuthBySetting]] = Field(
-        None, 
-        description="Prior auth requirement: simple boolean or setting-specific object"
-    )
-    pharmacy_benefit_plan_required: Optional[PharmacyBenefitBySetting] = Field(
-        None,
-        description="Whether pharmacy benefit plan is required by setting"
-    )
-    
-    # Summary and scenarios
-    summary: str = Field(..., description="Consolidated summary of all rules across settings")
-    scenarios: List[Scenario] = Field(
-        default_factory=list,
-        description="Detailed scenarios for each care setting"
-    )
+    original_text: Optional[str] = Field(None, description="The specific text line deriving this drug")
 
-class PolicyMetadata(BaseModel):
-    """Policy-level metadata about the drug rules"""
-    total_carve_out_drugs: Optional[int] = Field(None, description="Total number of drugs in carve-out list")
-    source_document: Optional[str] = Field(None, description="Path to source document")
-    policy_name: Optional[str] = Field(None, description="Name of the policy")
-    carve_out_applies_to: Optional[List[str]] = Field(None, description="Settings where carve-out applies")
-    carve_out_excluded_from: Optional[List[str]] = Field(None, description="Settings excluded from carve-out")
-    client_name: Optional[str] = Field(None, description="Client name")
-    specialty_pharmacy_vendor: Optional[Union[str, List[str]]] = Field(None, description="Specialty pharmacy vendor name(s)")
-    additional_info: Optional[Dict[str, Any]] = Field(default_factory=dict, description="Any additional metadata")
+class RuleScenario(BaseModel):
+    """
+    Represents a specific routing scenario for a drug list.
+    """
+    rule: str = Field(..., description="The specific rule or exclusion logic for this scenario")
+    routing: str = Field(..., description="Inferred routing logic (e.g. 'Medical', 'Pharmacy')")
+    applied_in: List[str] = Field(default_factory=list, description="Settings where this rule APPLIES")
+    does_not_applies_in: List[str] = Field(default_factory=list, description="Settings where this rule DOES NOT APPLY")
+
+class ExtractionSection(BaseModel):
+    """
+    Represents a group of scenarios and drugs for a specific section (Medical/Pharmacy).
+    """
+    section_type: str = Field(..., description="'medical' or 'pharmacy'")
+    scenario: Optional[RuleScenario] = Field(None, description="The primary rule scenario for these drugs")
+    drugs: List[DrugItem] = Field(default_factory=list, description="List of drugs applying to this scenario")
+
+class ExtractionMetadata(BaseModel):
+    """Metadata about the extraction process and policy"""
+    total_drugs_found: int = 0
+    total_scenarios_found: int = 0
+    same_drugs_across_scenarios: bool = False
+    policy_name: Optional[str] = None
+    source_document: Optional[str] = None
+    analysis_reasoning: Optional[str] = None
+    flags: Dict[str, bool] = Field(default_factory=dict)
 
 class RefinedExtraction(BaseModel):
-    """Final extraction result with drug rules and metadata"""
-    drug_rules: List[DrugRule] = Field(default_factory=list)
-    excluded_drug_list_in_hyperlink: bool = False
-    excluded_drug_list_in_source_doc: bool = False
-    metadata: PolicyMetadata = Field(default_factory=PolicyMetadata)
+    """Final output model for the pipeline"""
+    client: str = Field("Unknown", description="Name of the main client")
+    source_type: str = Field("source_text", description="Origin of info")
+    extraction: List[ExtractionSection] = Field(default_factory=list)
+    metadata: ExtractionMetadata = Field(default_factory=ExtractionMetadata)

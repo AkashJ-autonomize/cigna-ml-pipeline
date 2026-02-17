@@ -1,4 +1,5 @@
 import os
+from typing import List
 from bs4 import BeautifulSoup
 from src.schemas import OLAMExtraction, Hyperlink, SectionResult
 
@@ -30,15 +31,17 @@ class OLAMHTMLParser:
         """
         final_points, hyperlinks, seen_urls = [], [], set()
         
-        # Helper to decide if an a-tag is a "document"
-        def is_document_link(href):
+        def is_document_link(href: str) -> bool:
+            """Determines if a link points to a supported document format."""
             is_doc = any(href.lower().endswith(ext) for ext in self.doc_extensions)
             is_olam_form = "/OLAMForms/" in href
             return is_doc or is_olam_form
 
-        def add_point(text, a_tags=[]):
+        def add_point(text: str, a_tags: List = []):
+            """Cleans and adds a text point to the results, mapping it to documents."""
             clean_text = " ".join(text.replace("\u00a0", " ").split())
-            if not clean_text: return
+            if not clean_text:
+                return
             final_points.append(clean_text)
             for a in a_tags:
                 href = a.get("href", "")
@@ -49,7 +52,8 @@ class OLAMHTMLParser:
         def get_all_a_tags(element):
             return element.find_all("a", recursive=True)
 
-        def build_text_with_links(element):
+        def build_text_with_links(element) -> str:
+            """Recursively builds text from an element, including link URLs in parentheses."""
             parts = []
             for child in element.children:
                 if isinstance(child, str):
