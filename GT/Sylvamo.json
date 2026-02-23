@@ -1,476 +1,4673 @@
 {
-    "client": {
-        "name": "Sylvamo North America LLC",
-        "account_number": "3344396",
-        "company_website": "www.sylvamo.com",
-        "employee_service_center": {
-            "phones": [
-                "888.372.2968",
-                "866.683.4547"
-            ],
-            "note": "Contact Sylvamo ESC for any payroll or benefits questions/issues that occur after September 1"
-        }
-    },
-    "policy": {
-        "policy_name": "Specialty Drug Medical Provision",
-        "policy_type": "specialty_drug_first_dose_medical_provision",
-        "effective_date": "1.1.22",
-        "total_drugs_in_scope": 773,
-        "source_documents": [
-            "Sylvamo.html (Medical and Pharmacy sections only)",
-            "2022_Specialty_List_w_JCodes.xlsx"
-        ]
-    },
-    "medical": {
-        "note": "See Source System",
-        "programs": {
-            "health_matters_care_management_preferred": {
-                "available": true
-            },
-            "healthy_pregnancies_healthy_babies": {
-                "available": true,
-                "note": "See Incentives section for more info"
-            },
-            "comprehensive_oncology_program": {
-                "available": true
-            },
-            "cigna_gene_therapy_program": {
-                "available": true,
-                "includes": "Embarc Benefit Protection"
-            }
-        }
-    },
-    "pharmacy": {
-        "vendor": "OptumRx",
-        "phone": "800.797.9791",
-        "specialty_pharmacy": {
-            "vendor": "OptumSpecialty Pharmacy",
-            "phone": "855.427.4682"
-        },
-        "specialty_drug_medical_provision": {
-            "description": "The Sylvamo medical plans administered by Cigna cover the first injection/infusion of a Specialty Drug in the doctor's office and/or home setting. Thereafter, the Specialty Drug needs to be obtained from OptumSpecialty Pharmacy after the first injection or infusion.",
-            "first_dose_coverage": {
-                "covered_by": "Medical plan (Cigna)",
-                "settings": [
-                    "Doctor's office",
-                    "Home setting"
-                ]
-            },
-            "subsequent_doses": {
-                "covered_by": "OptumSpecialty Pharmacy",
-                "pharmacy_phone": "855.427.4682",
-                "requirement": "After the first injection or infusion"
-            },
-            "oncology_medications": {
-                "injectable_infused": {
-                    "setting": "Cancer clinic",
-                    "coverage": "Payable under the client's medical plan"
-                },
-                "oral": {
-                    "specialty_list_drugs": "Payable one time per lifetime under the client's medical plan(s)",
-                    "all_others": "Dispensed through OptumSpecialty Pharmacy"
-                }
-            },
-            "place_of_service_restrictions": {
-                "provision_applies_to": [
-                    "Doctor's office",
-                    "Home setting"
+    "client": "Sylvamo",
+    "source_type": "source_text",
+    "extraction": [
+        {
+            "section_type": "pharmacy",
+            "scenario": {
+                "rule": "All drugs on the attached list are covered by OptumRx through OptumSpecialty Pharmacy. If Cigna receives a medical claim for a drug on the list, it must be handled according to Sylvamo’s Specialty Drug Medical Provision. The specialty drug provision applies only to doctor’s office and home settings and does not apply to outpatient, inpatient, or emergency room settings.",
+                "routing": "Pharmacy",
+                "applied_in": [
+                    "HOME",
+                    "OFFICE",
+                    "PHARMACY"
                 ],
-                "provision_does_not_apply_to": [
-                    "Outpatient setting",
-                    "Inpatient setting",
-                    "Emergency room setting"
+                "does_not_applies_in": [
+                    "HOSPITAL"
                 ]
             },
-            "claims_handling": {
-                "note": "Should Cigna receive a medical claim for a drug on the list, it should be handled by Cigna according to Sylvamo's Specialty Drug Medical Provision. The specialty drug provision should ONLY be for places of service as doctor's office and/or home setting."
-            }
+            "drugs": [
+                {
+                    "drug_name": "KHAPZORY",
+                    "hcpcs_code": "J9271",
+                    "j_code": "J9271",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "EXKIVITY",
+                    "hcpcs_code": "S9379",
+                    "j_code": "S9379",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "SOVALDI",
+                    "hcpcs_code": "J1930",
+                    "j_code": "J1930",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "GEL-ONE",
+                    "hcpcs_code": "J7326",
+                    "j_code": "J7326",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "KOATE",
+                    "hcpcs_code": "J9271",
+                    "j_code": "J9271",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "XYNTHA SOLOF",
+                    "hcpcs_code": "J7185",
+                    "j_code": "J7185",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "KALBITOR",
+                    "hcpcs_code": "J1290",
+                    "j_code": "J1290",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ALIMTA",
+                    "hcpcs_code": "J9305",
+                    "j_code": "J9305",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "TEMSIROLIMUS",
+                    "hcpcs_code": "J9328",
+                    "j_code": "J9328",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "IDAMYCIN PFS",
+                    "hcpcs_code": "J1575",
+                    "j_code": "J1575",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "GLATOPA",
+                    "hcpcs_code": "J0257",
+                    "j_code": "J0257",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "GONAL-F",
+                    "hcpcs_code": "S0126",
+                    "j_code": "S0126",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "RETHYMIC",
+                    "hcpcs_code": "Q5106",
+                    "j_code": "Q5106",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "PALFORZIA",
+                    "hcpcs_code": "J9267",
+                    "j_code": "J9267",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ELITEK",
+                    "hcpcs_code": "J3060",
+                    "j_code": "J3060",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "FOLLISTIM AQ",
+                    "hcpcs_code": "S0128",
+                    "j_code": "S0128",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ILUMYA",
+                    "hcpcs_code": "J3245",
+                    "j_code": "J3245",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "IMCIVREE",
+                    "hcpcs_code": "J7313",
+                    "j_code": "J7313",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "SYNRIBO",
+                    "hcpcs_code": "J9262",
+                    "j_code": "J9262",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "CIMZIA PREFL",
+                    "hcpcs_code": "J0717",
+                    "j_code": "J0717",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "KEVEYIS",
+                    "hcpcs_code": "J2425",
+                    "j_code": "J2425",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "BAVENCIO",
+                    "hcpcs_code": "J9023",
+                    "j_code": "J9023",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "XTANDI",
+                    "hcpcs_code": "J2357",
+                    "j_code": "J2357",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "OTEZLA",
+                    "hcpcs_code": "J7324",
+                    "j_code": "J7324",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "RITUXAN",
+                    "hcpcs_code": "J9312",
+                    "j_code": "J9312",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ENBREL SRCLK",
+                    "hcpcs_code": "J1438",
+                    "j_code": "J1438",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "LAMIVUDINE",
+                    "hcpcs_code": "J9047",
+                    "j_code": "J9047",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "SAJAZIR",
+                    "hcpcs_code": "J9021",
+                    "j_code": "J9021",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "LUMAKRAS",
+                    "hcpcs_code": "J2778",
+                    "j_code": "J2778",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "TABLOID",
+                    "hcpcs_code": "J7325",
+                    "j_code": "J7325",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ZAVESCA",
+                    "hcpcs_code": "Q5101",
+                    "j_code": "Q5101",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "MAVENCLAD",
+                    "hcpcs_code": "J9353",
+                    "j_code": "J9353",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "SYPRINE",
+                    "hcpcs_code": "J7325",
+                    "j_code": "J7325",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ADEFOV DIPIV",
+                    "hcpcs_code": "J9042",
+                    "j_code": "J9042",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "TRUSELTIQ",
+                    "hcpcs_code": "J1746",
+                    "j_code": "J1746",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "PIQRAY 200MG",
+                    "hcpcs_code": "J2787",
+                    "j_code": "J2787",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ULTOMIRIS",
+                    "hcpcs_code": "J1303",
+                    "j_code": "J1303",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "FIBRYGA",
+                    "hcpcs_code": "J7177",
+                    "j_code": "J7177",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "PREVYMIS",
+                    "hcpcs_code": "J9204",
+                    "j_code": "J9204",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ELOCTATE",
+                    "hcpcs_code": "J7205",
+                    "j_code": "J7205",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "RIABNI",
+                    "hcpcs_code": "Q5123",
+                    "j_code": "Q5123",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "NUTROPIN AQ",
+                    "hcpcs_code": "J0485",
+                    "j_code": "J0485",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ARIKAYCE",
+                    "hcpcs_code": "J2793",
+                    "j_code": "J2793",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "EPIVIR HBV",
+                    "hcpcs_code": "J9178",
+                    "j_code": "J9178",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "IBRANCE",
+                    "hcpcs_code": "J1575",
+                    "j_code": "J1575",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "CIMZIA",
+                    "hcpcs_code": "J0717",
+                    "j_code": "J0717",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "SKYRIZI PEN",
+                    "hcpcs_code": "J7520",
+                    "j_code": "J7520",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "EVENITY",
+                    "hcpcs_code": "J3111",
+                    "j_code": "J3111",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "NEULASTA",
+                    "hcpcs_code": "J2506",
+                    "j_code": "J2506",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "SILDENAFIL",
+                    "hcpcs_code": "J2502",
+                    "j_code": "J2502",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "EMPAVELI",
+                    "hcpcs_code": "J9269",
+                    "j_code": "J9269",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "NORDITROPIN",
+                    "hcpcs_code": "Q5110",
+                    "j_code": "Q5110",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "HARVONI",
+                    "hcpcs_code": "J9179",
+                    "j_code": "J9179",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "HUMIRA",
+                    "hcpcs_code": "J0135",
+                    "j_code": "J0135",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "IMBRUVICA",
+                    "hcpcs_code": "J7313",
+                    "j_code": "J7313",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ZOLGENSMA",
+                    "hcpcs_code": "J3399",
+                    "j_code": "J3399",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "SOLIRIS",
+                    "hcpcs_code": "J1300",
+                    "j_code": "J1300",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "TARCEVA",
+                    "hcpcs_code": "J0593",
+                    "j_code": "J0593",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "GLEOSTINE",
+                    "hcpcs_code": "S0178",
+                    "j_code": "S0178",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "LEVOLEUCOVOR",
+                    "hcpcs_code": "J9218",
+                    "j_code": "J9218",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "TOTECT",
+                    "hcpcs_code": "J9330",
+                    "j_code": "J9330",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ALECENSA",
+                    "hcpcs_code": "J1931",
+                    "j_code": "J1931",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ZYKADIA",
+                    "hcpcs_code": "J1632",
+                    "j_code": "J1632",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "POMALYST",
+                    "hcpcs_code": "J9309",
+                    "j_code": "J9309",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "XEOMIN",
+                    "hcpcs_code": "J0588",
+                    "j_code": "J0588",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "UNITUXIN",
+                    "hcpcs_code": "A9699",
+                    "j_code": "A9699",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "IFEX",
+                    "hcpcs_code": "J7202",
+                    "j_code": "J7202",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "VIGABATRIN",
+                    "hcpcs_code": "J9025",
+                    "j_code": "J9025",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "TRIKAFTA",
+                    "hcpcs_code": "J1445",
+                    "j_code": "J1445",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ZARXIO",
+                    "hcpcs_code": "Q5101",
+                    "j_code": "Q5101",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "VISCO-3",
+                    "hcpcs_code": "J9390",
+                    "j_code": "J9390",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "NIVESTYM",
+                    "hcpcs_code": "Q5110",
+                    "j_code": "Q5110",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "LYNPARZA",
+                    "hcpcs_code": "J3398",
+                    "j_code": "J3398",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "CIMZIA START",
+                    "hcpcs_code": "J0717",
+                    "j_code": "J0717",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "AUSTEDO",
+                    "hcpcs_code": "J7504",
+                    "j_code": "J7504",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "DACARBAZINE",
+                    "hcpcs_code": "J9130",
+                    "j_code": "J9130",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "DARAPRIM",
+                    "hcpcs_code": "J9348",
+                    "j_code": "J9348",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "CYSTADANE",
+                    "hcpcs_code": "J9308",
+                    "j_code": "J9308",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "APOKYN",
+                    "hcpcs_code": "J0364",
+                    "j_code": "J0364",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "AVASTIN",
+                    "hcpcs_code": "J9035",
+                    "j_code": "J9035",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "TEMODAR",
+                    "hcpcs_code": "J9328",
+                    "j_code": "J9328",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ENTYVIO",
+                    "hcpcs_code": "J3380",
+                    "j_code": "J3380",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "TAFINLAR",
+                    "hcpcs_code": "J7525",
+                    "j_code": "J7525",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "VENTAVIS",
+                    "hcpcs_code": "Q4074",
+                    "j_code": "Q4074",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "SYNVISC",
+                    "hcpcs_code": "J7325",
+                    "j_code": "J7325",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ZEPATIER",
+                    "hcpcs_code": "Q5101",
+                    "j_code": "Q5101",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "FIRAZYR",
+                    "hcpcs_code": "J1744",
+                    "j_code": "J1744",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "SOFOS/VELPAT",
+                    "hcpcs_code": "J7520",
+                    "j_code": "J7520",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "TACROLIMUS",
+                    "hcpcs_code": "J7507",
+                    "j_code": "J7507",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "KISQALI 200",
+                    "hcpcs_code": "J9271",
+                    "j_code": "J9271",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "DUPIXENT",
+                    "hcpcs_code": "J9000",
+                    "j_code": "J9000",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "XEMBIFY",
+                    "hcpcs_code": "J1558",
+                    "j_code": "J1558",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "NOVAREL",
+                    "hcpcs_code": "J9999",
+                    "j_code": "J9999",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "MICRHOGAM PL",
+                    "hcpcs_code": "J8610",
+                    "j_code": "J8610",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ASPARLAS",
+                    "hcpcs_code": "J9118",
+                    "j_code": "J9118",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "PROCYSBI",
+                    "hcpcs_code": "J0886",
+                    "j_code": "J0886",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "IRESSA",
+                    "hcpcs_code": "J9214",
+                    "j_code": "J9214",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "KEPIVANCE",
+                    "hcpcs_code": "J2425",
+                    "j_code": "J2425",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "BICNU",
+                    "hcpcs_code": "J9050",
+                    "j_code": "J9050",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "DOPTELET",
+                    "hcpcs_code": "J9171",
+                    "j_code": "J9171",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "THROMBAT III",
+                    "hcpcs_code": "J9340",
+                    "j_code": "J9340",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "SOLESTA",
+                    "hcpcs_code": "J7520",
+                    "j_code": "J7520",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "PURIXAN",
+                    "hcpcs_code": "J7639",
+                    "j_code": "J7639",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "PHESGO",
+                    "hcpcs_code": "J9316",
+                    "j_code": "J9316",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "VEMLIDY",
+                    "hcpcs_code": "J9044",
+                    "j_code": "J9044",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "XALKORI",
+                    "hcpcs_code": "J2792",
+                    "j_code": "J2792",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "LEUPROLIDE",
+                    "hcpcs_code": "J9218",
+                    "j_code": "J9218",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "MELPHALAN",
+                    "hcpcs_code": "J9245",
+                    "j_code": "J9245",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "NOVOEIGHT",
+                    "hcpcs_code": "J7182",
+                    "j_code": "J7182",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "KORLYM",
+                    "hcpcs_code": "J9271",
+                    "j_code": "J9271",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "SODIUM PHENY",
+                    "hcpcs_code": "J7520",
+                    "j_code": "J7520",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "BREYANZI",
+                    "hcpcs_code": "C9076",
+                    "j_code": "C9076",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "RUBRACA",
+                    "hcpcs_code": "J7200",
+                    "j_code": "J7200",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "LAPATINIB",
+                    "hcpcs_code": "J9047",
+                    "j_code": "J9047",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "AMPYRA",
+                    "hcpcs_code": "J1426",
+                    "j_code": "J1426",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "PROVENGE",
+                    "hcpcs_code": "Q2043",
+                    "j_code": "Q2043",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "IXEMPRA KIT",
+                    "hcpcs_code": "J9319",
+                    "j_code": "J9319",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "UKONIQ",
+                    "hcpcs_code": "Q5111",
+                    "j_code": "Q5111",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "PARSABIV",
+                    "hcpcs_code": "J0606",
+                    "j_code": "J0606",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "PULMOZYME",
+                    "hcpcs_code": "J7639",
+                    "j_code": "J7639",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "EVRYSDI",
+                    "hcpcs_code": "J1305",
+                    "j_code": "J1305",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "PRIALT",
+                    "hcpcs_code": "J2278",
+                    "j_code": "J2278",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ZOLADEX",
+                    "hcpcs_code": "J9202",
+                    "j_code": "J9202",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "CORIFACT",
+                    "hcpcs_code": "J7180",
+                    "j_code": "J7180",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "BEVACIZUMAB",
+                    "hcpcs_code": "J1830",
+                    "j_code": "J1830",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "TIOPRONIN",
+                    "hcpcs_code": "J3240",
+                    "j_code": "J3240",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "BLEOMYCIN",
+                    "hcpcs_code": "J9040",
+                    "j_code": "J9040",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "RECLAST",
+                    "hcpcs_code": "J0896",
+                    "j_code": "J0896",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "GAMMAGARD SD",
+                    "hcpcs_code": "J1566",
+                    "j_code": "J1566",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "PROLEUKIN",
+                    "hcpcs_code": "J9015",
+                    "j_code": "J9015",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "BUPHENYL",
+                    "hcpcs_code": "J0567",
+                    "j_code": "J0567",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "BIVIGAM",
+                    "hcpcs_code": "J1556",
+                    "j_code": "J1556",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "RENFLEXIS",
+                    "hcpcs_code": "Q5104",
+                    "j_code": "Q5104",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "PIQRAY 300MG",
+                    "hcpcs_code": "J2787",
+                    "j_code": "J2787",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ONTRUZANT",
+                    "hcpcs_code": "Q5112",
+                    "j_code": "Q5112",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "OCALIVA",
+                    "hcpcs_code": "J7188",
+                    "j_code": "J7188",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "BEOVU",
+                    "hcpcs_code": "J0179",
+                    "j_code": "J0179",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "IMATINIB MES",
+                    "hcpcs_code": "J7313",
+                    "j_code": "J7313",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "XURIDEN",
+                    "hcpcs_code": "J2357",
+                    "j_code": "J2357",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "VOXZOGO",
+                    "hcpcs_code": "J7179",
+                    "j_code": "J7179",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "CUVITRU",
+                    "hcpcs_code": "J1555",
+                    "j_code": "J1555",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ADUHELM",
+                    "hcpcs_code": "J0172",
+                    "j_code": "J0172",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "CYSTADROPS",
+                    "hcpcs_code": "J9308",
+                    "j_code": "J9308",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ONIVYDE",
+                    "hcpcs_code": "J9205",
+                    "j_code": "J9205",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ENHERTU",
+                    "hcpcs_code": "J1438",
+                    "j_code": "J1438",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ROZLYTREK",
+                    "hcpcs_code": "J7200",
+                    "j_code": "J7200",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "XELODA",
+                    "hcpcs_code": "J2792",
+                    "j_code": "J2792",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "PORTRAZZA",
+                    "hcpcs_code": "J9309",
+                    "j_code": "J9309",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "BALVERSA",
+                    "hcpcs_code": "Q5121",
+                    "j_code": "Q5121",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ENBREL",
+                    "hcpcs_code": "J1438",
+                    "j_code": "J1438",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "RYBREVANT",
+                    "hcpcs_code": "J9061",
+                    "j_code": "J9061",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "SEROSTIM",
+                    "hcpcs_code": "J7352",
+                    "j_code": "J7352",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "DEXTENZA",
+                    "hcpcs_code": "J1190",
+                    "j_code": "J1190",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "CYCLOSPORINE",
+                    "hcpcs_code": "J7515",
+                    "j_code": "J7515",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "MITOXANTRON",
+                    "hcpcs_code": "J9293",
+                    "j_code": "J9293",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "RHOGAM PLUS",
+                    "hcpcs_code": "J2790",
+                    "j_code": "J2790",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "QINLOCK",
+                    "hcpcs_code": "J7639",
+                    "j_code": "J7639",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "FOTIVDA",
+                    "hcpcs_code": "J3110",
+                    "j_code": "J3110",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "INFLECTRA",
+                    "hcpcs_code": "Q5103",
+                    "j_code": "Q5103",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "IMFINZI",
+                    "hcpcs_code": "J9173",
+                    "j_code": "J9173",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "NOVOSEVEN RT",
+                    "hcpcs_code": "J7189",
+                    "j_code": "J7189",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "KALYDECO",
+                    "hcpcs_code": "J1290",
+                    "j_code": "J1290",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "NEORAL",
+                    "hcpcs_code": "J1458",
+                    "j_code": "J1458",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "KUVAN",
+                    "hcpcs_code": "J2507",
+                    "j_code": "J2507",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "BRUKINSA",
+                    "hcpcs_code": "J0567",
+                    "j_code": "J0567",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "TRETTEN",
+                    "hcpcs_code": "J7181",
+                    "j_code": "J7181",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ACTIMMUNE",
+                    "hcpcs_code": "J9216",
+                    "j_code": "J9216",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "BEXAROTENE",
+                    "hcpcs_code": "J1830",
+                    "j_code": "J1830",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "VALSTAR",
+                    "hcpcs_code": "J9357",
+                    "j_code": "J9357",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "EPIDIOLEX",
+                    "hcpcs_code": "J7503",
+                    "j_code": "J7503",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "IDARUBICIN",
+                    "hcpcs_code": "J9211",
+                    "j_code": "J9211",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "STIVARGA",
+                    "hcpcs_code": "J3357",
+                    "j_code": "J3357",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ABECMA",
+                    "hcpcs_code": "Q2055",
+                    "j_code": "Q2055",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "TRIPTODUR",
+                    "hcpcs_code": "J3316",
+                    "j_code": "J3316",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ZOLINZA",
+                    "hcpcs_code": "J3399",
+                    "j_code": "J3399",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "CUTAQUIG",
+                    "hcpcs_code": "J0584",
+                    "j_code": "J0584",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "OGIVRI",
+                    "hcpcs_code": "Q5114",
+                    "j_code": "Q5114",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "BLENREP",
+                    "hcpcs_code": "J9037",
+                    "j_code": "J9037",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "PONVORY",
+                    "hcpcs_code": "J9309",
+                    "j_code": "J9309",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "DAUNORUBICIN",
+                    "hcpcs_code": "J9144",
+                    "j_code": "J9144",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ORENCIA CLCK",
+                    "hcpcs_code": "J0129",
+                    "j_code": "J0129",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "YONDELIS",
+                    "hcpcs_code": "J9352",
+                    "j_code": "J9352",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "REVLIMID",
+                    "hcpcs_code": "S0104",
+                    "j_code": "S0104",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "COPIKTRA",
+                    "hcpcs_code": "J1595",
+                    "j_code": "J1595",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "PEGASYS",
+                    "hcpcs_code": "S0145",
+                    "j_code": "S0145",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "PROLIA",
+                    "hcpcs_code": "J9015",
+                    "j_code": "J9015",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "PARAPLATIN",
+                    "hcpcs_code": "J1640",
+                    "j_code": "J1640",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "BESPONSA",
+                    "hcpcs_code": "J9229",
+                    "j_code": "J9229",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ZYTIGA",
+                    "hcpcs_code": "C9084",
+                    "j_code": "C9084",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ACTEMRA",
+                    "hcpcs_code": "J3262",
+                    "j_code": "J3262",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "IDELVION",
+                    "hcpcs_code": "J7202",
+                    "j_code": "J7202",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "KANUMA",
+                    "hcpcs_code": "J2840",
+                    "j_code": "J2840",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "DROXIDOPA",
+                    "hcpcs_code": "J9000",
+                    "j_code": "J9000",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "TALTZ",
+                    "hcpcs_code": "J0593",
+                    "j_code": "J0593",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "VIMIZIM",
+                    "hcpcs_code": "J1322",
+                    "j_code": "J1322",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "GLEEVEC",
+                    "hcpcs_code": "S0088",
+                    "j_code": "S0088",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ALYQ",
+                    "hcpcs_code": "J7201",
+                    "j_code": "J7201",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "VALCHLOR",
+                    "hcpcs_code": "J1823",
+                    "j_code": "J1823",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "RUXIENCE",
+                    "hcpcs_code": "Q5119",
+                    "j_code": "Q5119",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "RAPAMUNE",
+                    "hcpcs_code": "J1301",
+                    "j_code": "J1301",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "YONSA",
+                    "hcpcs_code": "J9352",
+                    "j_code": "J9352",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "KOATE-DVI",
+                    "hcpcs_code": "J9271",
+                    "j_code": "J9271",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "DYSPORT",
+                    "hcpcs_code": "J0586",
+                    "j_code": "J0586",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "SARCLISA",
+                    "hcpcs_code": "J9227",
+                    "j_code": "J9227",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ORGOVYX",
+                    "hcpcs_code": "J0129",
+                    "j_code": "J0129",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ELZONRIS",
+                    "hcpcs_code": "J9269",
+                    "j_code": "J9269",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "AFINITOR",
+                    "hcpcs_code": "J7207",
+                    "j_code": "J7207",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "GILENYA",
+                    "hcpcs_code": "J7320",
+                    "j_code": "J7320",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "SIGNIFOR",
+                    "hcpcs_code": "J7212",
+                    "j_code": "J7212",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "EXONDYS 51",
+                    "hcpcs_code": "J1428",
+                    "j_code": "J1428",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "KESIMPTA",
+                    "hcpcs_code": "J2425",
+                    "j_code": "J2425",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "RINVOQ",
+                    "hcpcs_code": "J7178",
+                    "j_code": "J7178",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "MONOVISC",
+                    "hcpcs_code": "J7327",
+                    "j_code": "J7327",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "MYCOPHENOLIC",
+                    "hcpcs_code": "J7517",
+                    "j_code": "J7517",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "BETHKIS",
+                    "hcpcs_code": "J1830",
+                    "j_code": "J1830",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "EGRIFTA SV",
+                    "hcpcs_code": "J0586",
+                    "j_code": "J0586",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "STELARA",
+                    "hcpcs_code": "S0013",
+                    "j_code": "S0013",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "COSMEGEN",
+                    "hcpcs_code": "J9120",
+                    "j_code": "J9120",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ZYNLONTA",
+                    "hcpcs_code": "C9084",
+                    "j_code": "C9084",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ISTODAX OVR",
+                    "hcpcs_code": "J9319",
+                    "j_code": "J9319",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "NEXVIAZYME",
+                    "hcpcs_code": "C9085",
+                    "j_code": "C9085",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "OPZELURA",
+                    "hcpcs_code": "J9299",
+                    "j_code": "J9299",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "BRAFTOVI",
+                    "hcpcs_code": "J0585",
+                    "j_code": "J0585",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "UPTRAVI",
+                    "hcpcs_code": "J1823",
+                    "j_code": "J1823",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "SKYRIZI",
+                    "hcpcs_code": "J7520",
+                    "j_code": "J7520",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "MEKTOVI",
+                    "hcpcs_code": "J9353",
+                    "j_code": "J9353",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "VYNDAQEL",
+                    "hcpcs_code": "J3032",
+                    "j_code": "J3032",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ESBRIET",
+                    "hcpcs_code": "J9019",
+                    "j_code": "J9019",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "SABRIL",
+                    "hcpcs_code": "J9021",
+                    "j_code": "J9021",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ARANESP",
+                    "hcpcs_code": "J0882",
+                    "j_code": "J0882",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ETOPOSIDE",
+                    "hcpcs_code": "J9181",
+                    "j_code": "J9181",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "TEPEZZA",
+                    "hcpcs_code": "J3241",
+                    "j_code": "J3241",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "REVCOVI",
+                    "hcpcs_code": "S0104",
+                    "j_code": "S0104",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "OCTREOTIDE",
+                    "hcpcs_code": "J1568",
+                    "j_code": "J1568",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ETOPOPHOS",
+                    "hcpcs_code": "J0207",
+                    "j_code": "J0207",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ORENITRAM",
+                    "hcpcs_code": "J0129",
+                    "j_code": "J0129",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "TRODELVY",
+                    "hcpcs_code": "J9317",
+                    "j_code": "J9317",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "HEPSERA",
+                    "hcpcs_code": "J7199",
+                    "j_code": "J7199",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "PACLITAXEL",
+                    "hcpcs_code": "J9265",
+                    "j_code": "J9265",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "DOXIL",
+                    "hcpcs_code": "Q2050",
+                    "j_code": "Q2050",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "TUKYSA",
+                    "hcpcs_code": "Q5115",
+                    "j_code": "Q5115",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "PROLASTIN-C",
+                    "hcpcs_code": "J0886",
+                    "j_code": "J0886",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "AFINITOR DIS",
+                    "hcpcs_code": "J7207",
+                    "j_code": "J7207",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "XYNTHA",
+                    "hcpcs_code": "J7185",
+                    "j_code": "J7185",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ONCASPAR",
+                    "hcpcs_code": "J9266",
+                    "j_code": "J9266",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "POLIVY",
+                    "hcpcs_code": "J9309",
+                    "j_code": "J9309",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "VINORELBINE",
+                    "hcpcs_code": "J9390",
+                    "j_code": "J9390",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ELLENCE",
+                    "hcpcs_code": "J3060",
+                    "j_code": "J3060",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "HYQVIA",
+                    "hcpcs_code": "J1575",
+                    "j_code": "J1575",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "OXALIPLATIN",
+                    "hcpcs_code": "J9263",
+                    "j_code": "J9263",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "DALFAMPRIDIN",
+                    "hcpcs_code": "J0894",
+                    "j_code": "J0894",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "LUPR DEP-PED",
+                    "hcpcs_code": "J9313",
+                    "j_code": "J9313",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ORENCIA",
+                    "hcpcs_code": "J0129",
+                    "j_code": "J0129",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "TREPROSTINIL",
+                    "hcpcs_code": "J1628",
+                    "j_code": "J1628",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "OXBRYTA",
+                    "hcpcs_code": "J9263",
+                    "j_code": "J9263",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "FEIBA",
+                    "hcpcs_code": "J7198",
+                    "j_code": "J7198",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ABRAXANE",
+                    "hcpcs_code": "J9264",
+                    "j_code": "J9264",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "SIMPONI",
+                    "hcpcs_code": "J2502",
+                    "j_code": "J2502",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "VIVITROL",
+                    "hcpcs_code": "J2315",
+                    "j_code": "J2315",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "COSELA",
+                    "hcpcs_code": "J1448",
+                    "j_code": "J1448",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "FOLOTYN",
+                    "hcpcs_code": "J9307",
+                    "j_code": "J9307",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "TURALIO",
+                    "hcpcs_code": "Q5115",
+                    "j_code": "Q5115",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "CETROTIDE",
+                    "hcpcs_code": "A9591",
+                    "j_code": "A9591",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "TOPOSAR",
+                    "hcpcs_code": "J7682",
+                    "j_code": "J7682",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "HAEGARDA",
+                    "hcpcs_code": "J0599",
+                    "j_code": "J0599",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "TYVASO",
+                    "hcpcs_code": "J7686",
+                    "j_code": "J7686",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "LEDIP-SOFOSB",
+                    "hcpcs_code": "J9285",
+                    "j_code": "J9285",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "GEMCITABINE",
+                    "hcpcs_code": "J9201",
+                    "j_code": "J9201",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "WELIREG",
+                    "hcpcs_code": "J9153",
+                    "j_code": "J9153",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "KYNMOBI",
+                    "hcpcs_code": "Q2042",
+                    "j_code": "Q2042",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ELAPRASE",
+                    "hcpcs_code": "J1743",
+                    "j_code": "J1743",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "NUBEQA",
+                    "hcpcs_code": "J2796",
+                    "j_code": "J2796",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "LUMIZYME",
+                    "hcpcs_code": "J0221",
+                    "j_code": "J0221",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "BARACLUDE",
+                    "hcpcs_code": "Q5121",
+                    "j_code": "Q5121",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "WINRHO SDF",
+                    "hcpcs_code": "J2792",
+                    "j_code": "J2792",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "AFSTYLA",
+                    "hcpcs_code": "J7210",
+                    "j_code": "J7210",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "SAMSCA",
+                    "hcpcs_code": "J9021",
+                    "j_code": "J9021",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "BOTOX",
+                    "hcpcs_code": "J0585",
+                    "j_code": "J0585",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "TAGRISSO",
+                    "hcpcs_code": "J7525",
+                    "j_code": "J7525",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "THIOTEPA",
+                    "hcpcs_code": "J9340",
+                    "j_code": "J9340",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "BENEFIX",
+                    "hcpcs_code": "J9034",
+                    "j_code": "J9034",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "OCREVUS",
+                    "hcpcs_code": "J2350",
+                    "j_code": "J2350",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "VISUDYNE",
+                    "hcpcs_code": "J3396",
+                    "j_code": "J3396",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "SIGNIFOR LAR",
+                    "hcpcs_code": "J2502",
+                    "j_code": "J2502",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "CINRYZE",
+                    "hcpcs_code": "J0598",
+                    "j_code": "J0598",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ZANOSAR",
+                    "hcpcs_code": "J9320",
+                    "j_code": "J9320",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "CYCLOPHOSPH",
+                    "hcpcs_code": "J1555",
+                    "j_code": "J1555",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ARSENIC TRIO",
+                    "hcpcs_code": "J9261",
+                    "j_code": "J9261",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ZEPOSIA 7DAY",
+                    "hcpcs_code": "Q5101",
+                    "j_code": "Q5101",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "GRANIX",
+                    "hcpcs_code": "J1447",
+                    "j_code": "J1447",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "FASENRA",
+                    "hcpcs_code": "J0517",
+                    "j_code": "J0517",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "BERINERT",
+                    "hcpcs_code": "J0597",
+                    "j_code": "J0597",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "GENOTROPIN",
+                    "hcpcs_code": "J2941",
+                    "j_code": "J2941",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "LOVENOX",
+                    "hcpcs_code": "Q2049",
+                    "j_code": "Q2049",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "TRISENOX",
+                    "hcpcs_code": "J9017",
+                    "j_code": "J9017",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "HEMLIBRA",
+                    "hcpcs_code": "Q9995",
+                    "j_code": "Q9995",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "PANZYGA",
+                    "hcpcs_code": "J1640",
+                    "j_code": "J1640",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "INGREZZA",
+                    "hcpcs_code": "J9198",
+                    "j_code": "J9198",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "INFUGEM",
+                    "hcpcs_code": "J9198",
+                    "j_code": "J9198",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "COMETRIQ",
+                    "hcpcs_code": "J7175",
+                    "j_code": "J7175",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "HYMOVIS",
+                    "hcpcs_code": "J7322",
+                    "j_code": "J7322",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "TOBI PODHALR",
+                    "hcpcs_code": "J3240",
+                    "j_code": "J3240",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "JEVTANA",
+                    "hcpcs_code": "J9043",
+                    "j_code": "J9043",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ZEJULA",
+                    "hcpcs_code": "Q5101",
+                    "j_code": "Q5101",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "AMONDYS 45",
+                    "hcpcs_code": "C9075",
+                    "j_code": "C9075",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "PLEGRIDY",
+                    "hcpcs_code": "J2787",
+                    "j_code": "J2787",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "HERCEPTIN",
+                    "hcpcs_code": "J9355",
+                    "j_code": "J9355",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ALPHANATE",
+                    "hcpcs_code": "J7186",
+                    "j_code": "J7186",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "HUMIRA PEDIA",
+                    "hcpcs_code": "J0135",
+                    "j_code": "J0135",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "CEREZYME",
+                    "hcpcs_code": "J1786",
+                    "j_code": "J1786",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "RADICAVA",
+                    "hcpcs_code": "J1301",
+                    "j_code": "J1301",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "PENICILLAMIN",
+                    "hcpcs_code": "J9304",
+                    "j_code": "J9304",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "OPDIVO",
+                    "hcpcs_code": "J9299",
+                    "j_code": "J9299",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ENTECAVIR",
+                    "hcpcs_code": "J1438",
+                    "j_code": "J1438",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "FABRAZYME",
+                    "hcpcs_code": "J0180",
+                    "j_code": "J0180",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "REMICADE",
+                    "hcpcs_code": "J1745",
+                    "j_code": "J1745",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "SAPROPTERIN",
+                    "hcpcs_code": "C9086",
+                    "j_code": "C9086",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "FULVESTRANT",
+                    "hcpcs_code": "Q5108",
+                    "j_code": "Q5108",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "GAZYVA",
+                    "hcpcs_code": "J9301",
+                    "j_code": "J9301",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "GALAFOLD",
+                    "hcpcs_code": "J1324",
+                    "j_code": "J1324",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ZOLEDRONIC",
+                    "hcpcs_code": "J9202",
+                    "j_code": "J9202",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "TRAZIMERA",
+                    "hcpcs_code": "Q5116",
+                    "j_code": "Q5116",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "TOBRAMYCIN",
+                    "hcpcs_code": "J7682",
+                    "j_code": "J7682",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "YUTIQ",
+                    "hcpcs_code": "J7314",
+                    "j_code": "J7314",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ZEPOSIA",
+                    "hcpcs_code": "Q5101",
+                    "j_code": "Q5101",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "DECITABINE",
+                    "hcpcs_code": "J9151",
+                    "j_code": "J9151",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "NULIBRY",
+                    "hcpcs_code": "J2182",
+                    "j_code": "J2182",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "AVONEX PEN",
+                    "hcpcs_code": "Q3027",
+                    "j_code": "Q3027",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ZEVALIN",
+                    "hcpcs_code": "A9543",
+                    "j_code": "A9543",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "REBLOZYL",
+                    "hcpcs_code": "J0896",
+                    "j_code": "J0896",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "NUCALA",
+                    "hcpcs_code": "J2182",
+                    "j_code": "J2182",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "TYKERB",
+                    "hcpcs_code": "Q5115",
+                    "j_code": "Q5115",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ADVATE",
+                    "hcpcs_code": "J7192",
+                    "j_code": "J7192",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "PROFILNINE",
+                    "hcpcs_code": "J0886",
+                    "j_code": "J0886",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "XENAZINE",
+                    "hcpcs_code": "J1558",
+                    "j_code": "J1558",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "SYMDEKO",
+                    "hcpcs_code": "J2860",
+                    "j_code": "J2860",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "OBIZUR",
+                    "hcpcs_code": "J7188",
+                    "j_code": "J7188",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "TABRECTA",
+                    "hcpcs_code": "J7325",
+                    "j_code": "J7325",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "RIDAURA",
+                    "hcpcs_code": "J7178",
+                    "j_code": "J7178",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ENSPRYNG",
+                    "hcpcs_code": "J1438",
+                    "j_code": "J1438",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "FLOLAN",
+                    "hcpcs_code": "J1572",
+                    "j_code": "J1572",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "EPCLUSA",
+                    "hcpcs_code": "J7503",
+                    "j_code": "J7503",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "RYLAZE",
+                    "hcpcs_code": "J9021",
+                    "j_code": "J9021",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ALUNBRIG",
+                    "hcpcs_code": "J7201",
+                    "j_code": "J7201",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "KISQALI 600",
+                    "hcpcs_code": "J9271",
+                    "j_code": "J9271",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "TYVASO REFIL",
+                    "hcpcs_code": "J7686",
+                    "j_code": "J7686",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ILARIS",
+                    "hcpcs_code": "J0638",
+                    "j_code": "J0638",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ICATIBANT",
+                    "hcpcs_code": "J1575",
+                    "j_code": "J1575",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "LIBTAYO",
+                    "hcpcs_code": "J9119",
+                    "j_code": "J9119",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "FULPHILA",
+                    "hcpcs_code": "Q5108",
+                    "j_code": "Q5108",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "VECTIBIX",
+                    "hcpcs_code": "J9225",
+                    "j_code": "J9225",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "REMODULIN",
+                    "hcpcs_code": "J3285",
+                    "j_code": "J3285",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "TASIGNA",
+                    "hcpcs_code": "J0593",
+                    "j_code": "J0593",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "TECARTUS",
+                    "hcpcs_code": "Q2053",
+                    "j_code": "Q2053",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "FONDAPARINUX",
+                    "hcpcs_code": "J9307",
+                    "j_code": "J9307",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "THYROGEN",
+                    "hcpcs_code": "J3240",
+                    "j_code": "J3240",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "SPINRAZA",
+                    "hcpcs_code": "J2326",
+                    "j_code": "J2326",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "VITRAKVI",
+                    "hcpcs_code": "J3396",
+                    "j_code": "J3396",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "VYNDAMAX",
+                    "hcpcs_code": "J3032",
+                    "j_code": "J3032",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "SUBLOCADE",
+                    "hcpcs_code": "Q9992",
+                    "j_code": "Q9992",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "EYLEA",
+                    "hcpcs_code": "J0178",
+                    "j_code": "J0178",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ASCENIV",
+                    "hcpcs_code": "J1554",
+                    "j_code": "J1554",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "XYWAV",
+                    "hcpcs_code": "J7185",
+                    "j_code": "J7185",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "VOTRIENT",
+                    "hcpcs_code": "J7179",
+                    "j_code": "J7179",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "TETRABENAZIN",
+                    "hcpcs_code": "J3241",
+                    "j_code": "J3241",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "OLUMIANT",
+                    "hcpcs_code": "Q5114",
+                    "j_code": "Q5114",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ONUREG",
+                    "hcpcs_code": "Q5112",
+                    "j_code": "Q5112",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "TEPADINA",
+                    "hcpcs_code": "Q2017",
+                    "j_code": "Q2017",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ZALTRAP",
+                    "hcpcs_code": "J9400",
+                    "j_code": "J9400",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "BRINEURA",
+                    "hcpcs_code": "J0567",
+                    "j_code": "J0567",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "TIVDAK",
+                    "hcpcs_code": "J3240",
+                    "j_code": "J3240",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "LUMOXITI",
+                    "hcpcs_code": "J9313",
+                    "j_code": "J9313",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "OMNITROPE",
+                    "hcpcs_code": "Q5114",
+                    "j_code": "Q5114",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "CELLCEPT",
+                    "hcpcs_code": "J7699",
+                    "j_code": "J7699",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "GAMUNEX-C",
+                    "hcpcs_code": "J1561",
+                    "j_code": "J1561",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "TORISEL",
+                    "hcpcs_code": "J9330",
+                    "j_code": "J9330",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "CINQAIR",
+                    "hcpcs_code": "J2786",
+                    "j_code": "J2786",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "MYCOPHENOLAT",
+                    "hcpcs_code": "Q5107",
+                    "j_code": "Q5107",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "CARBOPLATIN",
+                    "hcpcs_code": "J9045",
+                    "j_code": "J9045",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "SKYTROFA",
+                    "hcpcs_code": "J7520",
+                    "j_code": "J7520",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "HETLIOZ",
+                    "hcpcs_code": "Q5113",
+                    "j_code": "Q5113",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "BOSULIF",
+                    "hcpcs_code": "J9039",
+                    "j_code": "J9039",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "SIROLIMUS",
+                    "hcpcs_code": "J7520",
+                    "j_code": "J7520",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "CARMUSTINE",
+                    "hcpcs_code": "J9045",
+                    "j_code": "J9045",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ENVARSUS XR",
+                    "hcpcs_code": "J7503",
+                    "j_code": "J7503",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "VOSEVI",
+                    "hcpcs_code": "J7179",
+                    "j_code": "J7179",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "TERIPARATIDE",
+                    "hcpcs_code": "J3241",
+                    "j_code": "J3241",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "FIRDAPSE",
+                    "hcpcs_code": "J1744",
+                    "j_code": "J1744",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "UPLIZNA",
+                    "hcpcs_code": "J1823",
+                    "j_code": "J1823",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "TECENTRIQ",
+                    "hcpcs_code": "J9022",
+                    "j_code": "J9022",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "HUMATE-P",
+                    "hcpcs_code": "J7187",
+                    "j_code": "J7187",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "TADALAFIL",
+                    "hcpcs_code": "J7525",
+                    "j_code": "J7525",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "TRACLEER",
+                    "hcpcs_code": "J9330",
+                    "j_code": "J9330",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "MAYZENT",
+                    "hcpcs_code": "J9353",
+                    "j_code": "J9353",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "SUTENT",
+                    "hcpcs_code": "J9226",
+                    "j_code": "J9226",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "TRETINOIN",
+                    "hcpcs_code": "J1628",
+                    "j_code": "J1628",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "PALYNZIQ",
+                    "hcpcs_code": "J9267",
+                    "j_code": "J9267",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "GLASSIA",
+                    "hcpcs_code": "J0257",
+                    "j_code": "J0257",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "CELLCEPT IV",
+                    "hcpcs_code": "J7599",
+                    "j_code": "J7599",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "EUFLEXXA",
+                    "hcpcs_code": "J7323",
+                    "j_code": "J7323",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "KYPROLIS",
+                    "hcpcs_code": "J9047",
+                    "j_code": "J9047",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "CAPECITABINE",
+                    "hcpcs_code": "J8521",
+                    "j_code": "J8521",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "HERCEP HYLEC",
+                    "hcpcs_code": "J7199",
+                    "j_code": "J7199",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "SYLVANT",
+                    "hcpcs_code": "J2860",
+                    "j_code": "J2860",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "LUPRON DEPOT",
+                    "hcpcs_code": "J9313",
+                    "j_code": "J9313",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ORKAMBI",
+                    "hcpcs_code": "J0129",
+                    "j_code": "J0129",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "MATULANE",
+                    "hcpcs_code": "J9353",
+                    "j_code": "J9353",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "DACOGEN",
+                    "hcpcs_code": "J0894",
+                    "j_code": "J0894",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "BELEODAQ",
+                    "hcpcs_code": "J9032",
+                    "j_code": "J9032",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "PLEGRIDY PEN",
+                    "hcpcs_code": "J2787",
+                    "j_code": "J2787",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "BETASERON",
+                    "hcpcs_code": "J9229",
+                    "j_code": "J9229",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "VELCADE",
+                    "hcpcs_code": "J9044",
+                    "j_code": "J9044",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "RAVICTI",
+                    "hcpcs_code": "J1301",
+                    "j_code": "J1301",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "GENVISC 850",
+                    "hcpcs_code": "J7320",
+                    "j_code": "J7320",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "OPSUMIT",
+                    "hcpcs_code": "J9299",
+                    "j_code": "J9299",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "VALRUBICIN",
+                    "hcpcs_code": "J1823",
+                    "j_code": "J1823",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "SYNVISC ONE",
+                    "hcpcs_code": "J7325",
+                    "j_code": "J7325",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "CABOMETYX",
+                    "hcpcs_code": "J0741",
+                    "j_code": "J0741",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ISTURISA",
+                    "hcpcs_code": "J9319",
+                    "j_code": "J9319",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "REVATIO",
+                    "hcpcs_code": "S0104",
+                    "j_code": "S0104",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "INFLIXIMAB",
+                    "hcpcs_code": "Q5103",
+                    "j_code": "Q5103",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "PROGRAF",
+                    "hcpcs_code": "J0886",
+                    "j_code": "J0886",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ZORTRESS",
+                    "hcpcs_code": "J3399",
+                    "j_code": "J3399",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "SOMAVERT",
+                    "hcpcs_code": "J1930",
+                    "j_code": "J1930",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "SAPHNELO",
+                    "hcpcs_code": "C9086",
+                    "j_code": "C9086",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "LUPKYNIS",
+                    "hcpcs_code": "J9313",
+                    "j_code": "J9313",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "YERVOY",
+                    "hcpcs_code": "J9228",
+                    "j_code": "J9228",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "CLOFARABINE",
+                    "hcpcs_code": "J9027",
+                    "j_code": "J9027",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ARCALYST",
+                    "hcpcs_code": "J2793",
+                    "j_code": "J2793",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ADYNOVATE",
+                    "hcpcs_code": "J7207",
+                    "j_code": "J7207",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "FORTEO",
+                    "hcpcs_code": "J3110",
+                    "j_code": "J3110",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ZIEXTENZO",
+                    "hcpcs_code": "Q5120",
+                    "j_code": "Q5120",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "REBINYN",
+                    "hcpcs_code": "J7203",
+                    "j_code": "J7203",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "TICE BCG",
+                    "hcpcs_code": "J3240",
+                    "j_code": "J3240",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "NPLATE",
+                    "hcpcs_code": "J2796",
+                    "j_code": "J2796",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ZEMAIRA",
+                    "hcpcs_code": "Q5101",
+                    "j_code": "Q5101",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ORLADEYO",
+                    "hcpcs_code": "J0129",
+                    "j_code": "J0129",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ADAKVEO",
+                    "hcpcs_code": "J0791",
+                    "j_code": "J0791",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "MULPLETA",
+                    "hcpcs_code": "J2562",
+                    "j_code": "J2562",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "FLEBOGAMMA",
+                    "hcpcs_code": "J1572",
+                    "j_code": "J1572",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "DUROLANE",
+                    "hcpcs_code": "J7318",
+                    "j_code": "J7318",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "NELARABINE",
+                    "hcpcs_code": "J1458",
+                    "j_code": "J1458",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "XERMELO",
+                    "hcpcs_code": "J0588",
+                    "j_code": "J0588",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "INBRIJA",
+                    "hcpcs_code": "J1599",
+                    "j_code": "J1599",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "SIMPONI ARIA",
+                    "hcpcs_code": "J1602",
+                    "j_code": "J1602",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "HUMIRA PEN",
+                    "hcpcs_code": "J0135",
+                    "j_code": "J0135",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "CYTARABINE",
+                    "hcpcs_code": "J9100",
+                    "j_code": "J9100",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "EMPLICITI",
+                    "hcpcs_code": "J9269",
+                    "j_code": "J9269",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "HALAVEN",
+                    "hcpcs_code": "J9179",
+                    "j_code": "J9179",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "BYLVAY",
+                    "hcpcs_code": "J0567",
+                    "j_code": "J0567",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "NEXAVAR",
+                    "hcpcs_code": "J1442",
+                    "j_code": "J1442",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "CERDELGA",
+                    "hcpcs_code": "J2724",
+                    "j_code": "J2724",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ESPEROCT",
+                    "hcpcs_code": "J7204",
+                    "j_code": "J7204",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "EXTAVIA",
+                    "hcpcs_code": "J1428",
+                    "j_code": "J1428",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "TRIVISC",
+                    "hcpcs_code": "J7329",
+                    "j_code": "J7329",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "GIVLAARI",
+                    "hcpcs_code": "J0223",
+                    "j_code": "J0223",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ICLUSIG",
+                    "hcpcs_code": "J1575",
+                    "j_code": "J1575",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ZYDELIG",
+                    "hcpcs_code": "J1632",
+                    "j_code": "J1632",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "BESREMI",
+                    "hcpcs_code": "J9229",
+                    "j_code": "J9229",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "AVONEX PREFL",
+                    "hcpcs_code": "Q3027",
+                    "j_code": "Q3027",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "CAMPTOSAR",
+                    "hcpcs_code": "J1952",
+                    "j_code": "J1952",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "MOZOBIL",
+                    "hcpcs_code": "J2562",
+                    "j_code": "J2562",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "REBIF",
+                    "hcpcs_code": "Q3028",
+                    "j_code": "Q3028",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "RUZURGI",
+                    "hcpcs_code": "Q5119",
+                    "j_code": "Q5119",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "VYXEOS",
+                    "hcpcs_code": "J9153",
+                    "j_code": "J9153",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ELIGARD",
+                    "hcpcs_code": "J3060",
+                    "j_code": "J3060",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "HETLIOZ LQ",
+                    "hcpcs_code": "Q5113",
+                    "j_code": "Q5113",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "PAMIDRONATE",
+                    "hcpcs_code": "J2430",
+                    "j_code": "J2430",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "BENDEKA",
+                    "hcpcs_code": "J9034",
+                    "j_code": "J9034",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "TRELSTAR MIX",
+                    "hcpcs_code": "J3315",
+                    "j_code": "J3315",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "AUBAGIO",
+                    "hcpcs_code": "J7504",
+                    "j_code": "J7504",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "BENLYSTA",
+                    "hcpcs_code": "J0490",
+                    "j_code": "J0490",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "HYPERRHO S/D",
+                    "hcpcs_code": "J2788",
+                    "j_code": "J2788",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "DANYELZA",
+                    "hcpcs_code": "J9348",
+                    "j_code": "J9348",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "TAVNEOS",
+                    "hcpcs_code": "J0593",
+                    "j_code": "J0593",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "RETACRIT",
+                    "hcpcs_code": "Q5106",
+                    "j_code": "Q5106",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "KADCYLA",
+                    "hcpcs_code": "J9354",
+                    "j_code": "J9354",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "KANJINTI",
+                    "hcpcs_code": "Q5117",
+                    "j_code": "Q5117",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "CAYSTON",
+                    "hcpcs_code": "J7699",
+                    "j_code": "J7699",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "SUNITINIB",
+                    "hcpcs_code": "Q9992",
+                    "j_code": "Q9992",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "NEUPOGEN",
+                    "hcpcs_code": "J1442",
+                    "j_code": "J1442",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "KOVALTRY",
+                    "hcpcs_code": "J7211",
+                    "j_code": "J7211",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "VINCRISTINE",
+                    "hcpcs_code": "J9375",
+                    "j_code": "J9375",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "FIRMAGON",
+                    "hcpcs_code": "J9155",
+                    "j_code": "J9155",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "TAZVERIK",
+                    "hcpcs_code": "J0593",
+                    "j_code": "J0593",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "HYDROXYPROG",
+                    "hcpcs_code": "J8705",
+                    "j_code": "J8705",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "MYLOTARG",
+                    "hcpcs_code": "J9203",
+                    "j_code": "J9203",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "VIDAZA",
+                    "hcpcs_code": "J9025",
+                    "j_code": "J9025",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "PRIVIGEN",
+                    "hcpcs_code": "J1459",
+                    "j_code": "J1459",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "IMLYGIC",
+                    "hcpcs_code": "J9325",
+                    "j_code": "J9325",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ATGAM",
+                    "hcpcs_code": "J7504",
+                    "j_code": "J7504",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "TECFIDERA",
+                    "hcpcs_code": "J9022",
+                    "j_code": "J9022",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ACTHAR",
+                    "hcpcs_code": "J3262",
+                    "j_code": "J3262",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "HEMOFIL M",
+                    "hcpcs_code": "Q9995",
+                    "j_code": "Q9995",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "CORTROPHIN",
+                    "hcpcs_code": "J7180",
+                    "j_code": "J7180",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "HYDROXY CAPR",
+                    "hcpcs_code": "J8705",
+                    "j_code": "J8705",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "TIGLUTIK",
+                    "hcpcs_code": "J3240",
+                    "j_code": "J3240",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "PANHEMATIN",
+                    "hcpcs_code": "J1640",
+                    "j_code": "J1640",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "VIZIMPRO",
+                    "hcpcs_code": "J2315",
+                    "j_code": "J2315",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "NAGLAZYME",
+                    "hcpcs_code": "J1458",
+                    "j_code": "J1458",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "LONSURF",
+                    "hcpcs_code": "Q2049",
+                    "j_code": "Q2049",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "SILIQ",
+                    "hcpcs_code": "J2502",
+                    "j_code": "J2502",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ERWINASE",
+                    "hcpcs_code": "J9055",
+                    "j_code": "J9055",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "VENCLEXTA",
+                    "hcpcs_code": "J9044",
+                    "j_code": "J9044",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "GLATIRAMER",
+                    "hcpcs_code": "J0257",
+                    "j_code": "J0257",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "FLUOROURACIL",
+                    "hcpcs_code": "J9190",
+                    "j_code": "J9190",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ALDURAZYME",
+                    "hcpcs_code": "J1931",
+                    "j_code": "J1931",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "REZUROCK",
+                    "hcpcs_code": "S0104",
+                    "j_code": "S0104",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "FENSOLVI",
+                    "hcpcs_code": "J1951",
+                    "j_code": "J1951",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "TYVASO START",
+                    "hcpcs_code": "J7686",
+                    "j_code": "J7686",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "BUSULFEX",
+                    "hcpcs_code": "J0567",
+                    "j_code": "J0567",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "GANIRELIX AC",
+                    "hcpcs_code": "S0132",
+                    "j_code": "S0132",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "XIAFLEX",
+                    "hcpcs_code": "J0775",
+                    "j_code": "J0775",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "HERZUMA",
+                    "hcpcs_code": "Q5113",
+                    "j_code": "Q5113",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ZELBORAF",
+                    "hcpcs_code": "Q5101",
+                    "j_code": "Q5101",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "KISQALI 400",
+                    "hcpcs_code": "J9271",
+                    "j_code": "J9271",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "UDENYCA",
+                    "hcpcs_code": "Q5111",
+                    "j_code": "Q5111",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "TAKHZYRO",
+                    "hcpcs_code": "J0593",
+                    "j_code": "J0593",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "WILATE",
+                    "hcpcs_code": "J7183",
+                    "j_code": "J7183",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "TYSABRI",
+                    "hcpcs_code": "J2323",
+                    "j_code": "J2323",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "OVIDREL",
+                    "hcpcs_code": "J7324",
+                    "j_code": "J7324",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "NIPENT",
+                    "hcpcs_code": "J9268",
+                    "j_code": "J9268",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "TRILURON",
+                    "hcpcs_code": "J7332",
+                    "j_code": "J7332",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "YESCARTA",
+                    "hcpcs_code": "Q2041",
+                    "j_code": "Q2041",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ENOXAPARIN",
+                    "hcpcs_code": "J1438",
+                    "j_code": "J1438",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ADCETRIS",
+                    "hcpcs_code": "J9042",
+                    "j_code": "J9042",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "DIACOMIT",
+                    "hcpcs_code": "J1190",
+                    "j_code": "J1190",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "CLOLAR",
+                    "hcpcs_code": "J9027",
+                    "j_code": "J9027",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "THALOMID",
+                    "hcpcs_code": "J3241",
+                    "j_code": "J3241",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "VINBLASTINE",
+                    "hcpcs_code": "J9360",
+                    "j_code": "J9360",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "CYTOGAM",
+                    "hcpcs_code": "J0850",
+                    "j_code": "J0850",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "LIVMARLI",
+                    "hcpcs_code": "Q2049",
+                    "j_code": "Q2049",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "CYSTAGON",
+                    "hcpcs_code": "J9308",
+                    "j_code": "J9308",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "CAPRELSA",
+                    "hcpcs_code": "J8521",
+                    "j_code": "J8521",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ADEMPAS",
+                    "hcpcs_code": "J9042",
+                    "j_code": "J9042",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "BELRAPZO",
+                    "hcpcs_code": "J9036",
+                    "j_code": "J9036",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "SUSVIMO",
+                    "hcpcs_code": "J9226",
+                    "j_code": "J9226",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "VILTEPSO",
+                    "hcpcs_code": "J1427",
+                    "j_code": "J1427",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "KINERET",
+                    "hcpcs_code": "J9271",
+                    "j_code": "J9271",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "BOSENTAN",
+                    "hcpcs_code": "J9039",
+                    "j_code": "J9039",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "REBIF REBIDO",
+                    "hcpcs_code": "Q3028",
+                    "j_code": "Q3028",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "SAIZEN",
+                    "hcpcs_code": "J9021",
+                    "j_code": "J9021",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ORFADIN",
+                    "hcpcs_code": "J0129",
+                    "j_code": "J0129",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "SEVENFACT",
+                    "hcpcs_code": "J7212",
+                    "j_code": "J7212",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "MVASI",
+                    "hcpcs_code": "Q5107",
+                    "j_code": "Q5107",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "NITISINONE",
+                    "hcpcs_code": "J9268",
+                    "j_code": "J9268",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "VIGADRONE",
+                    "hcpcs_code": "J9025",
+                    "j_code": "J9025",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "MAKENA",
+                    "hcpcs_code": "J1726",
+                    "j_code": "J1726",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "GATTEX",
+                    "hcpcs_code": "S0132",
+                    "j_code": "S0132",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "OXLUMO",
+                    "hcpcs_code": "J0224",
+                    "j_code": "J0224",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "CYSTARAN",
+                    "hcpcs_code": "J9308",
+                    "j_code": "J9308",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "GILOTRIF",
+                    "hcpcs_code": "J7320",
+                    "j_code": "J7320",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "XELJANZ XR",
+                    "hcpcs_code": "J2792",
+                    "j_code": "J2792",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ORTHOVISC",
+                    "hcpcs_code": "J7324",
+                    "j_code": "J7324",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "OXERVATE",
+                    "hcpcs_code": "J9263",
+                    "j_code": "J9263",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "KRYSTEXXA",
+                    "hcpcs_code": "J2507",
+                    "j_code": "J2507",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "DACTINOMYCIN",
+                    "hcpcs_code": "J0894",
+                    "j_code": "J0894",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ARZERRA",
+                    "hcpcs_code": "J9302",
+                    "j_code": "J9302",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "PEMAZYRE",
+                    "hcpcs_code": "S0148",
+                    "j_code": "S0148",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "FINTEPLA",
+                    "hcpcs_code": "J7177",
+                    "j_code": "J7177",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "DAURISMO",
+                    "hcpcs_code": "J9151",
+                    "j_code": "J9151",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "EPOGEN",
+                    "hcpcs_code": "J0885",
+                    "j_code": "J0885",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "NERLYNX",
+                    "hcpcs_code": "J1458",
+                    "j_code": "J1458",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "HYCAMTIN",
+                    "hcpcs_code": "J8705",
+                    "j_code": "J8705",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ALPROLIX",
+                    "hcpcs_code": "J7201",
+                    "j_code": "J7201",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "MEKINIST",
+                    "hcpcs_code": "J9353",
+                    "j_code": "J9353",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "CARBAGLU",
+                    "hcpcs_code": "J8521",
+                    "j_code": "J8521",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "PHENYLBUTYRA",
+                    "hcpcs_code": "J9306",
+                    "j_code": "J9306",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "FRAGMIN",
+                    "hcpcs_code": "J3110",
+                    "j_code": "J3110",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "TOLVAPTAN",
+                    "hcpcs_code": "J7682",
+                    "j_code": "J7682",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "LUXTURNA",
+                    "hcpcs_code": "J3398",
+                    "j_code": "J3398",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "SCENESSE",
+                    "hcpcs_code": "J7352",
+                    "j_code": "J7352",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "RYDAPT",
+                    "hcpcs_code": "J9061",
+                    "j_code": "J9061",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "MYOBLOC",
+                    "hcpcs_code": "J0587",
+                    "j_code": "J0587",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "PADCEV",
+                    "hcpcs_code": "J9267",
+                    "j_code": "J9267",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "BOTOX COSMET",
+                    "hcpcs_code": "J0585",
+                    "j_code": "J0585",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "TIBSOVO",
+                    "hcpcs_code": "J3240",
+                    "j_code": "J3240",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "DOXORUBICIN",
+                    "hcpcs_code": "Q2050",
+                    "j_code": "Q2050",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "WAKIX",
+                    "hcpcs_code": "J9153",
+                    "j_code": "J9153",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "AZACITIDINE",
+                    "hcpcs_code": "Q5121",
+                    "j_code": "Q5121",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "NUWIQ",
+                    "hcpcs_code": "J7209",
+                    "j_code": "J7209",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "SCEMBLIX",
+                    "hcpcs_code": "J9227",
+                    "j_code": "J9227",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "RIXUBIS",
+                    "hcpcs_code": "J7200",
+                    "j_code": "J7200",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "OFEV",
+                    "hcpcs_code": "J1568",
+                    "j_code": "J1568",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "MONONINE",
+                    "hcpcs_code": "J1437",
+                    "j_code": "J1437",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ERLEADA",
+                    "hcpcs_code": "J9055",
+                    "j_code": "J9055",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "MENOPUR",
+                    "hcpcs_code": "S0122",
+                    "j_code": "S0122",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "CEPROTIN",
+                    "hcpcs_code": "J2724",
+                    "j_code": "J2724",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "EVOMELA",
+                    "hcpcs_code": "J1305",
+                    "j_code": "J1305",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "DARZALEX",
+                    "hcpcs_code": "J9145",
+                    "j_code": "J9145",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "XOLAIR",
+                    "hcpcs_code": "J2357",
+                    "j_code": "J2357",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "VYONDYS 53",
+                    "hcpcs_code": "J1429",
+                    "j_code": "J1429",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "FLUDARABINE",
+                    "hcpcs_code": "J9185",
+                    "j_code": "J9185",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "POTELIGEO",
+                    "hcpcs_code": "J9204",
+                    "j_code": "J9204",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "INQOVI",
+                    "hcpcs_code": "J9198",
+                    "j_code": "J9198",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "COSENTYX",
+                    "hcpcs_code": "J1448",
+                    "j_code": "J1448",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "GAMIFANT",
+                    "hcpcs_code": "J9210",
+                    "j_code": "J9210",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "LETAIRIS",
+                    "hcpcs_code": "J0202",
+                    "j_code": "J0202",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "GONAL-F RFF",
+                    "hcpcs_code": "S0126",
+                    "j_code": "S0126",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "CARGLUMIC",
+                    "hcpcs_code": "J9045",
+                    "j_code": "J9045",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "SANDIMMUNE",
+                    "hcpcs_code": "J9021",
+                    "j_code": "J9021",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "VUMERITY",
+                    "hcpcs_code": "J3385",
+                    "j_code": "J3385",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "TRIENTINE",
+                    "hcpcs_code": "J7181",
+                    "j_code": "J7181",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "JIVI",
+                    "hcpcs_code": "J7208",
+                    "j_code": "J7208",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "LIVTENCITY",
+                    "hcpcs_code": "Q2049",
+                    "j_code": "Q2049",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "INTRON A",
+                    "hcpcs_code": "J9214",
+                    "j_code": "J9214",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "AYVAKIT",
+                    "hcpcs_code": "Q5121",
+                    "j_code": "Q5121",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "MARGENZA",
+                    "hcpcs_code": "J9353",
+                    "j_code": "J9353",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "INLYTA",
+                    "hcpcs_code": "J9198",
+                    "j_code": "J9198",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "JELMYTO",
+                    "hcpcs_code": "J9281",
+                    "j_code": "J9281",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "JEMPERLI",
+                    "hcpcs_code": "J9272",
+                    "j_code": "J9272",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "CISPLATIN",
+                    "hcpcs_code": "J0598",
+                    "j_code": "J0598",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "GAMMAGARD",
+                    "hcpcs_code": "J1569",
+                    "j_code": "J1569",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "DIMETHYL FUM",
+                    "hcpcs_code": "J1162",
+                    "j_code": "J1162",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ERIVEDGE",
+                    "hcpcs_code": "J9055",
+                    "j_code": "J9055",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ALKERAN",
+                    "hcpcs_code": "J8600",
+                    "j_code": "J8600",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "SYNAGIS",
+                    "hcpcs_code": "90378",
+                    "j_code": "90378",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "STRENSIQ",
+                    "hcpcs_code": "J3357",
+                    "j_code": "J3357",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "MEPSEVII",
+                    "hcpcs_code": "J3397",
+                    "j_code": "J3397",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "SUPARTZ FX",
+                    "hcpcs_code": "Q9992",
+                    "j_code": "Q9992",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ILUVIEN",
+                    "hcpcs_code": "J7313",
+                    "j_code": "J7313",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "DEPEN TITRA",
+                    "hcpcs_code": "J0895",
+                    "j_code": "J0895",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "PREGNYL",
+                    "hcpcs_code": "J9204",
+                    "j_code": "J9204",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "MONJUVI",
+                    "hcpcs_code": "J9349",
+                    "j_code": "J9349",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "FASENRA PEN",
+                    "hcpcs_code": "J0517",
+                    "j_code": "J0517",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "HIZENTRA",
+                    "hcpcs_code": "J1559",
+                    "j_code": "J1559",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "BORTEZOMIB",
+                    "hcpcs_code": "J9039",
+                    "j_code": "J9039",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "THIOLA",
+                    "hcpcs_code": "J3241",
+                    "j_code": "J3241",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "TARGRETIN",
+                    "hcpcs_code": "J0593",
+                    "j_code": "J0593",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "XOSPATA",
+                    "hcpcs_code": "J2357",
+                    "j_code": "J2357",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "CUPRIMINE",
+                    "hcpcs_code": "J0584",
+                    "j_code": "J0584",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "RYPLAZIM",
+                    "hcpcs_code": "J9021",
+                    "j_code": "J9021",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "NILUTAMIDE",
+                    "hcpcs_code": "C9085",
+                    "j_code": "C9085",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "REBIF TITRTN",
+                    "hcpcs_code": "Q3028",
+                    "j_code": "Q3028",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "HUMATROPE",
+                    "hcpcs_code": "J7187",
+                    "j_code": "J7187",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "NITYR",
+                    "hcpcs_code": "J9268",
+                    "j_code": "J9268",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "DOCETAXEL",
+                    "hcpcs_code": "J9171",
+                    "j_code": "J9171",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ERBITUX",
+                    "hcpcs_code": "J9055",
+                    "j_code": "J9055",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ROMIDEPSIN",
+                    "hcpcs_code": "J7200",
+                    "j_code": "J7200",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "RETISERT",
+                    "hcpcs_code": "J7311",
+                    "j_code": "J7311",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ODOMZO",
+                    "hcpcs_code": "J1568",
+                    "j_code": "J1568",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ALPHANINE SD",
+                    "hcpcs_code": "J7193",
+                    "j_code": "J7193",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "TREMFYA",
+                    "hcpcs_code": "J1628",
+                    "j_code": "J1628",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "CHENODAL",
+                    "hcpcs_code": "A9591",
+                    "j_code": "A9591",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "RIBAVIRIN",
+                    "hcpcs_code": "J7178",
+                    "j_code": "J7178",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "DEXRAZOXANE",
+                    "hcpcs_code": "J1190",
+                    "j_code": "J1190",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ZIRABEV",
+                    "hcpcs_code": "Q5118",
+                    "j_code": "Q5118",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "CLADRIBINE",
+                    "hcpcs_code": "J9065",
+                    "j_code": "J9065",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "GAVRETO",
+                    "hcpcs_code": "S0132",
+                    "j_code": "S0132",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "KOSELUGO",
+                    "hcpcs_code": "J9271",
+                    "j_code": "J9271",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "VONVENDI",
+                    "hcpcs_code": "J7179",
+                    "j_code": "J7179",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "KISQALI",
+                    "hcpcs_code": "J9271",
+                    "j_code": "J9271",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "AMBRISENTAN",
+                    "hcpcs_code": "J7201",
+                    "j_code": "J7201",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "VIEKIRA PAK",
+                    "hcpcs_code": "J9025",
+                    "j_code": "J9025",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "FARYDAK",
+                    "hcpcs_code": "J0180",
+                    "j_code": "J0180",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "SUCRAID",
+                    "hcpcs_code": "Q9992",
+                    "j_code": "Q9992",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "TYMLOS",
+                    "hcpcs_code": "Q5115",
+                    "j_code": "Q5115",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "IDHIFA",
+                    "hcpcs_code": "J7202",
+                    "j_code": "J7202",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "VPRIV",
+                    "hcpcs_code": "J3385",
+                    "j_code": "J3385",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "CRYSVITA",
+                    "hcpcs_code": "J0584",
+                    "j_code": "J0584",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ASTAGRAF XL",
+                    "hcpcs_code": "J7508",
+                    "j_code": "J7508",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "LEMTRADA",
+                    "hcpcs_code": "J0202",
+                    "j_code": "J0202",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "IFOSFAMIDE",
+                    "hcpcs_code": "J9208",
+                    "j_code": "J9208",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "XGEVA",
+                    "hcpcs_code": "J0588",
+                    "j_code": "J0588",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "MIGLUSTAT",
+                    "hcpcs_code": "J8610",
+                    "j_code": "J8610",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "SAIZENPREP",
+                    "hcpcs_code": "J9021",
+                    "j_code": "J9021",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "MUTAMYCIN",
+                    "hcpcs_code": "J9230",
+                    "j_code": "J9230",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "OZURDEX",
+                    "hcpcs_code": "J7312",
+                    "j_code": "J7312",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "XELJANZ",
+                    "hcpcs_code": "J2792",
+                    "j_code": "J2792",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "EVEROLIMUS",
+                    "hcpcs_code": "J7527",
+                    "j_code": "J7527",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "JAKAFI",
+                    "hcpcs_code": "Q5109",
+                    "j_code": "Q5109",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "GAMASTAN",
+                    "hcpcs_code": "J1324",
+                    "j_code": "J1324",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "EVKEEZA",
+                    "hcpcs_code": "J1305",
+                    "j_code": "J1305",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "KEVZARA",
+                    "hcpcs_code": "J2425",
+                    "j_code": "J2425",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ALFERON N",
+                    "hcpcs_code": "J9215",
+                    "j_code": "J9215",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ZORBTIVE",
+                    "hcpcs_code": "J3399",
+                    "j_code": "J3399",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "NILANDRON",
+                    "hcpcs_code": "C9085",
+                    "j_code": "C9085",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "RIASTAP",
+                    "hcpcs_code": "J7178",
+                    "j_code": "J7178",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ZULRESSO",
+                    "hcpcs_code": "J1632",
+                    "j_code": "J1632",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "MYCAPSSA",
+                    "hcpcs_code": "Q5107",
+                    "j_code": "Q5107",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "SPRAVATO",
+                    "hcpcs_code": "S0013",
+                    "j_code": "S0013",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "XPOVIO",
+                    "hcpcs_code": "J2357",
+                    "j_code": "J2357",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "VELETRI",
+                    "hcpcs_code": "J9044",
+                    "j_code": "J9044",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "CHOR GONADOT",
+                    "hcpcs_code": "A9591",
+                    "j_code": "A9591",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "AVSOLA",
+                    "hcpcs_code": "Q5121",
+                    "j_code": "Q5121",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "MYFORTIC",
+                    "hcpcs_code": "J7518",
+                    "j_code": "J7518",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "TOPOTECAN",
+                    "hcpcs_code": "J9351",
+                    "j_code": "J9351",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "TEGSEDI",
+                    "hcpcs_code": "J9022",
+                    "j_code": "J9022",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "GAMMAKED",
+                    "hcpcs_code": "J1566",
+                    "j_code": "J1566",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "MESNEX",
+                    "hcpcs_code": "J9209",
+                    "j_code": "J9209",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "CALQUENCE",
+                    "hcpcs_code": "J0741",
+                    "j_code": "J0741",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "BUSULFAN",
+                    "hcpcs_code": "J0567",
+                    "j_code": "J0567",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "PHOTOFRIN",
+                    "hcpcs_code": "J9600",
+                    "j_code": "J9600",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "BAFIERTAM",
+                    "hcpcs_code": "Q5121",
+                    "j_code": "Q5121",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "IRINOTECAN",
+                    "hcpcs_code": "J9206",
+                    "j_code": "J9206",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "NYVEPRIA",
+                    "hcpcs_code": "Q5122",
+                    "j_code": "Q5122",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ENBREL MINI",
+                    "hcpcs_code": "J1438",
+                    "j_code": "J1438",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "TREANDA",
+                    "hcpcs_code": "J9033",
+                    "j_code": "J9033",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "COSENTYX PEN",
+                    "hcpcs_code": "J1448",
+                    "j_code": "J1448",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "PERJETA",
+                    "hcpcs_code": "J9306",
+                    "j_code": "J9306",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "CHOLBAM",
+                    "hcpcs_code": "A9591",
+                    "j_code": "A9591",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "TEPMETKO",
+                    "hcpcs_code": "J3241",
+                    "j_code": "J3241",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "MITOMYCIN",
+                    "hcpcs_code": "J9290",
+                    "j_code": "J9290",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "EMFLAZA",
+                    "hcpcs_code": "J9269",
+                    "j_code": "J9269",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "SOMATULINE",
+                    "hcpcs_code": "J1930",
+                    "j_code": "J1930",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ALIQOPA",
+                    "hcpcs_code": "J9057",
+                    "j_code": "J9057",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "MAVYRET",
+                    "hcpcs_code": "J9353",
+                    "j_code": "J9353",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "NINLARO",
+                    "hcpcs_code": "C9085",
+                    "j_code": "C9085",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "PROMACTA",
+                    "hcpcs_code": "J0897",
+                    "j_code": "J0897",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "SANDOSTATIN",
+                    "hcpcs_code": "J2354",
+                    "j_code": "J2354",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "KYMRIAH",
+                    "hcpcs_code": "Q2042",
+                    "j_code": "Q2042",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "INREBIC",
+                    "hcpcs_code": "J9198",
+                    "j_code": "J9198",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ARALAST NP",
+                    "hcpcs_code": "J0256",
+                    "j_code": "J0256",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "GENGRAF",
+                    "hcpcs_code": "J9201",
+                    "j_code": "J9201",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "PIQRAY 250MG",
+                    "hcpcs_code": "J2787",
+                    "j_code": "J2787",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "BLINCYTO",
+                    "hcpcs_code": "J9039",
+                    "j_code": "J9039",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "NATPARA",
+                    "hcpcs_code": "J1458",
+                    "j_code": "J1458",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "NORTHERA",
+                    "hcpcs_code": "Q5110",
+                    "j_code": "Q5110",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "RETEVMO",
+                    "hcpcs_code": "Q5106",
+                    "j_code": "Q5106",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "JUXTAPID",
+                    "hcpcs_code": "J7208",
+                    "j_code": "J7208",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ONPATTRO",
+                    "hcpcs_code": "J0222",
+                    "j_code": "J0222",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "TOBI",
+                    "hcpcs_code": "J3240",
+                    "j_code": "J3240",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "PYRIMETHAMIN",
+                    "hcpcs_code": "J7639",
+                    "j_code": "J7639",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ABIRATERONE",
+                    "hcpcs_code": "Q2055",
+                    "j_code": "Q2055",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "SPRYCEL",
+                    "hcpcs_code": "S0013",
+                    "j_code": "S0013",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "LEUKINE",
+                    "hcpcs_code": "J2820",
+                    "j_code": "J2820",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "IXINITY",
+                    "hcpcs_code": "Q5109",
+                    "j_code": "Q5109",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "COTELLIC",
+                    "hcpcs_code": "J9120",
+                    "j_code": "J9120",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "JYNARQUE",
+                    "hcpcs_code": "J7208",
+                    "j_code": "J7208",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "MYALEPT",
+                    "hcpcs_code": "Q5107",
+                    "j_code": "Q5107",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "CYCLOPHOSPHA",
+                    "hcpcs_code": "J1555",
+                    "j_code": "J1555",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "RECOMBINATE",
+                    "hcpcs_code": "J0896",
+                    "j_code": "J0896",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "NULOJIX",
+                    "hcpcs_code": "J0485",
+                    "j_code": "J0485",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "CYRAMZA",
+                    "hcpcs_code": "J9308",
+                    "j_code": "J9308",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ADCIRCA",
+                    "hcpcs_code": "J9042",
+                    "j_code": "J9042",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "PROCRIT",
+                    "hcpcs_code": "J0886",
+                    "j_code": "J0886",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "TEMOZOLOMIDE",
+                    "hcpcs_code": "J9328",
+                    "j_code": "J9328",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "KEYTRUDA",
+                    "hcpcs_code": "J9271",
+                    "j_code": "J9271",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "TAVALISSE",
+                    "hcpcs_code": "J0593",
+                    "j_code": "J0593",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "FLOXURIDINE",
+                    "hcpcs_code": "J9200",
+                    "j_code": "J9200",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ADRIAMYCIN",
+                    "hcpcs_code": "J9042",
+                    "j_code": "J9042",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "GAMMAPLEX",
+                    "hcpcs_code": "J1557",
+                    "j_code": "J1557",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ARIXTRA",
+                    "hcpcs_code": "J2793",
+                    "j_code": "J2793",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "GELSYN-3",
+                    "hcpcs_code": "J7328",
+                    "j_code": "J7328",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "MARQIBO",
+                    "hcpcs_code": "J9353",
+                    "j_code": "J9353",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "INCRELEX",
+                    "hcpcs_code": "J2170",
+                    "j_code": "J2170",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "XYREM",
+                    "hcpcs_code": "J7185",
+                    "j_code": "J7185",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "OCTAGAM",
+                    "hcpcs_code": "J1568",
+                    "j_code": "J1568",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "TRUXIMA",
+                    "hcpcs_code": "Q5115",
+                    "j_code": "Q5115",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "MIRCERA",
+                    "hcpcs_code": "J0888",
+                    "j_code": "J0888",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "MESNA",
+                    "hcpcs_code": "J9209",
+                    "j_code": "J9209",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "SUPPRELIN LA",
+                    "hcpcs_code": "J9226",
+                    "j_code": "J9226",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "VERZENIO",
+                    "hcpcs_code": "Q4074",
+                    "j_code": "Q4074",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "KITABIS PAK",
+                    "hcpcs_code": "J9271",
+                    "j_code": "J9271",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "COPAXONE",
+                    "hcpcs_code": "J1595",
+                    "j_code": "J1595",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "RUCONEST",
+                    "hcpcs_code": "J0596",
+                    "j_code": "J0596",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "FASLODEX",
+                    "hcpcs_code": "J0517",
+                    "j_code": "J0517",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ELELYSO",
+                    "hcpcs_code": "J3060",
+                    "j_code": "J3060",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ARRANON",
+                    "hcpcs_code": "J9261",
+                    "j_code": "J9261",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "LENVIMA",
+                    "hcpcs_code": "J0202",
+                    "j_code": "J0202",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "LORBRENA",
+                    "hcpcs_code": "Q2049",
+                    "j_code": "Q2049",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ERLOTINIB",
+                    "hcpcs_code": "J9055",
+                    "j_code": "J9055",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "TALZENNA",
+                    "hcpcs_code": "J0593",
+                    "j_code": "J0593",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "COAGADEX",
+                    "hcpcs_code": "J7175",
+                    "j_code": "J7175",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "THIOLA EC",
+                    "hcpcs_code": "J3241",
+                    "j_code": "J3241",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "FYARRO",
+                    "hcpcs_code": "J1324",
+                    "j_code": "J1324",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ZOKINVY",
+                    "hcpcs_code": "Q5118",
+                    "j_code": "Q5118",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ZEPZELCA",
+                    "hcpcs_code": "J9223",
+                    "j_code": "J9223",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "CABLIVI",
+                    "hcpcs_code": "J0741",
+                    "j_code": "J0741",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "LUCENTIS",
+                    "hcpcs_code": "J2778",
+                    "j_code": "J2778",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "EPOPROSTENOL",
+                    "hcpcs_code": "J1325",
+                    "j_code": "J1325",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "KOGENATE FS",
+                    "hcpcs_code": "J9271",
+                    "j_code": "J9271",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "ZOMACTON",
+                    "hcpcs_code": "J3399",
+                    "j_code": "J3399",
+                    "original_text": null
+                }
+            ]
         }
-    },
-    "specialty_drug_list": {
-        "description": "All drugs on the attached list are covered by OptumRx, through OptumSpecialty Pharmacy",
-        "effective_date": "1.1.22",
-        "total_unique_drugs": 773,
-        "total_drug_classes": 55,
-        "drug_classes": [
-            "ADULT INCONTINENCE",
-            "ALZHEIMER'S DISEASE",
-            "AMMONIA DETOXICANTS",
-            "ANEMIA",
-            "ANTI-GOUT AGENT",
-            "ANTI-INFECTIVE",
-            "ANTIBACTERIALS",
-            "ANTICOAGULATION",
-            "ANTICONVULSANTS",
-            "ANTIHYPERLIPIDEMIC",
-            "ASTHMA",
-            "CARDIOVASCULAR",
-            "CENTRAL NERVOUS SYSTEM AGENTS",
-            "CHEMOTHERAPY PROTECTANT",
-            "CYSTIC FIBROSIS",
-            "DERMATOLOGIC",
-            "DUCHENNE MUSCULAR DYSTROPHY",
-            "ENDOCRINE",
-            "ENZYME THERAPY",
-            "GASTROINTESTINAL AGENTS",
-            "GENE THERAPY",
-            "GENETIC DISORDER",
-            "GROWTH HORMONE DEFICIENCY",
-            "HEMATOLOGICAL AGENTS",
-            "HEMOPHILIA",
-            "HEPATITIS B",
-            "HEPATITIS C",
-            "HEPATOLOGY",
-            "HEREDITARY ANGIOEDEMA",
-            "IMMUNE GLOBULIN",
-            "IMMUNOLOGICAL AGENTS",
-            "INFERTILITY",
-            "INFLAMMATORY CONDITIONS",
-            "METABOLIC AGENTS",
-            "METABOLIC BONE DISEASE",
-            "MOOD DISORDER DRUGS",
-            "MULTIPLE SCLEROSIS",
-            "MUSCULOSKELETAL AGENTS",
-            "NARCOLEPSY",
-            "NEUROLOGICAL AGENTS",
-            "NEUTROPENIA",
-            "ONCOLOGY - INJECTABLE",
-            "ONCOLOGY - ORAL",
-            "ONCOLOGY - TOPICAL",
-            "OPHTHALMIC AGENTS",
-            "OPIOID ANTAGONISTS",
-            "OSTEOARTHRITIS",
-            "OSTEOPOROSIS",
-            "PAIN MANAGEMENT",
-            "PARKINSON'S DISEASE",
-            "PULMONARY FIBROSIS",
-            "PULMONARY HYPERTENSION",
-            "RSV",
-            "SUBSTANCE ABUSE TREATMENT",
-            "TRANSPLANT"
-        ],
-        "sample_drugs": [
-            {
-                "drug_name": "SOLESTA",
-                "drug_class": "ADULT INCONTINENCE",
-                "jcode": "J7520"
-            },
-            {
-                "drug_name": "ADUHELM",
-                "drug_class": "ALZHEIMER'S DISEASE",
-                "jcode": "J0172"
-            },
-            {
-                "drug_name": "RAVICTI",
-                "drug_class": "AMMONIA DETOXICANTS",
-                "jcode": "J1301"
-            },
-            {
-                "drug_name": "REBLOZYL",
-                "drug_class": "ANEMIA",
-                "jcode": "J0896"
-            },
-            {
-                "drug_name": "KRYSTEXXA",
-                "drug_class": "ANTI-GOUT AGENT",
-                "jcode": "J2507"
-            },
-            {
-                "drug_name": "PREVYMIS",
-                "drug_class": "ANTI-INFECTIVE",
-                "jcode": "J9204"
-            },
-            {
-                "drug_name": "ARIKAYCE",
-                "drug_class": "ANTIBACTERIALS",
-                "jcode": "J2793"
-            },
-            {
-                "drug_name": "FRAGMIN",
-                "drug_class": "ANTICOAGULATION",
-                "jcode": "J3110"
-            },
-            {
-                "drug_name": "EPIDIOLEX",
-                "drug_class": "ANTICONVULSANTS",
-                "jcode": "J7503"
-            },
-            {
-                "drug_name": "EVKEEZA",
-                "drug_class": "ANTIHYPERLIPIDEMIC",
-                "jcode": "J1305"
-            },
-            {
-                "drug_name": "XOLAIR",
-                "drug_class": "ASTHMA",
-                "jcode": "J2357"
-            },
-            {
-                "drug_name": "DROXIDOPA",
-                "drug_class": "CARDIOVASCULAR",
-                "jcode": "J9000"
-            },
-            {
-                "drug_name": "BRINEURA",
-                "drug_class": "CENTRAL NERVOUS SYSTEM AGENTS",
-                "jcode": "J0567"
-            },
-            {
-                "drug_name": "LEVOLEUCOVOR",
-                "drug_class": "CHEMOTHERAPY PROTECTANT",
-                "jcode": "J9218"
-            },
-            {
-                "drug_name": "TOBI PODHALR",
-                "drug_class": "CYSTIC FIBROSIS",
-                "jcode": "J3240"
-            },
-            {
-                "drug_name": "SCENESSE",
-                "drug_class": "DERMATOLOGIC",
-                "jcode": "J7352"
-            },
-            {
-                "drug_name": "EMFLAZA",
-                "drug_class": "DUCHENNE MUSCULAR DYSTROPHY",
-                "jcode": "J9269"
-            },
-            {
-                "drug_name": "HYDROXY CAPR",
-                "drug_class": "ENDOCRINE",
-                "jcode": "J8705"
-            },
-            {
-                "drug_name": "FIRMAGON",
-                "drug_class": "ENDOCRINE",
-                "jcode": "J9155"
-            },
-            {
-                "drug_name": "REVCOVI",
-                "drug_class": "ENZYME THERAPY",
-                "jcode": "S0104"
-            },
-            {
-                "drug_name": "FABRAZYME",
-                "drug_class": "ENZYME THERAPY",
-                "jcode": "J0180"
-            },
-            {
-                "drug_name": "GATTEX",
-                "drug_class": "GASTROINTESTINAL AGENTS",
-                "jcode": "S0132"
-            },
-            {
-                "drug_name": "ZOLGENSMA",
-                "drug_class": "GENE THERAPY",
-                "jcode": "J3399"
-            },
-            {
-                "drug_name": "OXLUMO",
-                "drug_class": "GENETIC DISORDER",
-                "jcode": "J0224"
-            },
-            {
-                "drug_name": "SKYTROFA",
-                "drug_class": "GROWTH HORMONE DEFICIENCY",
-                "jcode": "J7520"
-            },
-            {
-                "drug_name": "DOPTELET",
-                "drug_class": "HEMATOLOGICAL AGENTS",
-                "jcode": "J9171"
-            },
-            {
-                "drug_name": "HEMOFIL M",
-                "drug_class": "HEMOPHILIA",
-                "jcode": "Q9995"
-            },
-            {
-                "drug_name": "KOATE",
-                "drug_class": "HEMOPHILIA",
-                "jcode": "J9271"
-            },
-            {
-                "drug_name": "ADEFOV DIPIV",
-                "drug_class": "HEPATITIS B",
-                "jcode": "J9042"
-            },
-            {
-                "drug_name": "PEGASYS",
-                "drug_class": "HEPATITIS C",
-                "jcode": "S0145"
-            },
-            {
-                "drug_name": "LIVMARLI",
-                "drug_class": "HEPATOLOGY",
-                "jcode": "Q2049"
-            },
-            {
-                "drug_name": "CINRYZE",
-                "drug_class": "HEREDITARY ANGIOEDEMA",
-                "jcode": "J0598"
-            },
-            {
-                "drug_name": "CYTOGAM",
-                "drug_class": "IMMUNE GLOBULIN",
-                "jcode": "J0850"
-            },
-            {
-                "drug_name": "GAMASTAN",
-                "drug_class": "IMMUNE GLOBULIN",
-                "jcode": "J1324"
-            },
-            {
-                "drug_name": "PALFORZIA",
-                "drug_class": "IMMUNOLOGICAL AGENTS",
-                "jcode": "J9267"
-            },
-            {
-                "drug_name": "NOVAREL",
-                "drug_class": "INFERTILITY",
-                "jcode": "J9999"
-            },
-            {
-                "drug_name": "CORTROPHIN",
-                "drug_class": "INFLAMMATORY CONDITIONS",
-                "jcode": "J7180"
-            },
-            {
-                "drug_name": "ACTHAR",
-                "drug_class": "INFLAMMATORY CONDITIONS",
-                "jcode": "J3262"
-            },
-            {
-                "drug_name": "NULIBRY",
-                "drug_class": "METABOLIC AGENTS",
-                "jcode": "J2182"
-            },
-            {
-                "drug_name": "ZOLEDRONIC",
-                "drug_class": "METABOLIC BONE DISEASE",
-                "jcode": "J9202"
-            },
-            {
-                "drug_name": "ZULRESSO",
-                "drug_class": "MOOD DISORDER DRUGS",
-                "jcode": "J1632"
-            },
-            {
-                "drug_name": "GLATIRAMER",
-                "drug_class": "MULTIPLE SCLEROSIS",
-                "jcode": "J0257"
-            },
-            {
-                "drug_name": "GLATOPA",
-                "drug_class": "MULTIPLE SCLEROSIS",
-                "jcode": "J0257"
-            },
-            {
-                "drug_name": "VOXZOGO",
-                "drug_class": "MUSCULOSKELETAL AGENTS",
-                "jcode": "J7179"
-            },
-            {
-                "drug_name": "WAKIX",
-                "drug_class": "NARCOLEPSY",
-                "jcode": "J9153"
-            },
-            {
-                "drug_name": "DYSPORT",
-                "drug_class": "NEUROLOGICAL AGENTS",
-                "jcode": "J0586"
-            },
-            {
-                "drug_name": "NEUPOGEN",
-                "drug_class": "NEUTROPENIA",
-                "jcode": "J1442"
-            },
-            {
-                "drug_name": "BELRAPZO",
-                "drug_class": "ONCOLOGY - INJECTABLE",
-                "jcode": "J9036"
-            },
-            {
-                "drug_name": "BENDEKA",
-                "drug_class": "ONCOLOGY - INJECTABLE",
-                "jcode": "J9034"
-            },
-            {
-                "drug_name": "MELPHALAN",
-                "drug_class": "ONCOLOGY - ORAL",
-                "jcode": "J9245"
-            },
-            {
-                "drug_name": "ALKERAN",
-                "drug_class": "ONCOLOGY - ORAL",
-                "jcode": "J8600"
-            },
-            {
-                "drug_name": "VALCHLOR",
-                "drug_class": "ONCOLOGY - TOPICAL",
-                "jcode": "J1823"
-            },
-            {
-                "drug_name": "KEVEYIS",
-                "drug_class": "OPHTHALMIC AGENTS",
-                "jcode": "J2425"
-            },
-            {
-                "drug_name": "SUBLOCADE",
-                "drug_class": "OPIOID ANTAGONISTS",
-                "jcode": "Q9992"
-            },
-            {
-                "drug_name": "GEL-ONE",
-                "drug_class": "OSTEOARTHRITIS",
-                "jcode": "J7326"
-            },
-            {
-                "drug_name": "TYMLOS",
-                "drug_class": "OSTEOPOROSIS",
-                "jcode": "Q5115"
-            },
-            {
-                "drug_name": "PRIALT",
-                "drug_class": "PAIN MANAGEMENT",
-                "jcode": "J2278"
-            },
-            {
-                "drug_name": "INBRIJA",
-                "drug_class": "PARKINSON'S DISEASE",
-                "jcode": "J1599"
-            },
-            {
-                "drug_name": "ESBRIET",
-                "drug_class": "PULMONARY FIBROSIS",
-                "jcode": "J9019"
-            },
-            {
-                "drug_name": "UPTRAVI",
-                "drug_class": "PULMONARY HYPERTENSION",
-                "jcode": "J1823"
-            },
-            {
-                "drug_name": "ADEMPAS",
-                "drug_class": "PULMONARY HYPERTENSION",
-                "jcode": "J9042"
-            },
-            {
-                "drug_name": "SYNAGIS",
-                "drug_class": "RSV",
-                "jcode": "90378"
-            },
-            {
-                "drug_name": "VIVITROL",
-                "drug_class": "SUBSTANCE ABUSE TREATMENT",
-                "jcode": "J2315"
-            },
-            {
-                "drug_name": "LIVTENCITY",
-                "drug_class": "TRANSPLANT",
-                "jcode": "Q2049"
-            }
-        ]
-    },
-    "summary": "Sylvamo North America LLC (Account 3344396) has OptumRx as their pharmacy vendor (800.797.9791) with a unique Specialty Drug Medical Provision effective 1.1.22. Under this provision, Cigna's medical plans cover the first injection/infusion of any specialty drug in the doctor's office and/or home setting, with all subsequent doses obtained through OptumSpecialty Pharmacy (855.427.4682). The provision applies ONLY to doctor's office and home settings, NOT to outpatient, inpatient, or emergency room settings. For oncology medications, injectable/infused drugs dispensed through cancer clinics are payable under the medical plan, while oral oncology medications included on the 2019 Specialty Drug Provision List are payable one time per lifetime under the medical plan, with all others dispensed through OptumSpecialty Pharmacy. The specialty drug list contains 773 unique drugs across 55 therapeutic classes including major categories such as Oncology (Injectable, Oral, and Topical), Hemophilia, Inflammatory Conditions, Immunological Agents, Immune Globulin, Endocrine, Enzyme Therapy, Multiple Sclerosis, Pulmonary Hypertension, Gene Therapy, Transplant, Hematological Agents, and others. Medical programs include Health Matters Care Management Preferred, Healthy Pregnancies Healthy Babies, Comprehensive Oncology Program, and Cigna's Gene Therapy Program with Embarc Benefit Protection."
+    ],
+    "metadata": {
+        "total_drugs_found": 773,
+        "total_scenarios_found": 1,
+        "same_drugs_across_scenarios": true,
+        "policy_name": "Optum Specialty Pharmacy Coverage and Place of Service Limitation",
+        "source_document": null,
+        "analysis_reasoning": "",
+        "flags": {
+            "source_doc": true,
+            "hyperlink": true
+        }
+    }
 }

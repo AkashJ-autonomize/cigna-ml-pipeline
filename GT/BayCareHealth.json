@@ -1,15 +1,13 @@
 {
-    "client": "BayCareHealth",
+    "client":"BayCareHealth",
     "source_type": "source_text",
     "extraction": [
         {
             "section_type": "medical",
             "scenario": {
-                "rule": "Members taking the listed rheumatoid arthritis or psoriatic arthritis medications are required to utilize the specialty clinic at St. Joseph’s Hospital.",
+                "rule": "Members of the BayCare Medical Plan who take any of the above rheumatoid arthritis or psoriatic arthritis medications are required to utilize the specialty clinic at St. Joseph’s Hospital to manage their condition.",
                 "routing": "Medical",
-                "applied_in": [
-                    "OFFICE"
-                ],
+                "applied_in": ["OFFICE"],
                 "does_not_applies_in": []
             },
             "drugs": [
@@ -128,19 +126,12 @@
         "total_drugs_found": 18,
         "total_scenarios_found": 1,
         "same_drugs_across_scenarios": true,
-        "policy_name": "Extracted Rules (18 drugs)",
+        "policy_name": "Specialty Clinic Requirement for Select Rheumatoid and Psoriatic Arthritis Medications",
         "source_document": null,
-        "analysis_reasoning": "medical: The source text contains explicit drug names (multiple RA/psoriatic arthritis medications) and setting-based routing rules (required specialty clinic, IP/OP BayCare vs non-BayCare review pathways), with no relevant linked documents to extract from. | pharmacy: The source content contains only pharmacy contact information and general medication assistance program details without any drug names, HCPCS/J-codes, or routing/coverage rules, and there are no relevant linked documents referenced.",
+        "analysis_reasoning": "",
         "flags": {
             "source_doc": true,
             "hyperlink": false
-        },
-        "llm_stats": {
-            "llm_calls": 3,
-            "input_tokens": 4553,
-            "output_tokens": 758,
-            "total_tokens": 5311,
-            "duration_seconds": 12.94
         }
     }
 }

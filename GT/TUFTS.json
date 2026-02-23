@@ -1,47 +1,35 @@
 {
-  "client": {
-    "name": "Tufts Health Plan - Clients",
-    "preferred_customer_name": "",
-    "account_numbers": "",
-    "brand_experience": "",
-    "customer_service_phone": "800.208.9565",
-    "client_website": "",
-    "notes": "Each Tufts Client is listed by the Client's name in OLAM. This page is a generic overview of how the Behavioral benefits work. See individual pages for account specifics."
-  },
-  "behavioral": {
-    "oap_structure": "OAP Carve-in",
-    "funding_type": "Fully Insured (Guaranteed Cost)",
-    "transition_policy": "Standard 30/60 Transition",
-    "claims_liability": {
-      "behavioral_claims_paid_by": "Tufts Health Plan",
-      "cbh_claims_liability": false,
-      "claims_inquiries_direct_to": "Tufts Health Plan 800.208.9565"
-    },
-    "alliance_structure": {
-      "alliance_name": "Carelink",
-      "coordinating_party": "Tufts Health Plan",
-      "um_structure": "Cigna Behavioral Health conducts UM for members accessing care outside MA & RI using CBH providers"
-    },
-    "member_id_routing_rules": [
-      {
-        "member_id_prefix": "U",
-        "case_management": "Cigna always manages the case"
-      },
-      {
-        "member_id_prefix": "7, 8, or 9",
-        "treatment_location": "Outside MA or RI",
-        "case_management": "Cigna manages the case"
-      },
-      {
-        "member_id_prefix": "7, 8, or 9",
-        "treatment_location": "Inside MA or RI",
-        "case_management": "Refer to Tufts Health Plan"
-      }
+    "client": "TUFTs",
+    "source_type": "source_text",
+    "extraction": [
+        {
+            "section_type": "",
+            "scenario": {
+                "rule": "",
+                "routing": "",
+                "applied_in": [],
+                "does_not_applies_in": []
+            },
+            "drugs": [
+                {
+                    "drug_name": "",
+                    "hcpcs_code": "",
+                    "j_code": "",
+                    "original_text": null
+                }
+            ]
+        }
     ],
-    "internal_contact": {
-      "cigna_behavioral_operations_clinical_team_lead": "Delilah Byabato"
+    "metadata": {
+        "total_drugs_found": 0,
+        "total_scenarios_found": 0,
+        "same_drugs_across_scenarios": true,
+        "policy_name": "",
+        "source_document": null,
+        "analysis_reasoning": "",
+        "flags": {
+            "source_doc": true,
+            "hyperlink": false
+        }
     }
-  },
-
-  "summary": "The Medical and Pharmacy sections are present in the document but contain no content. Behavioral is OAP carve-in, fully insured (guaranteed cost). Tufts Health Plan pays all behavioral claims. This is a Carelink alliance where Tufts is the coordinating party. Cigna Behavioral Health conducts UM for care outside MA & RI depending on member ID prefix rules. CBH has no claims liability. All claims inquiries are directed to Tufts Health Plan at 800.208.9565."
 }

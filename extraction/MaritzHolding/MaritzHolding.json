@@ -8,10 +8,17 @@
         "same_drugs_across_scenarios": false,
         "policy_name": null,
         "source_document": null,
-        "analysis_reasoning": "medical: The source contains a setting-based program access rule (Virtual Second Opinions via Cleveland Clinic through MyCigna or direct URL) but includes no drug list and no relevant hyperlinks pointing to drug/coverage details. | pharmacy: The source content is only a set of references titled 'MCM Drug List' with no explicit drug names or coverage/setting rules. It clearly points to multiple Excel files that likely contain the actual drug list, so extraction should be driven from the hyperlinks.",
+        "analysis_reasoning": "pharmacy: The source section is only a set of links titled 'MCM Drug List' with no drug names or coverage rules, indicating the drug details reside in the linked XLSX documents.",
         "flags": {
-            "source_doc": true,
+            "source_doc": false,
             "hyperlink": true
+        },
+        "llm_stats": {
+            "llm_calls": 1,
+            "input_tokens": 1092,
+            "output_tokens": 67,
+            "total_tokens": 1159,
+            "duration_seconds": 1.91
         }
     }
 }

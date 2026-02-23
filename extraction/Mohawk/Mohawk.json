@@ -5,7 +5,7 @@
         {
             "section_type": "medical",
             "scenario": {
-                "rule": "When administered in an office visit setting, the following specialty drugs are excluded from the medical benefit and routed (carved out) to the Specialty Medication Pharmacy Vendor (Vivio).",
+                "rule": "The listed specialty drugs are excluded from the medical benefit and carved out to the Specialty Medication Pharmacy Vendor (Vivio) when administered in an office visit setting.",
                 "routing": "Pharmacy",
                 "applied_in": [
                     "OFFICE"
@@ -14,111 +14,117 @@
             },
             "drugs": [
                 {
-                    "drug_name": "Epoetin alfa/Procrit",
-                    "hcpcs_code": "",
-                    "j_code": "",
+                    "drug_name": "Epoetin alfa",
+                    "hcpcs_code": "J0885",
+                    "j_code": "J0885",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "Procrit",
+                    "hcpcs_code": "J0885",
+                    "j_code": "J0885",
                     "original_text": null
                 },
                 {
                     "drug_name": "Aranesp",
-                    "hcpcs_code": "",
-                    "j_code": "",
+                    "hcpcs_code": "J0881",
+                    "j_code": "J0881",
                     "original_text": null
                 },
                 {
                     "drug_name": "Betaseron",
-                    "hcpcs_code": "",
-                    "j_code": "",
+                    "hcpcs_code": "J1830",
+                    "j_code": "J1830",
                     "original_text": null
                 },
                 {
                     "drug_name": "Pulmozyme",
-                    "hcpcs_code": "",
-                    "j_code": "",
+                    "hcpcs_code": "J7639",
+                    "j_code": "J7639",
                     "original_text": null
                 },
                 {
                     "drug_name": "Tobi",
-                    "hcpcs_code": "",
-                    "j_code": "",
+                    "hcpcs_code": "J7682",
+                    "j_code": "J7682",
                     "original_text": null
                 },
                 {
                     "drug_name": "Gleevec",
-                    "hcpcs_code": "",
+                    "hcpcs_code": "S0088",
                     "j_code": "",
                     "original_text": null
                 },
                 {
-                    "drug_name": "Hycamptin",
-                    "hcpcs_code": "",
-                    "j_code": "",
+                    "drug_name": "Hycamtin",
+                    "hcpcs_code": "J8705",
+                    "j_code": "J8705",
                     "original_text": null
                 },
                 {
                     "drug_name": "Fuzeon",
-                    "hcpcs_code": "",
-                    "j_code": "",
+                    "hcpcs_code": "J1324",
+                    "j_code": "J1324",
                     "original_text": null
                 },
                 {
                     "drug_name": "Apokyn",
-                    "hcpcs_code": "",
-                    "j_code": "",
+                    "hcpcs_code": "J0364",
+                    "j_code": "J0364",
                     "original_text": null
                 },
                 {
                     "drug_name": "Kineret",
-                    "hcpcs_code": "",
-                    "j_code": "",
+                    "hcpcs_code": "J3490",
+                    "j_code": "J3490",
                     "original_text": null
                 },
                 {
                     "drug_name": "Simponi",
-                    "hcpcs_code": "",
-                    "j_code": "",
+                    "hcpcs_code": "J3490",
+                    "j_code": "J3490",
                     "original_text": null
                 },
                 {
                     "drug_name": "Arcalyst",
-                    "hcpcs_code": "",
-                    "j_code": "",
+                    "hcpcs_code": "J3490",
+                    "j_code": "J3490",
                     "original_text": null
                 },
                 {
                     "drug_name": "Somatuline Depot",
-                    "hcpcs_code": "",
-                    "j_code": "",
+                    "hcpcs_code": "J1930",
+                    "j_code": "J1930",
                     "original_text": null
                 },
                 {
                     "drug_name": "Extavia",
-                    "hcpcs_code": "",
-                    "j_code": "",
+                    "hcpcs_code": "J1830",
+                    "j_code": "J1830",
                     "original_text": null
                 },
                 {
                     "drug_name": "Afinitor",
-                    "hcpcs_code": "",
-                    "j_code": "",
+                    "hcpcs_code": "J8561",
+                    "j_code": "J8561",
                     "original_text": null
                 },
                 {
                     "drug_name": "Chorionic gonadotropin",
-                    "hcpcs_code": "",
-                    "j_code": "",
+                    "hcpcs_code": "J0725",
+                    "j_code": "J0725",
                     "original_text": null
                 },
                 {
                     "drug_name": "Novarel",
-                    "hcpcs_code": "",
-                    "j_code": "",
+                    "hcpcs_code": "J0725",
+                    "j_code": "J0725",
                     "original_text": null
                 },
                 {
                     "drug_name": "Pregnyl",
-                    "hcpcs_code": "",
-                    "j_code": "",
+                    "hcpcs_code": "J0725",
+                    "j_code": "J0725",
                     "original_text": null
                 }
             ]
@@ -126,7 +132,7 @@
         {
             "section_type": "pharmacy",
             "scenario": {
-                "rule": "When administered in an office visit setting, the following specialty drugs are excluded from the medical benefit and are carved out to the specialty medication pharmacy vendor (Vivio).",
+                "rule": "The listed specialty drugs are excluded from the medical benefit and carved out to the specialty medication pharmacy vendor (Vivio) when administered in an office visit setting.",
                 "routing": "Pharmacy",
                 "applied_in": [
                     "OFFICE"
@@ -135,126 +141,139 @@
             },
             "drugs": [
                 {
-                    "drug_name": "Epoetin alfa/Procrit",
-                    "hcpcs_code": "",
-                    "j_code": "",
+                    "drug_name": "Epoetin alfa",
+                    "hcpcs_code": "J0885",
+                    "j_code": "J0885",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "Procrit",
+                    "hcpcs_code": "J0885",
+                    "j_code": "J0885",
                     "original_text": null
                 },
                 {
                     "drug_name": "Aranesp",
-                    "hcpcs_code": "",
-                    "j_code": "",
+                    "hcpcs_code": "J0881",
+                    "j_code": "J0881",
                     "original_text": null
                 },
                 {
                     "drug_name": "Betaseron",
-                    "hcpcs_code": "",
-                    "j_code": "",
+                    "hcpcs_code": "J1830",
+                    "j_code": "J1830",
                     "original_text": null
                 },
                 {
                     "drug_name": "Pulmozyme",
-                    "hcpcs_code": "",
-                    "j_code": "",
+                    "hcpcs_code": "J7639",
+                    "j_code": "J7639",
                     "original_text": null
                 },
                 {
                     "drug_name": "Tobi",
-                    "hcpcs_code": "",
-                    "j_code": "",
+                    "hcpcs_code": "J7682",
+                    "j_code": "J7682",
                     "original_text": null
                 },
                 {
                     "drug_name": "Gleevec",
-                    "hcpcs_code": "",
+                    "hcpcs_code": "S0088",
                     "j_code": "",
                     "original_text": null
                 },
                 {
                     "drug_name": "Hycamtin",
-                    "hcpcs_code": "",
-                    "j_code": "",
+                    "hcpcs_code": "J8705",
+                    "j_code": "J8705",
                     "original_text": null
                 },
                 {
                     "drug_name": "Fuzeon",
-                    "hcpcs_code": "",
-                    "j_code": "",
+                    "hcpcs_code": "J1324",
+                    "j_code": "J1324",
                     "original_text": null
                 },
                 {
                     "drug_name": "Apokyn",
-                    "hcpcs_code": "",
-                    "j_code": "",
+                    "hcpcs_code": "J0364",
+                    "j_code": "J0364",
                     "original_text": null
                 },
                 {
                     "drug_name": "Kineret",
-                    "hcpcs_code": "",
-                    "j_code": "",
+                    "hcpcs_code": "J3490",
+                    "j_code": "J3490",
                     "original_text": null
                 },
                 {
                     "drug_name": "Simponi",
-                    "hcpcs_code": "",
-                    "j_code": "",
+                    "hcpcs_code": "J3490",
+                    "j_code": "J3490",
                     "original_text": null
                 },
                 {
                     "drug_name": "Arcalyst",
-                    "hcpcs_code": "",
-                    "j_code": "",
+                    "hcpcs_code": "J3490",
+                    "j_code": "J3490",
                     "original_text": null
                 },
                 {
                     "drug_name": "Somatuline Depot",
-                    "hcpcs_code": "",
-                    "j_code": "",
+                    "hcpcs_code": "J1930",
+                    "j_code": "J1930",
                     "original_text": null
                 },
                 {
                     "drug_name": "Extavia",
-                    "hcpcs_code": "",
-                    "j_code": "",
+                    "hcpcs_code": "J1830",
+                    "j_code": "J1830",
                     "original_text": null
                 },
                 {
                     "drug_name": "Afinitor",
-                    "hcpcs_code": "",
-                    "j_code": "",
+                    "hcpcs_code": "J8561",
+                    "j_code": "J8561",
                     "original_text": null
                 },
                 {
                     "drug_name": "Chorionic gonadotropin",
-                    "hcpcs_code": "",
-                    "j_code": "",
+                    "hcpcs_code": "J0725",
+                    "j_code": "J0725",
                     "original_text": null
                 },
                 {
                     "drug_name": "Novarel",
-                    "hcpcs_code": "",
-                    "j_code": "",
+                    "hcpcs_code": "J0725",
+                    "j_code": "J0725",
                     "original_text": null
                 },
                 {
                     "drug_name": "Pregnyl",
-                    "hcpcs_code": "",
-                    "j_code": "",
+                    "hcpcs_code": "J0725",
+                    "j_code": "J0725",
                     "original_text": null
                 }
             ]
         }
     ],
     "metadata": {
-        "total_drugs_found": 36,
+        "total_drugs_found": 38,
         "total_scenarios_found": 2,
         "same_drugs_across_scenarios": false,
-        "policy_name": "Extracted Rules (36 drugs)",
+        "policy_name": "Extracted Rules (38 drugs)",
         "source_document": null,
-        "analysis_reasoning": "medical: The source content explicitly lists multiple specialty drug names/codes and states a setting-based coverage rule (excluded from medical and carved out to Vivio when administered in an office visit setting). The detected hyperlink pertains to 'allowance maximums' and is not referenced in the source text as the location for the drug list or coverage details for these specialty drugs. | pharmacy: The source text contains explicit setting-based coverage rules (specialty drugs carved out to Vivio when administered in an office visit setting) and includes a specific list of drug names/J-codes. No relevant hyperlinks are provided that are referenced for additional drug lists or coverage details.",
+        "analysis_reasoning": "medical: The source text explicitly lists specialty drug names with associated HCPCS/J-codes and a carve-out rule to Vivio for office visit administration, while the linked flyer is referenced for allowance maximums rather than drug-specific coverage lists. | pharmacy: The source text contains explicit drug names and associated HCPCS/J-codes with a clear site-of-care/pharmacy vendor carve-out rule, and there are no relevant linked documents to consult.",
         "flags": {
             "source_doc": true,
             "hyperlink": false
+        },
+        "llm_stats": {
+            "llm_calls": 4,
+            "input_tokens": 6510,
+            "output_tokens": 1720,
+            "total_tokens": 8230,
+            "duration_seconds": 19.12
         }
     }
 }

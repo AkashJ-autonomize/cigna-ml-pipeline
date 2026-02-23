@@ -1,5 +1,5 @@
 {
-    "client": "UPS",
+    "client": "MaritzHolding",
     "source_type": "source_text",
     "extraction": [
         {
@@ -28,8 +28,8 @@
         "source_document": null,
         "analysis_reasoning": "",
         "flags": {
-            "source_doc": true,
-            "hyperlink": false
+            "source_doc": false,
+            "hyperlink": true
         }
     }
 }

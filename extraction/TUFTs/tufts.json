@@ -8,7 +8,8 @@
         "same_drugs_across_scenarios": false,
         "policy_name": null,
         "source_document": null,
-        "analysis_reasoning": "No relevant Medical or Pharmacy sections detected in the source document.",
-        "flags": {}
+        "analysis_reasoning": "No relevant Medical or Pharmacy points detected.",
+        "flags": {},
+        "llm_stats": {}
     }
 }

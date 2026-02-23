@@ -1,314 +1,260 @@
 {
-    "client": {
-        "name": "Mohawk",
-        "preferred_customer_name": "Employees",
-        "aliases": [
-            "Dal-Tile",
-            "Mohawk",
-            "Unilin (division of Mohawk)"
-        ],
-        "account_numbers": {
-            "mohawk": "2500322",
-            "daltile": "2500325"
-        },
-        "brand_experience": "Cigna",
-        "phone": "855.566.4295",
-        "ivr_prompts": [
-            "1) MEDICAL",
-            "2) MENTAL HEALTH AND SUBSTANCE ABUSE",
-            "3) EMPLOYEE ASSISTANCE PROGRAM",
-            "4) COACHING/HEALTHY LIFE TEAM",
-            "5) AMWELL TELE-HEALTH",
-            "6) HEALTHY PREGNANCIES, HEALTHY BABIES",
-            "7) SOMETHING ELSE"
-        ],
-        "company_website": "www.myMohawkbenefits.com",
-        "benefits_service_center": "1.866.481.4922",
-        "team": "Premium PHT",
-        "annual_review": {
-            "last_completed": "11.26.25",
-            "next_due": "11.26.26"
-        }
-    },
-    "policy": {
-        "policy_name": "Specialty Drug Carve-Out and Imaging Allowances",
-        "policy_type": "specialty_pharmacy_carve_out_with_imaging_maximums",
-        "source_documents": [
-            "Mohawk.html (Medical and Pharmacy sections only)",
-            "Allowance_Maximums_Flyer.pdf",
-            "How_to_Refer_to_My_Personal_Champion_Program__Care_Solutions.pdf"
-        ]
-    },
-    "medical": {
-        "note": "See Source System",
-        "programs": {
-            "healthy_pregnancies_healthy_babies": {
-                "available": true,
-                "note": "See Incentives section for more info"
-            },
-            "hsa_banking_administrator": {
-                "vendor": "Fidelity",
-                "phone": "1.800.835.5087",
-                "spanish_phone": "1.800.587.5282"
-            },
-            "fsa": {
-                "vendor": "TaxSaver",
-                "phone": "1.800.328.4337"
-            },
-            "my_personal_champion_program": {
-                "eligibility": "This Account is eligible for the My Personal Champion program",
-                "reminder": "Do not commit to the customer that they can have a Personal Champion",
-                "referral_article": "How to Refer to My Personal Champion Program - Care Solutions",
-                "knowledgexchange_article": "kA04P000000UIJlSAO",
-                "about": {
-                    "identification_methods": [
-                        "Direct referrals from Clinical/Non-clinical staff",
-                        "Monthly data mining completed by the My Personal Champion team"
-                    ],
-                    "claim_platform_availability": {
-                        "facets": "Standard service offered to All Clients",
-                        "proclaim_pmhs": "No client restrictions"
-                    },
-                    "supported_services": [
-                        "Multiple denied authorizations",
-                        "Multiple out of network provider claims",
-                        "Multiple denied claims",
-                        "Repeat calls from the customer for the same issue",
-                        "Multiple outstanding claim issues",
-                        "Provider billing issues",
-                        "Coordination (COB) with Third-Party Vendors"
-                    ],
-                    "responsibilities": [
-                        "Delivers one-on-one attention to the customer during their time of need",
-                        "Provides a single point-of-contact for the customer",
-                        "Answers any questions about the customer's health plan",
-                        "Coordinates with Health Management Clinical Operations (HMCO) for health service/clinical needs",
-                        "Connects the customer to financial and social work specialists for possible additional services if the customer qualifies"
-                    ],
-                    "issues_not_supported": [
-                        "Customer with medical diagnosis but no current medical administrative needs",
-                        "Out-of-pocket review (Refer to Supervisor)",
-                        "Cigna is the secondary carrier",
-                        "Clinical Issues/Medical necessity review (Refer to appropriate Case Manager area)",
-                        "Irate callers asking for Supervisor",
-                        "Requests for a designated Champion as a Single Point of Contact",
-                        "Termination of Eligibility",
-                        "Exhaustion of benefits and/or benefits not covered under the plan",
-                        "A sole purpose for Social/Financial services only",
-                        "Transplant cases (pre and post-transplant) supported by LifeSOURCE",
-                        "Behavioral Health issues (Refer to Behavioral Health)"
-                    ],
-                    "outreach_goal": "Within two business days"
-                }
-            },
-            "cigna_telehealth_connection": {
-                "vendor": "MDLive",
-                "effective_date": "1.1.26",
-                "phone": "888.726.3171",
-                "website": "MDLIVEforCigna.com"
-            }
-        },
-        "non_standard_administration_workflows": {
-            "specialty_drug_carve_out": {
-                "description": "The following Specialty Drugs are excluded from medical and carved-out to the Specialty Medication Pharmacy Vendor, Vivio, when administered in an office visit setting",
-                "vendor": "Vivio",
-                "drugs_carved_out": [
-                    {
-                        "drug_name": "EPOETIN ALFA/PROCRIT",
-                        "hcpcs_code": "J0885",
-                        "note": "NON ERSD"
-                    },
-                    {
-                        "drug_name": "ARANESP",
-                        "hcpcs_code": "J0881",
-                        "note": "NON ERSD"
-                    },
-                    {
-                        "drug_name": "BETASERON",
-                        "hcpcs_code": "J1830"
-                    },
-                    {
-                        "drug_name": "PULMOZYME",
-                        "hcpcs_code": "J7639"
-                    },
-                    {
-                        "drug_name": "TOBI",
-                        "hcpcs_code": "J7682"
-                    },
-                    {
-                        "drug_name": "GLEEVEC",
-                        "hcpcs_code": "S0088"
-                    },
-                    {
-                        "drug_name": "HYCAMTIN ORAL",
-                        "hcpcs_code": "J8705"
-                    },
-                    {
-                        "drug_name": "FUZEON",
-                        "hcpcs_code": "J1324"
-                    },
-                    {
-                        "drug_name": "APOKYN",
-                        "hcpcs_code": "J0364"
-                    },
-                    {
-                        "drug_name": "KINERET",
-                        "hcpcs_code": "J3490"
-                    },
-                    {
-                        "drug_name": "SIMPONI",
-                        "hcpcs_code": "J3490"
-                    },
-                    {
-                        "drug_name": "ARCALYST",
-                        "hcpcs_code": "J3490"
-                    },
-                    {
-                        "drug_name": "SOMATULINE DEPOT",
-                        "hcpcs_code": "J1930"
-                    },
-                    {
-                        "drug_name": "EXTAVIA",
-                        "hcpcs_code": "J1830"
-                    },
-                    {
-                        "drug_name": "AFINITOR",
-                        "hcpcs_code": "J8561"
-                    },
-                    {
-                        "drug_name": "CHORIONIC GONADOTROPIN",
-                        "hcpcs_code": "J0725"
-                    },
-                    {
-                        "drug_name": "NOVAREL",
-                        "hcpcs_code": "J0725"
-                    },
-                    {
-                        "drug_name": "PREGNYL",
-                        "hcpcs_code": "J0725"
-                    }
-                ]
-            },
-            "imaging_allowance_maximums": {
-                "effective_date": "01-01/2025",
-                "description": "Benefit Payment Maximums on MRIs and CT Scans",
-                "mri_allowance": {
-                    "amount": "$2,300",
-                    "applies": "After deductible is met",
-                    "payment_rule": "Cigna will pay 80% per procedure up to the allowed amount, employee responsible for any remaining cost"
-                },
-                "ct_scan_allowance": {
-                    "amount": "$2,000",
-                    "applies": "After deductible is met",
-                    "payment_rule": "Cigna will pay 80% per procedure up to the allowed amount, employee responsible for any remaining cost"
-                },
-                "allowance_basis": "Based on national average costs for these diagnostic services",
-                "cost_verification_methods": [
-                    "Use the Garner Health app or visit getgarner.com",
-                    "Call the Referral Coordinator at 855-566-4295",
-                    "Call the Healthy Life Team at 855-566-4295, option 4",
-                    "Call Cigna at 855-566-4295 or mycigna.com",
-                    "Ask your doctor about the cost"
+    "client": "Mohawk",
+    "source_type": "source_text",
+    "extraction": [
+        {
+            "section_type": "medical",
+            "scenario": {
+                "rule": "The specified Specialty Drugs are excluded from the medical benefit and carved out to the Specialty Medication Pharmacy Vendor, Vivio, when administered in an office visit setting.",
+                "routing": "Pharmacy",
+                "applied_in": [
+                    "OFFICE"
                 ],
-                "steering_guidance": "Work with customers to steer to lowest cost providers (free-standing facilities instead of hospital-based services)",
-                "customer_resource": "Customers should be directed to www.mymohawkbenefits.com where these 'allowance maximums' are described"
-            }
-        }
-    },
-    "pharmacy": {
-        "retail_and_mail_order": {
-            "vendor": "Capital Rx",
-            "effective_date": "1.1.25",
-            "phone": "1.855.385.5681",
-            "website": "www.cap-rx.com",
-            "scope": "Non-specialty pharmacy"
+                "does_not_applies_in": []
+            },
+            "drugs": [
+                {
+                    "drug_name": "Epoetin alfa/Procrit",
+                    "hcpcs_code": "J0885",
+                    "j_code": "J0885",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "Aranesp",
+                    "hcpcs_code": "J0881",
+                    "j_code": "J0881",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "Betaseron",
+                    "hcpcs_code": "J1830",
+                    "j_code": "J1830",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "Pulmozyme",
+                    "hcpcs_code": "J7639",
+                    "j_code": "J7639",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "Tobi",
+                    "hcpcs_code": "J7682",
+                    "j_code": "J7682",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "Gleevec",
+                    "hcpcs_code": "S0088",
+                    "j_code": "S0088",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "Hycamtin",
+                    "hcpcs_code": "J8705",
+                    "j_code": "J8705",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "Fuzeon",
+                    "hcpcs_code": "J1324",
+                    "j_code": "J1324",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "Apokyn",
+                    "hcpcs_code": "J0364",
+                    "j_code": "J0364",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "Kineret",
+                    "hcpcs_code": "J3490",
+                    "j_code": "J3490",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "Simponi",
+                    "hcpcs_code": "J3490",
+                    "j_code": "J3490",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "Arcalyst",
+                    "hcpcs_code": "J3490",
+                    "j_code": "J3490",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "Somatuline Depot",
+                    "hcpcs_code": "J1930",
+                    "j_code": "J1930",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "Extavia",
+                    "hcpcs_code": "J1830",
+                    "j_code": "J1830",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "Afinitor",
+                    "hcpcs_code": "J8561",
+                    "j_code": "J5861",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "Chorionic gonadotropin",
+                    "hcpcs_code": "J0725",
+                    "j_code": "J0725",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "Novarel",
+                    "hcpcs_code": "J0725",
+                    "j_code": "J0725",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "Pregnyl",
+                    "hcpcs_code": "J0725",
+                    "j_code": "J0725",
+                    "original_text": null
+                }
+            ]
         },
-        "specialty_medications": {
-            "vendor": "Vivio",
-            "phone": "1.800.470.4034",
-            "email": "help@vivio.health",
-            "concierge_hours": "8-8 ET M-F, 10-3 Sat",
-            "carve_out_note": "Specialty prescription medications are carved out from Capital Rx and obtained through Vivio",
-            "office_visit_carve_out": {
-                "description": "The following Specialty Drugs are excluded from medical and carved-out to the Specialty Medication Pharmacy Vendor, Vivio, when administered in an office visit setting",
-                "drugs": [
-                    {
-                        "drug_name": "EPOETIN ALFA/PROCRIT",
-                        "hcpcs_code": "J0885",
-                        "note": "NON ERSD"
-                    },
-                    {
-                        "drug_name": "ARANESP",
-                        "hcpcs_code": "J0881",
-                        "note": "NON ERSD"
-                    },
-                    {
-                        "drug_name": "BETASERON",
-                        "hcpcs_code": "J1830"
-                    },
-                    {
-                        "drug_name": "PULMOZYME",
-                        "hcpcs_code": "J7639"
-                    },
-                    {
-                        "drug_name": "TOBI",
-                        "hcpcs_code": "J7682"
-                    },
-                    {
-                        "drug_name": "GLEEVEC",
-                        "hcpcs_code": "S0088"
-                    },
-                    {
-                        "drug_name": "HYCAMTIN ORAL",
-                        "hcpcs_code": "J8705"
-                    },
-                    {
-                        "drug_name": "FUZEON",
-                        "hcpcs_code": "J1324"
-                    },
-                    {
-                        "drug_name": "APOKYN",
-                        "hcpcs_code": "J0364"
-                    },
-                    {
-                        "drug_name": "KINERET",
-                        "hcpcs_code": "J3490"
-                    },
-                    {
-                        "drug_name": "SIMPONI",
-                        "hcpcs_code": "J3490"
-                    },
-                    {
-                        "drug_name": "ARCALYST",
-                        "hcpcs_code": "J3490"
-                    },
-                    {
-                        "drug_name": "SOMATULINE DEPOT",
-                        "hcpcs_code": "J1930"
-                    },
-                    {
-                        "drug_name": "EXTAVIA",
-                        "hcpcs_code": "J1830"
-                    },
-                    {
-                        "drug_name": "AFINITOR",
-                        "hcpcs_code": "J8561"
-                    },
-                    {
-                        "drug_name": "CHORIONIC GONADOTROPIN",
-                        "hcpcs_code": "J0725"
-                    },
-                    {
-                        "drug_name": "NOVAREL",
-                        "hcpcs_code": "J0725"
-                    },
-                    {
-                        "drug_name": "PREGNYL",
-                        "hcpcs_code": "J0725"
-                    }
-                ]
-            }
+        {
+            "section_type": "pharmacy",
+            "scenario": {
+                "rule": "The specified Specialty Drugs are excluded from the medical benefit and carved out to the Specialty Medication Pharmacy Vendor, Vivio, when administered in an office visit setting.",
+                "routing": "Pharmacy",
+                "applied_in": [
+                    "OFFICE"
+                ],
+                "does_not_applies_in": []
+            },
+            "drugs": [
+                {
+                    "drug_name": "Epoetin alfa/Procrit",
+                    "hcpcs_code": "J0885",
+                    "j_code": "J0885",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "Aranesp",
+                    "hcpcs_code": "J0881",
+                    "j_code": "J0881",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "Betaseron",
+                    "hcpcs_code": "J1830",
+                    "j_code": "J1830",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "Pulmozyme",
+                    "hcpcs_code": "J7639",
+                    "j_code": "J7639",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "Tobi",
+                    "hcpcs_code": "J7682",
+                    "j_code": "J7682",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "Gleevec",
+                    "hcpcs_code": "S0088",
+                    "j_code": "S0088",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "Hycamtin",
+                    "hcpcs_code": "J8705",
+                    "j_code": "J8705",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "Fuzeon",
+                    "hcpcs_code": "J1324",
+                    "j_code": "J1324",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "Apokyn",
+                    "hcpcs_code": "J0364",
+                    "j_code": "J0364",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "Kineret",
+                    "hcpcs_code": "J3490",
+                    "j_code": "J3490",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "Simponi",
+                    "hcpcs_code": "J3490",
+                    "j_code": "J3490",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "Arcalyst",
+                    "hcpcs_code": "J3490",
+                    "j_code": "J3490",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "Somatuline Depot",
+                    "hcpcs_code": "J1930",
+                    "j_code": "J1930",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "Extavia",
+                    "hcpcs_code": "J1830",
+                    "j_code": "J1830",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "Afinitor",
+                    "hcpcs_code": "J8561",
+                    "j_code": "J5861",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "Chorionic gonadotropin",
+                    "hcpcs_code": "J0725",
+                    "j_code": "J0725",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "Novarel",
+                    "hcpcs_code": "J0725",
+                    "j_code": "J0725",
+                    "original_text": null
+                },
+                {
+                    "drug_name": "Pregnyl",
+                    "hcpcs_code": "J0725",
+                    "j_code": "J0725",
+                    "original_text": null
+                }
+            ]
         }
-    },
-    "summary": "Mohawk (Account 2500322) and Dal-Tile (Account 2500325) have a Cigna Premium PHT plan with Capital Rx for retail and mail order non-specialty pharmacy (effective 1.1.25) and Vivio for specialty medications carved out from both medical and pharmacy benefits. Eighteen specialty drugs (including EPOETIN ALFA/PROCRIT J0885, ARANESP J0881, BETASERON J1830, PULMOZYME J7639, TOBI J7682, GLEEVEC S0088, HYCAMTIN ORAL J8705, FUZEON J1324, APOKYN J0364, KINERET J3490, SIMPONI J3490, ARCALYST J3490, SOMATULINE DEPOT J1930, EXTAVIA J1830, AFINITOR J8561, and CHORIONIC GONADOTROPIN/NOVAREL/PREGNYL J0725) are excluded from medical coverage and carved out to Vivio when administered in office visit settings. The account has imaging allowance maximums of $2,300 for MRIs and $2,000 for CT scans (after deductible is met, effective 01-01/2025), with Cigna paying 80% up to the allowed amount and employees responsible for any remaining costs. Customers should be steered to lowest cost providers (free-standing facilities vs hospital-based services) and can verify costs through Garner Health app (getgarner.com), Referral Coordinator (855-566-4295), Healthy Life Team (855-566-4295 option 4), or mycigna.com. The account is eligible for the My Personal Champion program, which provides single point-of-contact support for administrative needs including multiple denied authorizations, out-of-network claims, denied claims, repeat issues, outstanding claims, provider billing issues, and COB coordination. Medical programs include Healthy Pregnancies Healthy Babies, HSA through Fidelity (1.800.835.5087), FSA through TaxSaver (1.800.328.4337), and MDLive telehealth (effective 1.1.26, 888.726.3171)."
+    ],
+    "metadata": {
+        "total_drugs_found": 36,
+        "total_scenarios_found": 2,
+        "same_drugs_across_scenarios": true,
+        "policy_name": "Office Setting Medical Benefit Exclusion – Vivio Carve-Out",
+        "source_document": null,
+        "analysis_reasoning": "",
+        "flags": {
+            "source_doc": true,
+            "hyperlink": false
+        }
+    }
 }

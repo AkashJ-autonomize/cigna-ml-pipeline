@@ -1,0 +1,71 @@
+{
+    "total_analysis": {
+        "files_scanned": 9,
+        "pipeline_wall_clock_seconds": 92.76,
+        "llm_calls": 29,
+        "input_tokens": 41397,
+        "output_tokens": 5911,
+        "total_tokens": 47308,
+        "duration_seconds": 92.629,
+        "wall_clock_seconds": 92.76
+    },
+    "clients": {
+        "UPS": {
+            "llm_calls": 3,
+            "input_tokens": 6031,
+            "output_tokens": 304,
+            "total_tokens": 6335,
+            "duration_seconds": 7.811
+        },
+        "Boilermakers": {
+            "llm_calls": 7,
+            "input_tokens": 9753,
+            "output_tokens": 463,
+            "total_tokens": 10216,
+            "duration_seconds": 18.192
+        },
+        "Mohawk": {
+            "llm_calls": 4,
+            "input_tokens": 6510,
+            "output_tokens": 1720,
+            "total_tokens": 8230,
+            "duration_seconds": 19.12
+        },
+        "JPMorgan Chase": {
+            "llm_calls": 4,
+            "input_tokens": 4371,
+            "output_tokens": 348,
+            "total_tokens": 4719,
+            "duration_seconds": 8.817
+        },
+        "MaritzHolding": {
+            "llm_calls": 1,
+            "input_tokens": 1092,
+            "output_tokens": 67,
+            "total_tokens": 1159,
+            "duration_seconds": 1.91
+        },
+        "TUFTs": {},
+        "BayCareHealth": {
+            "llm_calls": 3,
+            "input_tokens": 4553,
+            "output_tokens": 758,
+            "total_tokens": 5311,
+            "duration_seconds": 12.94
+        },
+        "BJCHealthcare": {
+            "llm_calls": 3,
+            "input_tokens": 4737,
+            "output_tokens": 1761,
+            "total_tokens": 6498,
+            "duration_seconds": 14.746
+        },
+        "Sylvamo": {
+            "llm_calls": 4,
+            "input_tokens": 4350,
+            "output_tokens": 490,
+            "total_tokens": 4840,
+            "duration_seconds": 9.093
+        }
+    }
+}

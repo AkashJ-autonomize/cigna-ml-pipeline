@@ -1,11 +1,11 @@
 {
-    "client": "BJCHealthcare",
+    "client": "BJC Healthcare",
     "source_type": "source_text",
     "extraction": [
         {
             "section_type": "pharmacy",
             "scenario": {
-                "rule": "The specialty drugs listed in the attached document must be acquired through the BJC Pharmacy Benefit Plan when provided under Physician or Home Health Care services, and this carve-out does not apply to inpatient, outpatient, emergency room, or urgent care hospital settings.",
+                "rule": "The specified Specialty Drug HCPCS codes must be acquired through the BJC Pharmacy Benefit Plan when provided under Physician or Home Health Care services. This carve-out does not apply to services provided in inpatient, outpatient, emergency room hospital, or urgent care settings.",
                 "routing": "Pharmacy",
                 "applied_in": [
                     "OFFICE",
@@ -120,7 +120,7 @@
                     "original_text": null
                 },
                 {
-                    "drug_name": "HyperRAB S-D",
+                    "drug_name": "Hyperrab S-D",
                     "hcpcs_code": "90375",
                     "j_code": null,
                     "original_text": null
@@ -198,7 +198,7 @@
                     "original_text": null
                 },
                 {
-                    "drug_name": "Progesterone-50",
+                    "drug_name": "Progesterone",
                     "hcpcs_code": "J2675",
                     "j_code": "J2675",
                     "original_text": null
@@ -282,7 +282,7 @@
                     "original_text": null
                 },
                 {
-                    "drug_name": "WinRho SDF",
+                    "drug_name": "Winrho SDF",
                     "hcpcs_code": "90386",
                     "j_code": null,
                     "original_text": null
@@ -318,19 +318,12 @@
         "total_drugs_found": 49,
         "total_scenarios_found": 1,
         "same_drugs_across_scenarios": true,
-        "policy_name": "Extracted Rules (49 drugs)",
+        "policy_name": "Specialty Drug HCPCS Carve-Out to BJC Pharmacy Benefit Plan",
         "source_document": null,
-        "analysis_reasoning": "pharmacy: The source text contains a setting-based carve-out rule directing that 49 specialty drug HCPC codes must be obtained through the BJC Pharmacy Benefit Plan and explicitly references the attached DOCX for the specific code/drug list and details.",
+        "analysis_reasoning": "",
         "flags": {
             "source_doc": true,
             "hyperlink": true
-        },
-        "llm_stats": {
-            "llm_calls": 3,
-            "input_tokens": 4737,
-            "output_tokens": 1761,
-            "total_tokens": 6498,
-            "duration_seconds": 14.746
         }
     }
 }
