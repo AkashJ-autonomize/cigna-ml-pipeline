@@ -135,6 +135,7 @@ Extract exactly from these 4 settings: **HOME**, **OFFICE**, **PHARMACY**, **HOS
 - Extract ONLY the clinical/brand name (e.g., "Actemra", "Humira", "Remicade").
 - **DO NOT** include J-codes, HCPCS codes, dosages, strengths, or pack sizes in `drug_name`.
 - **STRICTLY SKIP** junk text, table headers, and metadata (e.g., "Drug Name", "Label Name", "Short Name", "Description", "Effective Date", "Page 1").
+- **STRICTLY SKIP MEDICAL DEVICES**: Do NOT extract glucose meters, testing supplies, continuous glucose monitors (CGMs), or any hardware (e.g., "OneTouch", "OneTouch Verio", "Dexcom", "Freestyle Libre", "test strips"). This extraction is for specialty pharmaceutical drugs ONLY.
 - **DO NOT** use placeholders like "Drug List", "49 Medications", "Attached document".
 - If drugs are only in a hyperlink (not in the source text), leave `drugs` as an empty list [].
 - Capture J-codes and HCPCS codes in their respective fields (`hcpcs_code`, `j_code`).
@@ -275,6 +276,7 @@ You are a clinical data extraction specialist. Your ONLY task is to extract a cl
    - Column headers or section titles (e.g., "Drug Name", "Label Name", "Short Name", "HCPCS Code", "Description").
    - Footnotes or asterisk explanations.
    - Blank or clearly non-drug text.
+   - **STRICTLY SKIP MEDICAL DEVICES**: Do NOT extract glucose meters, testing supplies, continuous glucose monitors (CGMs), or any hardware (e.g., "OneTouch", "OneTouch Verio", "Dexcom", "Freestyle Libre", "test strips").
    - **STRICTLY SKIP** any text that describes the table structure or metadata.
 
 4. **COMPLETENESS**: Extract ALL drugs from the document. Do not truncate or summarize.
